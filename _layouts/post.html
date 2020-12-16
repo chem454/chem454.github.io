@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/page.css" />
+</head>
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+</article>
