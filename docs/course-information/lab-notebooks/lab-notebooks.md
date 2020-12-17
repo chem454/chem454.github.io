@@ -140,3 +140,19 @@ There is no specific formula for creating a block diagram -- your goal is to cle
 
 1. Working with images in Jupyter and Exporting Images from Octave for your Report: [Panopto Video](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=57aa8a5b-df1d-4004-927a-ab90001bc595)
 1.  Making a block diagram [Editing in Progress] -->
+
+## Notebook Rubric
+
+I will use this rubric to judge the *content* (not accuracy) of your notebook.  For all items: '2' = exceptional, '1' = satisfactory, and '0' = inadequate/not present.
+
+| Item                                                                                                           | 2   | 1   | 0   |
+| -------------------------------------------------------------------------------------------------------------- | --- | --- | --- |
+| Descriptive title present?                                                                                     |     |     |     |
+| Introduction present describing experimental goals?                                                            |     |     |     |
+| Materials and Methods: detailed enough to convey *exactly* what was done?                                      |     |     |     |
+| Materials and Methods: Instrument table(s) complete?                                                           |     |     |     |
+| Results and Data: Calibration curve (if needed) plotted with high quality, including R2, slope, and intercept  |     |     |     |
+| Results and Data: all spectra, chromatograms, etc., plotted with high quality                                  |     |     |     |
+| Results and Data: Notebook runs without errors                                                                 |     |     |     |
+| Conclusion present and clearly states outcome of experiment while discussing errors/future direction as needed |     |     |     |
+| References clearly cited and used in the notebooks                                                             |     |     |     |
