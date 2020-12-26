@@ -70,11 +70,15 @@ Use the video below to install Julia and Pluto on your personal computer.
      ![A screenshot showing the Pluto welcome page in the Firefox web browser]({{site.url}}/assets/images/lab-0/pluto-window.png)
 
 ## Homework
+There are two exercises you need to complete, 0A and 0B.
 
-1. Copy the link below by **Right Click > Copy Link [Address/Location]**.
+1. For each exercise, copy the link below by using **Right Click > Copy Link [Address/Location]**.
+
+   - Exercise 0A: [https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0A-template.jl](https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0A-template.jl)
+   - Exercise 0B: [https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0B-template.jl](https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0B-template.jl)
 
 1. Paste the link into the '**Open from file:**' box in Pluto and click **Open**.
 
 1. Complete the steps/follow the instructions in the Pluto template.
 
-1. Turn in your work using MS Teams.
+1. Turn in your work on MS Teams.

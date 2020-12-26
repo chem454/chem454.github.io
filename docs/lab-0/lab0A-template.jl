@@ -185,7 +185,7 @@ You'll use Pluto for your lab notebooks this semester, and this exercise covered
 """
 
 # ╔═╡ Cell order:
-# ╟─3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
+# ╠═3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
 # ╟─154adf1c-470c-11eb-17d7-372c82203ac7
 # ╟─a2ea7b10-470d-11eb-22fb-536f9ae32369
 # ╟─3adecf4a-470c-11eb-0b4b-0f6a72d9d05b
