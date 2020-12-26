@@ -12,6 +12,11 @@ catch
 	using Pkg; Pkg.add("Plots");
 end
 
+# ╔═╡ 3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
+md"""
+Download this notebook as a template here:
+"""
+
 # ╔═╡ 154adf1c-470c-11eb-17d7-372c82203ac7
 md"""
 # Lab 0A: Getting Started in Pluto
@@ -70,13 +75,13 @@ md"## Cats
 Let's say you're like my grandma, and you have a lot of cats. Our story will be about them."
 
 # ╔═╡ 76a63134-4712-11eb-103a-f772d40f8b01
-cat = "Garfield 😸"
+cat = "Garfield 🐱"
 
 # ╔═╡ 842adb48-4712-11eb-0a7c-651cef12ce92
 if cat == "Ks*;lj"
 	md"Oh no! Someone messed with my pretty introduction. Change the code above to give our cat a proper name!"
 else
-	HTML("""<p><b>Well done, your cat is called $cat now.</b> This text gets updated every time you change the name. To see how the magic works, click on the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/eye-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> to the left of this text.</p>""")
+	HTML("""<p><b>Well done, your cat is called $cat now.</b> This text gets updated every time you change the name.</p>""")
 end
 
 # ╔═╡ 8ec15b5e-4712-11eb-06f8-1dc9d28d42b9
@@ -96,15 +101,15 @@ end
 # ╔═╡ 6e649206-4713-11eb-0db2-c9ce65669303
 html"""<p>A cell is a container for code & output. To add one, click on the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/add-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> above or below another cell. You can do it wherever you like. After you're done writing code in your cell, remember to run it!</p>"""
 
-# ╔═╡ 856694b8-4715-11eb-0ae4-8721158e1b0e
-friend = "Grumpy Cat 🐈"
+# ╔═╡ 03470362-4742-11eb-1fc7-796450340997
+friend = "Grumpy Cat 😾"
 
 # ╔═╡ 987108ae-4712-11eb-02c9-ef55d0a24035
 md"I feel like our cat needs a friend. Let's call them $(friend)."
 
 # ╔═╡ 96d2e434-4712-11eb-360a-39da622b5d8a
 if !@isdefined friend
-	md"Uh oh, that's an error message 😦...I forgot to add a cell defining our friend. Can you do it for me?"
+	md"Uh oh, that's an error message 😦...I forgot to add a cell defining $(cat)'s friend. Can you do it for me?"
 else
 	md"**Well done!** $cat and $friend are both happy with your performance."
 end
@@ -180,6 +185,7 @@ You'll use Pluto for your lab notebooks this semester, and this exercise covered
 """
 
 # ╔═╡ Cell order:
+# ╟─3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
 # ╟─154adf1c-470c-11eb-17d7-372c82203ac7
 # ╟─a2ea7b10-470d-11eb-22fb-536f9ae32369
 # ╟─3adecf4a-470c-11eb-0b4b-0f6a72d9d05b
@@ -193,7 +199,7 @@ You'll use Pluto for your lab notebooks this semester, and this exercise covered
 # ╟─987108ae-4712-11eb-02c9-ef55d0a24035
 # ╟─96d2e434-4712-11eb-360a-39da622b5d8a
 # ╟─6e649206-4713-11eb-0db2-c9ce65669303
-# ╠═856694b8-4715-11eb-0ae4-8721158e1b0e
+# ╠═03470362-4742-11eb-1fc7-796450340997
 # ╟─a17d0928-4715-11eb-0bbd-19ac53fda5c6
 # ╟─86db1226-4713-11eb-0732-7d4235896654
 # ╟─94e69392-4713-11eb-0c1e-8b0c72b11c1f

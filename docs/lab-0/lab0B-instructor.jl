@@ -7,10 +7,17 @@ using InteractiveUtils
 # ╔═╡ 9a7a31cc-46ff-11eb-38f5-bfd272f170a8
 try 
 	using Plots;
+	using DataFrames;
 	plotly();
 catch e
 	using Pkg; Pkg.add("Plots");
+	using Pkg; Pkg.add("DataFrames");
 end
+
+# ╔═╡ b391ce36-472c-11eb-0695-0b3db45fb0f0
+md"""
+Link to download template: 
+"""
 
 # ╔═╡ cf00b6e2-46fe-11eb-13e4-29d71149129e
 md"""
@@ -31,7 +38,7 @@ md"""
 # ╔═╡ fbaa31e6-4717-11eb-1d07-7fc2b65abf5b
 # Replace Paws' name with yours:
 
-student = "Paws Catamount"
+student = "Instructor"
 
 # press the ▶ button in the bottom right of this cell to run your edits
 # or use Shift+Enter
@@ -86,7 +93,7 @@ html"""<p>To edit any code, just click on it. When you're done programming, pres
 
 # ╔═╡ 48929da6-4707-11eb-3a8f-3d56aac620bf
 md"""
-Julia also knows `sin()`, `cos()`, `tan()`, `log10()`, `sqrt()`, etc., along with some common variables like $\pi$ (`pi` or `π`) and $e$ exp(1).  For example:
+Julia also knows `sin()`, `cos()`, `tan()`, `log10()`, `sqrt()`, etc., along with some common variables like $\pi$ (`pi` or `π`) and $e$ (exp(1)).  For example:
 """
 
 # ╔═╡ 73f1b176-4707-11eb-2d87-ad220e1a5d6d
@@ -107,7 +114,7 @@ md"""
 
 # ╔═╡ ebb9810a-4704-11eb-2651-d79bb280f755
 md"""
-## Julia has a Memory
+# Julia has a Memory
 """
 
 # ╔═╡ 17816204-4704-11eb-0930-dfeca9fba41c
@@ -131,7 +138,7 @@ Let's do some simple math by setting **a = $a**, **b = $b** and **c = a * b**.
 md"**Fix the value of `c` below to make it `c = a * b`**"
 
 # ╔═╡ 1cbad30e-4704-11eb-361d-3d172cb57f3e
-c = a * 2
+c = a * b
 
 # ╔═╡ 54b1aaec-4706-11eb-1421-dde8f96701ba
 people = 10
@@ -144,7 +151,7 @@ slices = 8
 
 # ╔═╡ 2feccd04-4706-11eb-0670-2bea4e667021
 md"""
-### Pizza Slices
+## Pizza Slices
 
 Let's try this out on a problem.  Let's say you want to order pizzas for $people people (**people = $people**) and each person wants $avg slices on average (**avg = $avg**).  A pizza has $slices slices per pizza (**slices = $slices**).  How many pizzas should you order (**pizzas = ?**)?  Here's a summary of all that:
 
@@ -159,7 +166,7 @@ Number of slices on a piece of pizza | slices
 md"Edit the equation below to calculate the number of pizzas to order using the variables above for **people**, **avg**, and **slices**:"
 
 # ╔═╡ 8c869590-4706-11eb-2285-bbd41ee7e246
-pizzas = 1
+pizzas = ceil(avg * people / slices)
 
 # ╔═╡ c889a87e-4707-11eb-32f8-79c0ce2cb661
 md"""## Functions
@@ -174,7 +181,7 @@ Typically, functions are represented as `function_name(function_arguments)`. The
 
 
 # ╔═╡ 5f1edfde-4708-11eb-2622-250cddf38d5b
-my_log_value = 1
+my_log_value = log10(10000)
 
 # ╔═╡ 3dd584ee-4709-11eb-194a-f5986066f6ad
 md"""
@@ -202,7 +209,7 @@ x = [4, 7, 8, 13]
 
 # ╔═╡ 68591080-471a-11eb-04db-fd2d2cbf4c28
 md"""
-produces a 1-column by 4-row vector.
+produces a 4-row by 1-column vector.
 
 and
 """
@@ -220,13 +227,114 @@ Julia defaults to the rules of linear algebra when conducting arithmetic.  We'll
 """
 
 # ╔═╡ e713a534-471a-11eb-3ed2-b107c9f099e9
-y = [1]
+y = [4, 8, 3, 10, 12, 2]
+
+# ╔═╡ 672e6e90-472d-11eb-1cd4-47a4bb603977
+md"""
+# Data Frames
+
+Julia has a very powerful data format called a data frame. A data frame is an object used to store data in Julia, and it is similar in structure to a spreadsheet.  However, the data are accessed and manipulated using functions in Julia instead of by pointing and clicking in a graphic user interface (GUI).  A data frame differs from an array in that it can contain multiple data types (e.g. numbers and words together) whereas an array can only contain one type (e.g. *only* numbers or *only words*).
+
+Most often, you’ll use data frames to work with the data you generate in lab. Data frames can be created with the `DataFrame()` function from the `DataFrames` package.
+"""
+
+# ╔═╡ aeb966ca-472d-11eb-2644-6df07b4f9291
+md"""
+## Creating a Data Frame
+
+Let's create a data frame with some survey results on favorite colors, shown in the table below.
+"""
+
+# ╔═╡ 88b2a490-472e-11eb-0337-1b0cefcd8495
+md"""
+Name | Age (years) | Height (cm) | Favorite Color 
+------- | ------- | ------- | ------- 
+ George | 37 | 161 | Green 
+ Amy    | 22 | 157 | Blue
+ Austen | 25 | 159 | Blue
+ Sarena | 49 | 161 | Purple 
+"""
+
+# ╔═╡ 29350ada-472e-11eb-0309-f7cfc0136744
+md"""
+### Step 1: Load `DataFrames` package
+
+Anytime you work with a data frame you will need to load the DataFrames package.
+"""
+
+# ╔═╡ 2fbf6742-472e-11eb-37e5-edb395bd4432
+import DataFrames
+
+# ╔═╡ 3377b5c4-472e-11eb-2a62-1b3548189ac4
+md"""
+### Step 2: Create a data frame
+
+Create the data frame by entering arrays of values into the `DataFrame()` function.  Each array is a separate column in the data frame.  The general syntax is:
+
+	DataFrame(colname1 = [val1, val2, ...], colname2 = [val1, val2, ...], ...)
+
+Add the rest of the data from the table above to the data frame below.
+"""
+
+# ╔═╡ 78b48702-472e-11eb-3cc1-eb6454ae9770
+fav_colors = DataFrame(Name = ["George", "Amy", "Austen", "Sarena"], Age_years = [37, 22, 25, 49], Height_cm = [161, 157, 159, 161], fav_col = ["Green", "Blue", "Blue", "Purple"])
+
+# ╔═╡ ccadc17a-4730-11eb-2ebe-e546e7ab9b68
+md"""
+Notice how the data frame looks a lot like the table above.  The difference is that the data frame is actually saved in the Julia environment so you can access it to do calculations.  For example, to divide each person's age by 2:
+"""
+
+# ╔═╡ f56b0a9e-4730-11eb-24d9-476cdc76638c
+fav_colors[!, "Age_years"] ./ 2
+
+# ╔═╡ 0740e0ae-4731-11eb-1831-8d9b61c72b5b
+md"""
+You'll get practice with this in Lab 1.
+"""
 
 # ╔═╡ 0f7c906e-470a-11eb-33fd-cf95fffc270a
 md"""
 # Conclusion
 
- Much like learning to speak a new language, learning a programming language like Julia takes time and practice. What you’ve seen here is the first layer of getting comfortable doing basic arithmetic in Julia. We’ll practice and build upon these concepts in the next exercise regarding data frames, so make sure you’re beginning to understand them before moving on.
+Much like learning to speak a new language, learning a programming language like Julia takes time and practice. What you’ve seen here is the first layer of getting comfortable using Julia. 
+
+You'll use Pluto for your lab notebooks this semester, and this exercise covered the basics of the Pluto interface and how to format text using Markdown.  You'll use Markdown anytime you need to add text to your lab notebook and Julia anytime you want to do calculations.
+
+You will use all of this information many times over the course of the semester, beginning next week in lab.  Make sure you are beginning to understand it before moving on!
+
+
+
+"""
+
+# ╔═╡ e8b60f0c-4731-11eb-01ee-cf31edc0a70b
+html"""
+Before you leave, save your notebook as a .jl file AND a .html file, and turn both in on MS Teams:
+
+<ul>
+   <li> Go to the top of the page</li>
+
+   <li> Type in/select your desired file path and file name in the box and click <b>Move</b>.  </li>
+
+   <li> Click on the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/shapes-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> icon and choose <b>Static HTML</b></li>
+
+	<li>Place both in the same folder, compress it to a ZIP file, and submit on MS Teams.</li>
+</ul>
+"""
+
+# ╔═╡ f83e6a92-4729-11eb-18a1-bd4c78a5b6a4
+if student === "Paws Catamount"
+	md"""
+!!! danger "Oops!"
+    **Before you save**, remember to fill in your name at the top of this notebook!
+	"""
+end
+
+# ╔═╡ 7a4521fc-4741-11eb-18b3-d34c22aa0a3e
+md"""
+When you're ready to exit Julia you can:  
+1. Close the browser tab.  
+2. Press CTRL + C in the Julia REPL.  
+3. Type `exit()` in the Julia REPL.
 """
 
 # ╔═╡ 9cd675ec-4705-11eb-2859-cfc382e9b2b1
@@ -236,7 +344,10 @@ hint(text) = Markdown.MD(Markdown.Admonition("hint", "Hint", [text]));
 	hint(md"Set `pizzas` equal to `people * avg / slices`")
 
 # ╔═╡ 03870338-4709-11eb-0404-6bfb52439206
-	hint(md"Try setting `my_log_value` equal to `log10(10000)`.")
+hint(md"Try setting `my_log_value` equal to `log10(10000)`.")
+
+# ╔═╡ 6f275b36-4730-11eb-3c53-555c63cf1d4d
+hint(md"Format the remaining columns the same way the first two are formatted.  It doesn't matter what you name the columns, but make sure the data *exactly* matches how it appears in the table -- including capital letters.  Make sure you put words/names in quotes but do **not** put numbers in quotes.")
 
 # ╔═╡ 94065af4-4705-11eb-16d9-c78a06cd58ed
 almost(text) = Markdown.MD(Markdown.Admonition("warning", "Almost there!", [text]));
@@ -283,14 +394,30 @@ else
 	correct(md"""**Great!**  You figured it out.  Keep going.""")
 end
 
+# ╔═╡ 9a68c9f2-472f-11eb-0e00-b3372d50b13b
+let
+fc = DataFrame(Name = ["George", "Amy", "Austen", "Sarena"], Age_years = [37, 22, 25, 49], Height_cm = [161, 157, 159, 161], Favorite_color = ["Green", "Blue", "Blue", "Purple"])
+	if ncol(fav_colors) == 4
+		
+		if fav_colors[!, 3] != fc[!, "Height_cm"] && fav_colors[!, 4] != fc[!, "Favorite_color"]
+		keep_working(md"One or more of your columns is incorrect.")
+		else
+		correct(md"""**Great!**  You figured it out.  Keep going.""")
+	end
+	else
+		keep_working(md"""You should have 4 columns in your data frame.""")
+end
+end
+
 # ╔═╡ Cell order:
+# ╟─b391ce36-472c-11eb-0695-0b3db45fb0f0
 # ╟─cf00b6e2-46fe-11eb-13e4-29d71149129e
 # ╟─4dcc73fc-470a-11eb-23f6-5542c5a42a8d
 # ╟─0ae8ab60-4718-11eb-1a3c-23b0f0c3164a
 # ╠═fbaa31e6-4717-11eb-1d07-7fc2b65abf5b
-# ╠═2341507a-46ff-11eb-1b20-1df79073c814
+# ╟─2341507a-46ff-11eb-1b20-1df79073c814
 # ╠═ba026d20-46ff-11eb-2369-4f08a47549cb
-# ╠═582dcf7a-4701-11eb-39d4-f30aa5d88b89
+# ╟─582dcf7a-4701-11eb-39d4-f30aa5d88b89
 # ╟─aecf5432-4703-11eb-2c9a-cbad7d393b3b
 # ╟─866092ee-4704-11eb-2a45-1783d0c0ff31
 # ╟─411c0970-4704-11eb-245a-51b9f29ae0e3
@@ -299,7 +426,7 @@ end
 # ╠═73f1b176-4707-11eb-2d87-ad220e1a5d6d
 # ╟─ee4aa4fa-4718-11eb-3340-bbd42fcf57fa
 # ╠═f84be958-4718-11eb-12e3-95b11eb39813
-# ╠═fd26fa44-4718-11eb-0011-e3c4423eee40
+# ╟─fd26fa44-4718-11eb-0011-e3c4423eee40
 # ╟─ebb9810a-4704-11eb-2651-d79bb280f755
 # ╟─b91d753c-4704-11eb-15bf-8b8cb3e6fe28
 # ╠═17816204-4704-11eb-0930-dfeca9fba41c
@@ -323,12 +450,27 @@ end
 # ╠═5306b14e-4709-11eb-1346-c503c7fc90d5
 # ╟─abbfa252-4719-11eb-0f80-efb85d4c628f
 # ╠═6202f656-471a-11eb-2186-8bfe6d6cde86
-# ╟─68591080-471a-11eb-04db-fd2d2cbf4c28
+# ╠═68591080-471a-11eb-04db-fd2d2cbf4c28
 # ╠═816eeab0-471a-11eb-3009-a9d14186dafd
 # ╟─b6435daa-471a-11eb-1f6b-775773ef3219
 # ╠═e713a534-471a-11eb-3ed2-b107c9f099e9
 # ╟─06bad5b0-471b-11eb-24be-1b2a6e23c518
+# ╟─672e6e90-472d-11eb-1cd4-47a4bb603977
+# ╟─aeb966ca-472d-11eb-2644-6df07b4f9291
+# ╟─88b2a490-472e-11eb-0337-1b0cefcd8495
+# ╟─29350ada-472e-11eb-0309-f7cfc0136744
+# ╠═2fbf6742-472e-11eb-37e5-edb395bd4432
+# ╟─3377b5c4-472e-11eb-2a62-1b3548189ac4
+# ╠═78b48702-472e-11eb-3cc1-eb6454ae9770
+# ╟─9a68c9f2-472f-11eb-0e00-b3372d50b13b
+# ╟─6f275b36-4730-11eb-3c53-555c63cf1d4d
+# ╟─ccadc17a-4730-11eb-2ebe-e546e7ab9b68
+# ╠═f56b0a9e-4730-11eb-24d9-476cdc76638c
+# ╟─0740e0ae-4731-11eb-1831-8d9b61c72b5b
 # ╟─0f7c906e-470a-11eb-33fd-cf95fffc270a
+# ╟─e8b60f0c-4731-11eb-01ee-cf31edc0a70b
+# ╟─f83e6a92-4729-11eb-18a1-bd4c78a5b6a4
+# ╟─7a4521fc-4741-11eb-18b3-d34c22aa0a3e
 # ╟─9cd675ec-4705-11eb-2859-cfc382e9b2b1
 # ╟─94065af4-4705-11eb-16d9-c78a06cd58ed
 # ╟─925f5a20-4705-11eb-09f5-e1f214c8b483
