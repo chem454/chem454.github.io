@@ -3,7 +3,8 @@ layout: default
 title: Lab 0 - Intro to Julia
 nav_order: 2
 permalink: /lab-0/
-last_modified_date: 2020-12-05
+last_modified_date: 2020-12-25
+has_children: true
 ---
 
 # Lab 0: Introduction to Julia & Pluto
@@ -11,16 +12,20 @@ last_modified_date: 2020-12-05
 
 ----
 
-<details open markdown="block">
-  <summary>
-  Table of Contents
-  </summary>
+## Summary
 
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+**Objective:** Become familiar with Markdown, Julia, and Pluto
+
+**Turn in:** Your lab 1 prelab.
+
+**Student Learning Outcomes**: 
+
+By the end of this lab, students will:
+
+  - Familiarize themselves with Markdown syntax.
+  - Familiarize themselves with Pluto and Julia.
+  - Understand how to access lab notebook templates in Pluto.
 
 ## Introduction
 
-Your lab notebook is the single ***exact, permanent, legally defensible, archival record*** of what you did in lab.  In an academic setting, notebooks are often used by the person who wrote the notebook or a lab colleague when trying to repeat an experiment, process data, or publish results.  In a professional setting, they may be used to communicate work to new employees, defend against patent lawsuits, or support forensic or toxicological conclusions in a court of law.  A good test of your lab notebook is to imagine handing it to a peer who has never completed the lab.  Then, try to determine if there would enough information for them to (1) complete the lab with no other resources, (2) ***exactly*** repeat your data analysis and calculations and arrive at the ***exact*** same answer (including all significant digits), and (3) understand your conclusions and how you arrived at those conclusions.  When in doubt, it's better to include too much than too little!
+You will keep an electronic lab notebook this semester using the programming language Julia and a notebook extension for it called Pluto.  We’ll discuss more of the details about what Julia is and why we’re using it throughout the semester. For now, you just need to be able to get it running, learn the basics, and create a lab notebook template for the GC-TCD lab.  You'll probably find it's most convenient to install Julia on your personal computer (it's free!), although you can also use it on STEM VCAT if you choose not to install it on your computer or have trouble with your computer.  The exercises here will walk you through installation Julia and Pluto and then introduce you to some of their features.
