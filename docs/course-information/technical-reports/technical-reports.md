@@ -28,10 +28,6 @@ Each group will write one technical report that summarizes their findings for th
 
 ---
 
-## Example Report
-
-This report, written by previous students, is an example of a "A" level report: Technical Report Example
-
 ## How to Write a Technical Report
 
 Follow the guidelines below when writing your report.  Your report should be formatted according to the [ACS Style Guide](https://pubs.acs.org/isbn/9780841239999#) (template below).
@@ -61,6 +57,8 @@ Follow the guidelines below when writing your report.  Your report should be for
 ## Examples & Templates
 
 - [Google Doc ACS-style Report Template](https://docs.google.com/document/d/1XhNYeBbJk1YYdBPF9YDNg7n3DBvBJ3z26qHK0V4ae70/view?usp=sharing)
+
+- [Example Report](https://github.com/dr-fischer/chem370/raw/master/assets/pdf/chem370_technical_report_example.pdf): This report, written by previous students, is an example of a "A" level report.
 
 <!-- - [Example technical report 1](https://github.com/alphonse/alphonse.github.io/raw/master/course-information/technical-reportsexamples/example-report-1.pdf)
 - [Example technical report 2](https://github.com/alphonse/alphonse.github.io/raw/master/course-information/technical-reportsexamples/example-report-2.pdf) -->
