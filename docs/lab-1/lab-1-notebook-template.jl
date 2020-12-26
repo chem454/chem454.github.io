@@ -144,7 +144,7 @@ Import the complete dataset with Time in minutes and Signal in millivolts:
 # ╔═╡ 468090fa-414a-11eb-0770-69ac5be501c2
 gc_data = missing
 
-# use CSV.read(filename, DataFrame) to import the CSV file you collected in lab.
+# use CSV.read("filename", DataFrame) to import the CSV file you collected in lab.
 # to do this replace 'missing' with your file name.
 
 # ╔═╡ 3b9eeba0-3f40-11eb-1aa1-ad7a459bec4b
@@ -254,11 +254,11 @@ md"""
 
 $$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2}$$
 
-*In practice they usually are asymmetric, typically with a tailing end.  The [exponentially modified Guassian](https://en.wikipedia.org/wiki/Exponentially_modified_Gaussian_distribution) (EMG) function provides a good approximation for the shape of tailing peaks in a chromatograph and will be used here to fit the chromatographic peaks. [1]  The mathmatical function is:*
+*In practice they usually are asymmetric, typically with a tailing end.  The [exponentially modified Gaussian](https://en.wikipedia.org/wiki/Exponentially_modified_Gaussian_distribution) (EMG) function provides a good approximation for the shape of tailing peaks in a chromatograph and will be used here to fit the chromatographic peaks. [1]  The mathmatical function is:*
 
 $$f_{EMG}(t) = \frac{M_0}{2 \tau} \exp \left( \frac{\sigma_g^2}{2\tau^2} - \frac{t-t_g}{\tau} \right) \times \text{erfc} \left( \frac{1}{\sqrt{2}} \left( \frac{\sigma_g}{\tau} - \frac{t-t_r}{\sigma_g} \right) \right)$$
 
-*I have provided two Julia functions to help with this: (1) `fitPeak`, which fits an EMG function to the peak and determines the parameters and (2) `plotPeak()`, which takes the output of `fitPeak()` and plots it to help you visulize the process.*
+*I have provided two Julia functions to help with this: (1) `fitPeak`, which fits an EMG function to the peak and determines the parameters and (2) `plotPeak()`, which takes the output of `fitPeak()` and plots it to help you visualize the process.*
 
 *The functions are used as:*
 
@@ -273,42 +273,6 @@ $$f_{EMG}(t) = \frac{M_0}{2 \tau} \exp \left( \frac{\sigma_g^2}{2\tau^2} - \frac
 *where `yourFit` is the output of `fitPeak` saved as a Julia object.*
 
 """
-
-# ╔═╡ 33387066-4153-11eb-0cbe-1fd074c9dabe
-# This is the function to fit the peaks ####
-# You can leave this chunk as-is
-
-# p[1] = m0, p[2] = t, p[3] = σ, p[4] = t_g (rt)
-
-function fitPeak(Chrom::DataFrame; tmin = 0.5, tmax = 1, t_r = 1.0, guesses = [0.5, 0.5, 0.05])
-	
-	guesses = vcat(guesses, t_r);
-   	Chrom2 = Chrom[findall(y -> y > tmin, Chrom[!, 1]), :]
-	Chrom2 = Chrom2[findall(y -> y < tmax, Chrom2[!, 1]), :]
-	
-	@. emgFit(x, p) = (p[1]/2*p[2])*exp((p[3]^2 / (2 * p[2]^2)) - ((x-p[4])/p[2])) * erfc((1/sqrt(2))*((p[3]/p[2]) - ((x - p[4])/p[3])));
-	
-	fitted_peak = curve_fit(emgFit, Chrom2[!, 1], Chrom2[!, 2], guesses)
-	
-	s = ((fitted_peak.param[3]^2 + fitted_peak.param[2]^2))^0.5
-	m = fitted_peak.param[4] + fitted_peak.param[2]
-	
-	peak_characters =  DataFrame(tᵣ = m, σ = s, Area = fitted_peak.param[1])
-	
-	fit_data = DataFrame(Time = range(0, stop = 3, length = 1000), Signal = emgFit(range(0, stop = 3, length = 1000), [fitted_peak.param[1], fitted_peak.param[2], fitted_peak.param[3], fitted_peak.param[4]]))
-	
-	return peak_characters, fit_data, Chrom
-end;
-
-# ╔═╡ 7e5b31d6-4154-11eb-1c79-471fd7dfd811
-# This is the function to plot the peaks ####
-# You can leave this chunk as-is
-
-function plotPeak(fitted_peak)
-	plot(fitted_peak[3][!, 1], fitted_peak[3][!, 2], linewidth = 2, label = "Data", legend = :topleft);
-	xlabel!("Time"); ylabel!("Signal");
-	plot!(fitted_peak[2][!, 1], fitted_peak[2][!, 2], fillrange=0, fillalpha=0.25, label = "Fit: tᵣ=$(round(fitted_peak[1][1, 1], sigdigits = 4)), σ = $(round(fitted_peak[1][1, 2], sigdigits = 4)), Area = $(round(fitted_peak[1][1, 3], sigdigits = 4))")
-end;
 
 # ╔═╡ 6ec2b898-4154-11eb-382a-ef0cd8d850fb
 md"""
@@ -415,6 +379,63 @@ md"""
 1. Kevin Lan and James W. Jorgenson (2001). A hybrid of exponential and gaussian  functions as a simple model of asymmetric chromatographic peaks. *Journal of Chromatography A* **915**:1–2, p 1-13. doi: [10.1016/S0021-9673(01)00594-5](https://doi-org.proxy195.nclive.org/10.1016/S0021-9673(01)00594-5)
 """
 
+# ╔═╡ 33387066-4153-11eb-0cbe-1fd074c9dabe
+# This is the function to fit the peaks ####
+# You can leave this chunk as-is
+
+# p[1] = m0, p[2] = t, p[3] = σ, p[4] = t_g (rt)
+
+"""
+fitPeak(Chrom::DataFrame; tmin = 0.5, tmax = 1, t_r = 1.0, guesses = [0.5, 0.5, 0.05])
+
+Fits an exponentially modified Gaussian to a chromatographic peak.
+
+   - **Chrom:** A 2-column data frame with Time column 1 and Signal in column 2
+   - **tmin:** The time at which to begin looking for a peak
+   - **tmax:** The time at which to stop looking for a peak
+   - **t_r:** A guess at the retention time of the peak.
+   - **guesses:** Guesses for the other fit parameters (area, standard deviation, and exponential decay rate, respectively).
+
+"""
+function fitPeak(Chrom::DataFrame; tmin = 0.5, tmax = 1, t_r = 1.0, guesses = [0.5, 0.5, 0.05])
+	
+
+	
+	guesses = vcat(guesses, t_r);
+   	Chrom2 = Chrom[findall(y -> y > tmin, Chrom[!, 1]), :]
+	Chrom2 = Chrom2[findall(y -> y < tmax, Chrom2[!, 1]), :]
+	
+	@. emgFit(x, p) = (p[1]/2*p[2])*exp((p[3]^2 / (2 * p[2]^2)) - ((x-p[4])/p[2])) * erfc((1/sqrt(2))*((p[3]/p[2]) - ((x - p[4])/p[3])));
+	
+	fitted_peak = curve_fit(emgFit, Chrom2[!, 1], Chrom2[!, 2], guesses)
+	
+	s = ((fitted_peak.param[3]^2 + fitted_peak.param[2]^2))^0.5
+	m = fitted_peak.param[4] + fitted_peak.param[2]
+	
+	peak_characters =  DataFrame(tᵣ = m, σ = s, Area = fitted_peak.param[1])
+	
+	fit_data = DataFrame(Time = range(0, stop = 3, length = 1000), Signal = emgFit(range(0, stop = 3, length = 1000), [fitted_peak.param[1], fitted_peak.param[2], fitted_peak.param[3], fitted_peak.param[4]]))
+	
+	return peak_characters, fit_data, Chrom
+end;
+
+# ╔═╡ 1e2b1cba-47ba-11eb-2b13-41f6bd3ce60e
+fitPeak
+
+# ╔═╡ 7e5b31d6-4154-11eb-1c79-471fd7dfd811
+# This is the function to plot the peaks ####
+# You can leave this chunk as-is
+"""
+plotPeak(fitted_peak)
+
+Plots the results of `fitPeak()`.
+"""
+function plotPeak(fitted_peak)
+	plot(fitted_peak[3][!, 1], fitted_peak[3][!, 2], linewidth = 2, label = "Data", legend = :topleft);
+	xlabel!("Time"); ylabel!("Signal");
+	plot!(fitted_peak[2][!, 1], fitted_peak[2][!, 2], fillrange=0, fillalpha=0.25, label = "Fit: tᵣ=$(round(fitted_peak[1][1, 1], sigdigits = 4)), σ = $(round(fitted_peak[1][1, 2], sigdigits = 4)), Area = $(round(fitted_peak[1][1, 3], sigdigits = 4))")
+end;
+
 # ╔═╡ Cell order:
 # ╟─1974d4d2-3f08-11eb-3ecd-9d73ed8fbe9c
 # ╟─3259ead2-3f08-11eb-0c8b-45d108629844
@@ -431,7 +452,7 @@ md"""
 # ╟─a1757e02-3f0d-11eb-0c67-59100f1c0718
 # ╠═681345e2-414c-11eb-1cc0-5bc1a894efbf
 # ╟─ccf3487c-4151-11eb-2297-3f35561be206
-# ╠═cfdf32b2-414c-11eb-03e5-1194bf9ee099
+# ╟─cfdf32b2-414c-11eb-03e5-1194bf9ee099
 # ╠═654339a0-414d-11eb-3a14-896d7c37b560
 # ╟─7e179aa4-414d-11eb-20ea-cd0e92b8bd3c
 # ╠═a9070e84-414d-11eb-10b5-0d46d32f539a
@@ -439,14 +460,13 @@ md"""
 # ╟─4c65408c-414e-11eb-2649-31e02d2ae739
 # ╠═589e0232-414e-11eb-25e5-2d4380542093
 # ╟─0d91f9ea-4153-11eb-0c62-53844d3607e2
-# ╟─33387066-4153-11eb-0cbe-1fd074c9dabe
-# ╟─7e5b31d6-4154-11eb-1c79-471fd7dfd811
 # ╟─6ec2b898-4154-11eb-382a-ef0cd8d850fb
 # ╠═d35d5506-4154-11eb-39b6-45ae9906f818
 # ╠═e55d17c8-4154-11eb-0d95-c94362c0c807
 # ╠═93faf8e6-4154-11eb-12c5-63d0e866d7e5
 # ╠═9c48d19e-4154-11eb-3286-c3fe738beaa4
 # ╠═c6b5ab6e-4154-11eb-381c-19eb4001c080
+# ╠═1e2b1cba-47ba-11eb-2b13-41f6bd3ce60e
 # ╟─00eb381c-4155-11eb-2d47-bd4c36151e50
 # ╠═3c9aedf8-4155-11eb-1d39-f1a020a2adfa
 # ╟─d3077862-4158-11eb-2149-1f7bad75cf25
@@ -457,3 +477,5 @@ md"""
 # ╠═b45102ec-4155-11eb-041e-295b5f20bec6
 # ╟─bc1db886-3f38-11eb-2d42-1bd1196107dc
 # ╟─c7633808-3f38-11eb-213f-49d634169b1d
+# ╟─33387066-4153-11eb-0cbe-1fd074c9dabe
+# ╟─7e5b31d6-4154-11eb-1c79-471fd7dfd811

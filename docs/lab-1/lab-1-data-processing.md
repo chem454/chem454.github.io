@@ -23,78 +23,102 @@ last_modified_date: 2020-12-17
 {:toc}
 </details>
 
-The following video walks you through the data processing portion of this lab.
+## Step-by-Step Video Tutorial
+{: .no_toc  }
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=69790db3-01a1-4dc7-9f63-ac2900f490b5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+This video walks you through the data processing step-by-step.  The goal is to help you get familiar with Julia and Pluto before you try it on your own in the rotation labs!
 
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=993fb4bb-535d-409c-96ce-ac3600df98a1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
+</iframe>
 
-## Step-by-Step Instructions
+## Create a Lab Notebook (Before Lab)
 
-1. Create a new R project for this lab and use it for all your data processing. Make sure your data files are also in this folder. Use the path: `lab-notebooks/Lab 2: GC-TCD`.  (You should have done this in Exercise 1.4.)
-1. Load the CSV files into R/RStudio.  You may also want to plot the data to inspect it.
+1. Complete the steps under the prelab section if you did not already do so.
 
-    ```{R, eval = FALSE}
-    chromatogram <- read.csv('filename.csv');  # replace 'filename' with your filename
+## Import and Inspect Your Data
+
+1. Paste your data file into your lab 1 folder.  If you are using the suggested path this folder is at `/Documents/lab-notebooks/lab-2/`.
+
+1. Load the CSV files into Julia.  
+
+    ```julia
+    gc_data = CSV.read("filename.csv", DataFrame)
+    # make sure you replace "filename" with your file name
+    ```
+1. Plot the chromatogram with Time on the $x$ axis and signal level on the $y$ axis to inspect it.
+
+    ```julia
+    begin
+      plotly() # only need to do this line once in each notebook
+      plot(x, y, grid = false, legend = false)
+      xlabel!("X axis label"); ylabel!("Y axis label");
+      xlims!(min, max); ylims!(min, max);
+    end
     ```
 
-1. Remove the baseline offset (DC offset) from the data.
+## Remove the Baseline Offset
 
-    ```{R, eval = FALSE}
-    ## Define the "baseline" as 4 minutes to end of chromatogram where there are no peaks
-    baseline = mean(chromatogram[481:end, 2]);
+Note that there is a significant *baseline offset* (also called a DC offset) in the data, meaning the baseline level is significantly higher than 0.  In this case, that is a result of how the zero knob was adjusted on the instrument.  We can remove the offset in data processing by subtracting the mean baseline value:
 
-    ## subtract the mean baseline value and store in second column of data set
-    chromatogram[:, 2] <- chromatogram[:, 2] - baseline;  
+$$S_{corrected} = S_{raw} - (\bar{S}_{raw-baseline})$$
+
+We can determine $\bar{S}_{raw-baseline}$ by averaging a portion of the chromatogram where there are no peaks.
+
+1. Determine the baseline signal, $\bar{S}_{raw-baseline}$.
+
+    ```julia
+    S_raw_baseline = mean(gc_data[1:2, "Latest: Potential (mV)"])
+    # replace 1:2 with the range you've selected as the baseline
     ```
 
-1. Plot the chromatogram with Time on the $x$ axis and signal level on the $y$ axis.
+1. Subtract the baseline signal from every other signal value ($S_{raw, i}$).
+
+    ```julia
+    gc_data[!, "S_corrected"] = gc_data[!, "Latest: Potential (mV)"] .- S_raw_baseline
+    ```
+
+1. Plot the corrected chromatogram.  Use the same code as you did above, but use the corrected column instead of the raw column.
+
+## Fit Chromatographic Peaks
+
+Ideally, chromatographic peaks are Guassian in nature and can be fit with a Gaussian function, as in:
+
+$$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2}$$
+
+In practice they usually are asymmetric, typically with a tailing end.  The [exponentially modified Gaussian](https://en.wikipedia.org/wiki/Exponentially_modified_Gaussian_distribution) (EMG) function provides a good approximation for the shape of tailing peaks in a chromatograph and will be used here to fit the chromatographic peaks. [1]  The mathmatical function is:
+
+$$f_{EMG}(t) = \frac{M_0}{2 \tau} \exp \left( \frac{\sigma_g^2}{2\tau^2} - \frac{t-t_g}{\tau} \right) \times \text{erfc} \left( \frac{1}{\sqrt{2}} \left( \frac{\sigma_g}{\tau} - \frac{t-t_r}{\sigma_g} \right) \right)$$
+
+I have provided two Julia functions to help with this: (1) `fitPeak`, which fits an EMG function to the peak and determines the parameters and (2) `plotPeak()`, which takes the output of `fitPeak()` and plots it to help you visualize the process.
+
+1. Fit each peak in the chromatogram using `fitPeak()`.
   
-    ```{R, eval = FALSE}
-    plot(time, signal, xlab = 'Time (min)', ylab = 'Signal (arbitrary)');
+    ```julia
+    yourFit = fitPeak(DataFrame, tmin = start_time, tmax = stop_time, t_r = retention_time_guess);
+    ```
+  
+    You should enter a 2-column data frame as `DataFrame`, a time on the left side of the peak as `tmin`, a time on the right side of the peak as `tmax`, and a best guess at the retention time of the peak as `t_r`.
+
+1. Plot the results.
+
+    ```julia
+    plotPeak(yourFit)
     ```
 
-1. Use the function `peakArea()` to calculate the area of each peak in your chromatograms.
+    where `yourFit` is the output of `fitPeak` saved as a Julia object.
 
-    ```{octave, eval = FALSE}
-    ### You must first run the code shown in the peak area function for this to work!
-    ### Copy and paste it into your notebook and run the cell.
+## Calculate Figures of Merit for Each Peak
 
-    peak1_area = peakArea([chromatogram(:, 1), chromatogram(:, 2)], x1, x2, true);
-    ### substitute the lower limit of integration for x1 and the upper limit for x2 (in minutes)
-    ### if the last argument is true, a plot will be created
+1. Calculate the retention factor, $$k_r = \frac{t_r - t_m}{t_m}$$.
+1. Calculate the resolution for each pair of peaks, $$R_s = \frac{t_{r_2} - t_{r_1}}{0.5(W_{b_2} + W_{b_1})}$$.
 
-    ### Repeat the function as many times as necessary to integrate each peak.  You will need to change the time for each peak.
+## Finish & Turn In Your Notebook
 
-    ### ... and so on
-    ```
+1. Include a discussion of (1) how many constituents are in your sample and (2) the relative polarity of each component.  Compare the retention factors you calculated to the standards to see if you can determine what's in the mixture.
+2. Save your notebook as both a Julia (.jl) file and static HTML (.html) file.
+9. Compress your lab 1 directory (.jl, .html, and .csv files) into ZIP folder and upload it to the Lab 1 assignment on MS Teams.
 
-1. Find the percent composition for each *unknown* peak.  The percent composition for peak $n$ is:
+## References
+{: .no_toc }
 
-    \[
-    C_n(\%)=\frac{A_n}{A_1 + A_2 + ... A_n} \times 100\%
-    \]
-
-    where $A_n$ represents the peak area of peak $n$.  Devise a way program this in Octave.
-
-1. Estimate the signal to noise (S/N) ratio for each peak.  S/N is defined as:
-
-    $$
-    \frac{S}{N} = \frac{2H}{h} = \frac{\text{Peak Height}}{\text{min-to-max baseline noise}}
-    $$
-
-    where $H$ is the peak height at maximum and $h$ is the min-to-max noise in the baseline.  Use the maximum peak height as signal.  The example below shows how to subset the data and find the min and max values.  You will need to calculate $S/N$ from those values according to the formula above.
-
-    ```{R, eval = FALSE}
-    ## find range of baseline, near end where there are no peaks
-    h <- 2 * (max(chromatogram[481:end, 2]) - min(chromatogram[81:end, 2]))
-
-    H1 <- max(chromatogram[chromatogram[:, 1] < x, 2]) # x represents dividing line between the two peaks in minutes.
-    H2 <- max(chromatogram[chromatogram[:, 1] > x, 2]) # x represents dividing line between the two peaks in minutes.
-    ```
-
-    <!-- See Section 5.3/Example 5.4 in your textbook for more information. -->
-
-6. Include a discussion of (1) how many constituents are in your sample, (2) the percent composition for each, and (3) the relative polarity of each component.
-7. Before turning in your notebook, run `rm(list = ls())` to clear your workspace and then run your entire notebook again.  Fix any errors before turning in your notebook.
-8. After completing the assessment questions at the end of the template, knit your notebook to an HTML.
-9. Compress your notebook (Rmd and HTML files) and data file(s) into ZIP folder and upload it to [Dropbox](https://alphonse.github.io/chem370/assignments/submissions.html).
+1. Kevin Lan and James W. Jorgenson (2001). A hybrid of exponential and gaussian  functions as a simple model of asymmetric chromatographic peaks. *Journal of Chromatography A* **915**:1–2, p 1-13. doi: [10.1016/S0021-9673(01)00594-5](https://doi-org.proxy195.nclive.org/10.1016/S0021-9673(01)00594-5)
