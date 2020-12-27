@@ -54,3 +54,9 @@ You should turn a ZIP folder containing:  (1) your complete lab notebook as an .
 1. Plot your chromatogram as *Relative Abundance (%)* vs. *Time (minutes)*.
 1. Plot your mass spectra as *Relative Abundance (%)* vs. *m/z*.
 1. Clearly identify the base peak, the molecular ion, and any important isotope peaks.  Also state how many rings and double bonds your molecule has, and whether it has an odd or even number of nitrogen atoms.  Provide a formula, common name, and molecular weight for each compound.  You must show your calculations for all of these items.  See the [mass spec guide](/chem370/guides/mass-spec) for help with interpretation.  Does your interpretation match the library?
+
+## Save & Turn In Your Work
+
+1. Save your work as a .jl (Julia) file and .html (static HTML).
+1. Compress your entire lab notebook including the .jl, .html, and .csv files into a ZIP file.
+1. Attach the ZIP file to the MS Teams assignment for this lab when turning it in.
