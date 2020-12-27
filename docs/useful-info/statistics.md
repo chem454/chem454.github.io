@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Statistics
-nav_order: 2
+nav_order: 3
 permalink: useful-info/statistics
 has_toc: true
 parent: Useful Information
@@ -10,6 +10,8 @@ last_modified_date: 2020-12-26
 
 
 # Statistical Data Analysis
+{: .no_toc }
+-----
 {: .no_toc }
 
 <details open markdown="block">

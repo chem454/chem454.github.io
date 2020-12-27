@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Useful Information
-nav_order: 10
+nav_order: 9
 permalink: useful-info/
 has_toc: false
 has_children: true
