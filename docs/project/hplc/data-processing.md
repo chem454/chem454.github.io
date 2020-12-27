@@ -43,9 +43,10 @@ You should turn a ZIP folder containing:  (1) your complete lab notebook as an .
 1. Use the HPLC software (or R if you prefer) to integrate the nicotine peak for each sample.
 1. Manually record the integration results in your lab notebook.
 1. Calculate a standard curve using a linear model with a floating intercept.   Use units of ppm for your standard curve.
-1. Calculate the concentration (in ppm) of nicotine in the QCs using your standard curve.
-1. Calculate the concentration (in ppm) of nicotine in the samples using your standard curve.
-1. Perform a *t*-test to determine in if the concentration of nicotine in your samples is *significantly* different than the expected amount.
+1. Calculate the concentration (in mg/L) of nicotine in the QCs using your standard curve.
+1. Calculate the concentration (in mg/L) of nicotine in the samples using your standard curve.
+1. Calculate the original concentration of nicotine in the undiluted product (in the same units specified on the bottle).
+1. Use the confidence intervals or a *t*-test (whichever you prefer) to determine whether the concentrations are *significantly* different. (See [Useful Information > Comparing Means]({{site.url}}/useful-info/statistics#comparing-means) for more information.)
 
 ## Limits of Detection and Quantitation
 

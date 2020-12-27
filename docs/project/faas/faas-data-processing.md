@@ -45,7 +45,7 @@ You should turn a ZIP folder containing:  (1) your complete lab notebook as an .
 ## Determine the Concentration of Your Samples
 
 1. Determine the concentration of your samples and QCs.  Remember to factor in all dilutions.
-1. Use the confidence intervals or a *t*-test (whichever you prefer) to determine whether the metal concentration is *significantly* different before and after vaping. (See Appendix 3, Comparing Means for more information on *t*-tests.)
+1. Use the confidence intervals or a *t*-test (whichever you prefer) to determine whether the metal concentration is *significantly* different before and after vaping. (See [Useful Information > Comparing Means]({{site.url}}/useful-info/statistics#comparing-means) for more information.)
 
 ## Validate Your Results
 
