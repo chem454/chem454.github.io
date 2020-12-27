@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FT-IR
-nav_order: 3
+nav_order: 2
 permalink: /project/ft-ir
 has_toc: true
 parent: Project (e-Cigarettes)
