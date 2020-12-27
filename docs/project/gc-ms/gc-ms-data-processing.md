@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GC-MS - Data Processing
+title: Data Processing
 nav_order: 3
 permalink: /project/gc-ms/data-processing
 has_toc: true

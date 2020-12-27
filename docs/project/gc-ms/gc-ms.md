@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GC-MS
-nav_order: 2
+nav_order: 4
 permalink: /project/gc-ms
 has_toc: true
 parent: Project (e-Cigarettes)

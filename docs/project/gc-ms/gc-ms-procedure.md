@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GC-MS - Procedure
+title: Procedure
 nav_order: 2
 permalink: /project/gc-ms/procedure
 has_toc: true
