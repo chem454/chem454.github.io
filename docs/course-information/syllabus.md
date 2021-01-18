@@ -11,8 +11,8 @@ parent: Course Information
 {: .no_toc  }
 
 **Instructor:** Al Fischer, PhD   
-**Office Hours:** By appointment at [calendly.com/drfischer](http://www.calendly.com/drfischer) (Meet on Zoom)  
-**Availability:** See my [calendar]({{site.baseurl}}/contact)  
+**Office Hours:** By appointment on [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/) (Meet on Teams)  
+**Availability:** Email, chat, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.
 **Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
 
 <a href="https://github.com/alphonse/alphonse.github.io/raw/master/chem370/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
