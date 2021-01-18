@@ -13,6 +13,8 @@ Lab assignments are due at 23:59:59 on the Wednesday before lab unless otherwise
 
 *This schedule is subject to change as needed.*
 
+***UPDATE: Weeks 1-3 will be completed remotely.***
+
 | Week | Week Beginning | Lab Activity                        | Due                                        |
 | ---- | -------------- | ----------------------------------- | ------------------------------------------ |
 | 1    | 1/25           | Safety Lecture, Intro to R/Markdown | Lab 0                                      |
