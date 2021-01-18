@@ -58,7 +58,9 @@ Follow the guidelines below when writing your report.  Your report should be for
 
 ## Examples & Templates
 
-- [Google Doc ACS-style Report Template](https://docs.google.com/document/d/1XhNYeBbJk1YYdBPF9YDNg7n3DBvBJ3z26qHK0V4ae70/view?usp=sharing)
+- [Microsoft Word Template on Teams](https://teams.microsoft.com/l/file/820575D8-404A-4C3F-9E86-F0E8BBDEC885?tenantId=c5b35b5a-16d5-4414-8ee1-7bde70543f1b&fileType=docx&objectUrl=https%3A%2F%2Fcatamountwcu.sharepoint.com%2Fsites%2FInstrumentalAnalysisILabSpring2020%2FShared%20Documents%2FGeneral%2FCHEM%20370%20Technical%20Report%20Template.docx&baseUrl=https%3A%2F%2Fcatamountwcu.sharepoint.com%2Fsites%2FInstrumentalAnalysisILabSpring2020&serviceName=teams&threadId=19:7b3cfac5b6164c34a2e6b2c9ce16f39e@thread.tacv2&groupId=dae986bf-2bdd-4b6d-ba80-95bab2b94a3e)
+
+<!-- - [Google Doc ACS-style Report Template](https://docs.google.com/document/d/1XhNYeBbJk1YYdBPF9YDNg7n3DBvBJ3z26qHK0V4ae70/view?usp=sharing) -->
 
 - [Example Report](https://github.com/dr-fischer/chem370/raw/master/assets/pdf/chem370_technical_report_example.pdf): This report, written by previous students, is an example of a "A" level report.
 
