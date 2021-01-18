@@ -15,7 +15,7 @@ You will keep an electronic lab notebook this semester using the programming lan
 
 **Objective:** Become familiar with Markdown, Julia, and Pluto
 
-**Turn in:** Your completed Pluto notebook with no errors (submit a .jl and a .html file).
+**Turn in:** Your 2 completed Pluto notebooks with no errors (submit 2 .jl files and 2 .html files).
 
 **Student Learning Outcomes**: 
 
