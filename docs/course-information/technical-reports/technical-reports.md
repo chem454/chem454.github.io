@@ -30,6 +30,8 @@ Each group will write one technical report that summarizes their findings for th
 
 ## How to Write a Technical Report
 
+Students often struggle to see the difference between lab notebooks and technical reports.  The lab notebook is an *exact* record of what you did in lab and should include everything you do; the technical report is the polished story summarizing your study and should be curated accordingly (curated for clarity, not to sweep findings under the rug!).
+
 Follow the guidelines below when writing your report.  Your report should be formatted according to the [ACS Style Guide](https://pubs.acs.org/isbn/9780841239999#) (template below).
 
 - Dr. Fischer's [Writing Tips]({{site.url}}/course-information/technical-reports/writing-guide) (based on common mistakes)
