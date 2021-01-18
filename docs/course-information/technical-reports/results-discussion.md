@@ -18,10 +18,10 @@ summarizing the results, discussing whether results are expected or unexpected, 
 
 You *must* present results supporting every conclusion you draw; likewise, you must use sound logic when interpreting the results to draw conclusions.  Similarly you *must not* withhold results that don't support your hypothesis or conclusions; all results must be reconciled, whether they agree or not.
 
-Style tips (see the [writing guide]({{site.url}}/course-information/technical-reports/writing-guide) for more info):
-	- Write in paste tense.
-	- Be specific.
-	- Avoid faulty and incomplete comparisons.
+Style tips (see the [writing guide]({{site.url}}/course-information/technical-reports/writing-guide) for more info):  
+	- Write in paste tense.  
+	- Be specific.  
+	- Avoid faulty and incomplete comparisons.  
 
 Please see [1] for more information.
 
