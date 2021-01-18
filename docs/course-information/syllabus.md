@@ -12,11 +12,11 @@ parent: Course Information
 
 **Instructor:** Al Fischer, PhD   
 **Office Hours:** By appointment on [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/) (Meet on Teams)   
-**Asking Questions:** Ask general questions on [Piazza](https://piazza.com)
-**Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu) 
+**Asking Questions:** Ask general questions on [Piazza](https://piazza.com)  
+**Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
 **Availability:** Email, chat, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.  
 
-<a href="https://github.com/alphonse/alphonse.github.io/raw/master/chem370/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
+<a href="https://github.com/chem370/chem370.github.io/raw/master/assets/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
 {: .no_toc  }
 
 ----
@@ -58,7 +58,7 @@ To achieve a satisfactory grade, students will:
 
 **Alternative Book:** Harvey, D. *Analytical Chemistry 2.1* Chem Libre Texts ([Free online!](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_(Harvey)))
 
-**Lab Manual:** All lab activities are posted [online]({{site.baseurl}})*
+**Lab Manual:** All lab activities are posted [online]({{site.baseurl}})
 
 **Technology:** Students will need a laptop computer meeting Chemistry and Physics' [minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx).   Students will be required to use [Julia](https://julialang.org/) + [Pluto](https://github.com/fonsp/Pluto.jl) and may wish to install these on their computer; both are freely available for for all operating systems.  Alternatively, student may use Julia + Pluto via WCU's STEM VCAT.  A web browser and internet connection capable of streaming video will be necessary for submitting homework assignments and accessing course materials.
 
