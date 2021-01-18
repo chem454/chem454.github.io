@@ -37,7 +37,8 @@ For this assignment, you should turn in a methods section to your final paper th
 
 **Example figure formatting:**
 
-![*Figure 1:* A block diagram of the HPLC used for this study.  (1) Solvent reservoirs, (2) Solvent degasser, (3) Gradient valve, (4) Mixing vessel for delivery of the mobile phase, (5) High-pressure pump, (6) Switching valve in "inject position", (6') Switching valve in "load position", (7) Sample injection loop, (8) Pre-column (guard column), (9) Analytical column, (10) Detector (i.e., IR, UV), (11) Data acquisition, (12) Waste or fraction collector.  By [WYassineMrabetTal CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=5722928)]({{site.baseurl}}/chem370/assets/img/hplc-apparatus.png).  
+![*Figure 1:* A block diagram of the HPLC used for this study.  (1) Solvent reservoirs, (2) Solvent degasser, (3) Gradient valve, (4) Mixing vessel for delivery of the mobile phase, (5) High-pressure pump, (6) Switching valve in "inject position", (6') Switching valve in "load position", (7) Sample injection loop, (8) Pre-column (guard column), (9) Analytical column, (10) Detector (i.e., IR, UV), (11) Data acquisition, (12) Waste or fraction collector.  By [WYassineMrabetTal CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=5722928)](https://upload.wikimedia.org/wikipedia/commons/a/a0/HPLC_apparatus.svg).  
+
 *Figure 1:* A block diagram of the HPLC used for this study. (1) Solvent reservoirs, (2) Solvent degasser, (3) Gradient valve, (4) Mixing vessel for delivery of the mobile phase, (5) High-pressure pump, (6) Switching valve in "inject position", (6') Switching valve in "load position", (7) Sample injection loop, (8) Pre-column (guard column), (9) Analytical column, (10) UV Detector, (11) Data acquisition, (12) Waste or fraction collector.  By [WYassineMrabetTal CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=5722928)
 
 
