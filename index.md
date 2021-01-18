@@ -41,8 +41,11 @@ has_children: true
 
 I put a lot of trust in you to complete your work, do it well, and ask questions when you don't understand something.  Many assignments will be "graded" automatically -- you will get feedback on screen as you complete them.  You may not get a formal grade for these, but neglecting them will certainly have a detrimental effect on your grade later in the semester!  Below are lists of the items that will be assessed for a grade.  
 
+(*Assignment lists may change as needed or if class is moved to an online modality.*)
+
 ### Individual
 
+- Lab 0 Tutorials (Exercises 0A & 0B)
 - 4 lab notebooks (1 for each intro labs and 2 for the project lab)
 - 4 instrument quizzes
 - 1 peer review assignment
