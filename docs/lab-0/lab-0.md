@@ -66,7 +66,7 @@ Use the video below to install Julia and Pluto on your personal computer.
 
 1. Pluto should open in your default web browser (it requires Firefox, Chrome, or another Chromium-based browser to run properly).
 
-      <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default copy and past the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
+      <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default, copy and paste the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
 
      ![A screenshot showing the Pluto welcome page in the Firefox web browser]({{site.url}}/assets/images/lab-0/pluto-window.png)
 
