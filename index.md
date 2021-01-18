@@ -35,7 +35,7 @@ has_children: true
 
 - Course materials will be posted on this site.
 - Homework will be submitted through Microsoft Teams.
-- Questions should be asked through Piazza.
+- General questions should be asked through Piazza.
 
 ## Assignments
 
