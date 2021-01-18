@@ -17,7 +17,7 @@ Your references should be cited in a separate "References" section at the end of
 
 **Example of citing a Journal Article:**
 
-> Photoacoustic spectroscopy is a sensitive technique for measuring light absorption by atmospheric aerosols. (1)
+Photoacoustic spectroscopy is a sensitive technique for measuring light absorption by atmospheric aerosols. (1)
 
 # References
 
