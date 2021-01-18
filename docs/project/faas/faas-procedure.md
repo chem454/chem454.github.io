@@ -27,7 +27,7 @@ last_modified_date: 2020-12-26
 ## Standard Preparation
 
 1. Prepare blanks from a mix of 90% ultrapure water/5% propylene glycol/5% glycerin (solution provided for you).
-1. Prepare 5 zinc standards spanning the range of 1--10 ppm using the stock solution provided.  Dilute with 90% ultrapure water/5% propylene glycol/5% glycerin (solution provided for you) using volumetric glassware.
+1. Prepare 5 zinc standards spanning the range of 0.1--1 ppm using the stock solution provided.  Dilute with 90% ultrapure water/5% propylene glycol/5% glycerin (solution provided for you) using volumetric glassware.
 1. Prepare a QC from a different stock solution.  The concentration should fall somewhere near the middle of your standard curve.
 1. Place your standards in 50 mL plastic centrifuge tubes for analysis.
 
