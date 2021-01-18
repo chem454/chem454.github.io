@@ -12,8 +12,9 @@ parent: Course Information
 
 **Instructor:** Al Fischer, PhD   
 **Office Hours:** By appointment on [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/) (Meet on Teams)   
-**Availability:** Email, chat, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.  
-**Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
+**Asking Questions:** Ask general questions on [Piazza](https://piazza.com)
+**Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu) 
+**Availability:** Email, chat, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.  
 
 <a href="https://github.com/alphonse/alphonse.github.io/raw/master/chem370/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
 {: .no_toc  }
@@ -55,11 +56,13 @@ To achieve a satisfactory grade, students will:
 
 **Text Book:**  Granger, R. M., Yochum, H. M., Granger, J. N., & Sienerth, K. D. (2017). *Instrumental Analysis*. Oxford University Press. (WCU rental book available at bookstore)
 
-**Lab Manual:** Fischer, D.A. (2020) *[Chem 370 Lab Manual]({{site.baseurl}}/chem370/lab-manual)* (free online)
+**Alternative Book:** Harvey, D. *Analytical Chemistry 2.1* Chem Libre Texts ([Free online!](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_(Harvey)))
 
-**Technology:** Students will need a laptop computer meeting Chemistry and Physics' [minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx).   Students will be required to install [R](https://cran.r-project.org/) + [RStudio](https://rstudio.com/) on their computer, both of which are freely available for non-commercial use.  Alternatively, student may use R + RStudio via VCAT, although this may add complexity to assignments.  A web browser and internet connection capable of streaming video will be necessary for submitting homework assignments and accessing course materials.
+**Lab Manual:** All lab activities are posted [online]({{site.baseurl}})*
 
-The program OpenChrom allows you to process chromatographic and mass spectrometric data on your personal computer.
+**Technology:** Students will need a laptop computer meeting Chemistry and Physics' [minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx).   Students will be required to use [Julia](https://julialang.org/) + [Pluto](https://github.com/fonsp/Pluto.jl) and may wish to install these on their computer; both are freely available for for all operating systems.  Alternatively, student may use Julia + Pluto via WCU's STEM VCAT.  A web browser and internet connection capable of streaming video will be necessary for submitting homework assignments and accessing course materials.
+
+The program [OpenChrom](https://lablicate.com/platform/openchrom) allows you to process chromatographic and mass spectrometric data on your personal computer.  This is not required but can speed up your data processing.
 
 **Additional Required Course Materials:**  
 
@@ -70,11 +73,11 @@ The program OpenChrom allows you to process chromatographic and mass spectrometr
   - A laptop computer meeting Chemistry and Physics' [minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx).
   - A lab-use only face mask to prevent spread of coronavirus.
 
-Most materials are available from the WCU bookstore; goggles are also available from the WCU Chemistry Club (recommended).  A lab coat is optional.
+Most materials are available from the WCU bookstore; goggles are also available from the WCU Chemistry Club (these goggles are recommended over cheaper ones).  A lab coat is optional.
 
 ## Lab Notebooks and Data Analysis 
 
-Lab notebooks will be completed electronically either using R and RStudio.  Students will be required to submit their data files along with their lab notebooks so that they can be checked for accuracy.  A lab notebook that does not compile will not be graded.
+Lab notebooks will be completed electronically either Julia and Pluto or similar data processing notebook environment.  Students will be required to submit their data files along with their lab notebooks so that they can be checked for accuracy.  A lab notebook that does not compile will not be graded.
 
 <!-- Lab notebooks will be completed electronically in Lab Archives and data analysis will be done in Microsoft Excel.  Alternatively, students may choose to learn a programming language (Python) and complete their lab notebooks in Jupyter for extra credit.  If a student chooses programming, a total of 100 points extra credit will be added to SLO 2, above.  Students must complete *all* lab work in Jupyter for extra credit -- no partial extra credit will be awarded.  However, students will have a 2-week grace period to choose. -->
 
@@ -186,9 +189,11 @@ The mask/face covering requirement for students is an expectation of our student
 
 ***Laboratory Behavior:*** Never bring food or drink into the laboratory.  This includes sealed bottles and items inside backpacks – leave them outside the lab!  Do not chew gum, use tobacco products, or apply cosmetics in the lab.  Do not place personal items inside fume hoods or where they may come into contact with chemicals.  Keep walkways clear of chairs, bookbags, etc.  Wash your hands before leaving lab, and never wear gloves or lab coats outside the lab!
 
-The sparing use of cell phones during lab sessions is permitted but discouraged. If you must, please use your cell phone outside the laboratory, and never leave an experiment unattended to do so!
+The sparing use of cell phones during lab sessions is permitted but discouraged. If you must, please use your cell phone outside the laboratory, and never leave an experiment unattended to do so!  Likewise, do not place your cellphone in a fume hood or on a chemical bench!
 
-In an effort to maintain a productive work environment for all students, please refrain from playing music, videos, etc., in the classroom.
+In an effort to maintain a productive work environment for all students, please refrain from playing music, videos, etc., in the classroom/laboratory.
+
+***After-hours Instrument Access:*** You may occasionally want to conduct analyses outside of class time.  The instrument lab is open from 9AM to 5PM M-F; please plan your work to fit within that time (it's OK to start a run at the end of the day and leave it to run overnight).  If you are completing work outside of class you must work with a lab partner who is also familiar with the instrument you're working on.  Likewise, please refrain from bringing guests into the instrument lab unless they have specifically passed the instrument safety training.  If you will require significant help on the instrument please schedule a time to meet with your isntructor in advance.
 
 ***Pregnancy:*** Certain chemicals can have severe harmful effects on unborn children.  Any student who is pregnant or might have become pregnant and wished to avoid these hazards should notify her TA or instructor before conducting any laboratory work so that proper safety precautions can be taken.
 
@@ -244,4 +249,5 @@ Undergraduate and Graduate Academic Integrity Process: Additional information is
 **Final Exam:** The University final exam schedule can be found on the [Registrar's webpage](http://www.wcu.edu/learn/academic-services/registrars-office/).  Note there is no final exam for the lab portion of Chem 370 (but there may be for the lecture portion).
 
 ## Syllabus Updates 
+
 This syllabus and the course schedule are subject to revision as needed. Students will be notified of changes and are responsible for adhering to the modifications.
