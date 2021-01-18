@@ -39,9 +39,13 @@ You'll probably find it's most convenient to install Julia and Pluto on your per
 
 Use the video below to install Julia and Pluto on your personal computer.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OOjKEgbt8AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[ Installing Julia Video ]
 
-## Launch Julia
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OOjKEgbt8AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+## Launch Julia & Pluto
+
+[ Launching Julia & Pluto Video ]
 
 1. The way you launch Julia will depend on your operating system.  You will see a window like the image below, which is called the REPL (read-evaluate-print loop).
 
@@ -53,8 +57,6 @@ Use the video below to install Julia and Pluto on your personal computer.
    - **Ubuntu Linux:** Open the terminal and type `julia`.
 
    ![A screenshot showing the Julia REPL window]({{site.url}}/assets/images/lab-0/julia-repl.png)
-
-## Launch Pluto
    
 1. Open Pluto by typing the following commands into the Julia prompt and then hitting the Enter key.
 
@@ -70,6 +72,7 @@ Use the video below to install Julia and Pluto on your personal computer.
      ![A screenshot showing the Pluto welcome page in the Firefox web browser]({{site.url}}/assets/images/lab-0/pluto-window.png)
 
 ## Homework
+
 There are two exercises you need to complete, 0A and 0B.
 
 1. For each exercise, copy the link below by using **Right Click > Copy Link [Address/Location]**.
