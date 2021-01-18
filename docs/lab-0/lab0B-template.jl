@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.12.17
 
 using Markdown
 using InteractiveUtils
@@ -13,6 +13,11 @@ catch e
 	using Pkg; Pkg.add("Plots");
 	using Pkg; Pkg.add("DataFrames");
 end
+
+# ╔═╡ b391ce36-472c-11eb-0695-0b3db45fb0f0
+md"""
+Link to download template: 
+"""
 
 # ╔═╡ cf00b6e2-46fe-11eb-13e4-29d71149129e
 md"""
@@ -45,9 +50,9 @@ student = "Paws Catamount"
 md"""
 # Introduction
 
-In this tutorial you’ll continue to explore the Pluto notebook interface and try out basic Julia functions used for calulations in your notebook. These tools will be necessary to complete Lab 1.
+In this tutorial you’ll continue to explore the Pluto notebook interface and try out basic Julia functions for doing calulations in your notebook. These tools will be necessary to complete Lab 1.
 
-Put very simply, you will use Julia cells to write code in the form of text commands that Julia will interpret and run. Once finished, Julia gives you the output (answers) you’ve asked for. For example, to compute the sum of two and five you could type:
+Put very simply, you will use Julia cells to write code in the form of text commands that Julia will run. Once finished, Julia gives you the output (answers) you’ve asked for. For example, to compute the sum of two and five you could type:
 """
 
 
@@ -78,7 +83,7 @@ power | ^
 """
 
 # ╔═╡ 866092ee-4704-11eb-2a45-1783d0c0ff31
-md"""**Try it out: Write code to add 2 and 3 together in the empty cell (area with the tan-colored background) below.**"""
+md"""**Try it out: Write code to add 2 and 3 together in the empty cell (with the coloured background) below.**"""
 
 # ╔═╡ 411c0970-4704-11eb-245a-51b9f29ae0e3
 html"""<p>To edit any code, just click on it. When you're done programming, press the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/caret-forward-circle-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> in the lower-right corner of a cell to run the code. You can also use `Shift+Enter` if you are in a hurry.</p>"""
@@ -148,7 +153,7 @@ slices = 8
 md"""
 ## Pizza Slices
 
-Let's try this out on a problem (taken from the Basic Mathmatics example notebook).  Let's say you want to order pizzas for $people people (**people = $people**) and each person wants $avg slices on average (**avg = $avg**).  A pizza has $slices slices per pizza (**slices = $slices**).  How many pizzas should you order (**pizzas = ?**)?  Here's a summary of all that:
+Let's try this out on a problem.  Let's say you want to order pizzas for $people people (**people = $people**) and each person wants $avg slices on average (**avg = $avg**).  A pizza has $slices slices per pizza (**slices = $slices**).  How many pizzas should you order (**pizzas = ?**)?  Here's a summary of all that:
 
 Meaning | Variable
 :------ | :--------:
@@ -301,11 +306,6 @@ You will use all of this information many times over the course of the semester,
 
 """
 
-# ╔═╡ 52d1b3e4-592a-11eb-122f-bd950b7f12b9
-md"""
-# Turn in Your Work
-"""
-
 # ╔═╡ e8b60f0c-4731-11eb-01ee-cf31edc0a70b
 html"""
 Before you leave, save your notebook as a .jl file AND a .html file, and turn both in on MS Teams:
@@ -331,14 +331,10 @@ end
 
 # ╔═╡ 7a4521fc-4741-11eb-18b3-d34c22aa0a3e
 md"""
-# Exit
-
 When you're ready to exit Julia you can:  
 1. Close the browser tab.  
 2. Press CTRL + C in the Julia REPL.  
 3. Type `exit()` in the Julia REPL.
-
-
 """
 
 # ╔═╡ 9cd675ec-4705-11eb-2859-cfc382e9b2b1
@@ -414,6 +410,7 @@ end
 end
 
 # ╔═╡ Cell order:
+# ╟─b391ce36-472c-11eb-0695-0b3db45fb0f0
 # ╟─cf00b6e2-46fe-11eb-13e4-29d71149129e
 # ╟─4dcc73fc-470a-11eb-23f6-5542c5a42a8d
 # ╟─0ae8ab60-4718-11eb-1a3c-23b0f0c3164a
@@ -471,7 +468,6 @@ end
 # ╠═f56b0a9e-4730-11eb-24d9-476cdc76638c
 # ╟─0740e0ae-4731-11eb-1831-8d9b61c72b5b
 # ╟─0f7c906e-470a-11eb-33fd-cf95fffc270a
-# ╟─52d1b3e4-592a-11eb-122f-bd950b7f12b9
 # ╟─e8b60f0c-4731-11eb-01ee-cf31edc0a70b
 # ╟─f83e6a92-4729-11eb-18a1-bd4c78a5b6a4
 # ╟─7a4521fc-4741-11eb-18b3-d34c22aa0a3e
