@@ -65,7 +65,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Contact Your Instructor":
+  "Ask a Question on Piazza":
     - "https://piazza.com/wcu/spring2021/chem370/home"
 
 # Makes Aux links open in a new tab. Default is false
