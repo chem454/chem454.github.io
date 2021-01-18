@@ -34,9 +34,14 @@ has_children: true
 ## Logistics
 
 - Course materials will be posted on this site.
-- Homework will be submitted through Microsoft Teams.
-- General questions should be asked through Piazza.
-- Office hours will be held remotely in MS Teams.  Schedule a meeting via [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/).
+- Homework will be submitted through Microsoft Teams.  
+  [ [Video: How to use Microsoft Teams](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8dbc528e-25c9-4a24-8d13-acb40149daef) ]
+  
+- General questions should be asked through Piazza.  
+  [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3c3ab88f-aec9-4572-a4e3-acb40149d5a0) ]
+  
+- Office hours will be held remotely in MS Teams.  Schedule a meeting via [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/).  
+  [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea55876d-0a93-4deb-ae4f-acb40149d18e) ]
 
 ## Assignments
 

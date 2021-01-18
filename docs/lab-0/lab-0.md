@@ -39,13 +39,12 @@ You'll probably find it's most convenient to install Julia and Pluto on your per
 
 Use the video below to install Julia and Pluto on your personal computer.
 
-[ Installing Julia Video ]
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8fe1c28d-3bc7-49ee-a2da-acb40149ccea&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
+</iframe>
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OOjKEgbt8AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 ## Launch Julia & Pluto
-
-[ Launching Julia & Pluto Video ]
 
 1. The way you launch Julia will depend on your operating system.  You will see a window like the image below, which is called the REPL (read-evaluate-print loop).
 
