@@ -15,7 +15,6 @@ layout: true
 .footer[
 - <div class="tooltip"><a href="/"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
 - <div class="tooltip"><a href="/slides"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
-- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
 - <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
 ]
 
@@ -28,10 +27,10 @@ layout: true
   Keeping a Lab Notebook for Reproducible Research
 </h1>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/RStudio_logo_flat.svg" style = "height: 100px; margin-left: auto; margin-right: auto; display: block;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" style = "height: 100px; margin-left: auto; margin-right: auto; display: block;">
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" style = "height: 100px; margin-left: auto; margin-right: auto; display: block;">
+<img src="https://raw.githubusercontent.com/fonsp/Pluto.jl/master/frontend/img/logo.svg" style = "height: 100px; margin-left: auto; margin-right: auto; display: block;">
 
 **Dr. Al Fischer**   |  Western Carolina University
 
@@ -45,7 +44,7 @@ layout: true
 
 - See [my lab notebook guidelines](https://alphonse.github.io/chem370/lab-manual/appendix-3-lab-notebook-guidelines.html) for specific requirements and examples.
 
-- Templates are available directly in RStudio through the `instRumental` package.
+- Templates are available on the course website and may be loaded directly into Julia via the links provided.
 
 - Follow the *specific* instructions in each template for the assessment.
 
@@ -54,17 +53,16 @@ layout: true
 
 # lab notebooks | **organizing files**
 
-- Organize your labs using R projects.
-- Use the following directory structure to organize your labs (mostly automatic in R projects) 
+- Organize your labs!
+- Use the following directory structure to organize your labs: 
 
 ```
-    > lab-notebooks/[lab N: lab-name]
-        |------> /[lab N: lab name] (this folder contains your notebook)
-        |      |------> /lab N: lab-name.Rmd (this is your lab notebook file)
+    > lab-notebooks/[labN_lab-name]
+        |------> /labN_lab-name.jl (this is your lab notebook file)
         |------> /datafile.csv (this is your data file - there may be several)
 ```
           
-<img src="/assets/images/lab-0-notebooks/notebooks-files.png" style = "height: 200px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-0/notebooks-files.png">
 
 ---
 class: center
@@ -82,7 +80,7 @@ class: center
 
 Lab notebooks are graded for thoroughness and overall quality according to the [rubrics](https://alphonse.github.io/chem370/lab-manual/gctcd-rubric.html) at the end of each lab.
 
-<img src="/assets/images/lab-0-notebooks/notebooks-rubric.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-0/notebooks-rubric.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -93,19 +91,25 @@ Lab notebooks are graded for accuracy using the [assessments](https://alphonse.g
 
 *You must turn in your data and answer* ***exactly*** *as specified!*
 
-<img src="/assets/images/lab-0-notebooks/notebooks-assessment.png" style = "height: 300px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-0/notebooks-assessment.png" style = "height: 300px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 
 # lab notebooks | **turning in work**
 
-- Work will be turned in [electronically](https://alphonse.github.io/chem370/submissions.html).
+- Work will be turned in electronically on MS Teams
+- Upload your .jl and .html files as attachments to each assignment
+
+<img src="/assets/images/lab-0/notebooks-turn-in.png" style = "height: 225px; margin-left: auto; margin-right: auto; display: block;">
+
+<!-- - Work will be turned in [electronically](https://alphonse.github.io/chem370/submissions.html).
 - Turn in a ZIP file containing all requested items. 
     - Place all items in the same folder (e.g. the [lab name] folder), right click, choose “Compress”
 
-<img src="/assets/images/lab-0-notebooks/notebooks-compress.png" style = "height: 225px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-0/notebooks-compress.png" style = "height: 225px; margin-left: auto; margin-right: auto; display: block;"> -->
 
 ---
+exclude: true
 
 # lab notebooks | **turning in work**
 
