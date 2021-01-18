@@ -31,12 +31,12 @@ Throughout this course, you should use statistical measures when analyzing your 
 - Record and report the correct number of significant digits.
 - Track uncertainties and propagate them in calculations.
 - Identify and report sources of error.
-- Analyze samples in triplicate and report the mean and standard deviation of your measurements.
-- Perform *t*-tests to compare means when necessary.
+- Analyze samples in triplicate and report the mean, standard deviation, and 95% confidence interval of your measurements.
+- Use confidence intervals to test if means are *significantly* different where necessary.
 - Perform Grubbs' tests to detect outliers when necessary.
 - Determine and report the limit of detection and/or limit of quantitation for each technique when conducting quantitative work.
 
-Please read Chapter 22 in your textbook for a refresher on statistical data analysis.
+Please read Chapter 22 in the Granger textbook (Hardcopy) or Chapter 4 in the Harvey book ([online](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_(Harvey)/04%3A_Evaluating_Analytical_Data)) for a refresher on statistical data analysis.
 
 ## Types of Error  
 
@@ -122,8 +122,20 @@ $$
 
 ## Comparing Means  
 
-If you are comparing two means or comparing a mean to an expected value (e.g. comparing the concentration of a compound to the concentration listed on the manufacturer's label), you should use the 95% confidence interval to draw conclusions about *significance*.  If the confidence intervals overlap, there is no *significant* difference; if they do not overlap the difference is *significant*.
+If you are comparing two means or comparing a mean to an expected value or (e.g. comparing the concentration of a compound to the concentration listed on the manufacturer's label) or to each other (e.g. comparing a post-vape to pre-vape sample), you should use the 95% confidence interval to draw conclusions about *significance*.  If the confidence intervals overlap, there is no *significant* difference; if they do not overlap the difference is *significant*.
+
+Recall that the confidence interval (CI) is calculated as:
+
+$$
+\text{CI} = \frac{t s}{\sqrt{n}}
+$$
+
+where $t$ is obtained from a *t*-table, $s$ is the sample standard deviation, and $n$ is the sample number.  Thus, the mean is reported as:
+
+$$
+\mu = \bar{x} \pm \frac{t s}{\sqrt{n}}
+$$
 
 ## Outlier Detection  
 
-You should never throw away data unless you have a good reason to do.  Generally, this means that you've identified the data point as an outlier using a Grubbs' test.  See section 22.4 in your textbook for more information.
+You should never throw away data unless you have a good reason to do so.  Generally, this means that you've identified the data point as an outlier using a Grubbs' test.  See section 22.4 in your textbook for more information.
