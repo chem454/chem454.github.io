@@ -36,6 +36,7 @@ has_children: true
 - Course materials will be posted on this site.
 - Homework will be submitted through Microsoft Teams.
 - General questions should be asked through Piazza.
+- Office hours will be held remotely in MS Teams.  Schedule a meeting via [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/).
 
 ## Assignments
 
