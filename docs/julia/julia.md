@@ -22,8 +22,26 @@ has_children: true
 {:toc}
 </details>
 
-## Getting Started
+## Installing/Opening Julia & Pluto
+
+- View the video on Installing and Opening Julia in [Lab 0]({{site.url}}/lab-0/#install-julia-and-pluto).
 
 ## Creating a New Lab Notebook
 
-## Loading Data
+## Loading CSV Files
+
+- View the video tutorial for this example
+- [View this example as a web page]({{site.url}}/docs/julia/anscombe_CSV.html)
+- Download the Pluto Notebook for this Example: [https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_CSV.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_CSV.jl)
+
+## Working with Data Frames
+
+- View the video tutorial for this example
+- [View this example as a web page]({{site.url}}/docs/julia/anscombe_dataframe.html)
+- Download the Pluto Notebook for this Example: [https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_dataframe.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_dataframe.jl)
+
+## Plotting Data
+
+- View the video tutorial for this example
+- [View this example as a web page]({{site.url}}/docs/julia/anscombe_plot.html)
+- Download the Pluto Notebook for this Example:[https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl)
