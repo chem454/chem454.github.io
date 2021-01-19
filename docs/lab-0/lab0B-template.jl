@@ -44,6 +44,7 @@ student = "Paws Catamount"
 # or use Shift+Enter
 
 # you might need to wait until all other cells in this notebook have completed running. 
+
 # scroll down the page to see what's up
 
 # ╔═╡ 2341507a-46ff-11eb-1b20-1df79073c814
@@ -64,6 +65,9 @@ md"""
 Notice the output is shown *above* the code cell.
 
 You'll use Julia in your lab notebook this semester to complete all your data processing *reproducibly* and prepare plots *reproducibly* for your technical report.
+
+*Much of this exercise is adapted from the Basic Mathmatics notebook in the Pluto example notebooks.*
+
 """
 
 # ╔═╡ aecf5432-4703-11eb-2c9a-cbad7d393b3b
@@ -153,8 +157,6 @@ slices = 8
 md"""
 ## Pizza Slices
 
-*The following is from the Basic Mathmatics notebook in the Pluto example notebooks.*
-
 Let's try this out on a problem.  Let's say you want to order pizzas for $people people (**people = $people**) and each person wants $avg slices on average (**avg = $avg**).  A pizza has $slices slices per pizza (**slices = $slices**).  How many pizzas should you order (**pizzas = ?**)?  Here's a summary of all that:
 
 Meaning | Variable
@@ -175,7 +177,7 @@ md"""## Functions
 
 When you write Julia code, you use Julia *functions* that are built into the language. The function tells Julia what to do, and Julia won’t do anything without one. Actually, you've used several already, such as `ceil(...)` in the last problem!  
 
-Typically, functions are represented as `function_name(function_arguments)`. The arguments are options you specify that tell the function what to work on and/or how work. This is similar to the concept of an algebraic function, e.g. $f(x)=2x$. Here, $f$ is the function name and $x$ is the argument. When we write $f(4)$, we’re saying we wish to substitute $4$ for $x$, as in $f(4)=2×4=8$. The same is true of functions in Julia. We might create a function `timesTwo(x)` that multiplies any x by 2, such that `timesTwo(4)` yields the result 8.
+Typically, functions are represented as `function_name(function_arguments)`. The *arguments* are options you specify that tell the function what to work on and/or how work. This is similar to the concept of an algebraic function, e.g. $f(x)=2x$. Here, $f$ is the function name and $x$ is the argument. When we write $f(4)$, we’re saying we wish to substitute $4$ for $x$, as in $f(4)=2×4=8$. The same is true of functions in Julia. Continuing this example, we might create a function `timesTwo(x)` that multiplies any argument x by 2, such that `timesTwo(4)` yields the result 8.
 
 **Try it out: Use the function `log10()` to calculate the base-10 logarithm of 10 000.**
 
@@ -194,7 +196,7 @@ This `log10()` example raises a question: Why can’t we use `log()`? To find ou
 """
 
 # ╔═╡ 5306b14e-4709-11eb-1346-c503c7fc90d5
-log(10000)
+
 
 # ╔═╡ abbfa252-4719-11eb-0f80-efb85d4c628f
 md"""
@@ -275,7 +277,7 @@ Create the data frame by entering arrays of values into the `DataFrame()` functi
 
 	DataFrame(colname1 = [val1, val2, ...], colname2 = [val1, val2, ...], ...)
 
-Add the rest of the data from the table above to the data frame below.
+**Add the rest of the data from the table above to the data frame below.**
 """
 
 # ╔═╡ 78b48702-472e-11eb-3cc1-eb6454ae9770
@@ -283,7 +285,7 @@ fav_colors = DataFrame(Name = ["George", "Amy", "Austen", "Sarena"], Age_years =
 
 # ╔═╡ ccadc17a-4730-11eb-2ebe-e546e7ab9b68
 md"""
-Notice how the data frame looks a lot like the table above.  The difference is that the data frame is actually saved in the Julia environment so you can access it to do calculations.  For example, to divide each person's age by 2:
+Notice how the data frame looks a lot like the table above.  The difference is that the data frame is actually saved in the Julia environment so you can access it to do calculations.  For example, you could divide each person's age by 2:
 """
 
 # ╔═╡ f56b0a9e-4730-11eb-24d9-476cdc76638c
