@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.17
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -12,11 +12,6 @@ catch
 	using Pkg; Pkg.add("Plots");
 end
 
-# ╔═╡ 3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
-md"""
-Download this notebook as a template here:
-"""
-
 # ╔═╡ 154adf1c-470c-11eb-17d7-372c82203ac7
 md"""
 # Lab 0A: Getting Started in Pluto
@@ -26,10 +21,26 @@ Chem 370: Instrumental Analysis I (Lab)
 
 # ╔═╡ a2ea7b10-470d-11eb-22fb-536f9ae32369
 md"""
-**Instructions:** Read this exercise and make sure all the blue hint boxes have disappeared before moving on.  You can mouse over the blue hints if you get stuck!
+**Instructions:** Read this exercise and make sure all the blue hint boxes and red error boxes have disappeared before moving on.  You can mouse over the blue hints if you get stuck!
 
 You may want to take notes so you can refer back to them later, especially on the Markdown Tutorial.
 """
+
+# ╔═╡ 9ff0f9a0-59fc-11eb-1724-81ba2cb6eecd
+md"""
+**Enter your name in the cell below next to student (inside the quotes):**
+"""
+
+# ╔═╡ e02c6234-59fa-11eb-38b5-c1c2c16d1dc8
+# Replace Paws' name with yours:
+
+student = "Paws Catamount"
+
+# press the ▶ button in the bottom right of this cell to run your edits
+# or use Shift+Enter
+
+# you might need to wait until all other cells in this notebook have completed running. 
+# scroll down the page to see what's up
 
 # ╔═╡ 3adecf4a-470c-11eb-0b4b-0f6a72d9d05b
 md"""
@@ -67,11 +78,13 @@ The methods of working with Pluto cells are:
 
 To get practice with this, complete the following excerpt about cats from the Getting Started example notebook included with Pluto and written by Fons van der Plas & Nicholas Bochenski.  
 
-In this introduction, we will go through the basics of using Pluto. To make it interesting, this notebook does something special: it **changes while you work on it**. Computer magic ✨
 """
 
 # ╔═╡ 09c1a1ac-4712-11eb-3bec-47379bf18ee9
 md"## Cats
+
+In this introduction, we will go through the basics of using Pluto. To make it interesting, this notebook does something special: it **changes while you work on it**. Computer magic ✨
+
 Let's say you're like my grandma, and you have a lot of cats. Our story will be about them."
 
 # ╔═╡ 76a63134-4712-11eb-103a-f772d40f8b01
@@ -134,7 +147,7 @@ scary_dog = "Odie"
 if @isdefined scary_dog
 	md" $scary_dog is terrorizing the neighborhood! 🙀 We must do something about it!"
 else
-	md"You saved the neighborhood! Referencing `scary_dog` leads to an `UndefVarError`, as if it never even existed."
+	md"You saved the neighborhood!"
 end
 
 # ╔═╡ a3acf358-4713-11eb-3e48-1b454f8e79fe
@@ -149,12 +162,11 @@ Speaking of saving, this notebook is autosaved whenever you change something. Th
 md"""
 # Formatting Text with Markdown
 
-You should have noticed that Pluto makes it possible to place formatted text between code cells.  This is done with Markdown, and you'll use this feature a lot in your notebooks.  Using only requires you know a few basic rules. Complete the tutorial embedded below to learn those rules.  (You may also access it [here](https://www.markdowntutorial.com/)).  There's also a [cheatsheet](https://www.markdownguide.org/cheat-sheet/)!
-"""
+You should have noticed that Pluto makes it possible to place formatted text between code cells.  This is done with Markdown, and you'll use this feature a lot in your notebooks.  Using only requires you know a few basic rules. Complete the tutorial linked below to learn those rules.
 
-# ╔═╡ 68bede66-470f-11eb-0b40-2347f7551a0d
-html"""
-<iframe src = "https://www.markdowntutorial.com/", width="800px" style =  "zoom: 0.85;  -moz-transform: scale(0.85);  -moz-transform-origin: 0 0;  -o-transform: scale(0.85);  -o-transform-origin: 0 0;  -webkit-transform: scale(0.85);  -webkit-transform-origin: 0 0; border: none;", height="700px"></iframe>
+[**COMPLETE THE MARKDOWN TUTORIAL**](https://www.markdowntutorial.com/).  
+
+There's also a [cheatsheet](https://www.markdownguide.org/cheat-sheet/)!
 """
 
 # ╔═╡ 66651b66-4710-11eb-02de-49e2a200a0e9
@@ -181,13 +193,53 @@ md"""
 
 You'll use Pluto for your lab notebooks this semester, and this exercise covered the basics of the Pluto interface and how to format text using Markdown.  You'll use Markdown anytime you need to add text to your lab notebook.  In the next exercise you'll learn how to embed calculation and plots using Julia.
 
-**There is nothing to turn in for this exercise, but you will need to turn in Lab 0B!**  You will use all of this information many times over the course of the semester, beginning next week in lab.  Make sure you are beginning to understand it before moving on!
+You will use all of this information many times over the course of the semester, beginning next week in lab.  Make sure you are beginning to understand it before moving on!
+"""
+
+# ╔═╡ bebcdecc-59fb-11eb-0425-49db3c76091b
+md"""
+# Turn in Your Work
+"""
+
+# ╔═╡ bd074220-59fb-11eb-39bc-a330c510648a
+html"""
+
+Save your notebook as a .jl file AND a .html file, and turn both in on MS Teams:
+
+<ul>
+   <li> Go to the top of the page</li>
+
+   <li> Type in/select your desired file path and file name in the box and click <b>Move</b>.  </li>
+
+   <li> Click on the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/shapes-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> icon and choose <b>Static HTML</b></li>
+
+	<li>Upload both as attachments to this assignment in Teams.</li>
+</ul>
+"""
+
+# ╔═╡ f34796d8-59fa-11eb-02ec-9d2147dff6d1
+if student === "Paws Catamount"
+	md"""
+!!! danger "Oops!"
+    **Before you save**, remember to fill in your name at the top of this notebook!
+	"""
+end
+
+# ╔═╡ d5ae92ba-59fb-11eb-11c9-7d83aeb4abb5
+md"""
+When you're ready to exit Julia you can:  
+1. Close the browser tab.  
+2. Press CTRL + C in the Julia REPL.  
+3. Type `exit()` in the Julia REPL.
+
+(But don't forget to do Exercise 0B!)
 """
 
 # ╔═╡ Cell order:
-# ╠═3b6d6ee8-4729-11eb-2df7-6bb82d1c6b73
 # ╟─154adf1c-470c-11eb-17d7-372c82203ac7
 # ╟─a2ea7b10-470d-11eb-22fb-536f9ae32369
+# ╟─9ff0f9a0-59fc-11eb-1724-81ba2cb6eecd
+# ╠═e02c6234-59fa-11eb-38b5-c1c2c16d1dc8
 # ╟─3adecf4a-470c-11eb-0b4b-0f6a72d9d05b
 # ╠═311e68c0-470d-11eb-0260-fb108bccfdc0
 # ╟─60210718-470d-11eb-3132-5b4961163cba
@@ -206,9 +258,12 @@ You'll use Pluto for your lab notebooks this semester, and this exercise covered
 # ╟─a3acf358-4713-11eb-3e48-1b454f8e79fe
 # ╟─ace605ca-4713-11eb-0316-65692aef2fbd
 # ╟─3c0066e6-4710-11eb-16d8-a7ecc5fa9414
-# ╟─68bede66-470f-11eb-0b40-2347f7551a0d
 # ╟─66651b66-4710-11eb-02de-49e2a200a0e9
 # ╠═ad28d8ca-4711-11eb-2105-d17ff393e508
 # ╟─b28c4efa-4711-11eb-1f51-c38e7657f7ae
 # ╟─c54deb00-4713-11eb-030e-81345064da97
+# ╟─bebcdecc-59fb-11eb-0425-49db3c76091b
+# ╟─bd074220-59fb-11eb-39bc-a330c510648a
+# ╟─f34796d8-59fa-11eb-02ec-9d2147dff6d1
+# ╟─d5ae92ba-59fb-11eb-11c9-7d83aeb4abb5
 # ╟─37677ca8-470d-11eb-1456-e532c016191e

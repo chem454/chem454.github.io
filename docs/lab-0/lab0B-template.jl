@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.17
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -32,7 +32,7 @@ md"""
 
 # ╔═╡ 0ae8ab60-4718-11eb-1a3c-23b0f0c3164a
 md"""
-**Enter your name in the cell below:**
+**Enter your name in the cell below next to student (inside the quotes):**
 """
 
 # ╔═╡ fbaa31e6-4717-11eb-1d07-7fc2b65abf5b
@@ -152,6 +152,8 @@ slices = 8
 # ╔═╡ 2feccd04-4706-11eb-0670-2bea4e667021
 md"""
 ## Pizza Slices
+
+*The following is from the Basic Mathmatics notebook in the Pluto example notebooks.*
 
 Let's try this out on a problem.  Let's say you want to order pizzas for $people people (**people = $people**) and each person wants $avg slices on average (**avg = $avg**).  A pizza has $slices slices per pizza (**slices = $slices**).  How many pizzas should you order (**pizzas = ?**)?  Here's a summary of all that:
 
@@ -306,9 +308,15 @@ You will use all of this information many times over the course of the semester,
 
 """
 
+# ╔═╡ 772ebf26-59fb-11eb-397f-d96cff083754
+md"""
+# Turn in Your Work
+"""
+
 # ╔═╡ e8b60f0c-4731-11eb-01ee-cf31edc0a70b
 html"""
-Before you leave, save your notebook as a .jl file AND a .html file, and turn both in on MS Teams:
+
+Save your notebook as a .jl file AND a .html file, and turn both in on MS Teams:
 
 <ul>
    <li> Go to the top of the page</li>
@@ -317,7 +325,7 @@ Before you leave, save your notebook as a .jl file AND a .html file, and turn bo
 
    <li> Click on the <img src="https://cdn.jsdelivr.net/gh/ionic-team/ionicons@5.0.0/src/svg/shapes-outline.svg" style="width: 1em; height: 1em; margin-bottom: -.2em;"> icon and choose <b>Static HTML</b></li>
 
-	<li>Place both in the same folder, compress it to a ZIP file, and submit on MS Teams.</li>
+	<li>Upload both as attachments to this assignment in Teams.</li>
 </ul>
 """
 
@@ -468,6 +476,7 @@ end
 # ╠═f56b0a9e-4730-11eb-24d9-476cdc76638c
 # ╟─0740e0ae-4731-11eb-1831-8d9b61c72b5b
 # ╟─0f7c906e-470a-11eb-33fd-cf95fffc270a
+# ╟─772ebf26-59fb-11eb-397f-d96cff083754
 # ╟─e8b60f0c-4731-11eb-01ee-cf31edc0a70b
 # ╟─f83e6a92-4729-11eb-18a1-bd4c78a5b6a4
 # ╟─7a4521fc-4741-11eb-18b3-d34c22aa0a3e
