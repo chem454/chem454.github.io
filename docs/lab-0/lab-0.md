@@ -76,8 +76,8 @@ There are two exercises you need to complete, 0A and 0B.
 
 1. For each exercise, copy the link below by using **Right Click > Copy Link [Address/Location]**.
 
-   - Exercise 0A: [https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0A-template.jl](https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0A-template.jl)
-   - Exercise 0B: [https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0B-template.jl](https://raw.githubusercontent.com/dr-fischer/chem370/master/docs/lab-0/lab0B-template.jl)
+   - Exercise 0A: [https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/lab-0/lab0A-template.jl](https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/lab-0/lab0A-template.jl)
+   - Exercise 0B: [https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/lab-0/lab0B-template.jl](https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/lab-0/lab0B-template.jl)
 
 1. Paste the link into the '**Open from file:**' box in Pluto and click **Open**.
 
