@@ -39,13 +39,12 @@ You'll probably find it's most convenient to install Julia and Pluto on your per
 
 Use the video below to install Julia and Pluto on your personal computer.
 
-[ Installing Julia Video ]
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8fe1c28d-3bc7-49ee-a2da-acb40149ccea&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
+</iframe>
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OOjKEgbt8AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 ## Launch Julia & Pluto
-
-[ Launching Julia & Pluto Video ]
 
 1. The way you launch Julia will depend on your operating system.  You will see a window like the image below, which is called the REPL (read-evaluate-print loop).
 
@@ -67,7 +66,7 @@ Use the video below to install Julia and Pluto on your personal computer.
 
 1. Pluto should open in your default web browser (it requires Firefox, Chrome, or another Chromium-based browser to run properly).
 
-      <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default copy and past the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
+      <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default, copy and paste the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
 
      ![A screenshot showing the Pluto welcome page in the Firefox web browser]({{site.url}}/assets/images/lab-0/pluto-window.png)
 
