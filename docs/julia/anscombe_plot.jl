@@ -24,7 +24,7 @@ This tutorial will show you how to create a basic scatter (x-y) plot in Julia.  
 - How to add labels to the axes
 - How to adjust grid lines
 
-Throughout this exercise I will work with Anscombe's quartet.  This is sets of $X$ and $Y$ (named I, II, III, and IV) that are all described by exactly the same linear model but -- as you'll see -- are quite different!
+Throughout this exercise I will work with [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet).  This is sets of $X$ and $Y$ (named 1, 2, 3, and 4) that are all described by exactly the same linear model but -- as you'll see -- are quite different!
 
 """
 

@@ -62,6 +62,29 @@ The syntax for writing a CSV file is `CSV.write(file, object; ...)`.  The file w
 # ╔═╡ 95fab4a4-5a06-11eb-0de3-ab85b1898f6d
 CSV.write("anscombes_data.csv", anscombe);
 
+# ╔═╡ 8ba000ba-5c04-11eb-27b9-870856285ec3
+if !isfile("anscombe.csv")
+	
+	anscombe_0 = DataFrame(
+		X_1 = [10.0, 8.0, 13.0, 9.0, 11.0, 14.0, 6.0, 4.0, 12.0, 7.0, 5.0], 
+			# X_1 will be the name of column 1
+		Y_1 = [8.04, 6.95, 7.58, 8.81, 8.33, 9.96, 7.24, 4.26, 10.84, 4.82, 5.68],
+			# Y_1 will be the name of column 2
+		X_2 = [10.0, 8.0, 13.0, 9.0, 11.0, 14.0, 6.0, 4.0, 12.0, 7.0, 5.0],
+		Y_2 = [9.14, 8.14, 8.74, 8.77, 9.26, 8.10, 6.13, 3.10, 9.13, 8.26, 4.74],
+		X_3 = [10.0, 8.0, 13.0, 9.0, 11.0, 14.0, 6.0, 4.0, 12.0, 7.0, 5.0], 
+		Y_3 = [7.46, 6.77, 12.74, 7.11, 7.81, 8.84, 6.08, 5.39, 8.15, 6.42, 5.73],
+		X_4 = [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 11.0, 8.0, 8.0, 8.0],
+		Y_4 = [6.58, 5.76, 7.71, 8.84, 8.47, 7.04, 5.25, 12.50, 5.56, 7.91, 6.89]
+	)
+
+	# Values were obtained from the Wikipedia article on Anscombe's quartet: https://en.wikipedia.org/wiki/Anscombe%27s_quartet
+	
+
+		CSV.write("anscombe.csv", anscombe_0);
+
+end
+
 # ╔═╡ Cell order:
 # ╟─cb3bef7c-5a04-11eb-391c-1fe136b7dfd9
 # ╟─3bf81e20-5a05-11eb-2c71-e5a52d18c005
@@ -72,3 +95,4 @@ CSV.write("anscombes_data.csv", anscombe);
 # ╟─42f1f2ca-5a06-11eb-22ce-0fb3ffec605e
 # ╟─69c53d28-5a06-11eb-0e9c-d7421c63b0c6
 # ╠═95fab4a4-5a06-11eb-0de3-ab85b1898f6d
+# ╟─8ba000ba-5c04-11eb-27b9-870856285ec3

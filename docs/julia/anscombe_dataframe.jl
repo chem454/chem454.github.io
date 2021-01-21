@@ -189,7 +189,7 @@ md"""
 
 # ╔═╡ 035e000c-39b4-11eb-34af-79bcaa7a1dae
 md"""
-Sometimes you may want to write the data frame to a file.  Typically tabular data such as this are stored in plain text files with the extension CSV for *comma-separated values*.  See the CSV tutorial for more information on how to save a data frame to a CSV file.
+Sometimes you may want to write the data frame to a file.  Typically tabular data such as this are stored in plain text files with the extension CSV for *comma-separated values*.  See the [CSV tutorial](https://chem370.github.io/julia/#loading-csv-files) for more information on how to save a data frame to a CSV file.
 """
 
 # ╔═╡ Cell order:

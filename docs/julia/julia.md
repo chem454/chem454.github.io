@@ -45,3 +45,9 @@ has_children: true
 - View the video tutorial for this example
 - [View this example as a web page]({{site.url}}/docs/julia/anscombe_plot.html)
 - Download the Pluto Notebook for this Example:[https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl)
+
+## Fitting a Linear Model
+
+- View the video tutorial for this example
+- View this example as a web page
+- Download the Pluto Notebook for this Example
