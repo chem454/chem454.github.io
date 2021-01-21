@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.17
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -178,7 +178,7 @@ end
 # ╔═╡ ccf3487c-4151-11eb-2297-3f35561be206
 md"""
 !!! hint
-    Plotting takes the form of `plot(x, y)`.  Look at the video tutorial or Pluto homepage > sample notebooks > Plots.jl for more help.
+    Plotting takes the form of `plot(x, y)`.  Look at the [video tutorial](https://chem370.github.io/julia/#plotting-data) or Pluto homepage > sample notebooks > Plots.jl for more help.
 """
 
 # ╔═╡ cfdf32b2-414c-11eb-03e5-1194bf9ee099
@@ -356,7 +356,7 @@ else
 end
 
 # ╔═╡ b45102ec-4155-11eb-041e-295b5f20bec6
-Rₛ2 = missing
+Rₛ₂ = missing
 
 # ╔═╡ bc1db886-3f38-11eb-2d42-1bd1196107dc
 md"""
@@ -419,9 +419,6 @@ function fitPeak(Chrom::DataFrame; tmin = 0.5, tmax = 1, t_r = 1.0, guesses = [0
 	return peak_characters, fit_data, Chrom
 end;
 
-# ╔═╡ 1e2b1cba-47ba-11eb-2b13-41f6bd3ce60e
-fitPeak
-
 # ╔═╡ 7e5b31d6-4154-11eb-1c79-471fd7dfd811
 # This is the function to plot the peaks ####
 # You can leave this chunk as-is
@@ -466,7 +463,6 @@ end;
 # ╠═93faf8e6-4154-11eb-12c5-63d0e866d7e5
 # ╠═9c48d19e-4154-11eb-3286-c3fe738beaa4
 # ╠═c6b5ab6e-4154-11eb-381c-19eb4001c080
-# ╠═1e2b1cba-47ba-11eb-2b13-41f6bd3ce60e
 # ╟─00eb381c-4155-11eb-2d47-bd4c36151e50
 # ╠═3c9aedf8-4155-11eb-1d39-f1a020a2adfa
 # ╟─d3077862-4158-11eb-2149-1f7bad75cf25
