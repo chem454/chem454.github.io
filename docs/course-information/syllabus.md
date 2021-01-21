@@ -64,6 +64,8 @@ To achieve a satisfactory grade, students will:
 
 The program [OpenChrom](https://lablicate.com/platform/openchrom) allows you to process chromatographic and mass spectrometric data on your personal computer.  This is not required but can speed up your data processing.
 
+This term we will be using Piazza for class discussion. The system is highly catered to getting you help fast and efficiently from classmates and your instructor. Rather than emailing questions to the teaching staff, I encourage you to post your questions on Piazza. If you have any problems or feedback for the developers, email team@piazza.com.  Find our class page at [here](https://piazza.com/wcu/spring2021/chem370/home).
+
 **Additional Required Course Materials:**  
 
   - Goggles rated for chemical protection
