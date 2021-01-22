@@ -94,7 +94,7 @@ rsd = sd/avg * 100
 
 ## Limits of Detection and Quantitation  
 
-For this course, the *Limit of Detection* ($LOD_y$) is defined as 3 times the standard deviation of a blank measurement, $y_blank$, plus the mean value of the blank ($\bar{y}_{blank}$).  This is the 3$\sigma$ detection limit and is represented as:
+For this course, the *Limit of Detection* ($LOD_y$) is defined as 3 times the standard deviation of a blank measurement, $y_{blank}$, plus the mean value of the blank ($\bar{y}_{blank}$).  This is the 3$\sigma$ detection limit and is represented as:
 
 $$
 LOD_y = \bar{y}_{blank} + 3\sigma_{blank}
