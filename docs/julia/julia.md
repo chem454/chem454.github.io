@@ -4,7 +4,7 @@ title: Julia Tutorials
 nav_order: 7
 permalink: julia/
 has_toc: true
-has_children: true
+has_children: false
 ---
 
 # Julia Tutorials
