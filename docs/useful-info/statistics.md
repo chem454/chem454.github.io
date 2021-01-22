@@ -106,7 +106,7 @@ $$
 LOD_x = \frac{3\sigma_{blank}}{m}
 $$
 
-\noindent where $m$ is the slope of the calibration curve and $LOD_x$ is the LOD in the concentration units of the calibration curve.
+where $m$ is the slope of the calibration curve and $LOD_x$ is the LOD in the concentration units of the calibration curve.
 
 The *Limit of Quantitation* ($LOQ_y$) is defined as 10 times the standard deviation of the blank:
 
