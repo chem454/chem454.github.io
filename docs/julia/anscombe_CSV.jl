@@ -83,7 +83,7 @@ if !isfile("anscombe.csv")
 
 		CSV.write("anscombe.csv", anscombe_0);
 
-end
+end;
 
 # ╔═╡ Cell order:
 # ╟─cb3bef7c-5a04-11eb-391c-1fe136b7dfd9
@@ -94,5 +94,5 @@ end
 # ╠═a8ef1c22-5a05-11eb-2359-fd2d51e7e90a
 # ╟─42f1f2ca-5a06-11eb-22ce-0fb3ffec605e
 # ╟─69c53d28-5a06-11eb-0e9c-d7421c63b0c6
-# ╠═95fab4a4-5a06-11eb-0de3-ab85b1898f6d
-# ╟─8ba000ba-5c04-11eb-27b9-870856285ec3
+# ╟─95fab4a4-5a06-11eb-0de3-ab85b1898f6d
+# ╠═8ba000ba-5c04-11eb-27b9-870856285ec3
