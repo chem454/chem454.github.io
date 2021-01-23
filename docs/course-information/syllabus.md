@@ -11,7 +11,8 @@ parent: Course Information
 {: .no_toc  }
 
 **Instructor:** Al Fischer, PhD   
-**Office Hours:** By appointment on Teams; schedule a meeting with [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/) [ [Video: Scheduling Office Hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]     
+**Office Hours:** By appointment on Teams; schedule a meeting with [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/)  
+[ [Video: Scheduling Office Hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]     
 **Asking Questions:** Ask general questions on [Piazza](https://piazza.com)  
 **Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
 **Availability:** Email, chat, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.  

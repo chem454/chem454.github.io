@@ -35,13 +35,13 @@ has_children: true
 
 - Course materials will be posted on this site.
 - Homework will be submitted through Microsoft Teams.  
-  [ [Video: How to use Microsoft Teams](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8dbc528e-25c9-4a24-8d13-acb40149daef) ]
+  [ [Video: How to use Microsoft Teams](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8cbd076b-a5e2-46e7-9fee-acb8012e09fc) ]
   
 - General questions should be asked through Piazza.  
-  [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3c3ab88f-aec9-4572-a4e3-acb40149d5a0) ]
+  [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0abad82d-58e0-49c9-aa39-acb8012e0a2e) ]
   
 - Office hours will be held remotely in MS Teams.  Schedule a meeting via [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/).  
-  [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea55876d-0a93-4deb-ae4f-acb40149d18e) ]
+  [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]
 
 ## Assignments
 
