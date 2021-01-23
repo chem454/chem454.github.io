@@ -55,9 +55,9 @@ has_children: false
 
 ## Making Julia Load Faster
 
-The "time to first plot" problem in Julia describes how it can take a relatively long time to start Julia and start working with data and/or get a plot displayed.  For example, on my computer it takes 60 seconds to open a Pluto notebook and display a simple plot.  This is because all the packages you load must precompile each time Julia is started, and this process can take a long time.  The problem can be circumvented or alleviated in several ways:
+The "time to first plot" problem in Julia describes how it can take a relatively long time to start Julia and start working with data and/or get a plot displayed.   This is because all the packages you load must precompile each time Julia is started, and this process can take a long time.  The problem can be circumvented or alleviated in several ways:
 
 1. Leave Julia running all the time and don't restart it unless necessary.  This is the easiest solution, but is not always possible or desirable.  
-2. Use `PackageCompiler` to [create a sysimage](https://julialang.github.io/PackageCompiler.jl/dev/examples/plots/).  For example, in the linked example the same plot mentioned above takes 15 seconds rather than 60 seconds!  On my system, I create a sysimage for both the Plots package and DataFrames package, as these are both slow to load.  
+2. Use `PackageCompiler` to [create a sysimage](https://julialang.github.io/PackageCompiler.jl/dev/examples/plots/). 
 
     - To load Julia with the custom sysimage file use `julia --sysimage sys_plots.so`, for example.
