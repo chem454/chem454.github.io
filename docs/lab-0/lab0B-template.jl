@@ -14,11 +14,6 @@ catch e
 	using Pkg; Pkg.add("DataFrames");
 end
 
-# ╔═╡ b391ce36-472c-11eb-0695-0b3db45fb0f0
-md"""
-Link to download template: 
-"""
-
 # ╔═╡ cf00b6e2-46fe-11eb-13e4-29d71149129e
 md"""
 # Lab 0B: Understanding Julia
@@ -200,7 +195,7 @@ This `log10()` example raises a question: Why can’t we use `log()`? To find ou
 
 # ╔═╡ abbfa252-4719-11eb-0f80-efb85d4c628f
 md"""
-# Vectors Scalars, and Matrices
+# Vectors, Scalars, and Matrices
 
 Up to this point we've stored single numbers, or *scalars*, in a variable, but in lab we'll often have many numbers to work with.  One way of dealing with multiple numbers is to store them in a *vector* (a 1-dimensional array) or a *matrix* (an *m*-column by *n*-row array of numbers.
 
@@ -420,7 +415,6 @@ end
 end
 
 # ╔═╡ Cell order:
-# ╟─b391ce36-472c-11eb-0695-0b3db45fb0f0
 # ╟─cf00b6e2-46fe-11eb-13e4-29d71149129e
 # ╟─4dcc73fc-470a-11eb-23f6-5542c5a42a8d
 # ╟─0ae8ab60-4718-11eb-1a3c-23b0f0c3164a
