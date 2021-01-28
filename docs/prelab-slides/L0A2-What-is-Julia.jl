@@ -38,7 +38,7 @@ md"""
 """
 
 # ╔═╡ c092d838-5dae-11eb-018d-1dda10cadc56
-
+2+2
 
 # ╔═╡ 660a29f0-5dee-11eb-3cca-2b7b5b080747
 md"""
@@ -104,6 +104,12 @@ Actions in Julia are controlled with **functions**.
 function_name(argument_1, argument_2, ...);
 ```
 """
+
+# ╔═╡ 2659073a-61a5-11eb-2651-1db5c4bc26a8
+f(x) = 2x+3
+
+# ╔═╡ 4f6692ec-61a9-11eb-3246-87eed2692122
+maximum([3, 6, 5, 2, 9, 7])
 
 # ╔═╡ 6b903e26-610b-11eb-0ff2-2ff125ab9da2
 md"""
@@ -192,6 +198,8 @@ md"""
 # ╟─2966523e-5de5-11eb-0dc9-7fa11c4f2b5a
 # ╟─0c8048e0-5deb-11eb-1184-43b34ab7b107
 # ╟─41a6309e-610a-11eb-2381-6d5b19603d33
+# ╠═2659073a-61a5-11eb-2651-1db5c4bc26a8
+# ╠═4f6692ec-61a9-11eb-3246-87eed2692122
 # ╟─6b903e26-610b-11eb-0ff2-2ff125ab9da2
 # ╠═0e78efb8-610c-11eb-3370-c16124be66f0
 # ╟─451a4fac-5daf-11eb-248a-956d16c86cd3
