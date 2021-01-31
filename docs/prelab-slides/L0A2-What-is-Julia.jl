@@ -106,10 +106,10 @@ function_name(argument_1, argument_2, ...);
 """
 
 # ╔═╡ 2659073a-61a5-11eb-2651-1db5c4bc26a8
-f(x) = 2x+3
+f(x, y) = 2x+y
 
-# ╔═╡ 4f6692ec-61a9-11eb-3246-87eed2692122
-maximum([3, 6, 5, 2, 9, 7])
+# ╔═╡ 99c85856-6236-11eb-2347-1f0c92f4270f
+minimum([5, 4, 1, 9, 7, 4, 3, 9])
 
 # ╔═╡ 6b903e26-610b-11eb-0ff2-2ff125ab9da2
 md"""
@@ -182,6 +182,9 @@ md"""
 *y* = $(round(coef(mod)[1], sigdigits = 4)) + $(round(coef(mod)[2], sigdigits = 4)) *x*, R² = $(round(r2(mod), digits = 4))
 """
 
+# ╔═╡ 4ac3fe72-62a9-11eb-22f8-c1f1ef428a7c
+
+
 # ╔═╡ Cell order:
 # ╟─f0dec1c8-5dab-11eb-3e47-55e15cceed16
 # ╟─8a38df9c-5dab-11eb-25db-f1bfc8fe144c
@@ -199,7 +202,7 @@ md"""
 # ╟─0c8048e0-5deb-11eb-1184-43b34ab7b107
 # ╟─41a6309e-610a-11eb-2381-6d5b19603d33
 # ╠═2659073a-61a5-11eb-2651-1db5c4bc26a8
-# ╠═4f6692ec-61a9-11eb-3246-87eed2692122
+# ╠═99c85856-6236-11eb-2347-1f0c92f4270f
 # ╟─6b903e26-610b-11eb-0ff2-2ff125ab9da2
 # ╠═0e78efb8-610c-11eb-3370-c16124be66f0
 # ╟─451a4fac-5daf-11eb-248a-956d16c86cd3
@@ -208,3 +211,4 @@ md"""
 # ╟─a0695832-5de4-11eb-3847-0713a4aff06c
 # ╟─70755ea6-5de8-11eb-31dd-9764b13d25d1
 # ╟─2baf8a10-5dea-11eb-263a-f331b5f83191
+# ╠═4ac3fe72-62a9-11eb-22f8-c1f1ef428a7c
