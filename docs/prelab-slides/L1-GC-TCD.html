@@ -34,7 +34,7 @@ class: center
 
 Chromatography separates a mixture using a **mobile phase** and **stationary phase**.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Column_chromatography_sequence.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Column_chromatography_sequence.png" style = "margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -52,7 +52,16 @@ class: center
 
 Each peak in the **chromatogram** represents a distinct compounds in the sample.
 
-<img src="img/lab02_chromatogram.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/chromatogram.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+
+---
+class: center
+
+# gc-tcd | **gas chromatography**
+
+Each peak is referred to by **retention time** or **retention factor**.  Retention factor compares R.T of the sample peak to R.T. of the *system peak*.
+
+<img src="/assets/images/lab-1/chromatogram.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -61,7 +70,7 @@ class: center
 
 You will use a Gow-Mac gas chromatograph with a **thermal conductivity detector** (GC-TCD)
 
-<img src="img/lab02_gowmacs.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/gowmacs.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -70,16 +79,17 @@ class: center
 
 You will use a Gow-Mac gas chromatograph with a **thermal conductivity detector** (GC-TCD)
 
-<img src="img/lab02_tcd.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/tcd.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
 
 # gc-tcd | **gas chromatography**
 
-<img src="img/lab02_gc-inside.png" style = "height: 500px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/gc-inside.png" style = "height: 500px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
+exclude: true
 
 # lab 2 | **Gow-Mac GC-TCD**
 
@@ -90,7 +100,7 @@ class: center
     - Want flat line with single peak for acetone
     
 ---
-
+exclude: true
 # lab 2 | **Gow-Mac GC-TCD**
 
 **The Experiment:**
@@ -103,33 +113,35 @@ class: center
 ---
 
 # lab 2 | **Gow-Mac GC-TCD**
+    
+1. Determine retention time of each peak.
+1. Calculate retention factor for each peak 
 
-**The Experiment:**
+    $$k\_r = \frac{t\_r - t\_m}{t\_m}$$
+    
+1. Calculate resolution for each peak
 
-1. A blank to check for cleanliness and determine the baseline.
-2. 1 unknown sample (obtain from your instructor)
-    - Inject 4 uL acetone (instruction in lab manual)
-    - Save data as CSV file
-3. Calculate Area of each peak and determine percent composition (next week)
-4. Determine S/N for each peak (next week)
+    $$R\_s = \frac{t\_{r\_2} - t\_{r\_1}}{0.5(W\_{b\_2} + W\_{b\_1})}$$
 
+1. Calculate area of each peak and determine percent composition
 ---
 class: center
 
 # lab 2 | **Gow-Mac GC-TCD**
 
-Determining peak area & percent composition -- look for video tutorial!
+Determining peak area -- look for video tutorial!  Use `fitPeak()` and `plotPeak()` functions in Julia.
 
-<img src="img/lab02_peakArea.png" style = "height: 300px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/peakArea.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
+exclude: true
 class: center
 
 # lab 2 | **Gow-Mac GC-TCD**
 
 Determining signal-to-noise ratio -- look for video tutorial!
 
-<img src="img/lab02_signal-to-noise.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/signal-to-noise.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -138,7 +150,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_instrument-table.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/instrument-table.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -147,7 +159,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_injectionPort.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/injectionPort.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -156,7 +168,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_temperature.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/temperature.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -165,7 +177,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_detectorCurrent.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/detectorCurrent.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -174,7 +186,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_zeroknob.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/zeroknob.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -183,7 +195,7 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="img/lab02_donottouch.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/images/lab-1/donottouch.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 
@@ -191,11 +203,11 @@ You will need to record the instrument parameters in your notebook today!  Use a
 
 **Next week:**
 - Use the online tutorial to complete your data analysis.
-- ***No in-person meeting.***  I will have Zoom open-office hours during our lab time to help with your data processing.  Email me if you'd like to attend.
-- This lab is due **September 2, 2020**.  Submit a ZIP file containing:
-    - Your lab notebook (electronic)
-    - Your data files
-- Make sure you complete the assessment questions at the end of the lab notebook template!
+- ***No in-person meeting.***  I will be watching Piazza during our lab time to answer any questions that come up regarding data processing.
+- This lab is due **February 16, 2021**.  Make sure you submit:
+    - Your lab notebook .jl file
+    - Your lab notebook .html file
+    - Your data file(s)
 
 <!-- =============================================================================== -->
 
