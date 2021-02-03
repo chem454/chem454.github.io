@@ -331,6 +331,39 @@ end
 # ╔═╡ b45102ec-4155-11eb-041e-295b5f20bec6
 Rₛ₂ = missing
 
+# ╔═╡ 191ecdf4-6671-11eb-21a8-0b158abf7e09
+md"""
+## Calculate the Percent Composition of Compound
+
+The percent composition is:
+
+$$C_n(\%)=\frac{A_n}{A_1 + A_2 + ... A_n} \times 100\%$$
+
+where $A_n$ represent the area of peak *n*.
+"""
+
+# ╔═╡ 57a81b34-6671-11eb-1b8f-7303b106f779
+peak_1_percent = missing
+
+# ╔═╡ 62ff4a0c-6671-11eb-3572-794e5e0d349d
+if peak_1_percent !== missing
+	if peak_1_percent === (peak_1[1][1, 3] / (peak_1[1][1, 3] + peak_2[1][1, 3]) )
+			md"""
+!!! correct
+			"""
+		else
+			md"""
+!!! warning 
+    Something's not right.  You should divide the area for peak 1 by the summed area of all other peaks.  Make sure you include only the peaks due to compounds in your sample and not the system peak.  And don't forget to multiply by 100%!
+			"""
+	end
+else
+	
+end
+
+# ╔═╡ 5cc48c4c-6671-11eb-0af9-1729f9393952
+peak_2_percent = missing
+
 # ╔═╡ bc1db886-3f38-11eb-2d42-1bd1196107dc
 md"""
 # Conlcusions
@@ -444,6 +477,10 @@ end;
 # ╠═8ddf330e-4155-11eb-169b-97338dc80c05
 # ╟─1b7ce6e0-4159-11eb-259e-b73de5c47871
 # ╠═b45102ec-4155-11eb-041e-295b5f20bec6
+# ╟─191ecdf4-6671-11eb-21a8-0b158abf7e09
+# ╠═57a81b34-6671-11eb-1b8f-7303b106f779
+# ╟─62ff4a0c-6671-11eb-3572-794e5e0d349d
+# ╠═5cc48c4c-6671-11eb-0af9-1729f9393952
 # ╟─bc1db886-3f38-11eb-2d42-1bd1196107dc
 # ╟─c7633808-3f38-11eb-213f-49d634169b1d
 # ╟─33387066-4153-11eb-0cbe-1fd074c9dabe
