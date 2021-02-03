@@ -5,7 +5,7 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ 389e73f0-3efd-11eb-1dae-538a2121a045
-using DataFrames, CSV, Plots, LsqFit, StatsPlots, Statistics
+using DataFrames, CSV, Plots, LsqFit, StatsPlots, Statistics, SpecialFunctions
 
 # Leave this chunk alone -- it will load the packages you need!
 
@@ -53,6 +53,11 @@ Insert your info about your sample here:
 
 The sample that was analyzed is:
 
+""";
+
+# ╔═╡ c0048288-65bf-11eb-3d4f-7561756a8a97
+md"""
+**NOTE: This analysis was completed by the instructor due to remote instruction so no Matierals and Methods Section is necessary.**
 """
 
 # ╔═╡ a321a7e8-3f0b-11eb-2055-4d2b08d9fe6b
@@ -149,16 +154,18 @@ gc_data = missing
 
 # ╔═╡ 3b9eeba0-3f40-11eb-1aa1-ad7a459bec4b
 if gc_data !== missing
-	if (nrow(gc_data) == 300) && (ncol(gc_data) == 2)
-			md"""
-	!!! correct
-		Your data frame has the right dimensions (300 x 2).
-			"""
-		else
-			md"""
-	!!! warning 
-		I'm expecting a data frame with 300 rows and 2 columns.  Are you sure you loaded the right thing and that it loaded correctly?
-			"""
+	if (nrow(gc_data) == 361) && (ncol(gc_data) == 2)
+	
+				md"""
+!!! correct 
+    Your data frame has the right dimensions (361 x 2).
+				"""
+		
+	else
+	md"""
+!!! warning 
+    I'm expecting a data frame with 361 rows and 2 columns.  Are you sure you loaded the right thing and that it loaded correctly?
+	"""
 	end
 else
 	
@@ -203,40 +210,6 @@ It will be best to add the baseline corrected data to the existing data frame as
 # ╔═╡ a9070e84-414d-11eb-10b5-0d46d32f539a
 # erase this line and insert the correct code here
 # df[!, "Column Name"] = df[!, "Original Column"] - value;
-
-# ╔═╡ 6e638660-414e-11eb-1b17-2388f9bb938a
-if gc_data !== missing
-	if (ncol(gc_data) != 3)
-			md"""
-	!!! danger
-		You need to add a third column.
-			"""
-	elseif (ncol(gc_data) == 3)
-		if gc_data[!, 3] == gc_data[!, 3] .- S_raw_baseline
-				md"""
-				!!! correct
-				"""
-		else
-			
-			md"""
-!!! hint
-    Looks like you did the subtraction incorrectly. I'm expecting the last column to be the baseline corrected data ($S_raw - S_{raw_{baseline}}$), as in: `gc_data[!, "Latest: Potential (mV)"] .- S_raw_baseline`.  Remember you need to broadcast the substraction over the whole array using the dot (`.`) operator before the subtraction sign!
-"""
-			
-		end
-		
-	else
-			md"""
-!!! hint
-    Looks like somethign's wrong.  I'm expecting three columns in a data frame, where the last column is the baseline corrected data ($S_raw - S_{raw_{baseline}}$). You can add a new column by simply giving it a name: `gc_data[!, "S_corrected"]`.  And you can do arithmetic on the old column: `gc_data[!, "Latest: Potential (mV)"] .- S_raw_baseline`. Remember you need to broadcast the substraction over the whole array using the dot (`.`) operator before the subtraction sign!
-"""
-	end
-else
-			md"""
-!!! hint
-    I'm expecting three columns in a data frame, where the last column is the baseline corrected data ($S_raw - S_{raw_{baseline}}$). You can add a new column by simply giving it a name: `gc_data[!, "S_corrected"]`.  And you can do arithmetic on the old column: `gc_data[!, "Latest: Potential (mV)"] .- S_raw_baseline`. 
-"""
-end
 
 # ╔═╡ 4c65408c-414e-11eb-2649-31e02d2ae739
 md"""
@@ -310,12 +283,12 @@ kᵣ₁ = missing
 if kᵣ₁ !== missing
 	if kᵣ₁ === ((peak_1[1][1, 1] - method_peak[1][1, 1]) / method_peak[1][1, 1])
 			md"""
-	!!! correct
-			"""
+!!! correct
+		"""
 		else
 			md"""
-	!!! warning 
-		Something's not right.
+!!! warning 
+    Something's not right.
 			"""
 	end
 else
@@ -343,12 +316,12 @@ Rₛ₁ = missing
 if Rₛ₁ !== missing
 	if Rₛ₁ === ((peak_2[1][1, 1] - peak_1[1][1, 1]) / (0.5*(4*peak_2[1][1, 2] + 4 * peak_1[1][1, 2])))
 			md"""
-	!!! correct
+!!! correct
 			"""
 		else
 			md"""
-	!!! warning 
-		Something's not right.
+!!! warning 
+    Something's not right.
 			"""
 	end
 else
@@ -437,6 +410,7 @@ end;
 # ╟─1974d4d2-3f08-11eb-3ecd-9d73ed8fbe9c
 # ╟─3259ead2-3f08-11eb-0c8b-45d108629844
 # ╟─068d4ccc-3f09-11eb-05ed-018d62fca359
+# ╟─c0048288-65bf-11eb-3d4f-7561756a8a97
 # ╠═a321a7e8-3f0b-11eb-2055-4d2b08d9fe6b
 # ╟─7a755bc8-414a-11eb-2671-e9b2e8e3cddc
 # ╟─b629f6e8-3f0a-11eb-10e6-072baf22db8e
@@ -453,7 +427,6 @@ end;
 # ╠═654339a0-414d-11eb-3a14-896d7c37b560
 # ╟─7e179aa4-414d-11eb-20ea-cd0e92b8bd3c
 # ╠═a9070e84-414d-11eb-10b5-0d46d32f539a
-# ╟─6e638660-414e-11eb-1b17-2388f9bb938a
 # ╟─4c65408c-414e-11eb-2649-31e02d2ae739
 # ╠═589e0232-414e-11eb-25e5-2d4380542093
 # ╟─0d91f9ea-4153-11eb-0c62-53844d3607e2
