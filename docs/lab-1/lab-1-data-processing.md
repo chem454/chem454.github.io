@@ -114,6 +114,10 @@ I have provided two Julia functions to help with this: (1) `fitPeak`, which fits
 1. Calculate the retention factor, $$k_r = \frac{t_r - t_m}{t_m}$$.
 1. Calculate the resolution for each pair of peaks, $$R_s = \frac{t_{r_2} - t_{r_1}}{0.5(W_{b_2} + W_{b_1})}$$.
 
+## Calculate the Percent Composition for Each Compound
+
+1. Calculate the percent composition: $$C\_n(\%)=\frac{A\_n}{A\_1 + A\_2 + ... A\_n} \times 100\%$$.  Here, $A_n$ is the area of peak *n*.
+
 ## Finish & Turn In Your Notebook
 
 1. Include a discussion of (1) how many constituents are in your sample and (2) the relative polarity of each component.  Compare the retention factors you calculated to the standards to see if you can determine what's in the mixture.
