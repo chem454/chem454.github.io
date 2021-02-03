@@ -22,6 +22,10 @@ has_children: false
 {:toc}
 </details>
 
+## Other Julia Resources
+
+- The book [*Think Julia*](https://www.oreilly.com/library/view/think-julia/9781492045021/?ar) is available as an e-book through the library.
+
 ## Installing/Opening Julia & Pluto
 
 - View the video on Installing and Opening Julia in [Lab 0]({{site.url}}/lab-0/#install-julia-and-pluto).
