@@ -34,15 +34,17 @@ has_children: false
 
 ## Loading CSV Files
 
-- View the video tutorial for this example
 - [View this example as a web page]({{site.url}}/docs/julia/anscombe_CSV.html)
 - Download the Pluto Notebook for this Example: [https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_CSV.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_CSV.jl)
 
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=379ee23d-3b2c-4fc5-a54c-acc50107ad25&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"  height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
 ## Working with Data Frames
 
-- View the video tutorial for this example
 - [View this example as a web page]({{site.url}}/docs/julia/anscombe_dataframe.html)
 - Download the Pluto Notebook for this Example: [https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_dataframe.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_dataframe.jl)
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9b2ed057-f0f5-4d3f-8fcf-acc50107acd9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
 
 ## Plotting Data
 
@@ -50,6 +52,8 @@ has_children: false
 - [View this example as a web page]({{site.url}}/docs/julia/anscombe_plot.html)
 - Download the Pluto Notebook for this Example:[https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/julia/anscombe_plot.jl)
 - The official documentation for plotting in Julia: [http://docs.juliaplots.org/latest/](http://docs.juliaplots.org/latest/)
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c4700bdf-f0e4-4222-b3eb-acc50107acaa&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
 
 ## Fitting a Linear Model
 
