@@ -134,11 +134,11 @@ I have provided two Julia functions to help with this: (1) `fitPeak`, which fits
 
 Below are retention factors for compounds used to create the samples.  You may use these to indicate which compounds are in your sample.
 
-| Compound | Rf |
-| :----- | :-----: |
-| Acetone | 0.7668 |
-| iso-octane | 3.229 | 
-| Ethanol | 0.5300 | 
-| n-heptane | 3.224 |
-| 2-butanol | 1.612 |
-| 1-propanol | 1.201 |
+| Compound   |   Rf   |
+|:---------- |:------:|
+| Acetone    | 0.7668 | 
+| iso-octane | 3.229  |
+| Ethanol    | 0.5300 |
+| n-heptane  | 3.224  |
+| 2-butanol  | 1.612  |
+| 1-propanol | 1.201  |
