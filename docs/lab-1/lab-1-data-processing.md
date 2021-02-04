@@ -128,3 +128,17 @@ I have provided two Julia functions to help with this: (1) `fitPeak`, which fits
 {: .no_toc }
 
 1. Kevin Lan and James W. Jorgenson (2001). A hybrid of exponential and gaussian  functions as a simple model of asymmetric chromatographic peaks. *Journal of Chromatography A* **915**:1–2, p 1-13. doi: [10.1016/S0021-9673(01)00594-5](https://doi-org.proxy195.nclive.org/10.1016/S0021-9673(01)00594-5)
+
+
+## Appendix: Retention Factors for Common Solvents
+
+Below are retention factors for compounds used to create the samples.  You may use these to indicate which compounds are in your sample.
+
+| Compound | Rf |
+| :----- | :-----: |
+| Acetone | 0.7668 |
+| iso-octane | 3.229 | 
+| Ethanol | 0.5300 | 
+| n-heptane | 3.224 |
+| 2-butanol | 1.612 |
+| 1-propanol | 1.201 |
