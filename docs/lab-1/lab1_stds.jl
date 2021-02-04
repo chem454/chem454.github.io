@@ -46,7 +46,7 @@ md"""
 | Ethanol | 0.5300 | 
 | n-heptane | 3.224 |
 | 2-butanol | 1.612 |
-| 1-propanol | 1.201
+| 1-propanol | 1.201 |
 
 
 """
