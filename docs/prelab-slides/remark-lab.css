@@ -32,7 +32,7 @@ html {
   height: 100%;
   line-height: 1.25;
   padding: 20px 80px 0 80px;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .remark-slide-content * {
   box-sizing: border-box;
@@ -138,7 +138,7 @@ html {
 }
 .remark-slide-content table,
 .remark-slide-content .katex {
-  font-size: 85%;
+  font-size: 40%;
 }
 .remark-slide-content.fullbleed,
 .remark-slide-content.fullbleed > p {
@@ -598,13 +598,13 @@ table {
 	border-collapse: collapse;
 	width: 50%;
 	font-family: $chem370text;
-	font-size: 14px;
+	/* font-size: 14px; */
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 th {
-	background-color: #433024;
+	background-color: #592C88;
 	color: white;
 	font-weight: bold;
 }
@@ -617,7 +617,7 @@ tr {
 	border-bottom: 2px solid #F5F4F1;
 }
 tr:last-child {
-	border-bottom: 2px solid #433024;
+	border-bottom: 2px solid #592C88;
 }
 tr:hover {
   background-color: #C1A875;

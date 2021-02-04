@@ -59,9 +59,34 @@ class: center
 
 # gc-tcd | **gas chromatography**
 
-Each peak is referred to by **retention time** or **retention factor**.  Retention factor compares R.T of the sample peak to R.T. of the *system peak*.
+Retention factor compares R.T of the sample peak to R.T. of the *system peak*.
 
-<img src="/assets/images/lab-1/chromatogram.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+$$k\_r = \frac{t\_r - t\_m}{t\_m}$$
+
+<img src="/assets/images/lab-1/chromatogram.png" style = "height: 250px; margin-left: auto; margin-right: auto; display: block;">
+
+---
+class: center
+
+# lab 2 | **Gow-Mac GC-TCD**
+
+**Peak area** is proportional to concentration.
+
+$$C\_n (\%)=\frac{A\_n}{A\_1 + A\_2 + ... A\_n} \times 100\%$$
+
+<img src="/assets/images/lab-1/peakArea.png" style = "height: 250px; margin-left: auto; margin-right: auto; display: block;">
+
+---
+class: center
+
+# lab 2 | **Gow-Mac GC-TCD**
+
+Peak separation is described the the **resolution**.
+
+$$R\_s = \frac{t\_{r\_2} - t\_{r\_1}}{0.5(W\_{b\_2} + W\_{b\_1})}$$
+
+$$W\_b = 4 \sigma$$
+<img src="/assets/images/lab-1/chromatogram.png" style = "height: 250px; margin-left: auto; margin-right: auto; display: block;">
 
 ---
 class: center
@@ -115,15 +140,11 @@ exclude: true
 # lab 2 | **Gow-Mac GC-TCD**
     
 1. Determine retention time of each peak.
-1. Calculate retention factor for each peak 
-
-    $$k\_r = \frac{t\_r - t\_m}{t\_m}$$
-    
+1. Calculate retention factor for each peak     
 1. Calculate resolution for each peak
-
-    $$R\_s = \frac{t\_{r\_2} - t\_{r\_1}}{0.5(W\_{b\_2} + W\_{b\_1})}$$
-
 1. Calculate area of each peak and determine percent composition
+
+
 ---
 class: center
 
@@ -150,7 +171,24 @@ class: center
 
 You will need to record the instrument parameters in your notebook today!  Use a Markdown table.
 
-<img src="/assets/images/lab-1/instrument-table.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;">
+**Table 1: Instrument Parameters**
+
+| Parameter                     |                     Value                     |
+|:----------------------------- |:---------------------------------------------:|
+| Manufacturer                  |                    Gow-Mac                    |
+| Model                         |                  400 Series                   |
+| Column Type                   |                                               |
+| Mobile Phase                  |                      He                       |
+| Oven Temperature (°C)         |                                               |
+| Injector Temperature (°C)     |                                               |
+| Detector Type                 |                                               |
+| Detector Temperature (°C)     |                                               |
+| Detector Current              |                                               |
+| Data Acquisition Module (DAQ) | Vernier Instrumentation Amp (+/- 20 mV range) |
+| Data Acquisition Software     |              Vernier LoggerLite               |
+| Sampling Rate (Hz)            |                     1 Hz                      |
+
+<!-- <img src="/assets/images/lab-1/instrument-table.png" style = "height: 400px; margin-left: auto; margin-right: auto; display: block;"> -->
 
 ---
 class: center
