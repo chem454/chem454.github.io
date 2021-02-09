@@ -54,7 +54,7 @@ Watch Dr. Fischer teardown a SpectroVis and find out what’s inside!
 
 Do the following *before* coming to lab:
 
-- Prepare your lab notebook, including calculations of your standard concentrations.
+- Prepare your lab notebook, including calculations of your standard concentrations (more info in the Prelab section).
 - Install [Vernier Spectral Analysis](https://www.vernier.com/product/spectral-analysis/) on your computer.
 
 ## Safety
