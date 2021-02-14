@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.16
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -101,7 +101,7 @@ flask_volume = missing; # mL
 if (flask_volume !== 25.00 && flask_volume !== missing)
 		md"""
 !!! warning "Unexpected flask volume?"
-    Did you use a flask other than 25 ml?  It's OK if so -- just make sure you have the right volume listed!  If you used more than one volume you can enter it like `flask_volume = [1, 2, 3, ...]`.
+    Did you use a flask other than 25 ml?  It's OK if so -- just make sure you have the right volume listed!  If you used more than one volume you can enter it like `flask_volume = [1, 2, 3, ...]`.  Also note that in Julia 25 ≠ 25.0!  The first is an `Int` and the second is a `Float`.
 		"""
 elseif flask_volume === missing
 	
@@ -113,7 +113,7 @@ end
 
 # ╔═╡ 340904fa-3ef7-11eb-0708-75853130399e
 # std_concs = C2 = C1V1 ÷ V2
-# C1 = stock conc. = 113.4 ppm
+# C1 = stock conc.
 # V1 = pipette_volume (varies)
 # V2 = vol flask volume (25 ml)
 standard_concentrations = missing # mg/L
@@ -122,25 +122,26 @@ standard_concentrations = missing # mg/L
 if standard_concentrations !== missing
 	if (standard_concentrations == pipette_volume * stock_conc / flask_volume)
 			md"""
-	!!! correct
-		Well done!
+!!! correct
+    Well done!
 			"""
 	else
 		md"""
 !!! warning "Incorrect"
-    I got different values...
+    I got different values...		
+    Make sure you use the dot syntax here (`.*` and `./`).
 		"""
 	end
 end
 
-# ╔═╡ 2772604a-3f0a-11eb-3d3a-b9e9bde5793e
+# ╔═╡ 9f6dff72-6e66-11eb-3725-531ee2f52173
 md"""
-A QC sample was prepared by placing 20.00 mL of quinine sulfate stock into a 25 mL volumetric flask and filling to volume with the same diluent used in the previous step.
+Insert your info about how the QC was prepared here.
 """
 
 # ╔═╡ b863400a-3efa-11eb-1e2b-1dce178424f0
 # qc_conc_expected = C2 = C1V1 ÷ V2
-# C1 = stock conc. = 103.2 ppm
+# C1 = stock conc.
 # V1 = pipette_volume (10 ml)
 # V2 = vol flask volume (25 ml)
 qc_expected_conc = missing # mg/L
@@ -323,24 +324,24 @@ qc_measured_conc = missing
 
 # ╔═╡ 53dc6110-3f0f-11eb-0cfa-5d8e19effc0d
 md"""
-The measured QC concentration of $(round(qc_measured_conc, sigdigits = 3)) mg/L is clost to the true QC concentration of $(qc_expected_conc) mg/L.  This equates to a $(round((qc_expected_conc - qc_measured_conc)/qc_expected_conc*100, sigdigits = 3)) % difference, which is <5% and therefore considered passing.
+Insert your interpretation of the QC data here.
 """
 
 # ╔═╡ df892290-3f44-11eb-198f-7192ac3bcf9c
 let
 	if qc_measured_conc !== missing
-		qcmeas = (experiment_data[12, 3] - coef(calcurve)[1]) / coef(calcurve)[2]
+		qcmeas = (experiment_data[occursin.("QC", experiment_data[!, 1]), :Signal][1] - coef(calcurve)[1]) / coef(calcurve)[2]
 
 		if qcmeas == qc_measured_conc
 
 			md"""
-	!!! correct
-		You calculated your QC concentration correctly!
+!!! correct
+    You calculated your QC concentration correctly!
 			"""
 		else
 			md"""
-	!!! warning 
-		Your QC concentration appears incorrect.  Double check the previous steps.
+!!! warning 
+    Your QC concentration appears incorrect.  Double check the previous steps.
 			"""
 		end
 	end
@@ -389,18 +390,63 @@ A custom function, `calculateCI(model, std_conc, std_signal, new_signal, t = 3.1
 - `t`: The critical *t* value to use for the CI
 
 **The output of the function is CI (i.e. $tS_{C_a}$).**
+
+See [Chapter 5](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_(Harvey)/05%3A_Standardizing_Analytical_Methods/5.04%3A_Linear_Regression_and_Calibration_Curves) in *Analytical Chemistry 2.1* by David Harvey for more information.
 """
 
 # ╔═╡ 8a1c2b54-3f30-11eb-2406-274ade08f7c4
 # Leave this chunk alone -- it's a custom function you will need!
 
-function calculateCI(model, std_conc, std_signal, new_signal, t = 3.182)
+function calculateCI(model, std_conc, std_signal, new_signal; t = 3.182)
 	sᵣ = sqrt((deviance(model) / dof_residual(model)));
 	CI = (sᵣ/coef(model)[2]) * sqrt((1/length(predict(model))) + (1/length(new_signal)) + ((mean(new_signal) - mean(std_signal))^2 / (coef(model)[2]^2 * sum((std_conc .- mean(std_conc)).^2)))) * t
 end;
 
 # ╔═╡ 012325ce-3f31-11eb-1f9f-059a0dc7e06d
 CI = missing
+
+# ╔═╡ 7753ebd0-6e6d-11eb-100f-31b0593efd65
+md"""
+# Determine Limit of Detection and Limit of Quantitation
+"""
+
+# ╔═╡ fdd3dac6-6e6d-11eb-02f9-450542e2218a
+LOD = missing
+
+# ╔═╡ b8ae0908-6e6d-11eb-25cd-733b8eb4f620
+if LOD !== missing
+		llod = ( 3 * std(experiment_data[occursin.("Blank", experiment_data[!, 1]), :Signal]) ) / coef(calcurve)[2]
+	
+	if llod == LOD
+
+	md"""
+!!! correct
+			"""
+		else
+	md"""
+!!! warning 
+			"""
+	end
+end
+
+# ╔═╡ 0214f7dc-6e6e-11eb-276c-033cc0aeecd2
+LOQ = missing
+
+# ╔═╡ 0bcf6636-6e6e-11eb-0928-b9739c4c456e
+if LOD !== missing
+		lloq = ( 10 * std(experiment_data[occursin.("Blank", experiment_data[!, 1]), :Signal]) ) / coef(calcurve)[2]
+	
+	if lloq == LOQ
+
+	md"""
+!!! correct
+			"""
+		else
+	md"""
+!!! warning 
+			"""
+	end
+end
 
 # ╔═╡ bc1db886-3f38-11eb-2d42-1bd1196107dc
 md"""
@@ -437,7 +483,7 @@ md"""
 # ╟─7d6624ae-3f3e-11eb-2d24-ef6684f04e4d
 # ╠═340904fa-3ef7-11eb-0708-75853130399e
 # ╟─61d52506-3f49-11eb-04ec-af07ac9a7750
-# ╟─2772604a-3f0a-11eb-3d3a-b9e9bde5793e
+# ╟─9f6dff72-6e66-11eb-3725-531ee2f52173
 # ╠═b863400a-3efa-11eb-1e2b-1dce178424f0
 # ╟─89112f64-3f0a-11eb-34e8-fdd7b6449fef
 # ╟─b629f6e8-3f0a-11eb-10e6-072baf22db8e
@@ -474,5 +520,10 @@ md"""
 # ╟─5f07d80e-3f36-11eb-30d6-f35fa7cd80c6
 # ╟─8a1c2b54-3f30-11eb-2406-274ade08f7c4
 # ╠═012325ce-3f31-11eb-1f9f-059a0dc7e06d
+# ╟─7753ebd0-6e6d-11eb-100f-31b0593efd65
+# ╠═fdd3dac6-6e6d-11eb-02f9-450542e2218a
+# ╟─b8ae0908-6e6d-11eb-25cd-733b8eb4f620
+# ╠═0214f7dc-6e6e-11eb-276c-033cc0aeecd2
+# ╟─0bcf6636-6e6e-11eb-0928-b9739c4c456e
 # ╟─bc1db886-3f38-11eb-2d42-1bd1196107dc
 # ╟─c7633808-3f38-11eb-213f-49d634169b1d
