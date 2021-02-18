@@ -30,9 +30,9 @@ Determine the concentration of quinine in the unknown with the 95% confidence in
 
 This video walks you through the data processing step-by-step.  The goal is to help you get familiar with Julia and Pluto before you try it on your own in the rotation labs!
 
-*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cec7a03-13fe-4208-9f3e-acc40119e635) to view it on Panopto instead.*
+*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2ffb7ac-7bd3-45d1-a68b-acd3016b73bc) to view it on Panopto instead.*
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=993fb4bb-535d-409c-96ce-ac3600df98a1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a2ffb7ac-7bd3-45d1-a68b-acd3016b73bc&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
 </iframe>
 
 ## Create a Lab Notebook and Calculate Standard Concentrations (Before Lab)
