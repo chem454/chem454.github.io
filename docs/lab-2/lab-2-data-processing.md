@@ -27,6 +27,7 @@ Determine the concentration of quinine in the unknown with the 95% confidence in
 </details>
 
 # Step-by-Step Video Tutorial
+{:toc}
 
 This video walks you through the data processing step-by-step.  The goal is to help you get familiar with Julia and Pluto before you try it on your own in the rotation labs!
 
@@ -35,11 +36,11 @@ This video walks you through the data processing step-by-step.  The goal is to h
 <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=993fb4bb-535d-409c-96ce-ac3600df98a1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
 </iframe>
 
-## Create a Lab Notebook and Calculate Standard Concentrations (Before Lab)
+# Create a Lab Notebook and Calculate Standard Concentrations (Before Lab)
 
 1. Complete the steps under the prelab section if you did not already do so.  Make sure you enter your actual standard concentrations.
 
-## Import and Format Your Data (During Lab)
+# Import and Format Your Data (During Lab)
 
 1. Paste your data file(s) into your lab 2 folder.  If you are using the suggested path this folder is at `/Documents/lab-notebooks/lab-2/`.
 
@@ -47,7 +48,7 @@ This video walks you through the data processing step-by-step.  The goal is to h
 
    ![A screenshot showing what the final data set should look like in Pluto]({{site.url}}/assets/images/lab-2/data-table-format.png)
 
-## Fit a Standard Curve (After Lab)
+# Fit a Standard Curve (After Lab)
 
 1. Fit a linear model of the form $S_a = k_a C_a + b$, where $S_a$ is the analyte signal and $C_a$ is the analyte concentration.  **Call your model `calcurve`.** In Julia, a linear model can be fit thusly:
    
@@ -79,13 +80,13 @@ This video walks you through the data processing step-by-step.  The goal is to h
 	end
    ```
 
-## Validate the Standard Curve
+# Validate the Standard Curve
 
 1. Determine the concentration of the QC by using it's measured signal value and solving for $C_a$ in the equation obtained from your standard curve.
 
 1. Determine the percent difference between the QC's measured concentration and true concentration.  This should be <5% as a general rule.
 
-## Determine the Sample Concentration
+# Determine the Sample Concentration
 
 1. Determine the concentration of quinine in the sample by using it's measured signal value and solving for $C_a$ in the equation obtained from your standard curve.  Make sure you calculate the average concentration
 
@@ -93,7 +94,7 @@ This video walks you through the data processing step-by-step.  The goal is to h
 
 1. Report your final concentration as $\bar{x} \pm \text{CI}$, where $\bar{x}$ is the average quinine concentration and $\text{CI}$ is the 95% confidence interval.
 
-## Determine the Limits of Detection and Quantitation
+# Determine the Limits of Detection and Quantitation
 
 1. Determine the limit of detection (LOD) and limit of quantitation (LOQ) for this method using the standard deviation, $s$ of your blank.  Use the following definitions:
 
