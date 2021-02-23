@@ -24,9 +24,10 @@ has_children: true
 
 ## Summary
 
-**Objective -** Determine the concentration of quinine in tonic water using fluorescence spectroscopy.
+**Objective:**
+Determine the concentration of quinine in tonic water using fluorescence spectroscopy.
 
-**Turn in** a ZIP folder containing:
+**Turn in:**
   - Your complete lab notebook as a .jl file, functioning with no errors.
   - You complete lab notebook as a static .html file.
   - Your data files.

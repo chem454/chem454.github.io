@@ -124,7 +124,7 @@ I have provided two Julia functions to help with this: (1) `fitPeak`, which fits
 
 1. Include a discussion of (1) how many constituents are in your sample and (2) the relative polarity of each component.  Compare the retention factors you calculated to the standards to see if you can determine what's in the mixture.
 2. Save your notebook as both a Julia (.jl) file and static HTML (.html) file.
-9. Compress your lab 1 directory (.jl, .html, and .csv files) into ZIP folder and upload it to the Lab 1 assignment on MS Teams.
+9. Upload your files to the Lab 1 assignment on MS Teams.
 
 ## References
 {: .no_toc }

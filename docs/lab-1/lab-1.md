@@ -33,7 +33,7 @@ last_modified_date: 2020-12-05
 - Prepare you lab notebook (see the next section, Lab 1 Prelab)
 - Watch the introductory videos below
 
-**Turn in a ZIP folder containing:**
+**Turn in:** 
 - Your complete lab notebook as an .jl file, functioning with no errors, and a static .html file.
 - Your data files.
 
