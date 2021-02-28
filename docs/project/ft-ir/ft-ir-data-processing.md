@@ -51,7 +51,7 @@ $$
 1. Normalize your spectra by converting from absorbance units to relative absorbance.  You do this by dividing the whole spectrum by the maximum absorbance value.  ***After this step your data should range from 0 to 1.***
 
 $$
-y_{i,normalized} = y_{i,corrected} - y_{max}
+y_{i,normalized} = y_{i,corrected} \div y_{max}
 $$
 
 ## Calculate the HQI  
