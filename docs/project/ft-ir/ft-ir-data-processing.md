@@ -40,7 +40,7 @@ The following video walks you through the data processing portion of this lab.
 
 ## Baseline Correct the Spectra 
 
-1. Baseline correct your spectra by subtracting the minimum value from each data point.  *This should make the minimum value on your plot 0.*
+1. Baseline correct your spectra by subtracting the minimum value from each data point.  ***After this step the minimum value in each spectrum should be 0.***
 
 $$
 y_{i,corrected} = y_{i} - y_{min}
@@ -52,6 +52,14 @@ $$
 
 $$
 y_{i,normalized} = y_{i,corrected} \div y_{max}
+$$
+
+## Calculate the Mean Spectrum
+
+1. Calculate the mean of your 3 replicates using the normalized spectra.
+
+$$
+\bar{y_i} = \sum_{i=1}^{i=n} \frac{ y_{1,i,normalized} + y_{2,i,normalized} + y_{3,i,normalized} + ... + y_{n,i,normalized}}{n}
 $$
 
 ## Calculate the HQI  
