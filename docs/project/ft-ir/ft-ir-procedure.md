@@ -6,7 +6,7 @@ permalink: /project/ft-ir/procedure
 has_toc: true
 parent: FT-IR
 grand_parent: Project (e-Cigarettes)
-last_modified_date: 2020-12-26
+last_modified_date: 2021-02-28
 ---
 # FT-IR Procedure
 {: .no_toc  }
