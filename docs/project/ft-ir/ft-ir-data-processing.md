@@ -24,11 +24,11 @@ last_modified_date: 2020-12-26
 {:toc}
 </details>
 
+Use the following link to download the notebook template for this lab:
+
+[https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/ft-ir/ftir-notebook-template.jl](https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/ft-ir/ftir-notebook-template.jl)
 
 The following video walks you through the data processing portion of this lab.
-
-
-
 
 <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=683a0991-3eb6-4e62-8bda-ac4600e1a364&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
@@ -107,5 +107,5 @@ $$
 1. Attach your .jl, .html, and .csv files to the MS Teams assignment for this lab when turning it in.
 
 <div class="tip">
-You should turn a your complete lab notebook as an .html and .jl file functioning with no errors and (2) your 9 data files in CSV format.
+You should turn a your complete lab notebook as an .html and .jl file functioning with no errors and (2) your 6 data files in CSV format.
 </div>
