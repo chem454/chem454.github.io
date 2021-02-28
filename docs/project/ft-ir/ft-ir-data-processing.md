@@ -87,7 +87,7 @@ $$
     where $\mathbf{b}^\text{T}$ represents the *transpose* of $\mathbf{b}$, as in:
 
     $$
-    \mathbf{a} \cdot \mathbf{b} = [a_1, a_2, ..., a_n] \times \begin{bmatrix}
+    \mathbf{a} \cdot \mathbf{b} = \mathbf{a} \times \mathbf{b}^\text{T} = [a_1, a_2, ..., a_n] \times \begin{bmatrix}
                b_{1} \\
                b_{2} \\
                \vdots \\
