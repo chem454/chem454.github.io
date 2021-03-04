@@ -41,7 +41,7 @@ Add your methods here, with enough detail that someone could *exactly* reproduce
 
 # ╔═╡ 6efee05e-7c8f-11eb-3724-0111656bf807
 md"""
-## Sample Information
+**Table 1: Sample Summaries**
 
 | Sample ID    | Manufacturer | Flavor | Advertised Nic. Conc. (mg/mL) |
 | -----        | ------       | -----  | :-----:                       |
@@ -69,7 +69,7 @@ md"""
 
 # ╔═╡ 6288abd6-78ca-11eb-15e0-37a6bed8d836
 md"""
-**Table 1: FT-IR Parameters**
+**Table 2: FT-IR Parameters**
 
 |   Parameter    |   Value    |
 | :--------       | :--------:   |
@@ -234,12 +234,9 @@ Your conclusions go here.
 md"""
 # References
 
-"""
-
-# ╔═╡ 79e7f816-7a00-11eb-15bf-893919a5bff4
-md"""
 1. Insert your references here in ACS format.    
 2. Make sure any references you use are cited in the text of your notebook, and *vice-versa*.
+
 """
 
 # ╔═╡ 87d9bb80-7a00-11eb-0c65-5d7235fe7639
@@ -647,7 +644,6 @@ end
 # ╟─fa194f3a-78ca-11eb-3970-a59ca63e5687
 # ╟─d4d78d36-7a00-11eb-1457-77f47c912d6c
 # ╟─05894e92-78cb-11eb-2dda-5b89c7e14514
-# ╟─79e7f816-7a00-11eb-15bf-893919a5bff4
 # ╟─87d9bb80-7a00-11eb-0c65-5d7235fe7639
 # ╟─835a69a2-78bf-11eb-0576-b9729ce6091e
 # ╟─422ef4e0-7926-11eb-0395-d9d791cb534e
