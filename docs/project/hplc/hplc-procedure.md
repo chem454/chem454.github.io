@@ -80,4 +80,4 @@ Repeat the following for each sample:
     1. QC Sample (same as previous QC; always finish with QC)
 1. After the instrument has warmed up, run your sequence.
 1. Analyze your standards and samples (you may skip the standards again if you've run them in the past hour -- just start with a QC instead).
-1. Use a *t*-test to determine if the mass of nicotine is *significantly* different from the expected mass. (See Appendix 3, Comparing Means for more information on *t*-tests.)
+1. Use a *t*-test or confidence intervals to determine if the mass of nicotine is *significantly* different from the expected mass. (See [Comparing Means](https://chem370.github.io/useful-info/statistics#comparing-means) for more information on comparing means.)
