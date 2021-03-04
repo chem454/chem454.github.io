@@ -24,6 +24,10 @@ last_modified_date: 2021-02-28
 {:toc}
 </details>
 
+Use the following link to download the notebook template for this lab:
+
+[https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/faas/faas-notebook-template.jl](https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/faas/faas-notebook-template.jl)
+
 The following video walks you through the data processing portion of this lab.
 
 <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=733fb481-8a20-4369-bf3c-ac67011c358e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
