@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.20
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -16,6 +16,13 @@ md"""
 February 27, 2021
 """
 
+# ╔═╡ 50d91580-7c90-11eb-262b-4d9d60357376
+md"""
+**NOTE:** *The sections listed in this template are meant to be a guide to help you determine what information you should include and different ways of presenting that information.  I encourage you to make it your own!  You are free to add sections, rearrange information, etc., in a way that works for you, so long as the notebook stays organized and easy to understand.*
+
+*You should delete the template text (like this) before you turn your notebook in.*
+"""
+
 # ╔═╡ 503be9d4-78ca-11eb-3193-c37d66d2f95f
 md"""
 # Introduction
@@ -29,6 +36,34 @@ md"""
 # Materials and Methods
 
 Add your methods here, with enough detail that someone could *exactly* reproduce your experiment with no other resources.
+
+"""
+
+# ╔═╡ 6efee05e-7c8f-11eb-3724-0111656bf807
+md"""
+## Sample Information
+
+| Sample ID    | Manufacturer | Flavor | Advertised Nic. Conc. (mg/mL) |
+| -----        | ------       | -----  | :-----:                       |
+| Sample 1 ID  |              |        |                               |
+
+*You can add more columns to this table if you want to.*
+
+"""
+
+# ╔═╡ ddf851fc-7c8f-11eb-3185-8d2f326ff6de
+md"""
+## Laboratory Methods & Sample Prep
+
+1. Add your sample prep and lab procedures here.  
+2. Remember to include exact quantities just like you would in a paper notebook.
+"""
+
+# ╔═╡ c55e8fc6-7c8f-11eb-19b9-8779f06dfef3
+md"""
+## Instrumental Methods
+
+*Insert info about the steps you used on the instrument here.*
 
 """
 
@@ -64,12 +99,9 @@ reference_spectrum = missing;
 # ╔═╡ 9bfe2b2c-7911-11eb-1060-e93f7885ce59
 reference_spectrum
 
-# ╔═╡ 8207ef16-79f5-11eb-0fa8-4fc0de4da073
-
-
 # ╔═╡ 34024f78-7912-11eb-18b8-393890e9d088
 md"""
-### Sample 1 (TX0) Data
+### Sample 1 Data
 """
 
 # ╔═╡ 52927184-78bf-11eb-3408-594d9d7670bb
@@ -77,7 +109,7 @@ sample1_spectrum = missing;
 
 # ╔═╡ 49173ad6-7912-11eb-2425-df41bd95f462
 md"""
-### Sample 2 (TX-1) Data
+### Sample 2 Data
 """
 
 # ╔═╡ 69f54f0e-78bf-11eb-266c-fb952c315e2f
@@ -101,7 +133,7 @@ reference_normalized = missing;
 
 # ╔═╡ ce9f4f82-79f4-11eb-22c6-db400b8ccd4e
 md"""
-### Sample 1 (TX0) Data
+### Sample 1 Data
 """
 
 # ╔═╡ 90580e62-79f4-11eb-37cc-c16154f397f2
@@ -112,7 +144,7 @@ sample1_normalized = missing;
 
 # ╔═╡ d6171d94-79f4-11eb-0fa7-7b4ec0c67b3b
 md"""
-### Sample 2 (TX1) Data
+### Sample 2 Data
 """
 
 # ╔═╡ bdfe3d46-79f4-11eb-106a-298771593f83
@@ -154,7 +186,7 @@ reference_spectrum
 
 # ╔═╡ ac66d8c0-791a-11eb-0a18-9db4352cb924
 md"""
-### Sample 1 (TX0)
+### Sample 1
 """
 
 # ╔═╡ cb8fe602-791e-11eb-2c19-8de4917d3dde
@@ -163,11 +195,11 @@ sample1_spectrum
 
 # ╔═╡ b45567d6-791a-11eb-07ef-25c21a21bf3d
 md"""
-### Sample 2 (TX1)
+### Sample 2
 """
 
 # ╔═╡ 8d600a1e-791a-11eb-31c7-63d98d85707b
-# This will display your processed data.  There is nothing you need to do here.s
+# This will display your processed data.  There is nothing you need to do here.
 sample2_spectrum
 
 # ╔═╡ d5b13cf8-791e-11eb-3fd7-e58c7c3bcc5f
@@ -178,6 +210,7 @@ md"""
 # ╔═╡ 719be4a6-78c5-11eb-1776-699c4f5b64b9
 begin
 	plotly();
+	
 end
 
 # ╔═╡ a6bea1ca-78c3-11eb-0353-6128ec73d49f
@@ -282,13 +315,13 @@ if !ismissing(reference_spectrum)
 	    Did you skip the metadata row? Use `CSV.read(filename.csv, DataFrame, header = 2)` to start importing at row 2? 
 		
 	!!! hint
-	    Did you add all three replicates to the data frame? Add the other two replicates to your data frame using something like `reference_spectrum[!, "NewColumnName"] = CSV.read(filename-2.csv, DataFrame, drop = 2)`.	**Make sure your spectra are in columns 2-4!**
+	    Did you add all three replicates to the data frame? Add the other two replicates to your data frame using something like `reference_spectrum[!, "NewColumnName"] = CSV.read(filename-2.csv, DataFrame, header = 2)`.	**Make sure your spectra are in columns 2-4!**
 	"""
 	end
 else sa1 = false
 			md"""
 	!!! hint 
-	    Import your first spectrum using `CSV.read("filename.csv", DataFrame)`.  Add the other two replicates to your data frame using something like `reference_spectrum[!, "NewColumnName"] = CSV.read(filename-2.csv, DataFrame, drop = 2)`.
+	    Import your first spectrum using `CSV.read("filename.csv", DataFrame)`.  Add the other two replicates to your data frame using something like `reference_spectrum[!, "NewColumnName"] = CSV.read(filename-2.csv, DataFrame, header = 2)`.
 	"""
 end
 
@@ -298,7 +331,7 @@ if !ismissing(sample1_spectrum)
 	sa2 = true
 	md"""
 	!!! correct
-	    Your dataframe appears correct.  Do the same for the last sample!
+	    Your dataframe appears correct.  Do the same for the other replicates and then the last sample!
 	"""
 	else
 	sa2 = false
@@ -326,7 +359,7 @@ if !ismissing(sample2_spectrum)
 	sa3 = true
 	md"""
 	!!! correct
-	    Your dataframe appears correct.  Do the same for the last sample!
+	    Your dataframe appears correct.  Do the same for the other replicates!
 	"""
 	else
 	sa3 = false
@@ -558,8 +591,12 @@ end
 
 # ╔═╡ Cell order:
 # ╟─3bc95926-78ca-11eb-2ac4-1dabed09ddd7
+# ╟─50d91580-7c90-11eb-262b-4d9d60357376
 # ╟─503be9d4-78ca-11eb-3193-c37d66d2f95f
 # ╟─5890957e-78ca-11eb-05aa-536cf337874c
+# ╟─6efee05e-7c8f-11eb-3724-0111656bf807
+# ╟─ddf851fc-7c8f-11eb-3185-8d2f326ff6de
+# ╟─c55e8fc6-7c8f-11eb-19b9-8779f06dfef3
 # ╟─6288abd6-78ca-11eb-15e0-37a6bed8d836
 # ╟─b0f34c52-78ca-11eb-21b2-55ea50051747
 # ╠═4ae04c94-78bd-11eb-3fbc-1100761316d0
@@ -567,7 +604,6 @@ end
 # ╟─20600570-7912-11eb-2ecf-87517fee3051
 # ╠═c124ab2c-78be-11eb-2a56-9bb5f9c9777b
 # ╟─9bfe2b2c-7911-11eb-1060-e93f7885ce59
-# ╟─8207ef16-79f5-11eb-0fa8-4fc0de4da073
 # ╟─af342e94-78cb-11eb-2139-9b4a3870c74c
 # ╟─34024f78-7912-11eb-18b8-393890e9d088
 # ╠═52927184-78bf-11eb-3408-594d9d7670bb
@@ -598,7 +634,7 @@ end
 # ╟─7d3927e2-791a-11eb-0f0b-379d0e1dc27b
 # ╟─9deea930-791a-11eb-0e88-cf26226782f8
 # ╠═d23d96ba-791f-11eb-1676-4bf5aea1cd0d
-# ╟─ac66d8c0-791a-11eb-0a18-9db4352cb924
+# ╠═ac66d8c0-791a-11eb-0a18-9db4352cb924
 # ╠═cb8fe602-791e-11eb-2c19-8de4917d3dde
 # ╟─b45567d6-791a-11eb-07ef-25c21a21bf3d
 # ╠═8d600a1e-791a-11eb-31c7-63d98d85707b
