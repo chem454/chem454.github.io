@@ -62,7 +62,7 @@ md"""
 """
 
 # ╔═╡ 9daa4a1a-7ca3-11eb-2124-a744fc0a5be0
-concentrations = missing
+concentrations = missing # you may want to enter your concentrations into julia here as an array, e.g., [1, 2, 3, ... ]
 
 # ╔═╡ b63201ce-7cab-11eb-33ff-8587745784f2
 md"""
@@ -113,7 +113,7 @@ if !ismissing(faas_data) && any(names(faas_data) .== "Conc")
 else
 			md"""
 	!!! hint 
-	     Enter your concentrations as a new column called "Conc".
+	     Enter your concentrations as a new column called "Conc".  Remember the new column must be the same length as the other columns (use `vcat()` to concatenate arrays together if you need to change the length).  If you do that and this hint doesn't turn green try re-running the cell with your `CSV.read(...)` code in it to trigger the notebook to update.
 	"""
 end
 
@@ -134,7 +134,7 @@ if !ismissing(faas_data) && any(names(faas_data) .== "Abs")
 else
 			md"""
 	!!! hint 
-	    Calculate the mean signal/absorption values and add them in a new column called "Abs".
+	    Calculate the mean signal/absorption values and add them in a new column called "Abs".  Remember you can take the mean across columns using `mean(matrix, dims = 2)`.  If you do that and this hint doesn't turn green try re-running the cell with your `CSV.read(...)` code in it to trigger the notebook to update.
 	"""
 end
 
@@ -193,10 +193,11 @@ md"""
 
 # ╔═╡ 205c8278-7a2b-11eb-02e2-23ac064ac955
 sample_signal = missing
+# Should be a 2x1 array of sample concentrations
 
 # ╔═╡ f56f7510-7a26-11eb-257c-5f7e92550ee9
-sample_concs = (sample_signal .- b) ./ k
-# Should be a 1x2 array of sample concentrations
+sample_concs = missing
+# Should be a 2x1 array of sample concentrations
 
 # ╔═╡ 82c459f2-7cad-11eb-1b01-0db08c3a874e
 md"""
@@ -325,13 +326,13 @@ if !ismissing(faas_data)
 	bs1 = false
 	md"""
 	!!! danger "Oops!"
-	    Your dataframe appears incorrect.  It should have 12 columns and 9 rows.  Things to check: Did you export the right format?  Did modify the CSV file in any way? Have you modified the data frame in any way?  You must keep the data in the same format the instrument gave you for this template to work.
+	    Your dataframe appears incorrect.  It should have 12 columns and 9 rows.  Things to check: Did you export the right format?  Did modify the CSV file in any way? Have you modified the data frame in any way?  You must keep the data in the same format the instrument gave you for this template to work.  Also check that you converted from UTF-16LE to UTF-8 file encoding: Since the FAAS files are encoded as UTF-16LE files you will need to use `CSV.read(open("filename.csv", enc"UTF-16LE"), ...)`.
 	"""
 	end
 else bs1 = false
 			md"""
 	!!! hint 
-	    Import your first data using `CSV.read("filename.csv", DataFrame)`.  Use the argument `normalizenames = true` to get rid of the spaces and parentheses in the column names (it'll make things easier later on).
+	    Import your first data using `CSV.read("filename.csv", DataFrame)`.  Use the argument `normalizenames = true` to get rid of the spaces and parentheses in the column names (it'll make things easier later on).  Since the FAAS files are encoded as UTF-16LE files you will need to use `CSV.read(open("filename.csv", enc"UTF-16LE"), ...)`.
 	"""
 end
 
@@ -480,7 +481,7 @@ if !ismissing(sample_concs) && length(sample_concs) == 2
 else bs7 = false
 			md"""
 	!!! hint 
-	    Determine your pre- and post-vape concentrations based your standard curve.  See Lab 2 for an example.  You should create a 1 row by 2 column array.
+	    Determine your pre- and post-vape concentrations based your standard curve.  See Lab 2 for an example.  You should create a 2 row by 1 column array.
 	"""
 end
 
