@@ -52,7 +52,7 @@ I put a lot of trust in you to complete your work, do it well, and ask questions
 ### Individual
 
 - Lab 0 Tutorials (Exercises 0A & 0B)
-- 4 lab notebooks (1 for each intro labs and 2 for the project lab)
+- 5 lab notebooks (1 for each intro labs and 3 for the project lab)
 - 4 instrument quizzes
 - 1 peer review assignment
 - Lab safety & participation
