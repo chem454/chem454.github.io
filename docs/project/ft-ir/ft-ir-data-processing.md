@@ -67,7 +67,7 @@ $$
 1. Calculate the Hit Quality Index according to Eq. 2 in [Rodriguez et al (2011)](https://www.researchgate.net/publication/51602215_Standardization_of_Raman_spectra_for_transfer_of_spectral_libraries_across_different_instruments):
 
     $$
-    \text{HQI} = \frac{(\text{Reference} \cdot \text{Sample})}{(\text{Sample} \cdot \text{Sample}) \times (\text{Reference} \cdot \text{Reference})}
+    \text{HQI} = \frac{(\text{Reference} \cdot \text{Sample})^2}{(\text{Sample} \cdot \text{Sample}) \times (\text{Reference} \cdot \text{Reference})}
     $$
 
     Be mindful of the difference between "x" (multiplication) and "·" (dot product). 
