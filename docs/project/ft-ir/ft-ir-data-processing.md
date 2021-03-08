@@ -30,7 +30,7 @@ Use the following link to download the notebook template for this lab:
 
 The following video walks you through the data processing portion of this lab.
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=683a0991-3eb6-4e62-8bda-ac4600e1a364&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1128fb69-b734-4f43-ba36-ace500f7cb2a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
 ## Organize and Import Your Data
 
