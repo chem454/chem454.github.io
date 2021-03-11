@@ -199,6 +199,11 @@ sample_signal = missing
 sample_concs = missing
 # Should be a 2x1 array of sample concentrations
 
+# ╔═╡ 5d7442e4-821a-11eb-2cf8-6f8ff0da7cce
+md"""
+**After you get the right concentration you still need to account for your dilution factor!**
+"""
+
 # ╔═╡ 82c459f2-7cad-11eb-1b01-0db08c3a874e
 md"""
 ### Compare Means
@@ -209,6 +214,11 @@ pre_vape_CI = missing # calculate the confidence interval for the concentration.
 
 # ╔═╡ 7ffb39a6-7a27-11eb-2c0a-5d34c20ed936
 post_vape_CI = missing # calculate the confidence interval for the concentration.  Remember there is a function `calculateCI()`.
+
+# ╔═╡ 7b1473be-821a-11eb-3960-cff604a22a30
+md"""
+**Don't forget to factor the dilution into your confidence interval too!**
+"""
 
 # ╔═╡ acb54dd0-7a27-11eb-1b75-57a339a5498d
 begin
@@ -539,9 +549,11 @@ end
 # ╠═205c8278-7a2b-11eb-02e2-23ac064ac955
 # ╠═f56f7510-7a26-11eb-257c-5f7e92550ee9
 # ╟─480c57da-7a3a-11eb-06ec-798002fe689e
+# ╟─5d7442e4-821a-11eb-2cf8-6f8ff0da7cce
 # ╟─82c459f2-7cad-11eb-1b01-0db08c3a874e
 # ╠═183a4ee0-7a2b-11eb-098e-873fcc0d0cc9
 # ╠═7ffb39a6-7a27-11eb-2c0a-5d34c20ed936
+# ╟─7b1473be-821a-11eb-3960-cff604a22a30
 # ╠═acb54dd0-7a27-11eb-1b75-57a339a5498d
 # ╟─dd412844-7a30-11eb-3ee5-4f59c2dea04b
 # ╠═fbe65454-7a30-11eb-1d7b-c580d4d9fb63
