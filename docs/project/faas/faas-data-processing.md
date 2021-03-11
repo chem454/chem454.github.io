@@ -30,7 +30,9 @@ Use the following link to download the notebook template for this lab:
 
 The following video walks you through the data processing portion of this lab.
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=733fb481-8a20-4369-bf3c-ac67011c358e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1128fb69-b734-4f43-ba36-ace500f7cb2a) to view it on Panopto instead.*
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=aedc7087-71e6-4069-b131-ace6011333a6&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
 <div class = "tip">
 You should turn a your complete lab notebook as an .html and .jl file functioning with no errors and your CSV file.
