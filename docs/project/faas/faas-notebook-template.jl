@@ -193,7 +193,7 @@ md"""
 
 # ╔═╡ 205c8278-7a2b-11eb-02e2-23ac064ac955
 sample_signal = missing
-# Should be a 2x1 array of sample concentrations
+# Should be a 2x1 array of sample signal
 
 # ╔═╡ f56f7510-7a26-11eb-257c-5f7e92550ee9
 sample_concs = missing
@@ -409,7 +409,7 @@ end
 
 # ╔═╡ 71434b8a-7a38-11eb-146c-197c97541c2d
 if !ismissing(qc_percent_diff)
-	if pd(qc_measured_conc, qc_expected_conc)[2] > 5
+	if abs(pd(qc_measured_conc, qc_expected_conc)[2]) > 5
 		bs5 = false
 	else
 		bs5 = true
