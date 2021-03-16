@@ -13,6 +13,8 @@ md"""
 
 **Your Name**
 
+My lab parter was: **Lab Partner's Name**.
+
 π, 2021
 """
 

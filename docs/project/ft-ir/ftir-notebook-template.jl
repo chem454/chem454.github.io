@@ -13,6 +13,8 @@ md"""
 
 **Your Name**
 
+My lab parter was: **Lab Partner's Name**.
+
 February 27, 2021
 """
 
