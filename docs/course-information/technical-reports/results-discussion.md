@@ -20,9 +20,9 @@ You *must* present results supporting every conclusion you draw; likewise, you m
 
 Style tips (see the [writing guide]({{site.url}}/course-information/technical-reports/writing-guide) for more info):   
 
-	- Write in paste tense.  
-	- Be specific.  
-	- Avoid faulty and incomplete comparisons.  
+- Write in paste tense.  
+- Be specific.  
+- Avoid faulty and incomplete comparisons.  
 
 Please see [1] for more information.
 
