@@ -28,6 +28,11 @@ Use the following link to download the notebook template for this lab:
 
 [https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/faas/faas-notebook-template.jl](https://raw.githubusercontent.com/chem370/chem370.github.io/master/docs/project/faas/faas-notebook-template.jl)
 
+<div class = "tip">
+Install the <code>StringEncodings</code> package before you open this template.
+</div>
+
+
 The following video walks you through the data processing portion of this lab.
 
 *Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aedc7087-71e6-4069-b131-ace6011333a6) to view it on Panopto instead.*
