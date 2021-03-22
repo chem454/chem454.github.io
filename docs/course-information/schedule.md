@@ -26,8 +26,8 @@ Lab assignments are due at 23:59:59 on the Wednesday before lab unless otherwise
 | 7    | 3/08           | Project Lab                             |                                            |
 |      |                | *Writing Workshop*                      |                                            |
 | 8    | 3/15           | Project Lab                             |                                            |
-| 9    | 3/22           | Project Lab                             | Intro + Methods                            |
-| 10   | 3/29           | *No Lab*                                | Notebook 1 + 2                             |
+| 9    | 3/22           | Project Lab                             |                                            | 
+| 10   | 3/29           | *No Lab*                                | Intro + Methods                            |
 | 11   | 4/05           | Project Lab                             |                                            |
 | 12   | 4/12           | Project Lab                             |                                            |
 | 13   | 4/19           | Project Lab                             | Full Draft                                 |
