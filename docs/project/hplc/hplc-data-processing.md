@@ -63,7 +63,7 @@ Make sure you don't have any extra CSV files in this folder.  Every CSV in this 
 
 ## Import Your Data
 
-1. Use the custom `hplcImport()` function to import all of your data at once.  This function takes no arguments (just make sure your notebook and CSV files are in the same folder.)
+1. Use the custom `importHPLC()` function to import all of your data at once.  This function takes no arguments (just make sure your notebook and CSV files are in the same folder.)
 1. You may wish to plot the chromatograms for inspection before moving further.  One way to quickly do this is:
 
     ```julia
