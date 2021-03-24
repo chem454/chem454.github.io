@@ -182,17 +182,6 @@ qc_measured_conc = missing
 # ╔═╡ cfe749ba-7a26-11eb-17a7-fd5f54b8c3fa
 qc_percent_diff = missing
 
-# ╔═╡ ecc0a466-7a2d-11eb-1851-3d090902ebe7
-md"""
-### Determine LOD & LOQ
-"""
-
-# ╔═╡ f4f2e6ba-7a2d-11eb-0b4f-4f6cf4184a28
-LOD = missing
-
-# ╔═╡ 97995ba4-7a2e-11eb-0fbc-25f4a70bdc89
-LOQ = missing
-
 # ╔═╡ e9165720-7a26-11eb-2c56-4d9921be73ff
 md"""
 ## Determine the Sample Concentrations
@@ -582,45 +571,6 @@ else bs4 = false
 
 end
 
-# ╔═╡ 4333cafc-7a37-11eb-0fa5-a5f811e0a16e
-if !ismissing(LOQ)
-	
-	t = q(std(hplc_data[!, findall(occursin.("lank", lowercase.(names(hplc_data))))[1]]), k)
-	let LOD = round(LOD, sigdigits = 4), LOQ = round(LOQ, sigdigits = 4)
-	
-		if t[1] == LOD && t[2] == LOQ
-		global bs6 = t[1] == LOD && t[2] == LOQ
-		md"""
-		!!! correct 
-		    Your LOD and LOQ are correct. 
-		"""
-		elseif t[1] != LOD && t[2] == LOQ
-		global bs6 = t[1] != LOD && t[2] == LOQ
-		md"""
-		!!! danger "Oops!"
-		    Your LOD is incorrect.
-		"""
-		elseif t[1] == LOD && t[2] != LOQ
-		global bs6 = t[1] == LOD && t[2] != LOQ
-		md"""
-		!!! danger "Oops!"
-		    Your LOQ is incorrect.
-		"""
-		else
-		global bs6 = false
-		md"""
-		!!! danger
-		    Your LOD and/or LOQ appear incorrect.
-		"""
-		end
-	end
-else global bs6 = false
-			md"""
-	!!! hint 
-	    Determine your LOD and LOQ based on the standard deviation of your blank sample.  See Lab 2 for an example.
-	"""
-end
-
 # ╔═╡ 480c57da-7a3a-11eb-06ec-798002fe689e
 if !ismissing(sample_area)
 	if sample_concs == cc.(sample_area, b, k)
@@ -646,7 +596,7 @@ end
 # do not modify or delete this!!!
 
 begin
-bs = [bs1 bs2 bs3 bs4 bs5 bs6 bs7]
+bs = [bs1 bs2 bs3 bs4 bs5 bs7]
 bss = sum(bs)/length(bs)
 if bss > 0.95 s = 5.0
 elseif bss > 0.80 && bss < 0.96 s = 3.0
@@ -691,10 +641,6 @@ end
 # ╟─8f00af82-7a36-11eb-2e05-83e75532c360
 # ╠═cfe749ba-7a26-11eb-17a7-fd5f54b8c3fa
 # ╟─71434b8a-7a38-11eb-146c-197c97541c2d
-# ╟─ecc0a466-7a2d-11eb-1851-3d090902ebe7
-# ╠═f4f2e6ba-7a2d-11eb-0b4f-4f6cf4184a28
-# ╠═97995ba4-7a2e-11eb-0fbc-25f4a70bdc89
-# ╟─4333cafc-7a37-11eb-0fa5-a5f811e0a16e
 # ╟─e9165720-7a26-11eb-2c56-4d9921be73ff
 # ╠═205c8278-7a2b-11eb-02e2-23ac064ac955
 # ╠═f56f7510-7a26-11eb-257c-5f7e92550ee9
