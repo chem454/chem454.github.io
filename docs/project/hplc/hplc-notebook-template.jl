@@ -488,7 +488,7 @@ if !ismissing(hplc_data)
 else bs1 = false
 			md"""
 	!!! hint 
-	    Import your data using the custom function `impotHPLC()` to import your data and that all data files are in the same directory as your notebook file.  The function does not require any arguments.
+	    Import your data using the custom function `importHPLC()` to import your data and that all data files are in the same directory as your notebook file.  The function does not require any arguments.
 	"""
 end
 
