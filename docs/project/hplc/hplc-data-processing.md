@@ -34,9 +34,9 @@ Install the <code>StringEncodings</code> package before you open this template.
 
 The following video walks you through the data processing portion of this lab.
 
-<!-- *Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aedc7087-71e6-4069-b131-ace6011333a6) to view it on Panopto instead.*
+*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3398a7fc-cb80-4b2c-8582-acf500e9be5c) to view it on Panopto instead.*
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=bb4bb7a4-7260-4f97-9ec6-ac6300e32d3d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe> -->
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3398a7fc-cb80-4b2c-8582-acf500e9be5c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
 <div class = "tip">
 You should turn a your complete lab notebook as an .html and .jl file functioning with no errors and your CSV file.
