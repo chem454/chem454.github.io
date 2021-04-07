@@ -24,16 +24,23 @@ last_modified_date: 2020-12-26
 {:toc}
 </details>
 
+The following videos provide an overview of mass spectrometry and mass spectrum interpretation:
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=21813c10-83d2-4dad-8bac-ad030117a360&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0d7bff42-cdef-4ade-ac07-ad030115d8c3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"  height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+
 The following videos walk you through the data processing portion of this lab.
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7d2b5841-5888-453d-9173-ac6300e32d05&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+[ Coming Soon ]
+<!-- <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7d2b5841-5888-453d-9173-ac6300e32d05&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d8e961a2-7075-437e-815e-ac6300e32d6d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d8e961a2-7075-437e-815e-ac6300e32d6d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe> -->
 
 
 <div class = "tip">
-You should turn a ZIP folder containing:  (1) your complete lab notebook as an .html and .jl file functioning with no errors, (2) your data files, (3) your completed assessment.
+You should turn in (1) your complete lab notebook as an .html and .jl file functioning with no errors and (2) your data files.
 </div>
 
 *An example notebook is available [here](https://alphonse.github.io/chem370/notebooks/good-example/)*.
