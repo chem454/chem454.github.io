@@ -88,3 +88,68 @@ blockquote {
   content: "TIP:";
 	font-weight: bold;
 }
+
+.check-understanding {
+	border: 1px solid #592C88;
+	border-radius: 5px;
+	border-top: 30px solid #592C88;
+	padding-left: 20px;
+	padding-top: 8px;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 90%;
+	line-height: 16px;
+}
+
+.check-understanding:before {
+	content: "PRACTICE";
+	color: $white;
+	position: absolute;
+	top: -25px;
+}
+
+
+.tooltip-understand {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.tooltip-understand span {
+  visibility: hidden;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid #592C88;
+  color: black;
+  text-align: left;
+  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  position: absolute;
+  bottom: 1em;
+  left: -2px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-size: 18px;
+}
+
+.tooltip-understand:hover {
+  cursor: pointer;
+  color: #592C88;
+}
+
+.tooltip-understand input {
+  display:none;
+}
+
+.tooltip-understand input:checked+span {
+  visibility: visible;
+  opacity: 1;
+}
