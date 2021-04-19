@@ -23,3 +23,9 @@ You will conduct liquid phase microextraction to analyze the volatile constituen
 The general order for GC-MS sampling is: (1) run solvent blanks on the GC-MS until the instrument is clean,  (2) prepare a single sample using liquid-phase microextraction, (3) run the sample, and (4) repeat 2-4 as necessary.  You should obtain a clean blank before preparing your samples.  For GC-MS, a passing blank will have a baseline less than 50,000 counts that is stable and peak-free.  You may see an increase in the baseline at temperature above 250$^{\circ}$C; this is normal and still considered passing.  If the blank is dirty you will not be able to tell what is from your sample and what is contamination!  
 
 This is a qualitative analysis.
+
+## Understanding Electron Ionization Mass Spectrometry
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=21813c10-83d2-4dad-8bac-ad030117a360&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0d7bff42-cdef-4ade-ac07-ad030115d8c3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>

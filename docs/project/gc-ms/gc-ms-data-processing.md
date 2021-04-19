@@ -34,7 +34,7 @@ Use the following link to download the notebook template for this lab:
 
 Other useful resources:
 - An [example GCMS notebook](https://alphonse.github.io/chem370/notebooks/good-example/)
-- A [Quick Guide to Interpreting Mass Spectra]({{site.url}}/chem370/guides/mass-spec) 
+- A [Quick Guide to Interpreting Mass Spectra]({{site.url}}/useful-info/mass-spec) 
 - [Structural ID Practice Problems]({{site.url}}/useful-info/mass-spec-practice)
 
 
@@ -73,7 +73,7 @@ You should turn in (1) your complete lab notebook as an .html and .jl file funct
 1. Import your chromatograms and mass spectra to Julia with `CSV.read()`.
 1. Plot your chromatogram as *Relative Abundance* vs. *Time (minutes)*.
 1. Plot your mass spectra as *Relative Abundance* vs. *m/z*.
-1. Clearly identify the base peak, the molecular ion, and any important isotope peaks.  Also state how many rings and double bonds your molecule has, and whether it has an odd or even number of nitrogen atoms.  Provide a formula, common name, and molecular weight for each compound.  You must show your calculations for all of these items.  See the [mass spec guide]({{site.url}}/chem370/guides/mass-spec) and [mass spec practice problems]({{site.url}}/useful-info/mass-spec-practice) for help with interpretation.  Does your interpretation match the library?  Provide a discussion of your results.
+1. Clearly identify the base peak, the molecular ion, and any important isotope peaks.  Also state how many rings and double bonds your molecule has, and whether it has an odd or even number of nitrogen atoms.  Provide a formula, common name, and molecular weight for each compound.  You must show your calculations for all of these items.  See the [mass spec guide]({{site.url}}/useful-info/mass-spec/mass-spec) and [mass spec practice problems]({{site.url}}/useful-info/mass-spec-practice) for help with interpretation.  Does your interpretation match the library?  Provide a discussion of your results.
 
 ## Save & Turn In Your Work
 
