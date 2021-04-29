@@ -33,7 +33,7 @@ Lab assignments are due at 23:59:59 on the Wednesday before lab unless otherwise
 | 13   | 4/19           | Project Lab                             | Full Draft                                 |
 | 14   | 4/29           | Project Lab                             | Peer Review, Notebooks 3 + 4               |
 | 15   | 5/03           | Lab & Instrument Clean                  | Final Report                               |
-| 15   | 5/10           | *No Labs (Final Exams)*                 |                                            |
+| 16   | 5/10           | *No Labs (Final Exams)*                 |                                            |
 
 
 Students will take a multiple-choice test to get a certification for each instrument used in the project lab.  Each student must be certified before using an instrument.  This certification contributes to your grade through SLO #1 on the syllabus.

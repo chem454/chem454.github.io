@@ -40,10 +40,8 @@ Other useful resources:
 
 The following videos provide an overview of mass spectrometry and mass spectrum interpretation:
 
-<!-- <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=21813c10-83d2-4dad-8bac-ad030117a360&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
- -->
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=384e7c4f-3e76-4213-bb15-ad1100f91b15&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: 15px;" allowfullscreen allow="autoplay"></iframe>
 
-[ Coming Soon ]
 
 <div class = "tip">
 You should turn in (1) your complete lab notebook as an .html and .jl file functioning with no errors and (2) your data files.
