@@ -22,6 +22,8 @@ The Centers for Disease Control (CDC) reports that an outbreak of e-cigarette, o
 
 ![Common exposure pathways related to e-cigarettes.  Public domain image from [CDC Stacks](https://stacks.cdc.gov/gsearch?collection=&terms=CS292347-A).]({{site.url}}/assets/images/e-cigarette-cdc.jpg)
 
+*Common exposure pathways related to e-cigarettes.  Public domain image from [CDC Stacks](https://stacks.cdc.gov/gsearch?collection=&terms=CS292347-A).*
+
 The North Carolina Department of Health and Human Services (NCDHHS) is seeking our help in finding the cause of the outbreak in NC. (See [this WLOS story](https://wlos.com/news/local/nc-health-officials-report-3-cases-of-severe-lung-disease-after-vaping) for additional information.) We are asked to screen e-cigarette liquid for toxicants.
 
 **Your job is to screen the products for:**  
