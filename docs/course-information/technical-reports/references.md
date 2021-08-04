@@ -1,6 +1,6 @@
 ---
 title:  References
-permalink: /course-information/technical-reports/references
+permalink: /technical-reports/references
 layout: default
 nav_order: 37
 has_toc: false

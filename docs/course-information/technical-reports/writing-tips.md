@@ -1,6 +1,6 @@
 ---
 title:  Writing Guide
-permalink: /course-information/technical-reports/writing-guide
+permalink: /technical-reports/writing-guide
 layout: default
 nav_order: 1
 has_toc: false

@@ -1,5 +1,5 @@
 ---
-permalink: /course-information/technical-reports/title-abstract
+permalink: /technical-reports/title-abstract
 title:  Title and Abstract
 layout: default
 nav_order: 3

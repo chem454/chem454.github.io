@@ -2,7 +2,7 @@
 layout: default
 title: Syllabus
 nav_order: 1
-permalink: /course-information/syllabus
+permalink: /syllabus
 has_toc: false
 parent: Course Information
 ---

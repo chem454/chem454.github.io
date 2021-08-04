@@ -2,7 +2,7 @@
 layout: default
 title: Technical Reports
 nav_order: 3
-permalink: /course-information/technical-reports
+permalink: /technical-reports
 has_toc: true
 parent: Course Information
 has_children: true
@@ -34,15 +34,15 @@ Students often struggle to see the difference between lab notebooks and technica
 
 Follow the guidelines below when writing your report.  Your report should be formatted according to the [ACS Style Guide](https://pubs.acs.org/isbn/9780841239999#) (template below).
 
-- Dr. Fischer's [Writing Tips]({{site.url}}/course-information/technical-reports/writing-guide) (based on common mistakes)
-- Dr. Fischer's [Publication-quality Figures Guide]({{site.url}}/course-information/technical-reports/figures)
+- Dr. Fischer's [Writing Tips]({{site.url}}/technical-reports/writing-guide) (based on common mistakes)
+- Dr. Fischer's [Publication-quality Figures Guide]({{site.url}}/technical-reports/figures)
 - You report should contain the following sections (click each link for info on that section):
-    - [Title and Abstract]({{site.url}}/course-information/technical-reports/title-abstract)
-    - [Introduction]({{site.url}}/course-information/technical-reports/introduction)
-    - [Materials and Methods]({{site.url}}/course-information/technical-reports/materials-methods)
-    - [Results and Discussion]({{site.url}}/course-information/technical-reports/results-discussion)
-    - [Conclusions]({{site.url}}/course-information/technical-reports/conclusion)
-    - [References]({{site.url}}/course-information/technical-reports/references)
+    - [Title and Abstract]({{site.url}}/technical-reports/title-abstract)
+    - [Introduction]({{site.url}}/technical-reports/introduction)
+    - [Materials and Methods]({{site.url}}/technical-reports/materials-methods)
+    - [Results and Discussion]({{site.url}}/technical-reports/results-discussion)
+    - [Conclusions]({{site.url}}/technical-reports/conclusion)
+    - [References]({{site.url}}/technical-reports/references)
 
 ## How you'll be graded
 
@@ -78,4 +78,4 @@ Follow the guidelines below when writing your report.  Your report should be for
 ## Other writing-related stuff
 
    - *Elements of Style*, William Strunk, Jr. and E.B. White (aka "Strunk and White") free html & ebook at [Project Gutenberg](http://www.gutenberg.org/ebooks/37134?msg=welcome_stranger) or free PDF [here](http://www.jlakes.org/ch/web/The-elements-of-style.pdf).
-   - [Mendeley Reference Manager]({{site.url}}/course-information/technical-reports/mendeley)
+   - [Mendeley Reference Manager]({{site.url}}/technical-reports/mendeley)

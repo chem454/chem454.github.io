@@ -2,19 +2,16 @@
 layout: default
 title: Lab 2 Data Processing
 nav_order: 6
-permalink: /uv-vis/data-processing
-has_toc: true
-parent: Lab 2 - UV-vis
+permalink: /gc-tcd/data-processing
+has_toc: false
+parent: Lab 2 - GC-TCD
+last_modified_date: 2020-12-17
 ---
 
-# UV-visible Spectroscopy: Data Processing
+# GC-TCD Data Processing 
 {: .no_toc  }
 
 ----
-
-Determine the concentration of quinine in the unknown with the 95% confidence interval, and use metrics such as LOD, LOQ, and QC percent difference to determine if the results are reliable.
-
-*Note: In addition to the steps below, you are expected to write your intro, conclusions, etc., and fill in all portions of the template.  You should also provide notes throughout that provide context as to what your calculations are doing.*
 
 <details open markdown="block">
   <summary>
@@ -26,82 +23,126 @@ Determine the concentration of quinine in the unknown with the 95% confidence in
 {:toc}
 </details>
 
-# Step-by-Step Video Tutorial
-{:toc}
+## Step-by-Step Video Tutorial
+{: .no_toc  }
 
 This video walks you through the data processing step-by-step.  The goal is to help you get familiar with Julia and Pluto before you try it on your own in the rotation labs!
 
-*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2ffb7ac-7bd3-45d1-a68b-acd3016b73bc) to view it on Panopto instead.*
+*Having trouble viewing this video?  Click [here](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cec7a03-13fe-4208-9f3e-acc40119e635) to view it on Panopto instead.*
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a2ffb7ac-7bd3-45d1-a68b-acd3016b73bc&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
-</iframe>
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5cec7a03-13fe-4208-9f3e-acc40119e635&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+<!-- 
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=993fb4bb-535d-409c-96ce-ac3600df98a1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
+</iframe> -->
 
-# Create a Lab Notebook and Calculate Standard Concentrations (Before Lab)
+## Create a Lab Notebook (Before Lab)
 
-1. Complete the steps under the prelab section if you did not already do so.  Make sure you enter your actual standard concentrations.
+1. Complete the steps under the prelab section if you did not already do so.
 
-# Import and Format Your Data (During Lab)
+## Import and Inspect Your Data
 
-1. Paste your data file(s) into your lab 2 folder.  If you are using the suggested path this folder is at `/Documents/lab-notebooks/lab-2/`.
+1. Paste your data file into your lab 2 folder.  If you are using the suggested path this folder is at `/Documents/lab-notebooks/lab-2/`.
 
-1. For this lab you should have most data in manually during lab.  Make sure you have your data frame formatted like the one below.
+1. Load the CSV files into Julia.  
 
-   ![A screenshot showing what the final data set should look like in Pluto]({{site.url}}/assets/images/lab-2/data-table-format.png)
+    ```julia
+    gc_data = CSV.read("filename.csv", DataFrame)
+    # make sure you replace "filename" with your file name
+    ```
+1. Plot the chromatogram with Time on the $x$ axis and signal level on the $y$ axis to inspect it.
 
-# Fit a Standard Curve (After Lab)
+    ```julia
+    begin
+      plotly() # only need to do this line once in each notebook
+      plot(x, y, grid = false, legend = false)
+      xlabel!("X axis label"); ylabel!("Y axis label");
+      xlims!(min, max); ylims!(min, max);
+    end
+    ```
 
-1. Fit a linear model of the form $S_a = k_a C_a + b$, where $S_a$ is the analyte signal and $C_a$ is the analyte concentration.  **Call your model `calcurve`.** In Julia, a linear model can be fit thusly:
-   
-   ```julia
-   fitName = lm(@formula(y ~ x), DataFrame)
-   ```
+## Remove the Baseline Offset
 
-1. Use the fit to determine the sensitivity coefficient, $k_a$, and intercept, $b$.  These fit coefficients can be found using:
+Note that there is a significant *baseline offset* (also called a DC offset) in the data, meaning the baseline level is significantly higher than 0.  In this case, that is a result of how the zero knob was adjusted on the instrument.  We can remove the offset in data processing by subtracting the mean baseline value:
 
-   ```julia
-   GLM.coef(fitName)[n]
-   ```
-   
-   where `n` is 1 for the intercept and 2 for the slope.
-   
-1. Extract the $R^2$ value from the fit using the function `r2(fitName)`.
+$$S_{corrected} = S_{raw} - (\bar{S}_{raw-baseline})$$
 
-1. Plot the standard data and line of best fit on a single plot.
+We can determine $\bar{S}_{raw-baseline}$ by averaging a portion of the chromatogram where there are no peaks.
 
-   ```julia
-   begin
-		plotly();
-		scatter(x, y, grid = false, label = "Label Text");
-		xlabel!("X Label Text"); ylabel!("Y Label Text");
-		xlims!(min, max); ylims!(min, max);
-		Plots.abline!(slope, intercept, 
-			label = "$(round(intercept, sigdigits = 4)) + $(round(slope, sigdigits = 4)) x,  R²=$(round(R2, sigdigits=5))", color = 1
-		);
-	end
-   ```
+1. Determine the baseline signal, $\bar{S}_{raw-baseline}$.
 
-# Validate the Standard Curve
+    ```julia
+    S_raw_baseline = mean(gc_data[1:2, "Latest: Potential (mV)"])
+    # replace 1:2 with the range you've selected as the baseline
+    ```
 
-1. Determine the concentration of the QC by using it's measured signal value and solving for $C_a$ in the equation obtained from your standard curve.
+1. Subtract the baseline signal from every other signal value ($S_{raw, i}$).
 
-1. Determine the percent difference between the QC's measured concentration and true concentration.  This should be <5% as a general rule.
+    ```julia
+    gc_data[!, "S_corrected"] = gc_data[!, "Latest: Potential (mV)"] .- S_raw_baseline
+    ```
 
-# Determine the Sample Concentration
+1. Plot the corrected chromatogram.  Use the same code as you did above, but use the corrected column instead of the raw column.
 
-1. Determine the concentration of quinine in the sample by using it's measured signal value and solving for $C_a$ in the equation obtained from your standard curve.  Make sure you calculate the average concentration
+## Fit Chromatographic Peaks
 
-1. Determine the 95% confidence interval on the concentration.  I have provided the function `calculateCI(model, std_conc, std_signal, new_signal, t = 3.182)` for this purpose.  You should understand the formula used to calculate the CI -- see the information provided in this section of the lab notebook template for details.
+Ideally, chromatographic peaks are Guassian in nature and can be fit with a Gaussian function, as in:
 
-1. Report your final concentration as $\bar{x} \pm \text{CI}$, where $\bar{x}$ is the average quinine concentration and $\text{CI}$ is the 95% confidence interval.
+$$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2}$$
 
-# Determine the Limits of Detection and Quantitation
+In practice they usually are asymmetric, typically with a tailing end.  The [exponentially modified Gaussian](https://en.wikipedia.org/wiki/Exponentially_modified_Gaussian_distribution) (EMG) function provides a good approximation for the shape of tailing peaks in a chromatograph and will be used here to fit the chromatographic peaks. [1]  The mathmatical function is:
 
-1. Determine the limit of detection (LOD) and limit of quantitation (LOQ) for this method using the standard deviation, $s$ of your blank.  Use the following definitions:
+$$f_{EMG}(t) = \frac{M_0}{2 \tau} \exp \left( \frac{\sigma_g^2}{2\tau^2} - \frac{t-t_g}{\tau} \right) \times \text{erfc} \left( \frac{1}{\sqrt{2}} \left( \frac{\sigma_g}{\tau} - \frac{t-t_r}{\sigma_g} \right) \right)$$
 
-	$$LOD = \frac{3 s_{blank}}{k_a}$$
+I have provided two Julia functions to help with this: (1) `fitPeak`, which fits an EMG function to the peak and determines the parameters and (2) `plotPeak()`, which takes the output of `fitPeak()` and plots it to help you visualize the process.
 
-	$$LOQ = \frac{10 s_{blank}}{k_a}$$
+1. Fit each peak in the chromatogram using `fitPeak()`.
+  
+    ```julia
+    yourFit = fitPeak(DataFrame, tmin = start_time, tmax = stop_time, t_r = retention_time_guess);
+    ```
+  
+    You should enter a 2-column data frame as `DataFrame`, a time on the left side of the peak as `tmin`, a time on the right side of the peak as `tmax`, and a best guess at the retention time of the peak as `t_r`.
 
-   Is the signal you measured quantifiable?
+1. Plot the results.
 
-*Don't for get to discuss your results and write a conclusion!*
+    ```julia
+    plotPeak(yourFit)
+    ```
+
+    where `yourFit` is the output of `fitPeak` saved as a Julia object.
+
+## Calculate Figures of Merit for Each Peak
+
+1. Calculate the retention factor, $$k_r = \frac{t_r - t_m}{t_m}$$.
+1. Calculate the resolution for each pair of peaks, $$R_s = \frac{t_{r_2} - t_{r_1}}{0.5(W_{b_2} + W_{b_1})}$$.
+
+## Calculate the Percent Composition for Each Compound
+
+1. Calculate the percent composition: $$C\_n(\%)=\frac{A\_n}{A\_1 + A\_2 + ... A\_n} \times 100\%$$.  Here, $A_n$ is the area of peak *n*.
+
+## Finish & Turn In Your Notebook
+
+1. Include a discussion of (1) how many constituents are in your sample and (2) the relative polarity of each component.  Compare the retention factors you calculated to the standards to see if you can determine what's in the mixture.
+2. Save your notebook as both a Julia (.jl) file and static HTML (.html) file.
+9. Upload your files to the Lab 2 assignment on MS Teams.
+
+## References
+{: .no_toc }
+
+1. Kevin Lan and James W. Jorgenson (2001). A hybrid of exponential and Gaussian  functions as a simple model of asymmetric chromatographic peaks. *Journal of Chromatography A* **915**:1–2, p 1-13. doi: [10.1016/S0021-9673(01)00594-5](https://doi-org.proxy195.nclive.org/10.1016/S0021-9673(01)00594-5)
+
+
+## Appendix: Retention Factors for Common Solvents
+
+Below are retention factors for compounds used to create the samples.  You may use these to indicate which compounds are in your sample.
+
+
+
+| Compound   | Ret. Factor | 
+|:---------- |:-----------:|
+| Acetone    |   0.7668    |
+| iso-octane |    3.229    |
+| Ethanol    |   0.5300    |
+| n-heptane  |    3.224    |
+| 2-butanol  |    1.612    |
+| 1-propanol |    1.201    |

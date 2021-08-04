@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Lab 2 Instructor Info
+title: Lab 2 Instructor Information
 nav_order: 7
-permalink: /uv-vis/instructor
-has_toc: true
-parent: Lab 2 - UV-vis
+permalink: /gc-tcd/instructor-info
+has_toc: false
+parent: Lab 2 - GC-TCD
+last_modified_date: 2020-12-17
 ---
 
-# UV-visible Spectroscopy: Instructor Information
+# GC-TCD Instructor Information
 {: .no_toc  }
 
 ----
@@ -22,26 +23,11 @@ parent: Lab 2 - UV-vis
 {:toc}
 </details>
 
-## Materials
+# Materials
+- Syringe cleaning apparatus
+- Microliter syringe
+- GC-TCD Instrument
 
-This lab requires per student:
-
-- 5 25-mL volumetric flasks
-- 1 50-mL volumetric flask
-- Volumetric pipettes (you determine the size you need)
-- Pipette bulb
-- 1-cm plastic cuvette
-- Beakers, for temporary storage of stock solutions
-- Waste beaker
-- SpectroVis UV-visible spectrometer
-
-
-## Solutions
-
-This lab requires per student:
-
-- 0.05 M sulfuric acid, about 150 ml
-- 100-ppm quinine stock solution, about 20 mL
-- 100-ppm quinine QC stock solution, about 10 mL
-- Tonic water, about 20 mL
-- Wash bottle of DI water
+# Chemicals
+- Acetone in wash bottle
+- Unknown mixtures

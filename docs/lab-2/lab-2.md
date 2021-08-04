@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Lab 2 - UV-vis
-nav_order: 4
-permalink: /uv-vis/
-has_toc: true
+title: Lab 2 - GC-TCD
+nav_order: 3
+permalink: /gc-tcd/
+has_toc: false
 has_children: true
+last_modified_date: 2020-12-05
 ---
 
-# UV-visible Spectroscopy (UV-vis)
+# Gas Chromatography with Thermal Conductivity Detection
 {: .no_toc  }
 
 ----
@@ -24,46 +25,45 @@ has_children: true
 
 ## Summary
 
-**Objective:**
-Determine the concentration of quinine in tonic water using fluorescence spectroscopy.
+**Objective:** 
+- Determine which instrument is best for determining the percent composition of an unknown mixture.
 
-**Turn in:**
-  - Your complete lab notebook as a .jl file, functioning with no errors.
-  - You complete lab notebook as a static .html file.
-  - Your data files.
+**Prelab:**
+
+- Prepare you lab notebook (see the next section, Lab 2 Prelab)
+- Watch the introductory videos below
+
+**Turn in:** 
+- Your complete lab notebook as an .jl file, functioning with no errors, and a static .html file.
+- Your data files.
 
 **Student Learning Outcomes:**
-  - Recall methods of creating standards and standard curves from Quantitative Analysis.
-  - Determine the concentration of quinine in an unknown sample, including the 95% confidence interval.
-  - Calculate the limits of detection limits of quantitation from a blank sample.
-  - Employ a quality control sample to check the accuracy of their results.
-  - Utilize Pluto (with Markdown) as an electronic lab notebook.
-  - Utilize Julia functions to analyze spectroscopic data.
+- Recognize that [gas] chromatography separates a mixture of compounds.
+- Explain how chromatographic peak area relates to composition of a mixture.
+- Calculate figures of merit for a chromatogram: retention time, retention factor, resolution, and signal-to-noise ratio (S/N).
+- Relate concepts about polarity from general and organic chemistry to instrumental analysis.
+- Utilize Julia and Pluto as an electronic lab notebook.
 
 ## Introduction
 
-This lab will use Vernier SpectroVis Plus UV-visible/fluorescence spectrometers to quantify the amount of quinine in tonic water. You will be given a sample of store-bought tonic water and a concentrated stock solution of quinine. You will then dilute the stock solution to create a standard curve and determine the concentration of quinine in (1) a commercial tonic water sample of unknown concentration and (2) a quality-control sample of known concentration to test the accuracy of your curve. Samples will be measured in triplicate so that you can determine the mean concentration and the 95% confidence interval.  The limit of quantitation (LOQ) will be determined from a blank sample.
+You will be given mixture of unknown composition for this lab. It will contain several organic compounds with similar boiling points diluted in acetone. You need to (1) determine how many components there are in the mixture, (2) determine the percent composition for each compound, and (3) determine the relative polarities of the compounds.
 
-Students should work in pairs for the lab activity but turn in independent lab notebooks.
+There are two gas chromatographs available for this task, and your goal is to determine which works best. You will run the sample on both instruments and compare their performance. Specifically, one lab partner will use a Gow-Mac 150-series isothermal gas chromatography and the other will use a Gow-Mac 400-series. Both use thermal conductivity detectors (GC-TCD) and work on the same principles. They separate compounds by both boiling point and polarity, and produce a peak for each component wherein the peak area is proportional to the amount of that component present.
 
-Watch Dr. Fischer teardown a SpectroVis and find out what’s inside!
+Watch the following video to refresh you memory about how chromatography works:
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=50136d4d-483b-4065-9fa2-ac2a00df6b01&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SnbXQTTHGs4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Prelab
+And watch this video explaining the specifics of gas chromatography:
 
-Do the following *before* coming to lab:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Xaa9WdXVTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-- Prepare your lab notebook, including calculations of your standard concentrations (more info in the Prelab section).
-- Install [Vernier Spectral Analysis](https://www.vernier.com/product/spectral-analysis/) on your computer.
+Finally, the following video provides an overview of the specific instrument you will use in lab:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0fxH9WRKigw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Safety
 
-- This lab uses 0.05 M sulfuric acid (SDS). Wear goggles and gloves.
-- Tonic water contains quinine hydrochloride and the stock solution contains quinine sulfate.
-- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
-
-## Reference
-
-Lawson-Wood, Kathryn, and Kieran Evans. “Determination of Quinine in Tonic Water Using Fluorescence Spectroscopy,” (Application Note: Fluorescence Spectroscopy) [Link](https://www.perkinelmer.com/lab-solutions/resources/docs/APP_Quinine_in_Tonic_Water_014133_01.pdf)
+- You will use organic solvents in this lab.  Keep all solvents in the hood and tightly capped when not in use.  Wear goggles and gloves!
+- The gas chromatographs operate at high temperatures.  Do not touch the top of the instrument.
+- The microliter syringes using to inject samples are very sharp.  Be careful not to poke yourself and keep the protective cover on the needle when not in use.

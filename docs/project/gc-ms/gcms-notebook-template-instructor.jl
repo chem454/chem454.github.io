@@ -329,6 +329,11 @@ begin
 	xlims!(20, 180); ylims!(0, 1)
 end
 
+# ╔═╡ ef0ab1cc-a243-11eb-1ee1-d50fa86d824b
+md"""
+![eugenol mass spectrum](https://upload.wikimedia.org/wikipedia/commons/9/94/Eugenol2DCSD.svg)
+"""
+
 # ╔═╡ 1e548db4-a0a4-11eb-0718-fb96169d7b06
 md"""
 **Make sure to show your work for the steps below!!!**
@@ -460,7 +465,8 @@ end
 # ╟─93b036c2-a0a3-11eb-3946-c1444ecba2a0
 # ╠═9d45cd00-a0a3-11eb-061e-55db641dd5e3
 # ╟─05a32f8e-a0a2-11eb-0a48-4dd9b4a234db
-# ╠═02413732-a0a2-11eb-21a2-5dbbf71652a5
+# ╟─02413732-a0a2-11eb-21a2-5dbbf71652a5
+# ╟─ef0ab1cc-a243-11eb-1ee1-d50fa86d824b
 # ╟─1e548db4-a0a4-11eb-0718-fb96169d7b06
 # ╟─1dd632a2-a0a4-11eb-0f21-d3c41f077abe
 # ╠═1d94bf18-a0a4-11eb-16f2-0b83b9458d57
