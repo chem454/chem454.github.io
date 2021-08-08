@@ -27,29 +27,26 @@ has_children: true
 
 -----
 
-# Course Information
+# Instrumental Analysis Course Information
 
 *CHEM 370 - Instrumental Analysis I (Laboratory)* is an introduction to instrumental analysis in the chemistry lab.  We will learn how to use and operate chemical instrumentation and learn how to reproducibly process the data they generate.
+
+*CHEM 370 - Instrumental Analysis I (Lecture)* is an introduction to common instrumental analysis techniques. Students will study the theoretical, electrical, and mechanical underpinnings of the most common methods of instrumental analysis. Topics covered include spectroscopy, mass spectrometry, separation science, and data interpretation.
 
 ## Logistics
 
 - Course materials will be posted on this site.
-- Homework will be submitted through Microsoft Teams.  
-  [ [Video: How to use Microsoft Teams](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8cbd076b-a5e2-46e7-9fee-acb8012e09fc) ]
-  
-- General questions should be asked through Piazza.  
-  [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0abad82d-58e0-49c9-aa39-acb8012e0a2e) ]
-  
-- Office hours will be held remotely in MS Teams.  Schedule a meeting via [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/).  
-  [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]
+- Homework will be submitted on Canvas.    
+- General questions should be asked through Piazza.   [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0abad82d-58e0-49c9-aa39-acb8012e0a2e) ]
+- Office hours meetings should be scheduled in advance.  No need to email or ask -- just schedule a meeting using [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/)!   [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]
 
-## Assignments
+## Lab Assignments
 
-I put a lot of trust in you to complete your work, do it well, and ask questions when you don't understand something.  Many assignments will be "graded" automatically -- you will get feedback on screen as you complete them.  You may not get a formal grade for these, but neglecting them will certainly have a detrimental effect on your grade later in the semester!  Below are lists of the items that will be assessed for a grade.  
+I put a lot of trust in you to complete your lab assignments, do them well, and ask questions when you don't understand something.  Many assignments will be "graded" automatically -- you will get feedback on screen as you complete them.  You may not get a formal grade for these, but neglecting them will certainly have a detrimental effect on your grade later in the semester!  Below are lists of the items that will be assessed for a grade.  
 
 (*Assignment lists may change as needed or if class is moved to an online modality.*)
 
-### Individual
+### Individual (Lab)
 
 - Lab 0 Tutorials (Exercises 0A & 0B)
 - 5 lab notebooks (1 for each intro labs and 3 for the project lab)
@@ -58,10 +55,16 @@ I put a lot of trust in you to complete your work, do it well, and ask questions
 - Lab safety & participation
 - Group participation
 
-### Group Assignments
+### Group Assignments (Lab)
 
 - 1 lab report (plus additional draft assignments)
 
 There are no exams.  Lab notebooks consist of data processing completed in a Markdown notebook and a data processing language (e.g. Pluto and Julia, respectively).
 
 *Please see the syllabus for a complete explanation of grading schemes.*
+
+## Lecture Assignments
+
+- There will be **4 exams** plus a final.  Each exam will cover one unit of the course, and the final will be comprehensive.  Formats will usually be a mix of multiple choice, short answer, and calculation problems.
+- There will be additional in class problem sets, homework, and quizzes assigned and graded as needed throughout the semester.
+- There will be assigned reading associated with every class meeting.  Students are *strong encouraged* to stay on top of reading the textbooks and to take notes while they read!

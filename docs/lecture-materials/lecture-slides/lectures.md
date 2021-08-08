@@ -2,9 +2,10 @@
 layout: default
 title: Lecture Slides
 nav_order: 14
-permalink: /lecture-slides/
+permalink: /lecture/slides
 has_toc: false
-last_modified_date: 2021-05-23
+parent: Lecture Materials
+last_modified_date: 2021-08-08
 ---
 
 # Lecture Slides
@@ -20,7 +21,7 @@ If there are slides available for a lecture they will be listed here.
 <ul>
 {% for file in site.static_files %}
   {% if file.path contains "lecture-slides" and file.extname == ".html" %}
-   <li> <a href = "{{ site.url }}{{ file.path }}">{{ file.path | replace:'.html','' | replace: '/docs/lecture-slides/', '' | replace: '-', ' ' }}</a> </li>
+   <li> <a href = "{{ site.url }}{{ file.path }}">{{ file.path | replace:'.html','' | replace: '/docs/lecture-materials/lecture-slides/', '' | replace: '-', ' ' }}</a> </li>
   {% endif %}
 {% endfor %}
 </ul>
