@@ -2,7 +2,7 @@
 layout: default
 title: Lab Notebooks
 nav_order: 3
-permalink: /course-information/lab-notebooks/
+permalink: lab-notebooks/
 has_toc: false
 parent: Course Information
 ---
@@ -32,10 +32,10 @@ In an effort to conduct reproducible data analysis, you will use open-source too
 
 ## Example Lab Notebooks 
 
-- [Good Example]({{site.url}}/course-information/lab-notebooks/good) *Note: This notebook was created in Jupyter, not Pluto.*   
-- [Bad Example]({{site.url}}/course-information/lab-notebooks/bad-1)  *Note: This notebook was created in Jupyter, not Pluto.*   
+- [Good Example]({{site.url}}lab-notebooks/good) *Note: This notebook was created in Jupyter, not Pluto.*   
+- [Bad Example]({{site.url}}lab-notebooks/bad-1)  *Note: This notebook was created in Jupyter, not Pluto.*   
     - This notebook contains no explanations of what was done and the data processing is incomplete.
-- [Bad Example 2]({{site.url}}/course-information/lab-notebooks/bad-2)  *Note: This notebook was created in Jupyter, not Pluto.*   
+- [Bad Example 2]({{site.url}}lab-notebooks/bad-2)  *Note: This notebook was created in Jupyter, not Pluto.*   
     - This example contains many errors that should have been fixed before it was turned in.
 
 ## Keeping an Archival Record 

@@ -1,6 +1,6 @@
 ---
 title:  Conclusion
-permalink: /course-information/technical-reports/conclusion
+permalink: /technical-reports/conclusion
 layout: default
 nav_order: 7
 has_toc: false

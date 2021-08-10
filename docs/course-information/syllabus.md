@@ -2,7 +2,7 @@
 layout: default
 title: Syllabus
 nav_order: 1
-permalink: /course-information/syllabus
+permalink: /syllabus
 has_toc: false
 parent: Course Information
 ---
@@ -127,12 +127,14 @@ These grades indicate levels in quality from excellent to unsatisfactory.  Stude
 
 ### Submitting Work
 
-Most assignments will be submitted electronically via Microsoft Teams.  Unless otherwise specified, assignments are due at 23:59:59 on the due date (usually the day before lab).  
+### Submitting Assignments
 
- - A file submission link or folder will be provided for each assignment.  Assignments submitted through said URL are visible only by the instructor.
- - Only one submission per group per assignment is necessary.
+Most assignments will be submitted electronically.  Unless otherwise specified, assignments are due at 23:59:59 on the due date.  
+
+ - Files should be uploaded to each assignment page on Canvas.
+ - Files should be of the types and quantity specified in the assignment.
  - Files should be given a clear, logical filename that reflects the assignment name.
- - Files may be sorted automatically by a computer.  Therefore, any files not named appropriately, not in the specified format, or submitted elsewhere will either incur point deductions or not be graded.
+ - Files may be sorted automatically by a computer.  Therefore, any files not named appropriately, not in the specified format, or submitted elsewhere may not be graded.
  - Any electronic assignments turned in via hardcopy will not be graded.
 
 Submissions that do not follow these guidelines may incur point deductions.

@@ -1,6 +1,6 @@
 ---
 title:  Figures
-permalink: /course-information/technical-reports/figures
+permalink: /technical-reports/figures
 layout: default
 nav_order: 2
 has_toc: false

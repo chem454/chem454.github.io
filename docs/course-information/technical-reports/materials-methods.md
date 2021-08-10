@@ -1,5 +1,5 @@
 ---
-permalink: /course-information/technical-reports/materials-methods
+permalink: /technical-reports/materials-methods
 title:  Materials and Methods
 layout: default
 nav_order: 5

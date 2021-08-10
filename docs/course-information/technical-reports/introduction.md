@@ -2,7 +2,7 @@
 layout: default
 title: Introduction
 nav_order: 4
-permalink: /course-information/technical-reports/introduction
+permalink: /technical-reports/introduction
 has_toc: false
 parent: Technical Reports
 grand_parent: Course Information
