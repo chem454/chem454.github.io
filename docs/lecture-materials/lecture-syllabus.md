@@ -11,11 +11,10 @@ parent: Lecture Materials
 {: .no_toc  }
 
 **Instructor:** Al Fischer, PhD   
-**Office Hours:** By appointment on Teams; schedule a meeting with [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/)  
-[ [Video: Scheduling Office Hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]     
+**Office Hours:** By appointment; see my availability and schedule an appointment on [Calendly](https://calendly.com/drfischer/office-hours). You will be able to choose to meet on Zoom or at my office during scheduling.  (No need to email or ask - just schedule!)  
 **Asking Questions:** Ask general questions on [Piazza](https://piazza.com)  
 **Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
-<!-- **Availability:** Email, chat, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.   -->
+**Availability:** Email, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.   
 
 <a href="https://github.com/chem370/chem370.github.io/raw/master/assets/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
 {: .no_toc  }
