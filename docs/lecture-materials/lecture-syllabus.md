@@ -16,7 +16,7 @@ parent: Lecture Materials
 **Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
 **Availability:** Email, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.   
 
-<a href="https://github.com/chem370/chem370.github.io/raw/master/assets/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
+<a href="https://github.com/chem370/chem370.github.io/raw/master/assets/pdf/lecture-syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
 {: .no_toc  }
 
 ----
