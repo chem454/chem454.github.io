@@ -1,10 +1,3 @@
----
-layout: default
-title: Lab 0 - Intro to Julia
-nav_order: 2
-permalink: /lab-0/
-last_modified_date: 2021-08-16
----
 
 # Lab 0: Introduction to Julia & Pluto
 {: .no_toc  }
@@ -23,7 +16,6 @@ You will keep an electronic lab notebook this semester using the programming lan
   - Become familiar with Pluto and Julia.
   - Understand how to access lab notebook templates in Pluto.
 
-
 <details open markdown="block">
   <summary>
   <b>Table of Contents</b>
@@ -34,55 +26,18 @@ You will keep an electronic lab notebook this semester using the programming lan
 {:toc}
 </details>
 
+## Install Julia and Pluto
 
-## Option 1: Use Julia and Pluto on VCAT
+You'll probably find it's most convenient to install Julia and Pluto on your personal computer.  The software is free and open-source.  You may alternatively use it via STEM VCAT; this does not require you to install Julia, but your may need to install other software to use VCAT on your computer (ask IT for help).
 
-**Choose ONE of the options to access Julia and Pluto.**  If you're unsure, start with Option 1 for now.  You can always switch to the advanced option later!
-
-The officially supported method of using Julia is through STEM VCAT.  This does not require you to install Julia, but your may need to install the VMWare Horizon client to use VCAT on your computer (ask IT for help if you have trouble accessing VCAT).
-
-### Sign in to VCAT
-
-1. Go to [vcat.wcu.edu](https://vcat.wcu.edu).
-1. Sign in using your WCU ID and password (if you're not already signed in).
-1. Choose the STEM Specialized machine.
-
-  ![A screenshot showing the VCAT start page with STEM VCAT highlighted]({{site.url}}/assets/images/lab-0/vcat-open-screen.png)
-
-### Launch Julia and Pluto
-
-1. Click on the **JuliaPortable** icon to open the Julia REPL (read-evaluate-print-loop).
-
-    ![A screenshot showing the JuliaPortable icon and Julia REPL]({{site.url}}/assets/images/lab-0/julia-open.png)
-
-1. Type `using Pluto; Pluto.run()` into the Julia REPL and then press the **Enter** key.
-
-      <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default, copy and paste the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
-      
-      <div class = "warning">You MUST use Google Chrome or Firefox to run Pluto!  Using another browser will cause your work to save incorrectly!</div>
-      
-   ![The Julia REPL showing the text to type to start Pluto]({{site.url}}/assets/images/lab-0/julia-pluto-close.png)
-
-1. If successful, you should see the screen below!
-
-   ![A screenshot showing the Pluto interface and Julia REPL running the background]({{site.url}}/assets/images/lab-0/julia-pluto.png)
-
-## Advanced Option: Install on your own computer
-
-**Choose ONE of the options to access Julia and Pluto.**  If you're unsure, start with Option 1 for now.  You can always switch to the advanced option later!
-
-You may find it's more convenient to install Julia and Pluto on your personal computer.  The software is free and open-source, however I cannot guarantee support for issues you run into during installation.
-
-### Install Julia and Pluto
-
-Use the video below to install Julia and Pluto on your personal computer.  *You may also [view the video on Panopto](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8fe1c28d-3bc7-49ee-a2da-acb40149ccea) if you have trouble with the embedded version below.*
+Use the video below to install Julia and Pluto on your personal computer.
 
 <iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8fe1c28d-3bc7-49ee-a2da-acb40149ccea&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder="0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay">
 </iframe>
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OOjKEgbt8AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-### Launch Julia & Pluto
+## Launch Julia & Pluto
 
 1. The way you launch Julia will depend on your operating system.  You will see a window like the image below, which is called the REPL (read-evaluate-print loop).
 
@@ -105,12 +60,10 @@ Use the video below to install Julia and Pluto on your personal computer.  *You 
 1. Pluto should open in your default web browser (it requires Firefox, Chrome, or another Chromium-based browser to run properly).
 
       <div class = "tip">If Pluto doesn't open automatically or you would like to use a different browser other than your default, copy and paste the link from the Julia REPL into your browser URL bar.  The link will look like 'localhost:1234/?secret=...'.</div>
-      
-      <div class = "warning">You MUST use Google Chrome or Firefox to run Pluto!  Using another browser will cause your work to save incorrectly!</div>
 
      ![A screenshot showing the Pluto welcome page in the Firefox web browser]({{site.url}}/assets/images/lab-0/pluto-window.png)
 
-## Assignment
+## Homework
 
 There are two exercises you need to complete, 0A and 0B.
 
@@ -121,21 +74,6 @@ There are two exercises you need to complete, 0A and 0B.
 
 1. Paste the link into the '**Open from file:**' box in Pluto and click **Open**.
 
-      ![A screenshot showing the box to paste a URL into when opening from GitHub]({{site.url}}/assets/images/lab-0/pluto-open-file.png)
-
-
 1. Complete the steps/follow the instructions in the Pluto template.
 
-1. Turn in your work on Canvas:  
-
-    1. Save your work as a `.jl` file
-    
-        ![A screenshot showing how to save a .jl file in Pluto]({{site.url}}/assets/images/lab-0/pluto-saving-file.png)
-        
-    2. Save your work as a static `.html` file
-      
-        ![A screenshot showing how to save a .html file in Pluto]({{site.url}}/assets/images/lab-0/pluto-saving-html.png)
-        
-    3. Upload to Canvas!
-    
-        ![A screenshot showing how to upload files to Canvas]({{site.url}}/assets/images/lab-0/canvas-submitting.png)
+1. Turn in your work on MS Teams.
