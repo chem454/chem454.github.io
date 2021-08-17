@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lab 1 - UV-vis
-nav_order: 4
+nav_order: 3
 permalink: /uv-vis/
 has_toc: true
 has_children: true
@@ -25,7 +25,7 @@ has_children: true
 ## Summary
 
 **Objective:**
-Determine the concentration of quinine in tonic water using fluorescence spectroscopy.
+*Precisely* determine the concentration of quinine in tonic water using fluorescence spectroscopy.
 
 **Turn in:**
   - Your complete lab notebook as a .jl file, functioning with no errors.
@@ -36,13 +36,13 @@ Determine the concentration of quinine in tonic water using fluorescence spectro
   - Recall methods of creating standards and standard curves from Quantitative Analysis.
   - Determine the concentration of quinine in an unknown sample, including the 95% confidence interval.
   - Calculate the limits of detection limits of quantitation from a blank sample.
-  - Employ a quality control sample to check the accuracy of their results.
+  - Employ a quality control sample to check the accuracy of results.
   - Utilize Pluto (with Markdown) as an electronic lab notebook.
   - Utilize Julia functions to analyze spectroscopic data.
 
 ## Introduction
 
-This lab will use Vernier SpectroVis Plus UV-visible/fluorescence spectrometers to quantify the amount of quinine in tonic water. You will be given a sample of store-bought tonic water and a concentrated stock solution of quinine. You will then dilute the stock solution to create a standard curve and determine the concentration of quinine in (1) a commercial tonic water sample of unknown concentration and (2) a quality-control sample of known concentration to test the accuracy of your curve. Samples will be measured in triplicate so that you can determine the mean concentration and the 95% confidence interval.  The limit of quantitation (LOQ) will be determined from a blank sample.
+This lab will use Vernier SpectroVis Plus UV-visible/fluorescence spectrometers to quantify the amount of quinine in tonic water. You will be given a sample of store-bought tonic water and a concentrated stock solution of quinine. You will then dilute the stock solution to create a standard curve and determine the concentration of quinine in (1) a commercial tonic water sample of unknown concentration and (2) a quality-control sample of known concentration to test the accuracy of your curve. Samples will be measured in triplicate so that you can determine the mean concentration and the 95% confidence interval.  The limit of quantitation (LOQ) will be determined from a blank sample.  ***You must get an $R^2$ of >0.9990 for your calibration curve.***
 
 Students should work in pairs for the lab activity but turn in independent lab notebooks.
 

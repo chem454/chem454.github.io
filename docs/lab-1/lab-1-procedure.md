@@ -28,15 +28,11 @@ parent: Lab 1 - UV-vis
 
    <div class = "tip">It doesn't matter if you make these concentrations exactly.  What matters is that you're in the right ballpark and know your concentrations exactly.</div>
 
-1. Create a quality control sample from a separate stock solution.  Make it a concentration that falls near the middle of your standard concentrations.  Use a 25 mL volumetric flask.
+1. Create a quality control sample from a separate stock solution.  Make it a concentration that falls near the middle of your standard concentrations.  Use a 25-mL volumetric flask.
 
     <div class = "tip">When creating your QC, make sure you use stock solution from a different lot and preferably a different manufacturer.  This helps check for contamination in the chemicals received from the supplier.  You should also do your QC calculations entirely from scratch so that you check your math with the QC.</div>
 
-## Prepare Your Samples
-
-1. There is no sample preparation -- place samples in your cuvette undiluted.
-
-## Acquire Data
+## Set Instrument Parameters
 
 *You will need [Vernier Spectral Analysis](https://www.vernier.com/product/spectral-analysis/) (free) installed on your computer for these steps.*
 
@@ -64,23 +60,33 @@ parent: Lab 1 - UV-vis
     
     ![A screenshot showing the proper way to set the integration time to achieve a signal of 0.8]({{site.url}}/assets/images/lab-2/integration-settings.png)
     
-1. Run your blank (in triplicate), standards (low to high), sample (in triplicate), and QC.  Rinse the cuvette with DI between each sample.  For each measurement:
+## Standardize
+    
+1. Run your blank (in triplicate), standards (low to high), and QC.  Rinse the cuvette with DI between each sample.  For each measurement:
 
+   <div class = "tip">When running your standards, always work from low concentration to high concentration to avoid carryover.</div>
+   
     1. Click **Collect**.
     1. Use the cursor to find the fluorescence intensity at your $\lambda_{max}$ and record the sample name, concentration, and intensity (signal) value in your lab notebook.  For samples of unknown concentration you can enter `missing` as the concentration.
     1. Press **Stop**.
     1. Repeat for each measurement.
-    1. When you are finished you should have spectra that look like the image below and should have a data table in your notebook that looks like the one below.
-
-   <div class = "tip">When running your standards, always work from low concentration to high concentration to avoid carryover.</div>
+    1. When you are finished you should have spectra that look like the image below and should have a data table in your notebook that looks like the one below (you will not have values for the sample signal yet, though).
+    1. Calculate the $R^2$ for your standard curve and check your QC (see the data processing section).  If the $R^2$ is less than 0.9990 you must redo your standards and/or measurements using better lab practice.  If your QC is not within $\pm$ 10% of the expected concentration you must determine the source of error and eliminate it.
 
    **What you should have in Spectral Analysis**
    
    ![A screenshot showing what the final data set should look like in Spectral Analysis]({{site.url}}/assets/images/lab-2/final-spectra.png)
    
+   
    **What you should have in Pluto**
       
    ![A screenshot showing what the final data set should look like in Pluto]({{site.url}}/assets/images/lab-2/data-table-format.png)
+ 
+## Analyze Samples 
+
+1. Place samples in your cuvette undiluted and collect the fluorescence value.  Measure the sample at least 3 separate times.
+
+# Export Data
    
 1. When you are done, click the **Untitled** box in the top left corner and choose **Export > .CSV**.  Repeat the process but choose **Save As** to the raw data as a .smbl file that you can open in Spectral Analysis later.
 

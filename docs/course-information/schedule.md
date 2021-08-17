@@ -13,14 +13,15 @@ Lab assignments are due at 23:59:59 on the Wednesday before lab unless otherwise
 
 *This schedule is subject to change as needed.*
 
-| Week | Week Beginning |              Lab Activity               |                    Due                     |
+| Week | Week Beginning | Lab Activity                            | Due                                        |
 | ---- | -------------- | --------------------------------------- | ------------------------------------------ |
-| 1    | 8/22           | Safety Lecture, Intro to Julia/Markdown | Lab 0                                      |
-| 2    | 8/29           | UV-vis Lab                              | Lab 1 Prelab                               | 
+| 1    | 8/22           | Safety Lecture, Intro to Julia/Markdown |                                            |
+| 2    | 8/29           | UV-vis Lab                              | Lab 0                                      |
 | 3    | 9/05           | UV-vis Lab                              |                                            |
-| 4    | 9/12           | UV-vis Data Analysis                    | Lab 1 Notebook                             |
-| 5    | 9/19           | GC Lab                                  | Lab 2 Prelab + Notebook                    |
-| 6    | 9/29           | Project Lab                             | Instrument Quizzes Passed  + Group Meeting |
+| 4    | 9/12           | UV-vis Lab                              |                                            |
+| 5    | 9/19           | GC Lab                                  | Lab 1 Notebook                             |
+| 6    | 9/29           | Project Lab                             | Lab 2 Notebook,  Instrument Quizzes Passed |
+|      |                | *Group Meeting*                         |                                            |
 | 7    | 10/03          | Project Lab                             |                                            |
 |      |                | *Writing Workshop*                      |                                            |
 | 8    | 10/10          | Project Lab                             | Notebook Progress Due                      |

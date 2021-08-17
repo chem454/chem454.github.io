@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lab 2 - GC-TCD
-nav_order: 3
+nav_order: 4
 permalink: /gc-tcd/
 has_toc: false
 has_children: true
