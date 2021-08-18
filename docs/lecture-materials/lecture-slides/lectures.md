@@ -15,7 +15,7 @@ last_modified_date: 2021-08-08
 
 If there are slides available for a lecture they will be listed here.
 
-*This list may update throughout the semester.*
+*This list will update throughout the semester.*
 
 <div>
 <ul>
