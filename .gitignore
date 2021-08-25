@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 
 docs/.DS_Store
+
+assets/images/lab-0/.DS_Store
+
+assets/images/.DS_Store
