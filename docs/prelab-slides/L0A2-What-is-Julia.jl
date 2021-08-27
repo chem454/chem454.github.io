@@ -11,7 +11,7 @@ using Plots, GLM, DataFrames, StatsPlots, Distributed
 @everywhere using StatsModels
 
 # ╔═╡ f0dec1c8-5dab-11eb-3e47-55e15cceed16
-html"<button onclick=present()>Toggle Presentation Mode 📺 </button>"
+html"<button onclick='present()'>present 📺</button>"
 
 # ╔═╡ 8a38df9c-5dab-11eb-25db-f1bfc8fe144c
 md"""
@@ -38,7 +38,7 @@ md"""
 """
 
 # ╔═╡ c092d838-5dae-11eb-018d-1dda10cadc56
-2+2
+π
 
 # ╔═╡ 660a29f0-5dee-11eb-3cca-2b7b5b080747
 md"""
@@ -107,6 +107,9 @@ function_name(argument_1, argument_2, ...);
 
 # ╔═╡ 2659073a-61a5-11eb-2651-1db5c4bc26a8
 f(x, y) = 2x+y
+
+# ╔═╡ 518e0a3c-9e7d-47a5-ab16-6a914bd890d0
+f(2, 3)
 
 # ╔═╡ 99c85856-6236-11eb-2347-1f0c92f4270f
 minimum([5, 4, 1, 9, 7, 4, 3, 9])
@@ -1294,6 +1297,7 @@ version = "0.9.1+5"
 # ╟─0c8048e0-5deb-11eb-1184-43b34ab7b107
 # ╟─41a6309e-610a-11eb-2381-6d5b19603d33
 # ╠═2659073a-61a5-11eb-2651-1db5c4bc26a8
+# ╠═518e0a3c-9e7d-47a5-ab16-6a914bd890d0
 # ╠═99c85856-6236-11eb-2347-1f0c92f4270f
 # ╟─6b903e26-610b-11eb-0ff2-2ff125ab9da2
 # ╠═0e78efb8-610c-11eb-3370-c16124be66f0
