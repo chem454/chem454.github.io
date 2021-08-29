@@ -33,17 +33,55 @@ class: center
 
 ---
 
+# Measurements
+
+Analytical measurements can be represented as:
+
+$$
+\text{Signal} = \text{Sensitivity} \times \text{amount}
+$$
+
+$$
+S\_{total} = k\_A C\_A
+$$
+
+--
+
+A **total analysis** gives a total signal, $S\_{total}$:
+
+$$
+S\_{total} = k\_A n\_A + S\_{mb}
+$$
+
+**Instrumental methods** more commonly give:
+
+$$
+S\_{total} = k\_A C\_A + S\_{mb}
+$$
+
+---
+
 <!-- ========================= Central Tendency ============================= -->
 
 # Measures of Central Tendency
+
+<img src="img/chapter-4/measures-of-central-tendency.png" style = "margin-left: auto; margin-right: auto; display: block;">
 
 ---
 
 # Mean
 
+$$
+\overline{X} = \frac {\sum_{i = 1}^n X_i} {n}
+$$
+
 ---
 
 # Median
+
+$$
+\widetilde{X} = \frac{x\_{\frac{n}{2}} + x\_{\frac{n}{2}+1}}{2}
+$$
 
 ---
 
@@ -51,21 +89,51 @@ class: center
 
 # Measures of Spread
 
+<img src="img/chapter-4/measures-of-spread.png" style = "margin-left: auto; margin-right: auto; display: block;">
+
 ---
 
 # Range
+
+$$
+w = X\_\text{largest} - X\_\text{smallest} 
+$$
 
 ---
 
 # Standard Deviation
 
+$$
+s = \sqrt{\frac {\sum\_{i = 1}^{n} \left(X\_i - \overline{X}\right)^{2}} {n - 1}}
+$$
+
 --
 
-RSD
+# Relative Standard Deviation
+
+$$
+s\_r = \frac{s}{\overline{X}} \times 100
+$$
+
+Also called *RSD*.
+
+--
+
+# Variance
+
+$$s^2$$
+
+???
+
+Variance shares same unit as mean!
 
 ---
 
 # Standard Error
+
+$$
+s_e = \frac{s}{\sqrt{n}}
+$$
 
 ---
 
@@ -131,6 +199,14 @@ class: center
 
 ---
 
+# Types of Error
+
+- Determinate
+
+- Indeterminate
+
+---
+
 class: center
 
 # Propagation of Error
@@ -156,17 +232,6 @@ Multiplication / division
 $$ R = \frac{A \times B}{C} $$
 
 $$ u\_R = \sqrt{ \left(\frac{u\_A}{A}\right)^2 + \left(\frac{u\_B}{B}\right)^2  + \left(\frac{u\_C}{C}\right)^2  } $$
-
-
----
-
-# Types of Error
-
-- Determinate
-
-- Indeterminate
-
-
 
 <!-- =============================================================================== -->
 
