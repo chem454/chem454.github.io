@@ -26,9 +26,47 @@ class: center
 
 <div style="margin-top: 100px;"></div>
 <h1 style = "text-align: left; font-weight: bold; margin-left: 175px;">Week 2: Describing Data</h1>
-<h5 style = "text-align: left; font-weight: bold; margin-left: 175px;">Harvey Chs 2, 4</h5>
+<h5 style = "text-align: left; font-weight: bold; margin-left: 175px;">Harvey Chs 2, 3, 4</h5>
+<h5 style = "text-align: left; font-weight: bold; margin-left: 175px;">Granger Ch 22</h5>
 
 <img src="img/chapter-4/accurate-v-precise_5.png" style = "height:250px; margin-left: auto; margin-right: auto; display: block;">
+
+---
+???
+
+- Goal of class, esp. lab, is to learn how to know when you're likely right -- or, more importantly -- when you're not right!
+- Tylenol Example
+  - If you get close to the label conc., are you right? Is the difference important?
+  - If you are far from the label conc., are you wrong?
+
+---
+# Accuracy vs. Precision
+
+<img src="img/chapter-4/dartboard.png" style = "height:500px; margin-left: auto; margin-right: auto; display: block;">
+
+.image-credit[[Arbeck via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Accuracy_and_Precision.svg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) ]
+
+<!-- =============================== Errors ======================================= -->
+
+---
+
+???
+
+Picture of instrument
+
+Chem Domain --> Instrument ---> Electrical Domain (Signal) --> Data Domain (x)
+
+*Each step introduces noise and error!*
+
+Methods may be **total analysis** methods, but most instrumental methods are not -- they are **conentration techniques**..
+
+---
+
+# Experimental Errors
+
+Every real datum will contain **signal**, $S$, and the **noise**, $N$.
+
+In an instrument, this yields the **signal-to-noise ratio**, $\frac{S}{N}$ or $S$:$N$.
 
 
 ---
@@ -61,6 +99,62 @@ $$
 
 ---
 
+<!-- =============================== Describing Data ======================================= -->
+
+---
+
+# Cu in Flour
+
+**Question:** What is the copper concentration in whole wheat flour?
+
+**Approach:** Measure with Flame Atomic Absorption
+
+**Answer:** 2.9 mg/kg
+
+--
+
+**Answer #2:** 3.1 mg/kg
+
+--
+
+The more measurements you take, the 'better' your answer will be.   
+(*central limit theorem*)
+
+---
+
+# Cu in Flour
+
+**Cu in Wholemeal Flour Data**: A numeric vector of 24 determinations of copper in wholemeal flour, in parts per million.
+
+.image-credit[Analytical Methods Committee (1989) *The Analyst* 114, 1693–1702.]
+
+
+
+```julia
+using RDatasets
+Cu = dataset("MASS", "chem")
+```
+
+```julia
+ i  │ ppm             i  │ ppm              SUM of ppm: 102.73
+    │ Float64            │ Float64          MAX of ppm: 28.95
+--- | --------       --- | ---------        MIN of ppm: 2.2
+  1 │    2.9          13 │    5.28
+  2 │    3.1          14 │    3.37
+  3 │    3.4          15 │    3.03
+  4 │    3.4          16 │    3.03
+  5 │    3.7          17 │   28.95
+  6 │    3.7          18 │    3.77
+  7 │    2.8          19 │    3.4
+  8 │    2.5          20 │    2.2 
+  9 │    2.4          21 │    3.5
+ 10 │    2.4          22 │    3.6
+ 11 │    2.7          23 │    3.7
+ 12 │    2.2          24 │    3.7
+```
+
+---
+
 <!-- ========================= Central Tendency ============================= -->
 
 # Measures of Central Tendency
@@ -75,6 +169,24 @@ $$
 \overline{X} = \frac {\sum_{i = 1}^n X_i} {n}
 $$
 
+```julia
+ i  │ ppm             i  │ ppm              SUM of ppm: 102.73
+    │ Float64            │ Float64          MAX of ppm: 28.95
+--- | --------       --- | ---------        MIN of ppm: 2.2
+  1 │    2.9          13 │    5.28
+  2 │    3.1          14 │    3.37
+  3 │    3.4          15 │    3.03
+  4 │    3.4          16 │    3.03
+  5 │    3.7          17 │   28.95
+  6 │    3.7          18 │    3.77
+  7 │    2.8          19 │    3.4
+  8 │    2.5          20 │    2.2 
+  9 │    2.4          21 │    3.5
+ 10 │    2.4          22 │    3.6
+ 11 │    2.7          23 │    3.7
+ 12 │    2.2          24 │    3.7
+```
+
 ---
 
 # Median
@@ -83,11 +195,35 @@ $$
 \widetilde{X} = \frac{x\_{\frac{n}{2}} + x\_{\frac{n}{2}+1}}{2}
 $$
 
+```julia
+ i  │ ppm             i  │ ppm              SUM of ppm: 102.73
+    │ Float64            │ Float64          MAX of ppm: 28.95
+--- | --------       --- | ---------        MIN of ppm: 2.2
+  1 │    2.9          13 │    5.28
+  2 │    3.1          14 │    3.37
+  3 │    3.4          15 │    3.03
+  4 │    3.4          16 │    3.03
+  5 │    3.7          17 │   28.95
+  6 │    3.7          18 │    3.77
+  7 │    2.8          19 │    3.4
+  8 │    2.5          20 │    2.2 
+  9 │    2.4          21 │    3.5
+ 10 │    2.4          22 │    3.6
+ 11 │    2.7          23 │    3.7
+ 12 │    2.2          24 │    3.7
+```
+
+???
+
+Median is less affected by outliers.  This makes it good for things like income, home price, stream gage, wind speed, etc. -- anything where there are very low and very high values mixed in with the "average" values.
+
 ---
 
 <!-- ========================= Spread ============================= -->
 
 # Measures of Spread
+
+<div style="margin-top: 100px;"></div>
 
 <img src="img/chapter-4/measures-of-spread.png" style = "margin-left: auto; margin-right: auto; display: block;">
 
@@ -99,6 +235,24 @@ $$
 w = X\_\text{largest} - X\_\text{smallest} 
 $$
 
+```julia
+ i  │ ppm             i  │ ppm              SUM of ppm: 102.73
+    │ Float64            │ Float64          MAX of ppm: 28.95
+--- | --------       --- | ---------        MIN of ppm: 2.2
+  1 │    2.9          13 │    5.28
+  2 │    3.1          14 │    3.37
+  3 │    3.4          15 │    3.03
+  4 │    3.4          16 │    3.03
+  5 │    3.7          17 │   28.95
+  6 │    3.7          18 │    3.77
+  7 │    2.8          19 │    3.4
+  8 │    2.5          20 │    2.2 
+  9 │    2.4          21 │    3.5
+ 10 │    2.4          22 │    3.6
+ 11 │    2.7          23 │    3.7
+ 12 │    2.2          24 │    3.7
+```
+
 ---
 
 # Standard Deviation
@@ -107,9 +261,28 @@ $$
 s = \sqrt{\frac {\sum\_{i = 1}^{n} \left(X\_i - \overline{X}\right)^{2}} {n - 1}}
 $$
 
---
+```julia
+ i  │ ppm             i  │ ppm              SUM of ppm: 102.73
+    │ Float64            │ Float64          MAX of ppm: 28.95
+--- | --------       --- | ---------        MIN of ppm: 2.2
+  1 │    2.9          13 │    5.28
+  2 │    3.1          14 │    3.37
+  3 │    3.4          15 │    3.03
+  4 │    3.4          16 │    3.03
+  5 │    3.7          17 │   28.95
+  6 │    3.7          18 │    3.77
+  7 │    2.8          19 │    3.4
+  8 │    2.5          20 │    2.2 
+  9 │    2.4          21 │    3.5
+ 10 │    2.4          22 │    3.6
+ 11 │    2.7          23 │    3.7
+ 12 │    2.2          24 │    3.7
+```
+
+---
 
 # Relative Standard Deviation
+
 
 $$
 s\_r = \frac{s}{\overline{X}} \times 100
@@ -125,19 +298,45 @@ $$s^2$$
 
 ???
 
-Variance shares same unit as mean!
+- Variance is additive.
+- But SD shares units with mean!
 
----
+--
 
 # Standard Error
+
 
 $$
 s_e = \frac{s}{\sqrt{n}}
 $$
 
+Not really a measure for *samples* but often used...we will come back to this later.
+
+???
+
+Standard deviation of the sampling distribution, i.e. measure of spread of sample means around population mean.
+
 ---
+# What about Outliers?
 
+> **Outlier:** A measurement that is not consistent with other measurements.
 
+<img src="img/chapter-4/outliers.png" style = "margin-left: auto; margin-right: auto; display: block; height: 175px;">
+
+**Dixon's $Q$-test:** Common, but not favored.
+
+**Grubb's Test:** Preferred by ISO, reject if $G_{exp} > G(a, n)$.
+
+$$
+G\_{exp} = \frac{\left|{X\_{out} - \overline{X}}\right|}{s}
+$$
+
+???
+
+- Must have normally distributed data!  Use ***Chauvinet's Criterion*** otherwise!
+- Proceed with extreme caution! Do not exclude outliers without a good reason!
+
+---
 
 <!-- ========================= Accuracy vs. Precision ============================= -->
 
@@ -197,13 +396,6 @@ class: center
 
 <img src="img/chapter-4/accurate-v-precise_5.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
 
----
-
-# Types of Error
-
-- Determinate
-
-- Indeterminate
 
 ---
 
@@ -232,6 +424,8 @@ Multiplication / division
 $$ R = \frac{A \times B}{C} $$
 
 $$ u\_R = \sqrt{ \left(\frac{u\_A}{A}\right)^2 + \left(\frac{u\_B}{B}\right)^2  + \left(\frac{u\_C}{C}\right)^2  } $$
+
+
 
 <!-- =============================================================================== -->
 
