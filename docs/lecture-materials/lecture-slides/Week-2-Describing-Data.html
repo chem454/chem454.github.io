@@ -118,7 +118,9 @@ $$
 --
 
 The more measurements you take, the 'better' your answer will be.   
-(*central limit theorem*)
+(**law of large numbers**)
+
+The **central limit theorem** states that random errors will tend to cancel each other out when averaged together, even if they aren't *normally distributed*
 
 ---
 
@@ -192,7 +194,7 @@ $$
 # Median
 
 $$
-\widetilde{X} = \frac{x\_{\frac{n}{2}} + x\_{\frac{n}{2}+1}}{2}
+\widetilde{X} = \frac{1}{2} \left( x\_{\lfloor \frac{n+1}{2} \rfloor} + x\_{\lceil \frac{n+1}{2} \rceil} \right)
 $$
 
 ```julia
@@ -317,6 +319,10 @@ Not really a measure for *samples* but often used...we will come back to this la
 Standard deviation of the sampling distribution, i.e. measure of spread of sample means around population mean.
 
 ---
+
+# Sample vs. Population
+
+---
 # What about Outliers?
 
 > **Outlier:** A measurement that is not consistent with other measurements.
@@ -338,12 +344,59 @@ $$
 
 ---
 
+# Signal Averaging
+
+> Signal averaging improves S:N by a factor of $\sqrt{n}$.
+
+???
+
+$$
+S\_T = \sum_{i=1}^n S\_i
+$$
+
+If signal is *roughly* constant:
+
+$$
+S\_1 \approx S\_2 ... \approx S\_n
+$$
+
+such that
+
+$$
+S\_T \approx nS\_1
+$$
+
+Total variance will be:
+
+$$
+\sigma^2\_T = \sum_{i=1}^n \sigma_i^2
+$$
+
+If variance is *roughly* constant:
+
+$$
+\sigma^2_t \approx n \sigma_1^1
+$$
+
+Coverting to RMS value gives:
+
+$$
+\sigma_T = \sqrt{n} \sigma_1
+$$
+
+Thus, SNR is
+
+$$
+\frac{S_T}{\sigma_T} \approx \frac{ns_1}{\sqrt{n}\sigma_1} = \sqrt{n} \left( \frac{s_1}{\sigma_1}\right)
+$$
+
+---
+
 <!-- ========================= Accuracy vs. Precision ============================= -->
 
 
 <div style="margin-top: 100px;"></div>
-<h1 style = "text-align: left; font-weight: bold; margin-left: 175px;">Accuracy and Precision</h1>
-<h5 style = "text-align: left; font-weight: bold; margin-left: 175px;">Harvey Ch 3</h5>
+<h1 style = "text-align: left; font-weight: bold; margin-left: 175px;">Rethinking Accuracy and Precision</h1>
 
 ---
 
@@ -398,7 +451,7 @@ class: center
 
 
 ---
-exclude: true
+
 class: center
 
 # Propagation of Error
@@ -412,7 +465,6 @@ $$ R = A + B - C $$
 $$ u\_R = \sqrt{ u\_A^2 + u\_C^2 + u\_C^2 } $$
 
 ---
-exclude: true
 
 class: center
 
