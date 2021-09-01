@@ -44,7 +44,7 @@ parent: Lab 1 - UV-vis
 
 6. Save the notebooks by clicking **Save notebook...** at the top of the page and typing in (or copy/pasting) the file path from step 1 above.  The final portion of the path should be the name of your Julia (.jl) file.
 
-   Suggested path and file name: `/Documents/lab-notebooks/lab-2/lab-2.jl`
+   Suggested path and file name: `/Documents/lab-notebooks/lab-1/lab-1.jl`
 
 ## Calculate Standard Concentrations
 
