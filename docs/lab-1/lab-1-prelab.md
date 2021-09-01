@@ -62,6 +62,6 @@ parent: Lab 1 - UV-vis
 
 1. Use the provided code chunks to insert the stock concentration, pipette volumes, and flask volumes into your notebook, and then enter an appropriate formula into the standard concentrations chunk to calculate your concentrations directly in the notebook. 
 
-## Prelab Video: How does a SpectroVis work?
+<!-- ## Prelab Video: How does a SpectroVis work?
 
-<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=50136d4d-483b-4065-9fa2-ac2a00df6b01&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=50136d4d-483b-4065-9fa2-ac2a00df6b01&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe> -->
