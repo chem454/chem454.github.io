@@ -7,41 +7,46 @@ using InteractiveUtils
 # ╔═╡ 56815c26-099a-11ec-2ff6-7959e88ba0d7
 using RDatasets, Statistics, StatsPlots
 
+# ╔═╡ 5f0de7f7-be77-4b1a-919b-b2b153d90660
+using Distributions
+
 # ╔═╡ 9e76fe53-4cbe-4afd-80c5-754f47754331
 plotly();
 
 # ╔═╡ 4f4ea4a0-c5d3-4191-ae72-de71bd7660cc
 Cu = dataset("MASS", "chem")
 
+# ╔═╡ b1eaaaf1-5e2d-4561-9e25-ec54ece1630c
+
+
+# ╔═╡ 01f43f36-790b-4549-9bb8-76ce1ec4676d
+md"""
+# Visualize the data with a *histogram*
+"""
+
 # ╔═╡ 864b5443-aeb2-4d9f-9dbe-328d3b8a4060
 histogram(Cu[!, 1])
 
-# ╔═╡ 81cb8034-e109-4727-8947-51e8e5198f88
-maximum(Cu[!, 1]) - minimum(Cu[!, 1])
-
-# ╔═╡ 807c2144-0e61-42f5-9212-6127d2e4f177
-describe(Cu)
-
-# ╔═╡ 08565934-cc29-4f5a-8912-ede803ad3237
-sort(Cu.x1)
-
-# ╔═╡ 02292c10-650d-40ed-8386-616ecf79ddc1
-floor(1.2)
-
-# ╔═╡ 1e399a82-f55b-4bc1-b48e-995c6ca55457
-ceil(1.2)
+# ╔═╡ a8d0699e-c0f6-4483-84db-dd44e520142b
+begin
+	 histogram(quantile.(Normal(0, 1), range(1/1000, 1-1/1000, length = 1000)), normalize = :pdf, color = :navajowhite4, label = "Histogram of Samples")
+	plot!(Normal(0, 1), color = "#C1A875", fill=(0, 0.5,"#C1A875"), label = "Distribution of Population", grid = false)
+	xlabel!("Value"); ylabel!("Probability Density")
+end
 
 # ╔═╡ a4ef1931-d901-428b-b8e6-1eccb9ccd81c
-dataset("HistData", "CushnyPeebles")
+dataset("HistData", "CushnyPeebles");
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 RDatasets = "ce6b1742-4840-55fa-b093-852dadbb1d8b"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
 
 [compat]
+Distributions = "~0.25.14"
 RDatasets = "~0.7.5"
 StatsPlots = "~0.14.26"
 """
@@ -1176,12 +1181,11 @@ version = "0.9.1+5"
 # ╠═56815c26-099a-11ec-2ff6-7959e88ba0d7
 # ╟─9e76fe53-4cbe-4afd-80c5-754f47754331
 # ╠═4f4ea4a0-c5d3-4191-ae72-de71bd7660cc
+# ╠═b1eaaaf1-5e2d-4561-9e25-ec54ece1630c
+# ╟─01f43f36-790b-4549-9bb8-76ce1ec4676d
 # ╠═864b5443-aeb2-4d9f-9dbe-328d3b8a4060
-# ╠═81cb8034-e109-4727-8947-51e8e5198f88
-# ╠═807c2144-0e61-42f5-9212-6127d2e4f177
-# ╠═08565934-cc29-4f5a-8912-ede803ad3237
-# ╠═02292c10-650d-40ed-8386-616ecf79ddc1
-# ╠═1e399a82-f55b-4bc1-b48e-995c6ca55457
-# ╠═a4ef1931-d901-428b-b8e6-1eccb9ccd81c
+# ╠═5f0de7f7-be77-4b1a-919b-b2b153d90660
+# ╟─a8d0699e-c0f6-4483-84db-dd44e520142b
+# ╟─a4ef1931-d901-428b-b8e6-1eccb9ccd81c
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
