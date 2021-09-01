@@ -40,7 +40,7 @@ parent: Lab 1 - UV-vis
  
 5. Open the template notebook by pasting the following link into the **Open from file** box in Pluto where it says "Enter path or URL..." and clicking **Open**.
 
-   - [https://github.com/chem370/chem370.github.io/blob/master/docs/lab-2/lab-2-notebook-template.jl](https://github.com/chem370/chem370.github.io/blob/master/docs/lab-2/lab-2-notebook-template.jl)
+   - [https://github.com/chem370/chem370.github.io/raw/master/docs/lab-1/lab-1-notebook-template.jl](https://github.com/chem370/chem370.github.io/raw/master/docs/lab-1/lab-1-notebook-template.jl)
 
 6. Save the notebooks by clicking **Save notebook...** at the top of the page and typing in (or copy/pasting) the file path from step 1 above.  The final portion of the path should be the name of your Julia (.jl) file.
 
