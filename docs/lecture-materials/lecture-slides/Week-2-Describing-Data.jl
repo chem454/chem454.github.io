@@ -7,9 +7,6 @@ using InteractiveUtils
 # ╔═╡ 56815c26-099a-11ec-2ff6-7959e88ba0d7
 using RDatasets, Statistics, StatsPlots
 
-# ╔═╡ 5f0de7f7-be77-4b1a-919b-b2b153d90660
-using Distributions
-
 # ╔═╡ 9e76fe53-4cbe-4afd-80c5-754f47754331
 plotly();
 
@@ -17,7 +14,22 @@ plotly();
 Cu = dataset("MASS", "chem")
 
 # ╔═╡ b1eaaaf1-5e2d-4561-9e25-ec54ece1630c
+round(mean(Cu.Cu), sigdigits = 2)
 
+# ╔═╡ 5bfcc280-aaef-4275-8ca6-cc2837d4b8be
+median(Cu.Cu)
+
+# ╔═╡ c139a4f3-444b-4435-9537-7408e74121ef
+std(sort(Cu.Cu)[1:23])
+
+# ╔═╡ 906baf21-71c8-440b-85fe-f31941d8c6eb
+(3.37+3.4) / 2
+
+# ╔═╡ ae32e43f-b627-43cc-9e92-439ea69c8e3d
+std(Cu.Cu)
+
+# ╔═╡ 59d9288d-1745-48c9-922c-05b3ae12586e
+describe(Cu)
 
 # ╔═╡ 01f43f36-790b-4549-9bb8-76ce1ec4676d
 md"""
@@ -27,26 +39,17 @@ md"""
 # ╔═╡ 864b5443-aeb2-4d9f-9dbe-328d3b8a4060
 histogram(Cu[!, 1])
 
-# ╔═╡ a8d0699e-c0f6-4483-84db-dd44e520142b
-begin
-	 histogram(quantile.(Normal(0, 1), range(1/1000, 1-1/1000, length = 1000)), normalize = :pdf, color = :navajowhite4, label = "Histogram of Samples")
-	plot!(Normal(0, 1), color = "#C1A875", fill=(0, 0.5,"#C1A875"), label = "Distribution of Population", grid = false)
-	xlabel!("Value"); ylabel!("Probability Density")
-end
-
 # ╔═╡ a4ef1931-d901-428b-b8e6-1eccb9ccd81c
 dataset("HistData", "CushnyPeebles");
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
-Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 RDatasets = "ce6b1742-4840-55fa-b093-852dadbb1d8b"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
 
 [compat]
-Distributions = "~0.25.14"
 RDatasets = "~0.7.5"
 StatsPlots = "~0.14.26"
 """
@@ -1182,10 +1185,13 @@ version = "0.9.1+5"
 # ╟─9e76fe53-4cbe-4afd-80c5-754f47754331
 # ╠═4f4ea4a0-c5d3-4191-ae72-de71bd7660cc
 # ╠═b1eaaaf1-5e2d-4561-9e25-ec54ece1630c
+# ╠═5bfcc280-aaef-4275-8ca6-cc2837d4b8be
+# ╠═c139a4f3-444b-4435-9537-7408e74121ef
+# ╠═906baf21-71c8-440b-85fe-f31941d8c6eb
+# ╠═ae32e43f-b627-43cc-9e92-439ea69c8e3d
+# ╠═59d9288d-1745-48c9-922c-05b3ae12586e
 # ╟─01f43f36-790b-4549-9bb8-76ce1ec4676d
 # ╠═864b5443-aeb2-4d9f-9dbe-328d3b8a4060
-# ╠═5f0de7f7-be77-4b1a-919b-b2b153d90660
-# ╟─a8d0699e-c0f6-4483-84db-dd44e520142b
 # ╟─a4ef1931-d901-428b-b8e6-1eccb9ccd81c
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
