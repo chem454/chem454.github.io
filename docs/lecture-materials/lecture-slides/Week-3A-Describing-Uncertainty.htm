@@ -131,16 +131,100 @@ $$ R = \frac{A \times B}{C} $$
 
 $$ u\_R = \sqrt{ \left(\frac{u\_A}{A}\right)^2 + \left(\frac{u\_B}{B}\right)^2  + \left(\frac{u\_C}{C}\right)^2  } $$
 
+---
+
+# Practice
+
+You analyze a verified solution known to contain $0.55000 \pm 0.00002$ ppm Cu using a new method and determine the concentration of Cu according to:
+
+$$ S\_{Cu} = k\_{Cu} C\_{Cu} + S_{mb} $$
+
+with
+
+$$ S\_{Cu} = 0.9648 \pm 0.0002$$
+
+$$ k\_{Cu} = 1.571 \pm 0.001 \text{ ppm}^{-1}$$
+
+$$ S_{mb} = 0.0501 \pm 0.0002 $$
+
+What is the concentration of Cu and it's uncertainty?  What is the error on your new method?
+
+???
+
+0.5822 ppm
+
+How do we get uncertainty on $S\_{Cu}$?
+
+<!-- ========================= Confidence Intervals ============================= -->
+---
+
+# Confidence Intervals
+
+If we select at random a single member from a population, what is its most
+likely value?
+
+$$x\_i = \mu \pm z \sigma$$
+
+--
+
+or, if we select at random a single member from a population, what is the most
+likely value of the mean?
+
+$$\mu = x\_i \pm z \sigma$$
+
+--
+
+> A **confidence interval** gives a range of values for an unknown parameter (e.g. a population mean).
+
+--
+
+For a sample, this becomes:
+
+$$\mu = \overline{X}\_i \pm t \frac{s}{\sqrt{n}} $$
+
+???
+
+gives a range of values for an unknown parameter (for example, a population mean)
+
+This means that the confidence level represents the theoretical long-run frequency (i.e., the proportion) of confidence intervals that contain the true value of the unknown population parameter. In other words, 90% of confidence intervals computed at the 90% confidence level contain the parameter, 95% of confidence intervals computed at the 95% confidence level contain the parameter, 99% of confidence intervals computed at the 99% confidence level contain the parameter, etc.[2]
 
 ---
-# 68-95-99% Rule
 
-<img src="img/chapter-4/68-95-99-rule.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
+# Practice
+
+An analyst determined the zinc content of a solution and obtained the data below.  What is the concentration of zinc in solution and the 95% CI?
+
+
+| Replicate | [Zn] (ppm) |
+| :-------: | :--------: |
+| 1         | 5.4        |
+| 2         | 2.9        |
+| 3         | 4.7        |
+| 4         | 2.7        |
+| 5         | 5.1        |
+| 6         | 4.8        |
+| 7         | 7.2        |
+| 8         | 6.6        |
+| 9         | 3.8        |
 
 ---
+
 # Limit of Detection
 
 <img src="img/chapter-4/lod.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
+
+???
+
+# Limits of Detection
+
+- Lower Limit of Detection
+
+$$ LOD = S\_{mb} + 3s\_{mb} $$ or $$ LOD = \frac{3s\_{mb}}{k\_A} $$
+
+- Lower Limit of Quantitation
+
+$$ LOD = S\_{mb} + 10s\_{mb} $$ or $$ LOD = \frac{10s\_{mb}}{k\_A} $$
+
 
 <!-- =============================================================================== -->
 
