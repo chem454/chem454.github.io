@@ -77,7 +77,7 @@ class: center
 
 --
 
-$$ e = \bar{X} - \mu $$
+$$ e = \overline{X} - \mu $$
 
 --
 
@@ -90,7 +90,7 @@ class: center
 <img src="img/chapter-4/accurate-v-precise_4.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
 
 
-$$ e\text{ (%)} = \frac{\bar{X} - \mu}{\mu} \times 100 $$
+$$ e\text{ (%)} = \frac{\overline{X} - \mu}{\mu} \times 100 $$
 
 --
 
@@ -107,7 +107,7 @@ class: center
 
 class: center
 
-# Propagation of Error
+# Propagation of Uncertainty
 
 Addition / subtraction
 
@@ -121,7 +121,7 @@ $$ u\_R = \sqrt{ u\_A^2 + u\_B^2 + u\_C^2 } $$
 
 class: center
 
-# Propagation of Error
+# Propagation of Uncertainty
 
 Multiplication / division
 
@@ -151,32 +151,68 @@ What is the concentration of Cu and it's uncertainty?  What is the error on your
 
 ???
 
-0.5822 ppm
+# Part I: Concentration & Uncertainty
 
-How do we get uncertainty on $S\_{Cu}$?
+## Concentration
+
+1. Plug in values and solve for $C\_{Cu}$!
+
+    $$ C\_{Cu} = 0.5822 \text{ppm} $$
+
+## Uncertainty
+
+1. Uncertainties for $S\_{Cu}$ and $S\_{mb}$ are combined according to addition / subtraction rule (absolute uncertainty).
+
+    $$ u = \sqrt{ 0.0002^2 + 0.0002^2 } = 0.0002828 $$
+    
+1. Uncertainties for $[S\_{Cu} - S\_{mb}]$ and $k\_{Cu}$ are combined according to multiplication / division rule (relative uncertainty).
+
+    $$ u = \sqrt{ \left( \frac{0.0002828}{ 0.91147 } \right)^2 + \left( \frac{0.001}{ 1.571 } \right)^2 } = 0.00070765 $$
+    
+    Note that $ 0.9648 - 0.0501 $ is $0.91147$.
+
+1. This is *relative error*!  Convert back to absolute error!
+
+    $$ 0.5822 \times 0.00070765 = 0.000411993 \text{ppm} $$
+
+## Combine it all together
+
+$$ C\_{Cu} = 0.5822 \pm 0.0004 \text{ppm} $$
+
+# Part II: Error
+
+Remember error = $\frac{\overline{X} - \mu}{\mu}$
+
+$$e = \frac{0.5822 - 0.55000}{0.55000} \times 100 = 5.855 \%$$
+
+Always set up this way so the +/- signs give info about direction high or low!
 
 <!-- ========================= Confidence Intervals ============================= -->
 ---
 
 # Confidence Intervals
 
-If we select at random a single member from a population, what is its most
-likely value?
+> A **confidence interval** gives a range of values for an unknown parameter (e.g. a population mean).
+
+If we select a random member from a population, what is its most likely value?
 
 $$x\_i = \mu \pm z \sigma$$
 
---
+<img src="img/chapter-4/68-95-99-rule.png" style = "height:325px; margin-left: auto; margin-right: auto; display: block;">
 
-or, if we select at random a single member from a population, what is the most
-likely value of the mean?
+---
 
-$$\mu = x\_i \pm z \sigma$$
-
---
+# Confidence Intervals
 
 > A **confidence interval** gives a range of values for an unknown parameter (e.g. a population mean).
 
---
+Or, if we select a random member of a population, what is the most likely mean?
+
+$$\mu = x\_i \pm z \sigma$$
+
+<img src="img/chapter-4/68-95-99-rule.png" style = "height:325px; margin-left: auto; margin-right: auto; display: block;">
+
+???
 
 For a sample, this becomes:
 
@@ -194,6 +230,8 @@ This means that the confidence level represents the theoretical long-run frequen
 
 An analyst determined the zinc content of a solution and obtained the data below.  What is the concentration of zinc in solution and the 95% CI?
 
+Assuming the solution is known to contain 6.0 $\pm$ 0.2 ppm Zn, determine if there is a significant difference between the measured and expected concentrations.
+
 
 | Replicate | [Zn] (ppm) |
 | :-------: | :--------: |
@@ -207,6 +245,19 @@ An analyst determined the zinc content of a solution and obtained the data below
 | 8         | 6.6        |
 | 9         | 3.8        |
 
+???
+
+- $\overline{X} = 4.8$
+- $s = 1.5$
+- $n = 9$ so D.O.F = $8$
+- From *t*-table: $t = 2.306 (\alpha = 0.05)$
+
+$$ CI = t \frac{s}{\sqrt{n}} = 2.306 \frac{1.5}{\sqrt{9}} = 1.2 \text{ppm} $$
+
+$$\overline[Zn] = 4.8 \pm 1.2 \text{ppm} $$
+
+Thus, 
+
 ---
 
 # Limit of Detection
@@ -214,6 +265,9 @@ An analyst determined the zinc content of a solution and obtained the data below
 <img src="img/chapter-4/lod.png" style = "height:350px; margin-left: auto; margin-right: auto; display: block;">
 
 ???
+
+- **Type 1 Error:** False positive
+- **Type 2 Error:** False negative
 
 # Limits of Detection
 
