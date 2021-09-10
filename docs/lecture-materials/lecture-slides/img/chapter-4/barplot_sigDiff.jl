@@ -12,7 +12,7 @@ gr()
 
 # ╔═╡ 34dd6fc4-ab33-4180-aea4-05aa4246c606
 begin
-	p = bar([1, 2, 3]', [2.3, 4.5, 3.2]', legend = false,  yerror = [0.75, 0.13, 0.4], border = :box, color = [1, 3, 4]')
+	p = bar([1, 2, 3]', [2.3, 4.5, 3.2]', legend = false,  yerror = [0.75, 0.1, 0.4]', border = :box, color = [1, 3, 4]')
 	hline!([3], linestyle = :dash, linewidth = 2, color = :grey)
 	xlabel!("Sample Number")
 	ylabel!("Measured Concentration")
