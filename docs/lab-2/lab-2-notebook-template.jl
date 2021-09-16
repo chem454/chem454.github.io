@@ -13,26 +13,19 @@ macro bind(def, element)
     end
 end
 
-# ╔═╡ b380d34a-fc29-48fa-b5cb-03d12b8eb3c9
-using PlutoUI
-
 # ╔═╡ 389e73f0-3efd-11eb-1dae-538a2121a045
 using DataFrames, CSV, Plots, LsqFit, StatsPlots, Statistics, SpecialFunctions
 
 # Leave this chunk alone -- it will load the packages you need!
+
+# ╔═╡ b380d34a-fc29-48fa-b5cb-03d12b8eb3c9
+using PlutoUI
 
 # ╔═╡ 375d7cdc-1ab0-4084-a1e3-e88ef70175d1
 md"Toggle Table of Contents:"
 
 # ╔═╡ ce422ca0-62ea-4da2-aca0-4b2258c5b527
 @bind toc_on CheckBox(default=true)
-
-# ╔═╡ 56dcb7db-f3b5-4c4a-823b-8617d6aecc23
-if toc_on == true
-	PlutoUI.TableOfContents()
-else
-		
-end
 
 # ╔═╡ 1974d4d2-3f08-11eb-3ecd-9d73ed8fbe9c
 md"""
@@ -82,7 +75,12 @@ The sample that was analyzed is:
 
 # ╔═╡ c0048288-65bf-11eb-3d4f-7561756a8a97
 md"""
-**NOTE: This analysis was completed by the instructor due to remote instruction so no Matierals and Methods Section is necessary.**
+# Materials and Methods
+"""
+
+# ╔═╡ e3b24066-b1bb-4761-b651-29519f32520d
+md"""
+## Sample Information and Reagents
 """
 
 # ╔═╡ a321a7e8-3f0b-11eb-2055-4d2b08d9fe6b
@@ -118,7 +116,7 @@ end
 
 # ╔═╡ b629f6e8-3f0a-11eb-10e6-072baf22db8e
 md"""
-## Analysis
+## Instrumental Analysis
 
 Insert info about your analysis here.  Fill in the values in the table, as well.
 
@@ -409,6 +407,13 @@ md"""
 
 1. Kevin Lan and James W. Jorgenson (2001). A hybrid of exponential and gaussian  functions as a simple model of asymmetric chromatographic peaks. *Journal of Chromatography A* **915**:1–2, p 1-13. doi: [10.1016/S0021-9673(01)00594-5](https://doi-org.proxy195.nclive.org/10.1016/S0021-9673(01)00594-5)
 """
+
+# ╔═╡ 56dcb7db-f3b5-4c4a-823b-8617d6aecc23
+if toc_on == true
+	PlutoUI.TableOfContents()
+else
+		
+end
 
 # ╔═╡ 33387066-4153-11eb-0cbe-1fd074c9dabe
 # This is the function to fit the peaks ####
@@ -1665,6 +1670,7 @@ version = "0.9.1+5"
 # ╟─3259ead2-3f08-11eb-0c8b-45d108629844
 # ╟─068d4ccc-3f09-11eb-05ed-018d62fca359
 # ╟─c0048288-65bf-11eb-3d4f-7561756a8a97
+# ╟─e3b24066-b1bb-4761-b651-29519f32520d
 # ╠═a321a7e8-3f0b-11eb-2055-4d2b08d9fe6b
 # ╟─7a755bc8-414a-11eb-2671-e9b2e8e3cddc
 # ╟─b629f6e8-3f0a-11eb-10e6-072baf22db8e
