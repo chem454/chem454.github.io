@@ -38,9 +38,9 @@ last_modified_date: 2020-12-17
 
 ## Setup the Instrument
 
-~~*You will need [Vernier Logger Lite](https://www.vernier.com/products/software/logger-lite/#section5) (free) installed on your computer for these steps.*~~
+*You will need [Vernier Logger Lite](https://www.vernier.com/products/software/logger-lite/#section5) (free) installed on your computer for these steps.*
 
-*Due to increased time constraints with COVID19, these steps will be completed for you. A computer and the software will be provided.*  
+<!-- *Due to increased time constraints with COVID19, these steps will be completed for you. A computer and the software will be provided.*   -->
 
 1. Connect the Instrumentation Amplifier/GoLink! to your computer via USB and open Logger Lite.  
 
@@ -49,6 +49,10 @@ last_modified_date: 2020-12-17
 1. Select **Choose Sensor** and select **Instrumentation Amplifier from the dropdown menu**.  
 
 1. Open the **dropdown menu** again and choose the **0-20 mV** range for the amplifier.
+
+    <div class="tip">
+    Don't forget to record the instrument parameters in your notebook!
+    </div>
 
 1. Use the **Zero** knob (on the GC) to adjust the signal until the readout is between 1 and 2 mV.
 
@@ -70,10 +74,10 @@ last_modified_date: 2020-12-17
     3. Squirt solvent through the syringe.  
     4. Clean the plunger and the needle with a Kimwipe moistened with your solvent.  
     
-1. For a solvent blank:  Pull about 4 $\mu$L acetone into the syringe.  Record how much you end up loading into the syringe.
+1. For a solvent blank:  Pull about 2 $\mu$L acetone into the syringe.  Record how much you end up loading into the syringe. (Check with your instructor to see if you need to do this.)
 
 1. For samples:
-    1. Pull 4 $\mu$L of your sample into the syringe.  Make sure inject *exactly* the same amount into each instrument.
+    1. Pull 2 $\mu$L of your sample into the syringe.  Make sure inject *exactly* the same amount into each instrument.
     1. Pull air into the syringe until you can clearly see how much sample you loaded.  Record this value in your lab notebook.
 
 ## Inject the Sample
