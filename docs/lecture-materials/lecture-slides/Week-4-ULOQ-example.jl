@@ -47,6 +47,13 @@ md"# Plot Data as Standard Curve"
 # ╔═╡ ea0fac87-23f9-4b5c-9798-8a00a4f2aec7
 md"**Breakpoint = $(breakpoint)**"
 
+# ╔═╡ d5e97ebf-0f32-4884-9ff4-7666bbdeb1ce
+md"""
+Adjust the slider to see where the best breakpoint between the lower linear range and upper saturated range is.  You can use $R^2$ as a guide, but it's a judgement call in the end.
+
+*Note: The slider will not work over the web.  You must use the 'Edit or Run This Notebook' button in the top right and open the notebook in Julia to use the slider.*
+"""
+
 # ╔═╡ dffd659f-865a-484e-a6ff-72aef18fa51c
 md"# Perform Two Linear Regressions on Data, divided at 'Breakpoint'"
 
@@ -1106,6 +1113,7 @@ version = "0.9.1+5"
 # ╟─0650f8ed-019c-4c0c-acb3-40bff226e10e
 # ╟─ea0fac87-23f9-4b5c-9798-8a00a4f2aec7
 # ╟─26e37170-ab7c-42a9-9616-2476b6dc3beb
+# ╟─d5e97ebf-0f32-4884-9ff4-7666bbdeb1ce
 # ╟─dffd659f-865a-484e-a6ff-72aef18fa51c
 # ╠═9821ac71-ef8e-4a56-a134-d85610ad061c
 # ╠═c4e567e8-b514-413e-b42f-33075a988ae3
