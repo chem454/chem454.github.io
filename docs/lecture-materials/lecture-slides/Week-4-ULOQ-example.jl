@@ -42,7 +42,7 @@ standard_data = DataFrame(
 md"# Plot Data as Standard Curve"
 
 # ╔═╡ 26e37170-ab7c-42a9-9616-2476b6dc3beb
-@bind breakpoint html"<input type='range' min='0' max='9'>"
+@bind breakpoint html"<input type='range' min='0' max='9' value = '6'>"
 
 # ╔═╡ ea0fac87-23f9-4b5c-9798-8a00a4f2aec7
 md"**Breakpoint = $(breakpoint)**"
@@ -92,10 +92,10 @@ blank_signal = [-0.002, 0.005, 0.004]
 s_blank = std(blank_signal)
 
 # ╔═╡ d5d2929e-380b-49e9-905e-a88f86b2bffe
-LLOD = (3 * s_blank) / kₐ # ug / ml
+LLOD = round( (3 * s_blank) / kₐ, sigdigits = 3 ) # ug / ml
 
 # ╔═╡ 7a600d9e-33b9-4225-b038-98b6ab262295
-LLOQ = (10 * s_blank) / kₐ # ug / ml
+LLOQ = round( (10 * s_blank) / kₐ, sigdigits = 3 ) # ug / ml
 
 # ╔═╡ cab58fa7-a1a3-4da8-acb4-4b7e14776661
 md"""
@@ -126,7 +126,7 @@ $$LDR = ULOQ-LLOQ$$
 """
 
 # ╔═╡ 6bba76c9-a96a-435d-b820-4a329bd0c57e
-LDR = ULOQ - LLOQ
+LDR = round(ULOQ - LLOQ, sigdigits = 3 )
 
 # ╔═╡ fabaeaeb-2b6a-4fff-9ac1-0ff05e1cac47
 plotly();
