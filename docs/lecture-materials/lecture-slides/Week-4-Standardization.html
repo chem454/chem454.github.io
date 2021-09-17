@@ -155,6 +155,37 @@ $$
 s\_{C\_a} = \frac{s\_r}{b\_1} \sqrt{ \frac{1}{n} + \frac{(\overline{S}\_{STD})^2}{(b\_1)^2 \sum\_{i = 1}^n \left( C\_{STD, i} - \overline{C}\_{STD} \right)^2} }
 $$
 
+<!-- ========================= Internal Standards ============================= -->
+---
+
+# Internal Standards
+
+What if, for example, some solvent evaporates from one standard but not the others?  Or from the sample?
+
+> **Internal Standard:** A compound that is similar to -- but NOT identical to -- the analyte that is added in the same concentration to each sample and standard and used to compensate for changes in concentration during sample introduction, etc.
+
+$$ S\_A = k\_A C\_A $$
+
+$$ S\_{IS} = k\_{IS} C\_{IS} $$
+
+$$\frac{ S\_A }{ S\_{IS} } = \frac{ k\_A C\_A }{ k\_{IS} C\_{IS} } = K \times \frac{ C\_A }{ C_{IS} }$$
+
+---
+# Internal Standards
+
+1. Add same concentration to each sample.
+2. Plot $\frac{ S\_A }{ S\_{IS} }$ vs $C\_A$
+3. Slope = $\frac{K}{C_{IS}}$
+
+---
+# Internal Standard Example
+
+A spectrophotometric method for the quantitative analysis of Pb$^{2+}$ in blood gives a linear internal standards calibration curve for which 
+
+$$\frac{ S\_A }{ S\_{IS} } = (2.11 \text{ppb}^{-1}) \times C\_A - 0.006$$
+
+What is the concentration of Pb$^{2+}$ in a sample of blood if the analyte yields a signal of 3.36 and the internal standard give a signal of 1.20?
+
 <!-- ========================= QCs ============================= -->
 ---
 # Quality Control Samples
