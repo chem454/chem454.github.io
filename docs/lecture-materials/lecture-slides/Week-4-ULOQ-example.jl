@@ -4,132 +4,132 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 7d5f74ac-161f-11ec-1026-a71c00ad3d67
-using Plots, GLM, DataFrames, Statistics
-
-# ╔═╡ 7bdc6572-caef-4697-85fe-0c898f9a5e75
-begin
-	plotly();
-	using PlutoUI
-	PlutoUI.TableOfContents()
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
 end
 
-# ╔═╡ 82a0390e-ac7f-47df-8743-b812194a96f9
-md"# Example worked in Class 2021-09-15"
+# ╔═╡ 6a10e74c-17b5-11ec-077f-f353e1f17ad1
+using GLM, Statistics, DataFrames, Plots
 
-# ╔═╡ 0adc3b04-0947-45cb-b59e-371150bb22b1
-md"# Place Data in DataFrame"
+# ╔═╡ df3cde73-0728-472f-a0ee-2552a8d463ba
+using PlutoUI; PlutoUI.TableOfContents()
 
-# ╔═╡ b140ee31-b865-4393-a37e-78fda375511b
-HgStds = DataFrame(
-	Conc = [0.50, 1.00, 2.50, 3.00, 3.50], # conc. in ug / ml - given in problem
-	Sₐ   = [0.026, 0.054, 0.153, 0.181, 0.210] # signal in arb. units - given
-)
+# ╔═╡ f5128c21-4de5-4736-8577-2927b6bb9140
+md"# Upper LOQ Example from Class 2021-09-17"
 
-# ╔═╡ 750732a1-bfb1-4160-b40a-78bf79aea514
-mean(HgStds.Sₐ)
+# ╔═╡ 647ed657-f18e-4126-bd40-4b04b3fe31d3
+md"""
+**The data below were gathered for sodium standards. A blank run in triplicate returns $S_b = [-0.011, 0.005, 0.017]$.**
 
-# ╔═╡ 4f1df46c-4ff1-416d-af3c-d0d81b63e925
-md"# Perform Linear Regression"
+**What is the LLOQ, ULOQ, and LDR?**
+"""
 
-# ╔═╡ faaf2f4c-2512-43e0-bfff-fd03797d8796
-HgStdCurve = lm(@formula(Sₐ ~ Conc),HgStds)
+# ╔═╡ 5335d491-8999-4e78-aa01-cbeb66fd1a3c
+md"# Put Data in DataFrame"
 
-# ╔═╡ c6c7fbc0-f14c-4bef-856d-5c35ec8b669a
+# ╔═╡ b81fd347-7422-4db1-a005-894562ad23e5
+standard_data = DataFrame(
+	Concentration = [0.5, 1.00, 2.50, 5.00, 7.5, 10.0, 12.5, 15.0, 17.5], # (ug / ml)
+	Sₐ = [0.026, 0.045, 0.090, 0.185, 0.274, 0.363, 0.415, 0.458, 0.475]  # arb.
+	)
+
+# ╔═╡ ae7649ae-bcb7-4dde-b8ef-9e0f768705f5
+md"# Plot Data as Standard Curve"
+
+# ╔═╡ 26e37170-ab7c-42a9-9616-2476b6dc3beb
+@bind breakpoint html"<input type='range' min='0' max='9'>"
+
+# ╔═╡ ea0fac87-23f9-4b5c-9798-8a00a4f2aec7
+md"**Breakpoint = $(breakpoint)**"
+
+# ╔═╡ dffd659f-865a-484e-a6ff-72aef18fa51c
+md"# Perform Two Linear Regressions on Data, divided at 'Breakpoint'"
+
+# ╔═╡ 9821ac71-ef8e-4a56-a134-d85610ad061c
+standard_curve_lower = lm(@formula(Sₐ ~ Concentration), standard_data[1:breakpoint, :])
+
+# ╔═╡ c4e567e8-b514-413e-b42f-33075a988ae3
+standard_curve_upper = lm(@formula(Sₐ ~ Concentration), standard_data[(breakpoint+1):nrow(standard_data), :])
+
+# ╔═╡ 0650f8ed-019c-4c0c-acb3-40bff226e10e
 begin
-	scatter(HgStds.Conc, HgStds.Sₐ, legend = false)
-	xlabel!("Concentration (μg / mL)"); ylabel!("Sₐ")
-	xlims!(0, 4); ylims!(0, 0.3)
-	Plots.abline!(coef(HgStdCurve)[2], coef(HgStdCurve)[1], color = 1, linestyle = :dot)
+	scatter(
+		standard_data.Concentration, standard_data.Sₐ, 
+		label = "Standards", legend = (0.52, 0.37), border = :box, grid = false,
+		markersize = 6, color = 1
+	)
+	scatter!([standard_data.Concentration[breakpoint]], [standard_data.Sₐ[breakpoint]], color = :red, label = "Breakpoint", markersize = 8) 
+	Plots.abline!(coef(standard_curve_lower)[2], coef(standard_curve_lower)[1], label = "fit to Linear Range (Lower), R² = $(round(r2(standard_curve_lower), sigdigits = 4))", linewidth = 3, color = "#C1A875")
+		Plots.abline!(coef(standard_curve_upper)[2], coef(standard_curve_upper)[1], label = "Fit to Non-linear Range (Upper), R² = $(round(r2(standard_curve_upper), sigdigits = 4))", color = "#592C88", linewidth = 3)
+	xlims!(0, 20); ylims!(0, 0.5)
+	xlabel!("Concentration (μg / mL)"); ylabel!("Signal (arbitrary units)")
 end
 
-# ╔═╡ c100841a-b438-4db2-96cd-3d4e260111fa
-kₐ = coef(HgStdCurve)[2] # slope / sensitivity coefficient
+# ╔═╡ 07f09c8e-90ad-4151-b502-7855ddc7fbe7
+b = coef(standard_curve_lower)[1] # arb units
 
-# ╔═╡ 57434bf6-fcc5-4028-b3ef-dd6974ffcc49
-b₀ = coef(HgStdCurve)[1] # intercept
+# ╔═╡ 3ca01a1e-100b-433a-bea1-936ffb9ff563
+b_upper = coef(standard_curve_upper)[1] # arb units
 
-# ╔═╡ ffc83079-2cca-4274-bdc7-5b9928b5dd3c
+# ╔═╡ 8e4efe36-4f18-45de-97b7-3d5448ca93d5
+kₐ = coef(standard_curve_lower)[2] # ml / ug
+
+# ╔═╡ 2f1a7754-a078-4768-91a5-495161dc10f6
+kₐ_upper = coef(standard_curve_upper)[2] 
+
+# ╔═╡ f38c0957-f047-47b5-85d8-632968432fa2
+md"# LLOD + LLOQ"
+
+# ╔═╡ 3946f269-eccf-47af-9a2f-8356cee911db
+blank_signal = [-0.002, 0.005, 0.004]
+
+# ╔═╡ 5b8a00b1-711e-4909-9c62-5847ad68649f
+s_blank = std(blank_signal)
+
+# ╔═╡ d5d2929e-380b-49e9-905e-a88f86b2bffe
+LLOD = (3 * s_blank) / kₐ # ug / ml
+
+# ╔═╡ 7a600d9e-33b9-4225-b038-98b6ab262295
+LLOQ = (10 * s_blank) / kₐ # ug / ml
+
+# ╔═╡ cab58fa7-a1a3-4da8-acb4-4b7e14776661
 md"""
-# Write Function to Predict [Hg]
+# ULOQ
 
-In Julia, it's possible to write a function such as 
+Determine $C_A$ at point of intersection.  That is an estimate of your ULOQ in concentration units.
 
-$f(x) = 2x + 3$
+This is done by setting the equations equal to each other and solving for $C_A$.
 
-and then call the function and have Julia calculate the answer with, e.g., `f(2)`.  In that case, the output would be 2(2) + 3 = `7`.
+$$0.0067 + 0.0335 C_A = 0.0120 + 0.0038 C_A$$
 
-I will do that here using the slope and intercept from the model.  Then I can call `predictHg(S)` on any arbitrary signal value.
+Solveing this, **$C_{A-ULOQ} =$ $(round((b_upper-b)/(kₐ-kₐ_upper), sigdigits  = 3)) μg / mL**.
 
-Of course you could do the calculation manually, but this streamlines calculations and saves you from having to repeat work.  It's also generally good practice to code using functions instead of line-by-line scripts.
+
 
 """
 
-# ╔═╡ 36224988-c299-4833-b017-eefb5a339abe
-predictHg(S) =  ( S .- b₀ ) ./ kₐ 
+# ╔═╡ a2c0fc78-f26d-4f44-b5ce-160c503fa77e
+ULOQ = (b_upper-b)/(kₐ-kₐ_upper)
 
-# ╔═╡ 4062fa94-8ec1-4c16-9931-b50d50a6e155
-md"# Predict [Hg]"
-
-# ╔═╡ f07d4af9-9eff-46fb-bd85-0b3457aa4797
-sampleSignal = [0.173, 0.166, 0.189] # arb. units - given in problem
-
-# ╔═╡ 65c4f0a0-a6f6-41f7-81f5-02968b627aab
-mean(sampleSignal) # arb. units 
-
-# ╔═╡ ecf0c0a5-e766-4cde-8def-e26fc57e91e0
-HgConcs = predictHg(sampleSignal) # ug / ml
-
-# ╔═╡ 9bef997d-6189-47cd-878c-584e932dcc88
-mean(HgConcs) # ug / ml
-
-# ╔═╡ 8e0df380-6a18-4609-bb0b-e98246ffdbe2
-md"# Determine 95% CI"
-
-# ╔═╡ 5df57467-ec5d-40ef-a1b1-d191b4de3749
+# ╔═╡ 2e602d43-a250-4809-a8f4-148536c6ce39
 md"""
-The (weighted) residual sum of squares can be obtained using `deviance(modelName)`.
+# LDR
 
-$s_r = \sqrt{\frac {\sum_{i = 1}^{n} \left( y_i - \hat{y}_i \right)^2} {n-2}}$
+The LDR is the range over which you can determine concentration:
 
+$$LDR = ULOQ-LLOQ$$
 """
 
-# ╔═╡ 7cee2292-70c1-4eca-a4c7-0ef81f5deae6
-rss_y = deviance(HgStdCurve) # y_i - y_hat,i, arb units
+# ╔═╡ 6bba76c9-a96a-435d-b820-4a329bd0c57e
+LDR = ULOQ - LLOQ
 
-# ╔═╡ 07c4763f-f0e8-45af-acc0-66ffc13be19c
-sᵣ = sqrt( rss_y / 3.0 )
-
-# ╔═╡ a63b67b6-3d5a-4c0e-87dc-41d499fd2b65
-m = length(sampleSignal)
-
-# ╔═╡ f7792769-420c-4fa6-9bd5-3e499f4dbd73
-n = length(predict(HgStdCurve))
-
-# ╔═╡ 06761723-f068-4023-9522-6b8de9c8687f
-md"""
-
-The rest of the numbers needed for the CI are already determined or given.
-
-$s_{C_A} = \frac {s_r} {k_a} \sqrt{\frac {1} {m} + \frac {1} {n} + \frac {\left( \overline{S}_{samp} - \overline{S}_{std} \right)^2} {(k_a)^2 \sum_{i = 1}^{n} \left( C_{std_i} - \overline{C}_{std} \right)^2}}$
-
-"""
-
-# ╔═╡ 6593f985-a42f-474b-888e-bdadd6f00979
-rss_x = sum((HgStds.Conc .- mean(HgStds.Conc)).^2) # sum(C_std-i - C_std)^2
-# units are (ug / ml)^2
-
-# ╔═╡ c8e9a4c7-1f3c-4b6c-8237-99126f176d83
-S_Ca = (sᵣ/coef(HgStdCurve)[2]) * sqrt((1/m) + (1/n) + ((mean(sampleSignal) - mean(HgStds.Sₐ))^2 / (coef(HgStdCurve)[2]^2 * rss_x)))
-
-# ╔═╡ dcb7fb35-2b72-4c6b-a4a2-33d8a93afea2
-CI = S_Ca * 3.182
-
-# ╔═╡ 9f492fef-6211-47a9-b6ad-82c00159a5c0
-md"# Final Answer"
-
-# ╔═╡ a227e613-c9b4-420e-9e5c-6be8296cf0f6
-md"**The concentration of Hg is $(round(mean(HgConcs), sigdigits = 3)) ± $(round(CI, digits = 3)) μg / mL**"
+# ╔═╡ fabaeaeb-2b6a-4fff-9ac1-0ff05e1cac47
+plotly();
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -143,7 +143,7 @@ Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 [compat]
 DataFrames = "~1.2.2"
 GLM = "~1.5.1"
-Plots = "~1.21.3"
+Plots = "~1.22.0"
 PlutoUI = "~0.7.9"
 """
 
@@ -351,9 +351,9 @@ version = "1.5.1"
 
 [[GR]]
 deps = ["Base64", "DelimitedFiles", "GR_jll", "HTTP", "JSON", "Libdl", "LinearAlgebra", "Pkg", "Printf", "Random", "Serialization", "Sockets", "Test", "UUIDs"]
-git-tree-sha1 = "182da592436e287758ded5be6e32c406de3a2e47"
+git-tree-sha1 = "c2178cfbc0a5a552e16d097fae508f2024de61a3"
 uuid = "28b8d3ca-fb5f-59d9-8090-bfdbd6d07a71"
-version = "0.58.1"
+version = "0.59.0"
 
 [[GR_jll]]
 deps = ["Artifacts", "Bzip2_jll", "Cairo_jll", "FFMPEG_jll", "Fontconfig_jll", "GLFW_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "Pixman_jll", "Pkg", "Qt5Base_jll", "Zlib_jll", "libpng_jll"]
@@ -669,9 +669,9 @@ version = "1.0.14"
 
 [[Plots]]
 deps = ["Base64", "Contour", "Dates", "Downloads", "FFMPEG", "FixedPointNumbers", "GR", "GeometryBasics", "JSON", "Latexify", "LinearAlgebra", "Measures", "NaNMath", "PlotThemes", "PlotUtils", "Printf", "REPL", "Random", "RecipesBase", "RecipesPipeline", "Reexport", "Requires", "Scratch", "Showoff", "SparseArrays", "Statistics", "StatsBase", "UUIDs"]
-git-tree-sha1 = "2dbafeadadcf7dadff20cd60046bba416b4912be"
+git-tree-sha1 = "b1a708d607125196ea1acf7264ee1118ce66931b"
 uuid = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
-version = "1.21.3"
+version = "1.22.0"
 
 [[PlutoUI]]
 deps = ["Base64", "Dates", "InteractiveUtils", "JSON", "Logging", "Markdown", "Random", "Reexport", "Suppressor"]
@@ -836,9 +836,9 @@ version = "0.6.25"
 
 [[StructArrays]]
 deps = ["Adapt", "DataAPI", "StaticArrays", "Tables"]
-git-tree-sha1 = "f41020e84127781af49fc12b7e92becd7f5dd0ba"
+git-tree-sha1 = "2ce41e0d042c60ecd131e9fb7154a3bfadbf50d3"
 uuid = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
-version = "0.6.2"
+version = "0.6.3"
 
 [[SuiteSparse]]
 deps = ["Libdl", "LinearAlgebra", "Serialization", "SparseArrays"]
@@ -1097,35 +1097,32 @@ version = "0.9.1+5"
 """
 
 # ╔═╡ Cell order:
-# ╟─82a0390e-ac7f-47df-8743-b812194a96f9
-# ╠═7d5f74ac-161f-11ec-1026-a71c00ad3d67
-# ╟─7bdc6572-caef-4697-85fe-0c898f9a5e75
-# ╟─0adc3b04-0947-45cb-b59e-371150bb22b1
-# ╠═b140ee31-b865-4393-a37e-78fda375511b
-# ╠═750732a1-bfb1-4160-b40a-78bf79aea514
-# ╟─4f1df46c-4ff1-416d-af3c-d0d81b63e925
-# ╟─c6c7fbc0-f14c-4bef-856d-5c35ec8b669a
-# ╠═faaf2f4c-2512-43e0-bfff-fd03797d8796
-# ╠═c100841a-b438-4db2-96cd-3d4e260111fa
-# ╠═57434bf6-fcc5-4028-b3ef-dd6974ffcc49
-# ╟─ffc83079-2cca-4274-bdc7-5b9928b5dd3c
-# ╠═36224988-c299-4833-b017-eefb5a339abe
-# ╟─4062fa94-8ec1-4c16-9931-b50d50a6e155
-# ╠═f07d4af9-9eff-46fb-bd85-0b3457aa4797
-# ╠═65c4f0a0-a6f6-41f7-81f5-02968b627aab
-# ╠═ecf0c0a5-e766-4cde-8def-e26fc57e91e0
-# ╠═9bef997d-6189-47cd-878c-584e932dcc88
-# ╟─8e0df380-6a18-4609-bb0b-e98246ffdbe2
-# ╟─5df57467-ec5d-40ef-a1b1-d191b4de3749
-# ╠═7cee2292-70c1-4eca-a4c7-0ef81f5deae6
-# ╠═07c4763f-f0e8-45af-acc0-66ffc13be19c
-# ╠═a63b67b6-3d5a-4c0e-87dc-41d499fd2b65
-# ╠═f7792769-420c-4fa6-9bd5-3e499f4dbd73
-# ╟─06761723-f068-4023-9522-6b8de9c8687f
-# ╠═6593f985-a42f-474b-888e-bdadd6f00979
-# ╠═c8e9a4c7-1f3c-4b6c-8237-99126f176d83
-# ╠═dcb7fb35-2b72-4c6b-a4a2-33d8a93afea2
-# ╟─9f492fef-6211-47a9-b6ad-82c00159a5c0
-# ╟─a227e613-c9b4-420e-9e5c-6be8296cf0f6
+# ╟─f5128c21-4de5-4736-8577-2927b6bb9140
+# ╠═6a10e74c-17b5-11ec-077f-f353e1f17ad1
+# ╟─647ed657-f18e-4126-bd40-4b04b3fe31d3
+# ╟─5335d491-8999-4e78-aa01-cbeb66fd1a3c
+# ╠═b81fd347-7422-4db1-a005-894562ad23e5
+# ╟─ae7649ae-bcb7-4dde-b8ef-9e0f768705f5
+# ╟─0650f8ed-019c-4c0c-acb3-40bff226e10e
+# ╟─ea0fac87-23f9-4b5c-9798-8a00a4f2aec7
+# ╟─26e37170-ab7c-42a9-9616-2476b6dc3beb
+# ╟─dffd659f-865a-484e-a6ff-72aef18fa51c
+# ╠═9821ac71-ef8e-4a56-a134-d85610ad061c
+# ╠═c4e567e8-b514-413e-b42f-33075a988ae3
+# ╠═07f09c8e-90ad-4151-b502-7855ddc7fbe7
+# ╠═3ca01a1e-100b-433a-bea1-936ffb9ff563
+# ╠═8e4efe36-4f18-45de-97b7-3d5448ca93d5
+# ╠═2f1a7754-a078-4768-91a5-495161dc10f6
+# ╟─f38c0957-f047-47b5-85d8-632968432fa2
+# ╠═3946f269-eccf-47af-9a2f-8356cee911db
+# ╠═5b8a00b1-711e-4909-9c62-5847ad68649f
+# ╠═d5d2929e-380b-49e9-905e-a88f86b2bffe
+# ╠═7a600d9e-33b9-4225-b038-98b6ab262295
+# ╟─cab58fa7-a1a3-4da8-acb4-4b7e14776661
+# ╠═a2c0fc78-f26d-4f44-b5ce-160c503fa77e
+# ╟─2e602d43-a250-4809-a8f4-148536c6ce39
+# ╠═6bba76c9-a96a-435d-b820-4a329bd0c57e
+# ╟─fabaeaeb-2b6a-4fff-9ac1-0ff05e1cac47
+# ╟─df3cde73-0728-472f-a0ee-2552a8d463ba
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
