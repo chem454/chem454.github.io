@@ -20,9 +20,13 @@ You *must* present results supporting every conclusion you draw; likewise, you m
 
 Style tips (see the [writing guide]({{site.url}}/technical-reports/writing-guide) for more info):   
 
-- Write in paste tense.  
+- Write in past tense.  
 - Be specific.  
 - Avoid faulty and incomplete comparisons.  
+- All tables must have a title *above* the table and be numbered sequentially.  
+- All figures (images or graphs) must have a caption (that includes a title and brief description of the figure) *below* the figure and be numbered sequentially.
+- All tables and figures should be referred to in order.  If you do not discuss a table or figure it's not worth including!
+- Use tables to convey specific, exact data.  Use figures to convey trends and large amounts of data where the exact values do not need to be known exactly by the reader. 
 
 Please see [1] for more information.
 

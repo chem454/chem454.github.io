@@ -17,7 +17,6 @@ The abstract should be a complete summary of your paper.  One or two sentences p
 
 **Additional Resources:**
 
-- Please read [Chapter 6:
-Abstract and Title](https://www.spiedigitallibrary.org/ebooks/PM/How-to-Write-a-Good-Scientific-Paper/6/Abstract-and-Title/10.1117/3.2317707.ch6) in *How to Write a Good Scientific Paper* for more guidelines.
+- Please read [Chapter 6: Abstract and Title](https://www.spiedigitallibrary.org/ebooks/PM/How-to-Write-a-Good-Scientific-Paper/6/Abstract-and-Title/10.1117/3.2317707.ch6) in *How to Write a Good Scientific Paper* for more guidelines.
 
 - [Writing Workshop slides coming soon]

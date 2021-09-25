@@ -15,14 +15,14 @@ The methods section provides the reader of your manuscript a *detailed* account 
 
 > There are really two interrelated goals at work: the reader should be given the ability to reproduce the results and the ability to judge the results. [1]
 
-For this assignment, you should turn in a methods section to your final paper that details your sensor construction and deployment.
-
 **Style tips:**
 
 - Write in *past tense*.  
 - Use active voice (first-person is OK, too).  
 - All tables must have a title *above* the table and be numbered sequentially.  
-- All figures (images or graphs) must have a caption (that includes a title and brief description of the figure) *below* the figure and be numbered sequentially.  
+- All figures (images or graphs) must have a caption (that includes a title and brief description of the figure) *below* the figure and be numbered sequentially.
+- All tables and figures should be referred to in order.  If you do not discuss a table or figure it's not worth including!
+- Use tables to convey specific, exact data.  Use figures to convey trends and large amounts of data where the exact values do not need to be known exactly by the reader. 
 
 **Example table formatting:**
 
