@@ -58,7 +58,9 @@ Follow the guidelines below when writing your report.  Your report should be for
 
 ## Examples & Templates
 
-- [Microsoft Word Template](https://catamountwcu-my.sharepoint.com/:w:/g/personal/dfischer_wcu_edu/ESJSHEwCANhNuKW_bapC2ucBCdRurIpvfxZ2FHRRTc7s9w?e=ILpNgr)
+
+- [Microsoft Word Template](https://catamountwcu-my.sharepoint.com/:w:/g/personal/dfischer_wcu_edu/ESJSHEwCANhNuKW_bapC2ucB8LdVraBrW5pvEMGiCz6pFQ?e=YLd2of)
+<!-- - [Microsoft Word Template](https://catamountwcu-my.sharepoint.com/:w:/g/personal/dfischer_wcu_edu/ESJSHEwCANhNuKW_bapC2ucBCdRurIpvfxZ2FHRRTc7s9w?e=ILpNgr) -->
 
 <!-- - [Google Doc ACS-style Report Template](https://docs.google.com/document/d/1XhNYeBbJk1YYdBPF9YDNg7n3DBvBJ3z26qHK0V4ae70/view?usp=sharing) -->
 
