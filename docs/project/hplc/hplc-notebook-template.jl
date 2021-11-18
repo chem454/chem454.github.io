@@ -285,19 +285,26 @@ end;
 # Leave this chunk alone -- it's a custom function you will need!
 
 
+# Leave this chunk alone -- it's a custom function you will need!
+
+
 function importHPLC(dir = pwd())
-	fnames = readdir()[endswith.(readdir(), ".CSV") .| endswith.(readdir(), ".csv")]
-	chromatograms = CSV.read(
-		open(fnames[1], enc"UTF-16LE"), DataFrame, 
-		header = ["Time", fnames[1][1:(end-4)]]
+	fnames = readdir()[endswith.(readdir(), ".AIA")];
+	dataset_info = NCDataset(fnames[1]*"/SIGNAL01.cdf", "r");
+	sample_names = [dataset_info.attrib["sample_name"]]
+	l = length(dataset_info["ordinate_values"])
+	chromatograms = DataFrame(
+		Time = range(0, length = l, 
+			step = 0.0133333333333333333333), 
+		A = Array(dataset_info["ordinate_values"])
 	)
-	l = nrow(chromatograms)
+	rename!(chromatograms, :A => dataset_info.attrib["sample_name"])
 	
 	for i in 2:length(fnames)
-		f = CSV.read(
-			open(fnames[i], enc"UTF-16LE"), DataFrame, 
-			header = ["Time", fnames[i][1:(end-4)]]
-		)[1:l, 2]
+		dataset_info = NCDataset(fnames[i]*"/SIGNAL01.cdf", "r");
+	
+		sample_names = vcat(sample_names, dataset_info.attrib["sample_name"])
+		f = Array(dataset_info["ordinate_values"])
 		if length(f) < l
 			chromatograms[!, :A] .= missing
 			chromatograms[1:l, :A] = f
@@ -306,7 +313,7 @@ function importHPLC(dir = pwd())
 		else
 			chromatograms[!, :A] = f
 		end
-		rename!(chromatograms, :A => fnames[i][1:(end-4)])
+		rename!(chromatograms, :A => dataset_info.attrib["sample_name"])
 	end
 
 	chromatograms
