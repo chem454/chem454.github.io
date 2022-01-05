@@ -39,14 +39,7 @@ parent: Course Information
 
 Computers, and more recently sensors and microcontrollers, have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to methods of using computers and off-the-shelf electronic components to interface with common laboratory equipment.  Topics covered include basic analog electronics (RC circuits and op-amps), serial communication, microcontroller usage and programming, graphic user interface (GUI) creation, and data acquisition. This course is cross-listed with PHYS 454 and CHEM 554.
 
-The goal of this course is to help you develop a practical understanding of electronics and programming so that you will be better able to setup, troubleshoot, construct, and utilize scientific equipment; it is NOT designed to help you become an electrical engineer.  This course is self-contained -- it assumes no previous experience in electronics or programming, just a willingness to learn and experiment.
-
-The textbook sums up our goals for the semester well:
-
-> We hope that this [course] will provide you with an intuitive understanding of the theoretical and practical aspects of electronics in a way that fuels your creativity...This [course] is designed to help [scientists] invent.
-
-This course is cross-listed with PHYS 454 and CHEM 554.
-
+The goal of this course is to help you develop a practical understanding of electronics and programming so that you will be better able to setup, troubleshoot, construct, and utilize scientific equipment; it is NOT designed to help you become an electrical engineer.  This course is self-contained, and assumes no previous experience in electronics or programming, just a willingness to learn and experiment.
 
 ## Student Learning Outcomes 
 
@@ -57,7 +50,6 @@ To achieve a satisfactory grade, students will:
 1. Utilize microcontrollers to interface a computer with lab equipment.
 1. Construct a working instrument, including a grpahic user interface (GUI), suitable for use in an experimental laboratory or field application.
 1. Describe instrument performance using common formats, including figures of merit, bills of materials, schematics, and technical data sheets.
-1. Demonstrate independent research skills.
 1. *Graduate Students:* Modify an instrument to achieve new functionality and fully describe it's performance.
 
 
@@ -72,19 +64,19 @@ To achieve a satisfactory grade, students will:
 
 **Miscelaneous Suggested Materials:** A notebook or binder for taking notes during lecture, a separate notebook for taking notes during lab.
 
-**Technology:** Students will need a laptop computer meeting Chemistry and Physics’ [minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx). In addition, the computer must have a standard [USB-A receptacle](https://en.wikipedia.org/wiki/USB_hardware#/media/File:USB_2.0_and_3.0_connectors.svg), or students must supply an appropriate USB-A adapter for their computer. An internet connection capable of streaming video will be required to access some course materials and submit homework assignments.
+**Technology:** Students will need a laptop computer meeting [Chemistry and Physics’ minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx). In addition, the computer must have a standard [USB-A receptacle](https://en.wikipedia.org/wiki/USB_hardware#/media/File:USB_2.0_and_3.0_connectors.svg), or students must supply an appropriate USB-A adapter for their computer. 
 
-Students will be required to use [Julia](https://julialang.org/) + [Pluto](https://github.com/fonsp/Pluto.jl) and may wish to install these on their computer; both are freely available for all operating systems. Alternatively, students may use Julia + Pluto via WCU’s STEM VCAT (officially supported option for the course). Students *must* use Chrome, Firefox, or Brave as their browser for running Pluto or certain functionalities will not work (i.e. you cannot use Safari, Edge, Internet Explorer, Opera, etc.).
+Students will be required to use [Julia](https://julialang.org/) + [Pluto](https://github.com/fonsp/Pluto.jl) and may wish to install these on their computer; both are freely available for all operating systems. Alternatively, students may use Julia + Pluto via WCU’s STEM VCAT (officially supported option for the course). A web browser and internet connection capable of streaming video will be necessary for submitting homework assignments and accessing course materials.
 
 Students will also use [Arduino](https://www.arduino.cc/en/software) and [Teensyduino](https://www.pjrc.com/teensy/td_download.html).  These have also been requested for STEM VCAT, but students may likewise find is easiest to install them on their personal computers free of charge.
 
 Students will need the VMWare Horizon Clinet, available through WCU IT, to use STEM VCAT on their personal computers.  The web interface to STEM VCAT will not work for this application!  Students should contact the IT Helpdesk for assistance installing VMWare Horizon.
 
 Some class work will be completed on [Tinkercad](https://www.tinkercad.com/dashboard).  Though not strictly necessary, a free Tinkercad account will likely make assignments go more smoothly.
-
+
 ## Grading 
 
-Your grade is determined from several categories of work, listed under [Contributions to Your Grade]({{site.url}}/syllabus#contributions-to-your-grade), below.  At the end of the semester, the total points you've earned in each category will be summed and divided by the total points available for that category, to calculate the fraction of points you earned in each category.  Then, your final grade will be computed as the weighted average of each category score.  The weights for each category are also listed below.
+Your grade is determined from several categories of work, listed under [Contributions to Your Grade]({{site.baseurl}}/syllabus#contributions-to-your-grade), below.  At the end of the semester, the total points you've earned in each category will be summed and divided by the total points available for that category, to calculate the fraction of points you earned in each category.  Then, your final grade will be computed as the weighted average of each category score.  The weights for each category are also listed below.
 
 ### Contributions to Your Grade
 
