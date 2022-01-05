@@ -8,63 +8,44 @@ has_children: true
 ---
 
 
+# CHEM / PHYS 454 & 554: Computer Interfacing
 
+Computers have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to methods of using computers to interface with common laboratory equipment.  Topics covered will include basic analog electronics (RC circuits and op-amps), serial communication, microcontroller usage and programming, and data acquisition. This course is cross-listed with PHYS 454.
 
-<div class="card">
-  {% for post in site.posts limit:1 %}
-    <article class="post">
-
-    <h1>This Week</h1>
-
-      <div class="entry">
-        {{ post.content }}
-      </div>
-
-      <a href="{{ site.url }}/weekly-summaries" class="read-more">[View Previous Weeks]</a>
-    </article>
-  {% endfor %}
-</div>
-
------
-
-# Instrumental Analysis Course Information
-
-*CHEM 370 - Instrumental Analysis I (Laboratory)* is an introduction to instrumental analysis in the chemistry lab.  We will learn how to use and operate chemical instrumentation and learn how to reproducibly process the data they generate.
-
-*CHEM 370 - Instrumental Analysis I (Lecture)* is an introduction to common instrumental analysis techniques. Students will study the theoretical, electrical, and mechanical underpinnings of the most common methods of instrumental analysis. Topics covered include spectroscopy, mass spectrometry, separation science, and data interpretation.
-
-## Logistics
+# Logistics
 
 - Course materials will be posted on this site.
-- Homework will be submitted on Canvas.    
+- Homework will be posted and submitted electronically on Canvas.    
 - General questions should be asked through Piazza.   [ [Video: How to use Piazza](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0abad82d-58e0-49c9-aa39-acb8012e0a2e) ]
-- Office hours meetings should be scheduled in advance.  No need to email or ask -- just schedule a meeting using [Bookings](https://outlook.office365.com/owa/calendar/DrFischer@catamountwcu.onmicrosoft.com/bookings/)!   [ [Video: How to schedule office hours](https://wcu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aee14c85-2213-49f4-bfb3-acb8012e0a68) ]
+- Office hours meetings should be scheduled in advance. See my availability and schedule an appointment on [Calendly](https://calendly.com/drfischer/office-hours). You will be able to choose to meet on Zoom or at my office during scheduling.  (No need to email or ask - just schedule!)
 
-## Lab Assignments
+# Anticipated Assignments
 
-I put a lot of trust in you to complete your lab assignments, do them well, and ask questions when you don't understand something.  Many assignments will be "graded" automatically -- you will get feedback on screen as you complete them.  You may not get a formal grade for these, but neglecting them will certainly have a detrimental effect on your grade later in the semester!  Below are lists of the items that will be assessed for a grade.  
+Most assignments in this course will be centered around the construction of a working instrument.  Prior to Spring Break students will work to develop a design for their instrument.  All students should begin constructing their instruments no later than the week returning from Spring Break.
 
-(*Assignment lists may change as needed or if class is moved to an online modality.*)
-
-### Individual (Lab)
-
-- Lab 0 Tutorials (Exercises 0A & 0B)
-- 5 lab notebooks (1 for each intro labs and 3 for the project lab)
-- 4 instrument quizzes
-- 1 peer review assignment
-- Lab safety & participation
-- Group participation
-
-### Group Assignments (Lab)
-
-- 1 lab report (plus additional draft assignments)
-
-There are no exams.  Lab notebooks consist of data processing completed in a Markdown notebook and a data processing language (e.g. Pluto and Julia, respectively).
+- Weekly(-ish) homework assignments (Individual)
+- Weekly(-ish) Arduino / Teensy assignments (Individual)
+- Instrument build project (Group)
+	- Bi-weekly design review check-ins
+	- Presentation on proposed design (midterm)
+	- Instrument design packet (midterm)
+	- Instrument hardware working
+	- Instrument software working
+	- Data collection / validation activity
+	- Instrument technical datasheet
+- Final exam (individual)
 
 *Please see the syllabus for a complete explanation of grading schemes.*
 
-## Lecture Assignments
+## Graduate Projects
 
-- There will be **4 exams** plus a final.  Each exam will cover one unit of the course, and the final will be comprehensive.  Formats will usually be a mix of multiple choice, short answer, and calculation problems.
-- There will be additional in class problem sets, homework, and quizzes assigned and graded as needed throughout the semester.
-- There will be assigned reading associated with every class meeting.  Students are *strong encouraged* to stay on top of reading the textbooks and to take notes while they read!
+Graduate students will complete additional activities over the course of the semester:
+
+1. A graduate project involving computational circuit analysis, with modules due throughout the semester.
+1. Modify their instrument to incorporate additional functionality.
+1. Answer additional questions on exams.
+
+## Reading
+
+- There will be assigned readings from the textbook associated with every class meeting.  Students are *strong encouraged* to stay on top of reading the textbooks, to take notes while they read, and to come to class with questions!
+- There may occassionally be, for example, journal articles or white papers assigned for class discussion.  These should be read *before* the day of the discussion.

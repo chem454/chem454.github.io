@@ -5,34 +5,65 @@ nav_order: 2
 permalink: /schedule
 has_toc: false
 parent: Course Information
+last_modified_date: 2022-01-03
 ---
 
-# Lab Schedule
 
-Lab assignments are due at 23:59:59 on the Wednesday before lab unless otherwise specified.
+# Tentative Course Schedule
 
-*This schedule is subject to change as needed.*
+Much of this course will be project-based.  In general, I intend to use Tuesdays to cover theory and background material and Thursdays for hands-on project work.  The schedule is *very* tentative and subject to change!
 
-| Week | Week Beginning | Lab Activity                            | Due                          |
-| ---- | -------------- | --------------------------------------- | ---------------------------- |
-| 1    | 8/22           | Safety Lecture, Intro to Julia/Markdown |                              |
-| 2    | 8/29           | UV-vis Lab                              | Lab 0                        |
-| 3    | 9/05           | UV-vis Lab                              |                              |
-| 4    | 9/12           | UV-vis Lab                              |                              |
-| 5    | 9/19           | GC Lab                                  | Lab 1 Notebook               |
-| 6    | 9/26           | Project Lab                             | Lab 2 Notebook               |
-|      |                | *Group Meeting*                         |                              |
-| 7    | 10/03          | Project Lab                             | FT-IR Quiz                   |
-|      |                | *Writing Workshop*                      |                              |
-| 8    | 10/10          | Project Lab                             | Notebook Progress Due        |
-| *FB* | *10/17*        | *No Lab (Fall Break)*                   |                              |
-| 9    | 10/24          | Project Lab                             |                              |
-| 10   | 10/31          | Project Lab                             | Intro + Methods, All Quizzes |
-| 11   | 11/08          | Project Lab                             |                              |
-| 12   | 11/14          | Project Lab                             |                              |
-| 13   | 11/21          | *No Lab (Thanksgiving)*                 | Full Draft                   |
-| 14   | 11/28          | Project Lab                             | Peer Review, All Notebooks   | 
-| 15   | 12/05          | Lab & Instrument Clean                  | Final Report                 |
-| 16   | 12/12          | *No Lab (Final Exams)*                  |                              |
+| Week No. | Begins On | Tuesday Topic              | Thursday Topic        | Due |
+|:--------:|:---------:|:---------------------------|:----------------------|:----|
+|     1    |    1/09   | Introduction               | Intro to Arduino      |     |
+|     2    |    1/16   | Electrical Theory & Safety | Measuring Temperature |     |
+|     3    |    1/23   | Microcontrollers           | Function Generator    |     |
+|     4    |    1/30   | Passive Analog Circuits    | RC Filters            |     |
+|     5    |    2/6    | Active Analog Circuits     | Op-amps               |     |
+|     6    |    2/13   | Presentations How-to       | Lights                |     |
+|     7    |    2/20   | *Advising Day - No Class*  | PID Loops             |     |
+|     8    |    2/27   | Presentations              | Presentations         |     |
+|     9    |    3/6    | *Spring Break - No Class*  | *No Class*            |     |
+|    10    |    3/13   | Lights                     | Project               |     |
+|    11    |    3/20   | Motors                     | Project               |     |
+|    12    |    3/27   | GUI Design                 | Project               |     |
+|    13    |    4/3    | Data Acquisition           | Project               |     |
+|    14    |    4/10   | Serial Communication       | *Easter - No Class*   |     |
+|    15    |    4/17   | Schematics                 | Project               |     |
+|    16    |    4/24   | Final Presentation         | Final Presentation    |     |
+|    18    |    5/1    | *Final*                    | *Exams*               |     |
 
-Students will take a multiple-choice test to get a certification for each instrument used in the project lab.  Each student must be certified before using an instrument.  This certification contributes to your grade through SLO #1 on the syllabus.
+- Rotation lab
+- Using DMMs, Scopes, etc.
+- Soldering
+- Voltage divider
+- Exams
+- Impedances
+- homemade dac
+*Design reviews will be held on Thursdays during class time.*
+
+
+# Anticipated Assignments
+
+Most assignments in this course will be centered around the construction of a working instrument.  Prior to Spring Break students will work to develop a design for their instrument.  All students should begin constructing their instruments no later than the week returning from Spring Break.
+
+- Weekly(-ish) homework assignments (Individual)
+- Weekly(-ish) Arduino / Teensy assignments (Individual)
+- Instrument build project (Group)
+	- Bi-weekly design review check-ins
+	- Presentation on proposed design (midterm)
+	- Instrument design packet (midterm)
+	- Instrument hardware working
+	- Instrument software working
+	- Data collection / validation activity
+	- Instrument technical datasheet
+- Final exam (individual)
+
+
+# Grad Projects
+
+Graduate students will complete additional activities over the course of the semester:
+
+1. A graduate project involving computational circuit analysis, with modules due throughout the semester.
+1. Modify their instrument to incorporate additional functionality.
+1. Answer additional questions on exams.

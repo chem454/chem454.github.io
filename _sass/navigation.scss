@@ -14,6 +14,7 @@
     position: relative;
     margin: 0;
 
+
     @include mq(md) {
       @include fs-3;
     }
@@ -24,6 +25,7 @@
       padding-top: $sp-1;
       padding-bottom: $sp-1;
       line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
+      color: $nav-link-color;
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
         padding-left: $gutter-spacing-sm;
@@ -71,7 +73,7 @@
       padding-right: #{$nav-list-item-height-sm / 4};
       padding-bottom: #{$nav-list-item-height-sm / 4};
       padding-left: #{$nav-list-item-height-sm / 4};
-      color: $link-color;
+      color: $nav-link-color;
 
       @include mq(md) {
         width: $nav-list-item-height;

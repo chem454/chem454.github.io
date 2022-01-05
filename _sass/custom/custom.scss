@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
 
 h1, h2 {
-  font-family: 'IBM Plex Sans', serif;
-  font-weight: 200;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'IBM Plex Sans', serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 
@@ -22,7 +23,7 @@ table {
 }
 
 th {
-	background-color: #592C88;
+	background-color: #4A7729;
 	color: white;
 	font-weight: bold;
 }
@@ -37,17 +38,17 @@ tr {
 }
 
 tr:hover {
-	color: #592C88;;
+	color: #4A7729;;
 }
 tr:last-child {
-	border-bottom: 2px solid #592C88;
+	border-bottom: 2px solid #4A7729;
 }
 
 blockquote {
 	font-family:'IBM Plex Serif', serif;
 	font-size: 14px;
 	font-style: italic;
-	border-left:8px solid #592C88;
+	border-left:8px solid #4A7729;
 	background-color: #f2f2f2;
 	padding-left: 20px;
 	padding-top: 2px;
@@ -90,9 +91,9 @@ blockquote {
 }
 
 .check-understanding {
-	border: 1px solid #592C88;
+	border: 1px solid #4A7729;
 	border-radius: 5px;
-	border-top: 30px solid #592C88;
+	border-top: 30px solid #4A7729;
 	padding-left: 20px;
 	padding-top: 8px;
 	padding-bottom: 40px;
@@ -124,7 +125,7 @@ blockquote {
   visibility: hidden;
   width: 100%;
   background-color: $white;
-  border: 1px solid #592C88;
+  border: 1px solid #4A7729;
   color: black;
   text-align: left;
   border-radius: 6px;
@@ -142,7 +143,7 @@ blockquote {
 
 .tooltip-understand:hover {
   cursor: pointer;
-  color: #592C88;
+  color: #4A7729;
 }
 
 .tooltip-understand input {

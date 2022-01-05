@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: CHEM 370
-description: CHEM 370
+title: CHEM 454
+description: CHEM 454
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://chem370.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://chem454.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
@@ -67,7 +67,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Ask a Question on Piazza":
-    - "https://piazza.com/wcu/spring2021/chem370/home"
+    - "https://piazza.com/wcu/spring2022/chem454/home"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -83,7 +83,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2018-2021  <a href=\"https://alphonse.github.io\">Al Fischer</a>. Course content released under a Creative Commons Attribution-ShareAlike lisence (<a href=\"https://creativecommons.org/licenses/by-sa/4.0/legalcode\">CC BY-SA 4.0</a>)."
+footer_content: "Copyright &copy; 2022  <a href=\"https://alphonse.github.io\">Al Fischer</a>. Course content released under a Creative Commons Attribution-ShareAlike lisence (<a href=\"https://creativecommons.org/licenses/by-sa/4.0/legalcode\">CC BY-SA 4.0</a>)."
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -94,13 +94,13 @@ last_edit_time_format: "%Y-%m-%d" # uses ruby's time format: https://ruby-doc.or
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Notice an error or have a suggestion? You can fix it on GitHub!"
-gh_edit_repository: "https://github.com/chem370/chem370.github.io" # the github URL for your repo
+gh_edit_repository: "https://github.com/chem454/chem454.github.io" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: chem370
+color_scheme: chem454
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
