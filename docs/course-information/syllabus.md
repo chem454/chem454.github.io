@@ -37,9 +37,15 @@ parent: Course Information
 
 ## Overview 
 
-Computers, and more recently sensors and microcontrollers, have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to methods of using computers and off-the-shelf electronic components to interface with common laboratory equipment.  Topics covered include basic analog electronics (RC circuits and op-amps), serial communication, microcontroller usage and programming, graphic user interface (GUI) creation, and data acquisition. This course is cross-listed with PHYS 454 and CHEM 554.
+Computers, and more recently sensors and microcontrollers, have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to the development of custom instruments and data acquisition (DAQ) systems using basic electronic components.  Topics covered may include basic analog electronics (RC circuits and op-amps), communication protocols, microcontroller usage and programming, component selection, graphic user interface (GUI) creation, and test and validation methods. 
 
-The goal of this course is to help you develop a practical understanding of electronics and programming so that you will be better able to setup, troubleshoot, construct, and utilize scientific equipment; it is NOT designed to help you become an electrical engineer.  This course is self-contained, and assumes no previous experience in electronics or programming, just a willingness to learn and experiment.
+Although this course covers topics from the field of electronics, it is designed to help you be a better experimental scientist; it is not designed to help you become an electrical engineer. Hopefully it will help you develop a practical understanding of electronics and programming so that you will be better able to setup, troubleshoot, construct, and utilize scientific equipment.  The course assumes no previous experience in electronics or programming, just a willingness to learn and experiment.
+
+The preface of the course textbook provides a nice summary of our goals for this semester:
+
+> Inventors in the field of electronics are individuals who possess the knowledge, intuition, creativity, and technical know-how to turn their ideas into real-life electrical gadgets.  We hope this [course] will provide you with an intuitive understanding of the theoretical and practical aspects of electronics in a way that fuels your creativity...This [course] is designed to help [scientists] invent.  It assumes little to no prior knowledge of electronics.
+
+This course is cross-listed with PHYS 454 and CHEM 554.
 
 ## Student Learning Outcomes 
 
@@ -58,7 +64,9 @@ To achieve a satisfactory grade, students will:
 
 **Text Book:** Scherz, P. and Simon Monk. (2016) *Practical Electronics for Inventors* (Fourth Edition) McGraw Hill Education. (WCU rental book available at the bookstore)
 
-**Lab Manual:** Class assignments will typically be posed on the [course website]({{site.baseurl}}).
+[*Programming Arduino: Getting started with sketches* by Simon Monk](https://www.amazon.com/Programming-Arduino-Getting-Started-Sketches/dp/1259641635#:~:text=Program%20Arduino%20with%20ease!&text=Programming%20Arduino%3A%20Getting%20Started%20with%20Sketches%2C%20Second%20Edition%2C%20features,and%20interface%20with%20the%20Web.) is another inexpensive, helpful text.  Although it is not required, you may find it helpful to have a copy for your own reference (although most of the information in it can also be found online with some searching).
+
+**Lab Manual:** Class assignments will typically be posed on the [course website]({{site.baseurl}}). (Due dates will appear on Canvas so that they link to your calendar.)
 
 **Calculator:** Students will need a scientific calculator that is not on a phone for exams (eg. TI-XX, or something as simple as a $10 Casio *fx*-300).
 
@@ -168,28 +176,26 @@ In an effort to maintain a productive work environment for all students, please 
 
 ## Institutional Policies 
 
-**Course Recording and Broadcasting:** Course recording is bound by [University Policy 122](https://www.wcu.edu/discover/leadership/office-of-the-chancellor/legal-counsel-office/university-policies/numerical-index/university-policy-122.aspx).  Students should request prior permission of their instructor before recording and class meetings.
+All WCU policies apply to this course, and those statements can be read either on Canvas or the [WCU website](https://www.wcu.edu/learn/faculty/coulter-faculty-commons/teaching-and-learning/syllabus-additional.aspx).  Students are expected to understand these policies and recognize that the statements are considered part of the syllabus for this course.  Highlights are given below.
 
 **Accommodations for Students with Disabilities:** Western Carolina University is committed to providing equal educational opportunities for students with documented disabilities and/or medical conditions. Students who require accommodations must identify themselves as having a disability and/or medical condition and provide current diagnostic documentation to the Office of Accessibility Resources. Please contact the Office of Accessibility Resources, 135 Killian Annex, (828) 227-3886 or by [email](mailto:accessibility@wcu.edu).  Visit the OAR website at [http://accessibility.wcu.edu/](https://www.wcu.edu/learn/academic-services/disability-services/index.aspx) for more information.
 
 **Academic Integrity Policy and Reporting Process:** This course follows the guidelines set forth in WCU's [Academic Integrity Policy](https://www.wcu.edu/experience/dean-of-students/academic-integrity.aspx).  Refer to the policy for specific rules and sanctions!
 
-Written work may be checked for plagiarism using computer software.  Plagiarism will NOT be tolerated and will by handled according to WCU's academic honesty policy.
+Written work may be checked for plagiarism either manually by our instructor or by computer software.  Plagiarism will NOT be tolerated and will by handled according to WCU's academic honesty policy.
 
-**Community Vision for Inclusive Excellence**: All members of the WCU community are expected to embrace WCU's mission of inclusive excellence.  See the [Community Vision for Inclusive Excellence](https://www.wcu.edu/discover/diversity/eodp/).
-
-## Resources 
+## Resources  
 
 ### Getting Help
 
-WCU provides many resources to help students succeed.  *All* students are encouraged to take advantage of resources such as the library and tutoring centers, regardless of their academic standing!  A few are listed below.
+WCU provides many resources to help students succeed.  *All* students are encouraged to take advantage of these resources, regardless of their academic standing -- there is no harm in asking for help!  A few key resources are listed below.
 
 - **Office Hours and Piazza** - don't hesitate to ask your instructor and classmates for help!  See the top of this document for more information.
 - **Writing and Learning Commons (WaLC)** for help and feedback on writing.  Visit [tutoring.wcu.edu](https://tutoring.wcu.edu) or call 828-227-2274.
 - **Math Tutoring Center** for help with calculations and math. For more information, visit [mtc.wcu.edu](http://mtc.wcu.edu/) or call 828–227–3830.
 - **CAPS** for help with non-academic concerns such as anxiety, depression, grief, relationships, identity, and addiction.  For more information, visit [caps.wcu.edu](https://www.wcu.edu/experience/health-and-wellness/caps/index.aspx).  Additionally, you may call the Western NC 24-hour crisis line at 888-315-2880 or the Suicide Prevention Lifeline at 800-273-8255.
 
-### University Dates
+### University Dates 
 
 - **Academic Calendar** The University academic calendar can be found at [here](http://www.wcu.edu/learn/academic-calendar.aspx). It includes dates for all breaks, University closures, final exams, etc.
 - **Final Exam:** The University final exam schedule can be found on the [Registrar's webpage](http://www.wcu.edu/learn/academic-services/registrars-office/).  Note there is no final exam for the lab portion of Chem 370 (but there may be for the lecture portion).

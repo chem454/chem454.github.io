@@ -9,8 +9,16 @@ has_children: true
 
 
 # CHEM / PHYS 454 & 554: Computer Interfacing
+Computers, and more recently sensors and microcontrollers, have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to the development of custom instruments and data acquisition (DAQ) systems using basic electronic components.  Topics covered may include basic analog electronics (RC circuits and op-amps), communication protocols, microcontroller usage and programming, component selection, graphic user interface (GUI) creation, and test and validation methods. 
 
-Computers have become an integral part of the experimental chemistry and physics laboratories.  This course provides an introduction to methods of using computers to interface with common laboratory equipment.  Topics covered will include basic analog electronics (RC circuits and op-amps), serial communication, microcontroller usage and programming, and data acquisition. This course is cross-listed with PHYS 454.
+Although this course covers topics from the field of electronics, it is designed to help you be a better experimental scientist; it is not designed to help you become an electrical engineer. Hopefully it will help you develop a practical understanding of electronics and programming so that you will be better able to setup, troubleshoot, construct, and utilize scientific equipment.  The course assumes no previous experience in electronics or programming, just a willingness to learn and experiment.
+
+
+The preface of the course textbook provides a nice summary of our goals for this semester:
+
+> Inventors in the field of electronics are individuals who possess the knowledge, intuition, creativity, and technical know-how to turn their ideas into real-life electrical gadgets.  We hope this [course] will provide you with an intuitive understanding of the theoretical and practical aspects of electronics in a way that fuels your creativity...This [course] is designed to help [scientists] invent.  It assumes little to no prior knowledge of electronics.
+
+This course is cross-listed with PHYS 454 and CHEM 554.
 
 # Logistics
 
