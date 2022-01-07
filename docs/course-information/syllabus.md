@@ -9,7 +9,7 @@ parent: Course Information
 
 
 
-# CHEM 454 Lab Syllabus
+# CHEM 454 Syllabus
 {: .no_toc  }
 
 **Instructor:** Al Fischer, PhD   
@@ -18,7 +18,9 @@ parent: Course Information
 **Email:** [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  
 **Availability:** Email, Piazza, and office hours are the best ways to find me; my devices turn on Do Not Disturb at 9 PM.  
 
-<a href="https://github.com/chem370/chem370.github.io/raw/master/assets/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
+**Course Time and Location:** Tuesday & Thursday 11:00-12:15, AP 331
+
+<a href="https://github.com/chem454/chem454.github.io/raw/master/assets/pdf/syllabus.pdf" target="blank">Download Syllabus as  PDF</a> 
 
 {: .no_toc  }
 
@@ -46,7 +48,7 @@ The preface of the course textbook provides a nice summary of our goals for this
 > Inventors in the field of electronics are individuals who possess the knowledge, intuition, creativity, and technical know-how to turn their ideas into real-life electrical gadgets.  We hope this [course] will provide you with an intuitive understanding of the theoretical and practical aspects of electronics in a way that fuels your creativity...This [course] is designed to help [scientists] invent.  It assumes little to no prior knowledge of electronics.
 
 This course is cross-listed with PHYS 454 and CHEM 554.
-
+	
 ## Student Learning Outcomes 
 
 To achieve a satisfactory grade, students will:
@@ -72,7 +74,7 @@ To achieve a satisfactory grade, students will:
 
 **Miscelaneous Suggested Materials:** A notebook or binder for taking notes during lecture, a separate notebook for taking notes during lab.
 
-**Technology:** Students will need a laptop computer meeting [Chemistry and Physics’ minimum computer requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx). In addition, the computer must have a standard [USB-A receptacle](https://en.wikipedia.org/wiki/USB_hardware#/media/File:USB_2.0_and_3.0_connectors.svg), or students must supply an appropriate USB-A adapter for their computer. 
+**Technology:** Students will need a laptop computer meeting Chemistry and Physics’ minimum computer [requirements](https://www.wcu.edu/learn/academic-services/it/computer-guidelines/index.aspx). In addition, the computer must have a standard [USB-A receptacle](https://en.wikipedia.org/wiki/USB_hardware#/media/File:USB_2.0_and_3.0_connectors.svg), or students must supply an appropriate USB-A adapter for their computer. 
 
 Students will be required to use [Julia](https://julialang.org/) + [Pluto](https://github.com/fonsp/Pluto.jl) and may wish to install these on their computer; both are freely available for all operating systems. Alternatively, students may use Julia + Pluto via WCU’s STEM VCAT (officially supported option for the course). A web browser and internet connection capable of streaming video will be necessary for submitting homework assignments and accessing course materials.
 
@@ -80,21 +82,20 @@ Students will also use [Arduino](https://www.arduino.cc/en/software) and [Teensy
 
 Students will need the VMWare Horizon Clinet, available through WCU IT, to use STEM VCAT on their personal computers.  The web interface to STEM VCAT will not work for this application!  Students should contact the IT Helpdesk for assistance installing VMWare Horizon.
 
-Some class work will be completed on [Tinkercad](https://www.tinkercad.com/dashboard).  Though not strictly necessary, a free Tinkercad account will likely make assignments go more smoothly.
-
+[Tinkercad](https://www.tinkercad.com/dashboard) provides a free online way to practice Arduino coding and circuit building.  It may be useful for students to create an online account.
+
 ## Grading 
 
 Your grade is determined from several categories of work, listed under [Contributions to Your Grade]({{site.baseurl}}/syllabus#contributions-to-your-grade), below.  At the end of the semester, the total points you've earned in each category will be summed and divided by the total points available for that category, to calculate the fraction of points you earned in each category.  Then, your final grade will be computed as the weighted average of each category score.  The weights for each category are also listed below.
 
 ### Contributions to Your Grade
 
-1. Homework and class assignments (Individual, includes grad project for graduate students) [25%]
-2. Midterm (Group Presentation + Project Proposal) [15%]
-3. Design Review Meetings (Group) [15%]
-4. Submit working instrument with GUI by end of semester [15%]
-4. Technical Datasheet / Instrument Description (Group) [15%]
-4. Final Exam (Individual) [5%]
-5. Discretionary (10%)
+1. Homework (Individual) [25%]
+   - *Graduate students only:* This includes your "grad project".
+2. Classwork and Class Discussions (Individual) [25%]
+3. Instrument Project (Group) [30%] 
+4. Exams (Individual) [10%]
+5. Discretionary (Individual) [10%]
 
 Discretionary points are determined at the end of the semester based on participation, effort, attendance, and overall respect for your peers/classmates, your instructor, and their time, both inside and outside the classroom.  For example, if you do not contribute your fair share to the group project you will not receive credit for the discretionary category; this is just one example -- other things such as not coming to class, being exceptionally rude to or monopolizing the time of others, etc., can also cause you to lose credit.
 
@@ -120,6 +121,8 @@ Discretionary points are determined at the end of the semester based on particip
 
 These grades indicate levels in quality from excellent to unsatisfactory.  Students are responsible for knowing class attendance, withdrawal, and drop-add policies and procedures.
 
+*Graduate students only:* Graduate students will be subject to the same grading scale, but will have additional work to complete that helps determine their grade.  See [Contributions to Your Grade](http://localhost:4000/syllabus#contributions-to-your-grade) (above) and [Graduate Project](http://localhost:4000/syllabus#graduate-project) (below) for additional information.
+
 ## Turning Things In
 
 Most assignments will be submitted electronically on Canvas.  Unless otherwise specified, assignments are due at 23:59:59 on the due date and late work is not accepted.  A list of anticipated assignments is available in the Canvas site for the course, but is subject to change as needed.
@@ -140,9 +143,14 @@ Submissions that do not follow these guidelines may incur point deductions.
 
 Late work is not accepted in this course.  Due dates are automatically enforced by Canvas.  However:  
 
-- Assignments are accepted *early* and students are encouraged to submit assignments before the deadline.  Extra credit of 5% per assignment is granted for assignments submitted more than 24 hours early!
+- Assignments are accepted *early* and students are encouraged to submit assignments before the deadline.  Extra credit of 5% per assignment is granted for assignments submitted more than 24 hours early!  The due date listed in Canvas is the early turn-in date; the close date is the normal due date.
 - Each student is granted one exception to the late policy.  You must fill out a [late work exception form](https://forms.office.com/Pages/ResponsePage.aspx?id=WluzxdUWFESO4XvecFQ_GwFnoMNxJhxDhln9pQs53sVUOEMxSk9IWThGUExPNEEzTTlONTJXR1dSNS4u) to use your exception.  You may use this exception for any reason, but bear in mind future exceptions aren't guaranteed.  All work, regardless of whether an exception has been used, must be turned in no later than the last day of classes prior to finals week.
 - If you experience *extenuating circumstances* (e.g. a medical emergency, professionally diagnosed illness, or death in the family) or a [*university-sponsored absence*](https://www.wcu.edu/experience/health-and-wellness/student-concern-response-team/absence-notification-protocol.aspx) you may ask to be considered for an extension on a case-by-base basis.  Communication of the issue to your instructor and identification of when you plan to turn in the assignment are important in such circumstances.  For university-sponsored absences, exceptions should be arranged *before* your absence or will not be granted.
+- Some assignments (such as design reviews, in-class presentations, and exams) may not be amenable to late turn-in and therefore no latework will be accepted for these assignments.  If you are in doubt about whether or not late work will be accepted you can check the assignment close date on Canvas -- the close date is the last day the assignment will be accepted without a latework exception form.
+
+### Graduate Project
+
+All graduate students will be expected to complete graduate-level work in addition to the undergraduate assignments.  This may consist of (1) individual "grad projects" that consist large of data processing and calculations, (2) additional project work, and (3) additional problems on exams.
 
 ## Course Policies 
 

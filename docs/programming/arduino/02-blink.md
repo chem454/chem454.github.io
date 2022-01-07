@@ -32,7 +32,7 @@ There are several ways to connect something to the pins of the Teensy.  One way 
 
 A breadboard is shown in the figure below.  The holes in the breadboard are spaced in such a way that a Teensy can be plugged directly into the board.  Columns, labelled A, B, C, ..., are connected across the board electrically, such that A1 and B1 are connected; rows are insulated from each other, such that A1 and A2 are not connected.  The connections labeled with red and blue lines on each edge are connected together and are sometimes called rails; they provide an easy way to distribute power (e.g. the red rail) and ground (e.g. the blue rail) connections around the board.  If that seems confusing, try watching this video [this video](https://www.youtube.com/watch?v=mLOxoK1zj9A).
 
-![<small>*A solderless breadboard with purple lines indicating connected holes; the pattern continues down the board.  Holes with the same number are connected electrically, except across the gap in the middle, while holes with different numbers are electrically insulated.*</small>](../../assets/images/01-blink/breadboard.png)
+![<small>*A solderless breadboard with purple lines indicating connected holes; the pattern continues down the board.  Holes with the same number are connected electrically, except across the gap in the middle, while holes with different numbers are electrically insulated.*</small>](../../assets/images/02-blink/breadboard.png)
 
 <small>*A solderless breadboard with purple lines indicating connected holes; the pattern continues down the board.  Holes with the same number are connected electrically, except across the gap in the middle, while holes with different numbers are electrically insulated.*</small>
 
@@ -89,7 +89,7 @@ In the exercise, we'll connect an 3-color LED to a Teensy and write a sketch to 
 3. Use a jumper wire to connect the **longer lead** on the LED to the **GND** pin on the Teensy.
 1. Use 3 more jumper wires to connect the remaining three leads to pins **13, 14, and 15**.
 
-![<small>*Your final setup should look something like this picture (keep in mind that you may be using a different version Teensy board).*</small>](../../assets/images/01-blink/teensy_LED.png)
+![<small>*Your final setup should look something like this picture (keep in mind that you may be using a different version Teensy board).*</small>](../../assets/images/02-blink/teensy_LED.png)
 
 <small>*Your final setup should look something like this picture.*</small>
 
@@ -132,8 +132,10 @@ You should have seen a single color blinking on and off.  Now, make some modific
 	  }
 	```
 
-   <div class = "warning">
-   Be extremely careful with the USB connection on the Teensy. They break off very easily and cannot be repaired!
+   <div class = "tip">
+   Remember to save your work often -- the Arduino IDE doesn't autosave!
+
+   It's also a good idea to create a backup file occassionally in case you lose the one you're working from. 
    </div>
 
 2. Finally, add the extra colors to the `loop()` function.
