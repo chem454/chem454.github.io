@@ -14,8 +14,8 @@ last_modified_date: 2022-01-03
 
 ----
 
-This course will be heavily based around project work.  This section of the site is a repository of information regarding the project.  It will continue to update throughout the semester.
+You will complete programming assignments using the Arduino IDE over the course of the semester. These are designed to help you get familiar with programming in Arduino so that you can develop your own programs for your instruments.
 
-Here are the assignments:
+The assignments are listed below under "Table of Contents".  The list will continue to update throughout the semester.
 
 

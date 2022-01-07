@@ -13,6 +13,8 @@ last_modified_date: 2022-01-03
 
 ----
 
-This course will be heavily based around project work.  This section of the site is a repository of information regarding the project.  It will continue to update throughout the semester.
+At present, the plan is to use Julia to write a graphic user interface (GUI) for your isntruments.  Information about how to do that will be given here.
+
+Graduate students may also find it useful to use Julia and Pluto for the graduate project.  Check back here later in the semester for tutorials.
 
 
