@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Lectures
-nav_order: 60
-permalink: /lectures/
+title: Helpful Info
+nav_order: 50
+permalink: /helpful-info/
 has_toc: false
-last_modified_date: 2022-01-03
+last_modified_date: 2022-01-09
 ---
 
 # Lecture Slides
