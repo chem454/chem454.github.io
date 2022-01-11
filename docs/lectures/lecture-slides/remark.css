@@ -427,12 +427,12 @@ body { font-family: 'Fira Sans'; background-color: white;}
 h2, h3 {
   font-family: 'Fira Sans';
   font-weight: bold;
-  color: #433024;
+  color: #4A7729;
 }
 h1 {
   font-family: 'Fira Sans';
   font-weight: bold;
-  color: #433024;
+  color: #4A7729;
 }
 .remark-code, .remark-inline-code {
   font-family: 'Fira Code';
@@ -564,7 +564,7 @@ blockquote{
   padding: 5px;
   border-radius: 6px;
   border-width: 5px;
-  border-color: #433024;
+  border-color: #4A7729;
   bottom: 100%;
   left: 50%;
   margin-left: -15px; /* Use half of the width (120/2 = 60), to center the tooltip */
@@ -620,7 +620,7 @@ table {
 }
 
 th {
-	background-color: #433024;
+    background-color: #4A7729;
 	color: white;
 	font-weight: bold;
 }
@@ -633,7 +633,7 @@ tr {
 	border-bottom: 2px solid #F5F4F1;
 }
 tr:last-child {
-	border-bottom: 2px solid #433024;
+	border-bottom: 2px solid #4A7729;
 }
 tr:hover {
   background-color: #C1A875;
