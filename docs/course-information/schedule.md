@@ -19,7 +19,7 @@ Activities in **bold** require you to bring a computer and USB converter.
 |:--------:|:---------:|:--------------------------|:---------------------------|:----|
 | 1        | 1/09      | Introduction              | **Safety + Arduino Intro** |     |
 | 2        | 1/16      | **Soldering + Blink**     | Literature Discussion      |     |
-| 3        | 1/23      | Microcontrollers          | **Function Generator**     |     |
+| 3        | 1/23      | Microcontrollers          | **Functions**     |     |
 | 4        | 1/30      | Passive Analog Circuits   | **RC Filters**             |     |
 | 5        | 2/6       | Active Analog Circuits    | **Op-amps**                |     |
 | 6        | 2/13      | Presentations How-to      | TBD                        |     |
@@ -45,7 +45,7 @@ Activities in **bold** require you to bring a computer and USB converter.
 - Soldering
 - Voltage divider
 - Exams
-- Impedances
+- Impedance
 - Digital-to-analog converters (homemade dac, comparison to IC DAC)
 - Comparing different temperature sensors
 
