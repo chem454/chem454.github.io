@@ -177,7 +177,7 @@ In the exercise, we'll add to our code from last week to control 3-color LED wit
 1. Save your final in the default Arduino format (.ino).  This is for your future reference.
 
     <div class="warning">
-    Remember that VCAT does not save your work in between sessions!  You must save it to your Vault storage or it will be gone when you log back in.
+    Remember that VCAT does not save your work in between sessions!  You must save it to your Vault storage or Xenon or it will be gone when you log back in.
     </div>
 
 1. In Arduino, go to Edit > Copy as HTML.  This copies the code in a format you  can input into Canvas.  **Make sure you submit your final code, with all the modifications listed above.**
