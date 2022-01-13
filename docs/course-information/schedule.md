@@ -38,6 +38,7 @@ Activities in **bold** require you to bring a computer and USB converter.
 ## Potential Topics for TBD Days
 
 - Rotation lab (after Function Gen)
+- PWM
 - Motors
 - PID Loops
 - Lights
