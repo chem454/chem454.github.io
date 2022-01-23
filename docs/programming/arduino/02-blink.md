@@ -170,7 +170,7 @@ In the exercise, we'll add to our code from last week to control 3-color LED wit
    - Make the lights blink in the order green, blue, red
    - Make the green light stay on for 2 seconds and off for 1
    - Make the blue light stay on for half a second and off for one
-   - Make the red light stay on for a second and off for a second, and make it repeat the read blink twice.
+   - Make the red light stay on for a second and off for a second, and make it repeat the red blink twice.
 
 ## Turn in your work
 
