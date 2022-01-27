@@ -119,7 +119,7 @@ In this exercise, you'll measure ambient temperatures using a temperature sensor
 
 ### Converting to Temperature
 
-The Teensy reports values in bits, which isn't very meaningful to humans.  What we really care about is the temperature.  The sensor comes with a [datasheet](https://www.digikey.com/en/datasheets/vishay-bc-components/vishay-bc-components-ntcle100) that provides the values necessary to convert the value in resistance to temperature in Kelvin using the [Steinhart-Hart equation](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation) (OK, acutally the []modified Steinhart-Hart](https://en.wikipedia.org/wiki/Thermistor) is easier in this case!):
+The Teensy reports values in bits, which isn't very meaningful to humans.  What we really care about is the temperature.  The sensor comes with a [datasheet](https://www.digikey.com/en/datasheets/vishay-bc-components/vishay-bc-components-ntcle100) (or [datasheet for the 203 thermistor](https://www.jameco.com/Jameco/Products/ProdDS/2312655.pdf) that provides the values necessary to convert the value in resistance to temperature in Kelvin using the [Steinhart-Hart equation](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation) (OK, acutally the []modified Steinhart-Hart](https://en.wikipedia.org/wiki/Thermistor) is easier in this case!):
 
 
    $$\frac{1}{T} = \frac{1}{T_0} + \frac{1}{B} \times \ln \left( \frac{R}{R_0} \right)$$
