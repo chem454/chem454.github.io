@@ -35,15 +35,15 @@ But what did this do internally in the Teensy?  When the Teensy gets the command
 You may have gotten the idea that voltage and current are inextricably linked, and that's true.  In fact, **Ohm's Law** provides a mathematical relation between the two:
 
 $$
-\text{Voltage (volts)} = \text{Current (amps)} \times \text{Resistance (ohms, }\Omega\text{)}  \\
-V = iR
+\text{Resistance (ohms, }\Omega\text{)} = \frac{\text{Voltage (volts)}}{\text{Current (amps)}}   \\
+R = \frac{V}{I}
 $$
 
 This introduces a new concept, resistance.  **Resistance** is simply the opposition to flow of electrical current.  Resistance can be introduced to a circuit purposely with a device called a **resistor**.  Usually these are a defined, fixed resistance introduced for a specific purpose.  However, many sensors have a resistance that changes proportionally to some stimulus.  Thus, the voltage across the device will change in response to that stimulus, and the stimulus can be measured simply by measuring the voltage.  As an example of how useful this is, consider a temperature sensor.  A computer or microcontroller cannot sense the temperature directly -- it only understands voltages.  A device that converts changes in temperature to changes in voltage allows the computer to infer changes in temperature.
 
 Although the voltage output from the Teensy pin was either HIGH or LOW, the voltage output from the temperature sensor can be any value.  A signal that can be only HIGH or LOW (i.e. on or off, 1 or 0), is called a **digital signal**.  Digital signals are often used to communicate between computers and to control many devices because they are relatively immune to outside noise.  Many sensors, on the other hand, produce signals that vary *continuously*, and such signals are called **analog signals**.  
 
-The Teensy can read *digital* signals on any of its digital I/O (input/output) pins (grey labels on the pinout diagram).  The Teensy can read *analog* signals on any of the analog input pin, which are shown with orange labels in the pinout diagram and numbered A0 through A22 (the A stands for analog).
+The Teensy can read *digital* signals on any of its digital I/O (input/output) pins (grey labels on the pinout diagram).  The Teensy can read *analog* signals on any of the analog input pin, which are shown on the Teensy pinout diagram and numbered A0, A1, ... (the A stands for analog).
 
 ### Bits and Volts
 
@@ -82,7 +82,7 @@ In this exercise, you'll measure ambient temperatures using a temperature sensor
 
 3. Use a jumper wire to connect one side of the sensor to Vin/5V on the Teensy (side 1).
 
-4. Connect the other side (side 2) of the sensor to a 10 kilo-ohm (k$\Omega$) resistor, and then connect the other side of the resistor to ground (GND on the Teensy).  You may need to use a jumper wire to connect the resistor to GND.
+4. Connect the other side (side 2) of the sensor to a 10 k$\Omega$ resistor, and then connect the other side of the resistor to ground (GND on the Teensy).  You may need to use a jumper wire to connect the resistor to GND.
 
 5. Use a jumper wire to connect side 2 of the sensor to an analog input on the Teensy.  In the example below, pin A0 is used.
 
@@ -95,42 +95,53 @@ In this exercise, you'll measure ambient temperatures using a temperature sensor
 ### Bare Minimum
 
 1. Open the Arduino IDE and load a new file (if one doesn't open automatically).
-1. Go to `File > Save As` to save the example under a new name in the default location (`Documents/Arduino`).  Call it **groupName_voltage.ino**.
+1. Go to `File > Save As` to save the example under a new name in the default location (your "Sketchbook").
 
     > *Remember, files that don't follow the naming convention **exactly** may incur point deductions.*
 
 3. Create a `setup()` function and start serial communication within it:
 	```cpp
-	    void setup() {
-		Serial.begin(9600);  // start serial communication at a rate of 9600 bits per second (the standard)
-	    }
+	void setup() {
+       Serial.begin(9600);  // start serial communication at a rate of 9600 bits per second (the standard)
+    }
 	```
 
 4. Create a `loop()` function, read the sensor data, and print it to the serial port:
 	```cpp
-	    void loop() {
-		value = analogRead(0); // read sensor
-		Serial.println(value); // print result to serial port
-		delay(1000);           // wait for 1 second
-	    }
+	void loop() {
+		value = analogRead(14); // read sensor
+		Serial.println(value);  // print result to serial port
+		delay(1000);            // wait for 1 second
+	}
 	```
 
-5. Press the **Upload** button to send your sketch to the Teensy.  Once you get it loaded, click the **Serial Monitor** button to see if the communication is working. You should see a number between 400 and 500 if you sensor is working correctly.
+5. Press the **Upload** button to send your sketch to the Teensy.  Once you get it loaded, click the **Serial Monitor** button to see if the communication is working. You should see numbers in the hundreds if your sensor is working correctly.
 
 ### Converting to Temperature
 
-The Teensy reports values in bits, which isn't very meaningful to humans.  What we really care about is the temperature.  The sensor comes with a [datasheet](https://www.digikey.com/en/datasheets/vishay-bc-components/vishay-bc-components-ntcle100) the provides the values necessary to conver the value in resistance to temperature in Kelvin using the [Steinhart-Hart equation](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation):
+The Teensy reports values in bits, which isn't very meaningful to humans.  What we really care about is the temperature.  The sensor comes with a [datasheet](https://www.digikey.com/en/datasheets/vishay-bc-components/vishay-bc-components-ntcle100) that provides the values necessary to convert the value in resistance to temperature in Kelvin using the [Steinhart-Hart equation](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation) (OK, acutally the []modified Steinhart-Hart](https://en.wikipedia.org/wiki/Thermistor) is easier in this case!):
 
 
    $$\frac{1}{T} = \frac{1}{T_0} + \frac{1}{B} \times \ln \left( \frac{R}{R_0} \right)$$
 
 Where $T$ is temperature, $T_0$ is room temperature (in K), $B$ is an empiracal value unique to each type of thermistor (3977 in for the NTCLE100E3103B0 thermistor we're using, as given on the datasheet), $R$ is the resistance of the thermistor at temperature $T$, and $R_0$ is the resistance of the thermistor at room temperature, $T_0$ (10 k$\Omega$ for this thermistor, as specified by the datasheet).
 
-1. The first step toward printing a temperature is to convert from bits (`sensorValue`)  Note that the trailing zeroes (after the decimal points) ARE important in this case!  They differentiate between the data types `float` and `int`, and leaving them off can lead to round off errors.
+1. The first step toward printing a temperature is to convert from bits (`sensorValue`) to resistance. Typically, we first convert to voltage:
+
+	$$V_{IN} = \frac{\text{ADC Value} * V_{ref}}{\text{number of possible ADC values}}$$
+
+	then, you can apply Ohm's law to determine $R$.
+	
+	Also recognize that the thermistor forms a voltage divider, such that the voltage it produces is:
+	
+	$$V_{OUT} = \frac{R}{R+R_{ref}} \times V_{CC}$$
+	
+	In our case, $V_{CC} = V_{ref}$.  You can simplify your code by subsitution to develop an expression in which $V_{CC}$ cancels out
+
 	```cpp
 	    void loop() {
-		int value = analogRead(14); // read sensor
-		float resistance = 8192.0 / value - 1.0;
+	    	value = analogRead(14); // read sensor
+	    	float resistance = ______________________;
 	    }
 	```
 
@@ -142,8 +153,8 @@ Where $T$ is temperature, $T_0$ is room temperature (in K), $B$ is an empiracal 
 	```cpp
 	    void loop() {
 		int value = analogRead(14); // read sensor
-		float resistance = 8192.0 / value - 1.0;
-		float temp  = 1.0 / (1.0/298.15 + 1.0/3977.0 * log(resistance/10.0)); // convert to temperature with Steinhart-Hart
+		float resistance =________________________;
+		float temp  = ____________________________; // convert to temperature with Steinhart-Hart
 		______________________; // print the temperature to the serial port.
 		delay(1000);            // wait for 1 second
 	    }
@@ -173,6 +184,6 @@ You can also print text to the serial port.  When you use `Serial.print()` or `S
 1. If you have time, use a multimeter to measure the resistance of the blue resistor you used.  Substitute this value for the `10.0` in the temperature calculation and see what happens to your percent error.
 
 ### Turn in
-1. A hardcopy of your completed Exercise 3 Worksheet.
-1. An electronic copy of your final Voltage code (submit to Dropbox).
+
+1. An electronic copy of your final Temperature code (submit to Canvas).  Make sure you use the "Copy as HTML" function in Arduino and not the normal copy/paste!
 
