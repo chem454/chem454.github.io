@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Temperature
-nav_order: 33
+title: Functions
+nav_order: 34
 permalink: /programming/arduino/functions
 grand_parent: Programming
 parent: Arduino Assignments
@@ -12,7 +12,7 @@ last_modified_date: 2022-02-02
 
 **Objective:** Create a `blink()` function in Arduino.
 
-## Introduction {-}
+## Introduction
 
 In previous exercises discussed the two function, `setup()` and `loop()` that are necessary for every Arduino sketch.  You've also (perhaps unknowingly) used pre-defined functions to achieve tasks.  In programming, a **function** is a defined piece of reusable code that can be used to perform an action.  You could think of functions as modules that can be stacked together to create a program.  For example, the items `digitalWrite()` and `Serial.print()` are both functions.  The first, as we've seen, controls the logic level of a digital I/O pin on the Teensy while the latter prints data to the serial port.
 
@@ -34,9 +34,9 @@ We could just as easily do this in Arduino.  Using the same example, we can defi
 
 This function is equivalent to the mathmatical expression above.  First, we define a function `f()` that takes one argument, `x` (contained within the parentheses).  Within the function (denoted by the curly braces), we ask Arduino to output, or **return**, $3 \times x$.  After defining the function, we could write `f(2)` and Arduino would output `6`.
 
-> *What would Arduino output if you wrote `f(4)`?
+> What would Arduino output if you wrote `f(4)`?
 
-### Using Functions {-}
+### Using Functions
 
 Although most of the work done in this class will rely on pre-written functions, You'll explore the methods for writing your own function in this exercise to help you understand how they work.  As mentioned above, you can think of function as modules or building blocks that can be combined to create desired outcome.  For example, if you wished to create a program that flashed a light everytime the temperature was read and then displayed the result to the screen, you might wish to combine blocks for reading the temperature, flashing a light, and printing data to the computer screen:
 
@@ -76,7 +76,7 @@ Creating the **block diagrams** can be very helpful in visualizing what a progra
 
 3. Define your `blink()` function at the bottom of your sketch.  Follow the format below (don't worry about the `void` part now -- just know that you need to use it).
 
-```{Rcpp, eval = FALSE}
+```cpp
   // define variables here
   
   void setup() {
@@ -99,7 +99,7 @@ Creating the **block diagrams** can be very helpful in visualizing what a progra
 
 1. Add the function into your code and test it out.
 
-```{Rcpp, eval = FALSE}
+```cpp
   // define variables here
   
   void setup() {
@@ -122,7 +122,7 @@ Creating the **block diagrams** can be very helpful in visualizing what a progra
 
 1. Create a second function called `blink2();`.  It should do the same thing as blink but allow the user to change the blinking time speed.
 
-```{Rcpp, eval = FALSE}
+```cpp
   void blink2(int pin, int period) {
     // turn LED connected to *pin* on
     // wait *period* milliseconds
