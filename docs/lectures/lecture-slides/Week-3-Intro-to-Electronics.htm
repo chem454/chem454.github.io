@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CHEM 454 Lecture Slides</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.htm"></div>
+    <div w3-include-html="common-text.htm"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+.footer[
+- <div class="tooltip"><a href="/"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C454 Main Page</span></div>
+- <div class="tooltip"><a href="/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+
+---
+class: center
+
+<!-- <h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 54px; margin-top: 10px;">Environmental applications of ultratrace spectroscopy</h2> -->
+<!-- <h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 54px; margin-top: 10px;">Ultratrace Spectroscopy for Environmental Analysis</h2> -->
+<h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 42px; margin-top: 50px;">What is a microcontroller?</h2>
+
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/PIC18F8720.jpg", style="margin-top: 10px;">
+</center>
+
+---
+
+# Outline
+
+1. Current
+2. Voltage
+4. Voltage Law
+6. Grounds
+7. Resistors
+3. Ohm's Law
+5. Kirchoff's Laws
+8. Thevinin Equivalent Circuits
+
+# Current
+
+> It is important to realize that components mentioned in this chapter are only "theoretically" explained.  To get important insights...such as real-life applications...requires that you jump to other chapters.
+
+# Current
+
+> **Electric Current** is the total charge passing through a cross-sectional area $A$ per unit time, $t$.
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          packages: {'[+]': ['mhchem']}
+        },
+        loader: {load: ['[tex]/mhchem']},
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+        {
+          navigation: {scroll: false, touch: true},
+          slideNumberFormat: '%current%',
+          highlightLanguage: 'r',
+          highlightStyle: 'atom-one-light',
+        });
+        // MathJax.Hub.Config({
+        //   tex2jax: {
+        //     inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+        //     processEscapes: true,
+        //     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        //   }            });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+	</html> 
+
