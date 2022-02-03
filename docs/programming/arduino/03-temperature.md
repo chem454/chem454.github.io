@@ -10,8 +10,8 @@ last_modified_date: 2022-01-05
 
 # Measuring Temperature with Teensy (analog signals)
 
-**Objective:** Measure a temperature with Teensy and display the result to the computer screen using serial communication.  
-**To turn in:** Turn in your individual worksheet and submit a copy your group code to Dropbox by the end of class.
+**Objective:** Measure a temperature with Teensy and display the result to the computer screen using serial communication.
+**To turn in:** Turn in your code on Canvas (use Copy as HTML)
 
 ## Introduction
 

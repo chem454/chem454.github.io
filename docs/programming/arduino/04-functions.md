@@ -11,6 +11,7 @@ last_modified_date: 2022-02-02
 # Functions: Building Blocks for Programs
 
 **Objective:** Create a `blink()` function in Arduino.
+**To turn in:** Turn in your code on Canvas (use Copy as HTML)
 
 ## Introduction
 
