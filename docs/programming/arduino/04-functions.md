@@ -40,9 +40,7 @@ This function is equivalent to the mathmatical expression above.  First, we defi
 
 Although most of the work done in this class will rely on pre-written functions, You'll explore the methods for writing your own function in this exercise to help you understand how they work.  As mentioned above, you can think of function as modules or building blocks that can be combined to create desired outcome.  For example, if you wished to create a program that flashed a light everytime the temperature was read and then displayed the result to the screen, you might wish to combine blocks for reading the temperature, flashing a light, and printing data to the computer screen:
 
-![<small>*Your final setup should look something like this picture.  Red = 5V, black = GND, and blue = signal.  *</small>](../../assets/images/04-funcionts/blockDiagram_basic.png)
-)
-
+![*A simple block diagram.](../../assets/images/04-functions/blockDiagram_basic.png)
 <small>*A simple block diagram.*</small>
 
 ![](images/blockDiagram_basic.png)
