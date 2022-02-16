@@ -1,0 +1,12 @@
+---
+layout: default
+title:     // turn LED connected to *pin* off
+  }
+```
+
+2. Use this function in your code in combination with `blink()`.
+
+### Turn in
+
+1. An electronic copy of your final Temperature code (submit to Canvas).  Make sure you use the "Copy as HTML" function in Arduino and not the normal copy/paste!
+

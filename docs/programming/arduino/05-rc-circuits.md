@@ -27,9 +27,28 @@ last_modified_date: 2022-02-02
 
 # Introduction
 
+RC filters are a type of electronic filter that are passive (i.e. require no power source) and can be used to remove unwanted interference from the signal, provided that the interference occurs at a different frequency than the signal.  For example, an RC filter could be used to remove 60-Hz hum from an audio signal, or could be used to remove 90 MHz high-frequency interference from a local FM radio station.
+
+There are two general types of RC filters: (1) a high-pass filter and (2) a low-pass filter.  As the names imply, high-pass filters allow high-frequency signals to pass through the circuit but block low-frequency signals; the opposite is the case for a low-pass filter.
+
+![A simple low-pass filter schematic.](https://upload.wikimedia.org/wikipedia/commons/e/e0/1st_Order_Lowpass_Filter_RC.svg)
+
+<small>*A basic low-pass filter schematic.*</small>
+
+![A simple low-pass filter schematic.](https://en.wikipedia.org/wiki/High-pass_filter#/media/File:High_pass_filter.svg
+)
+
+<small>*A basic high-pass filter schematic.*</small>
+
+In this activity, you will use the digital output pins on a Teensy to generate square waves of a desired frequency, and then use the analog input pins on the Teensy to acquire the waveform.
+
+Once acquired, the waveform can be plotted to show how signal varies with time.  However, it may also be useful to look at the *Fourier transform* of the data, which converts the time domain to a frequency domain; this is typically done using the so-called fast-Fourier transform (FFT) algorithm.  The Teensy program provided for this activity provides both the raw waveform and the FFT of the waveform.
+
+
 # Set up the Teensy
 
-1. Download the following ZIP file, and extract it to a location on your computer.
+1. Download the code at the following GitHub repo: [link to chem 454 lab 6 github repo](https://github.com/chem454/rc-circuits).  Click on the green Code button and choose "Download as Zip."
+1. After downloading ths ZIP file, and extract it to a location on your computer.
 1. Open the "454-rc-circuits-code.ino" file and upload the code to your Teensy.  
     
 	This code contains two key functionalities:
@@ -45,7 +64,10 @@ last_modified_date: 2022-02-02
 
 1. Type <kbd>fft</kbd> and press <kbd>Enter</kbd> to acquire both the waveform and FFT.
 
-1. Copy and paste the results into Excel or a similar program for plotting (<kbd> CTRL + A</kbd> may be helpful!).
+1. Copy and paste the results into Excel or a similar program for plotting (<kbd> CTRL + A</kbd> may be helpful!).  Create scatter plots of the waveform and FFT and verify they are correct.
+
+	- Your waveform plot should have time (seconds/milliseconds/microseconds, etc.) on the *x*-axis and voltage on the *y*-axis.
+	- Your FFT plot should have frequency in hertz on the *x*-axis and magnitude on the *y*-axis.
 
 # Build a high-pass filter
 
