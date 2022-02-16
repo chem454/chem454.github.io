@@ -35,7 +35,7 @@ There are two general types of RC filters: (1) a high-pass filter and (2) a low-
 
 <small>*A basic low-pass filter schematic.*</small>
 
-![A simple low-pass filter schematic.](https://en.wikipedia.org/wiki/High-pass_filter#/media/File:High_pass_filter.svg
+![A simple low-pass filter schematic.](https://en.wikipedia.org/wiki/High-pass_filter#/media/File:Hihttps://upload.wikimedia.org/wikipedia/commons/f/fe/High_pass_filter.svg)
 )
 
 <small>*A basic high-pass filter schematic.*</small>
