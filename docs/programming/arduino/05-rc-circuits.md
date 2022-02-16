@@ -48,6 +48,7 @@ Once acquired, the waveform can be plotted to show how signal varies with time. 
 
 1. Download the code at the following GitHub repo: [link to chem 454 lab 6 github repo](https://github.com/chem454/rc-circuits).  Click on the green Code button and choose "Download as Zip."
 1. After downloading ths ZIP file, and extract it to a location on your computer.
+1. Copy the `arduinoFFT` folder to your `arduino/libraries` folder on your computer.
 1. Open the "454-rc-circuits-code.ino" file and upload the code to your Teensy.  
     
 	This code contains two key functionalities:
