@@ -35,7 +35,7 @@ There are two general types of RC filters: (1) a high-pass filter and (2) a low-
 
 <small>*A basic low-pass filter schematic.*</small>
 
-![A simple low-pass filter schematic.](https://en.wikipedia.org/wiki/High-pass_filter#/media/File:Hihttps://upload.wikimedia.org/wikipedia/commons/f/fe/High_pass_filter.svg)
+![A simple low-pass filter schematic.]()
 
 <small>*A basic high-pass filter schematic.*</small>
 
@@ -71,14 +71,14 @@ Once acquired, the waveform can be plotted to show how signal varies with time. 
 
 # Build a high-pass filter
 
-1. Build a high-pass filter that with a cutoff frequency of ~$\tau=$500 Hz using your breadboard and available components in the lab.
-1. Apply 10, 50, 100, 500, 100, and 2000 HZ waveforms to the input and record the peak-to-peak output.
+1. Build a high-pass filter that with a cutoff frequency of ~$f_c=$500 Hz using your breadboard and available components in the lab.
+1. Apply 10, 50, 100, 500, 1000, and 2000 HZ waveforms to the input and record the peak-to-peak output.
 1. Create a log-log plot of your results as gain (in dB) vs frequency.
 
 # Build a low-pass filter
 
-1. Build a low-pass filter that with a cutoff frequency of ~$\tau=$800 Hz using your breadboard and available components in the lab.
-1. Apply 10, 50, 100, 500, 100, and 2000 HZ waveforms to the input and record the peak-to-peak output.
+1. Build a low-pass filter that with a cutoff frequency of ~$f_c=$800 Hz using your breadboard and available components in the lab.
+1. Apply 10, 50, 100, 500, 1000, and 2000 HZ waveforms to the input and record the peak-to-peak output.
 1. Create a log-log plot of your results as gain (in dB) vs frequency.
 
 ### Turn in
