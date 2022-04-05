@@ -129,6 +129,55 @@ html"""
 	</center>
 """
 
+# ╔═╡ 0cfdd4f6-f524-4364-b578-8b44a0acee51
+md"""
+# Pluto Rules
+
+Julia is basically a very advanced calculator, and Pluto is an interface for it.  Rules specific to Pluto but not found in other environments:
+
+1. All code goes in "cells".
+1. Only one line of code may be used in a cell; this may be circumvented by using `begin ... end` blocks, but this is discouraged except where necessary!
+1. Cells may contain Julia code (the default), Markdown text.  You may look up Markdown cheatsheets online, and we will use HTML only sparingly (if at all) in this course.
+
+
+"""
+
+# ╔═╡ bbd3e4b3-d1c4-4bee-b56b-1a61777a6e20
+2+2
+
+# ╔═╡ b1f605e6-46b8-4118-9a47-bbefbdc7e4ab
+f(x) = 2x + 5
+
+# ╔═╡ 65360c70-1a85-4b21-b4c4-e3466980e423
+# plot()
+
+# ╔═╡ a8d3b190-637c-420b-89bf-d0e489bd5bd0
+md"""
+# Reactivity in Pluto
+
+In most programming languages, code is executed top to bottom and does not update automatically.  For example, in normal Julia (or Python, R, C / Arduino, MATLAB, FORTRAN, ...), typing
+
+```julia
+julia> a = 5
+julia> b = 6
+julia> c = a+b
+julia> print(c)
+```
+
+would return `11`.  But if the programmer then runs `a = 6`, the value of c does *not* change!  The programmer must specifically re-run `c = a+b` to update the value of c.
+
+In Pluto, Julia code becomes *reactive*, such that the value of c *does* change automatically when the value of either a or b changes!  This feature allows the notebook to respond to user input.
+"""
+
+# ╔═╡ 73e69dca-f784-4ed2-afb1-6d41270d5c36
+a = 8
+
+# ╔═╡ cb2b9bef-d9b8-457f-88a3-360f8fd79cec
+b = 6
+
+# ╔═╡ 107eeb96-fbaa-44fc-8994-70564182b20f
+c = a + b
+
 # ╔═╡ fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 md"""
 # Features of a GUI
@@ -217,11 +266,78 @@ md"""
 
 - [PlutoUI](https://github.com/JuliaPluto/PlutoUI.jl/blob/main/docs/src/index.md) provides HTML widgets to use as interface items
 - Code can be hidden to give a "front panel" type look
-- Widgest must be **bound** to a variable using `@bind`
+- Widgets must be **bound** to a variable using `@bind`
 """
 
 # ╔═╡ c48d5f36-66e1-46d0-aeae-0c2bf4279960
 Slider(1:10, default = 5)
+
+# ╔═╡ 05f77f87-f238-4b3c-9803-6527229a863d
+
+
+# ╔═╡ 0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
+md"""
+# Creating a GUI in Julia - Number Input
+
+The most useful numeric inputs are:
+
+```
+Slider
+NumberField
+```
+
+The function of these should be intuitive: a slider provides a slider bar to select a number in a range, while a number field is just an empty box the user can type a number into.
+"""
+
+# ╔═╡ 89a87461-fee5-4954-9a9e-4dafc9945918
+Slider(1:10, default = 5)
+
+# ╔═╡ ef24b06b-513d-4b5b-b92f-24a123d47ed3
+NumberField(1:10, default = 5)
+
+# ╔═╡ 4879f359-9724-4b17-ab34-30a7b125756d
+md"""
+# Creating a GUI in Julia - Buttons (Triggers)
+
+A button can be used to trigger another cell.
+
+This can be helpful in making an instrument perform a function, such as acquiring a spectrum.
+"""
+
+# ╔═╡ 1555ee93-63f0-4dfa-a7a4-68b5b0820687
+begin
+	rand()
+end
+
+# ╔═╡ 5cfcd806-b33a-46fe-b6ef-7b350f5c7d05
+md"""
+# Creating a GUI in Julia - Check Boxes
+
+- A single checkbox can be used for a binary state (e.g. Off vs. On)
+- Multi check boxes are typically used when more than one value might need to be selected.
+
+"""
+
+# ╔═╡ a9d20250-c5a5-44e8-ac6b-c5bd68f955fa
+md"""
+# Creating a GUI in Julia - Plotting Data
+
+- Data can be plotted using the `plot(x, y)` function.
+- New data can be added to a plot using an exclamation point, as in `plot!(x2, y2)`.
+
+"""
+
+# ╔═╡ 56b4a58d-fa38-4903-8a04-38ed2a1b88c4
+plotly();
+
+# ╔═╡ ac66ef40-e5eb-44a3-9f2c-f70d4865ec43
+x = 1:100;
+
+# ╔═╡ 606a3504-f73e-43e6-9230-c1559ffd0c13
+y = rand(100);
+
+# ╔═╡ b913899b-5045-4664-aa96-a19ed96f8d4c
+plot(x, y)
 
 # ╔═╡ cbfb4a3b-5a3c-416d-80af-49c311e67963
 md"""
@@ -236,9 +352,10 @@ You will notice that the reactive code is re-run almost immediately, often befor
 md"""
 # For the remainder of class:
 
-1. Work in your groups to start communicating with your spectrometer
-   1. Your first goal should be to communicate with the instrument through Julia
-   2. Your second goal should be to decipher the integration time command.  
+Work in your groups to start communicating with your spectrometer
+1. You may use the [template](https://raw.githubusercontent.com/chem454/chem454.github.io/master/docs/programming/julia/gui-template.jl) provided as a starting point (link on Canvas or website)
+2. Try first to acquire a spectrum using the built in functionality, then try to start adding your own functionality to work towards acquiring an absorbance spectrum.
+ 
 """
 
 # ╔═╡ 3da74bf7-8bdb-45fa-a1df-f47afb3106c6
@@ -294,6 +411,38 @@ begin
 	catch
 		missing
 	end
+end
+
+# ╔═╡ bf40d1b0-9443-459c-a0df-512ce7574423
+@bind get_rand_no Button("Get Random Number 🎲")
+
+# ╔═╡ 34dc0947-7aba-47ee-a735-bbd65cddab2b
+md"""
+On/Off
+$(@bind on_off CheckBox())
+"""
+
+# ╔═╡ 31e7ada4-eeff-4dd1-b581-9dc9d7a1f070
+if on_off
+	md"🌝"
+else 
+	md"🌚"
+end
+
+# ╔═╡ 009c7553-88b2-4a85-bba1-ed9c62207cad
+md"""
+Which do you enjoy?
+
+$(@bind tea_coffee MultiCheckBox(["🍵", "☕"]))
+"""
+
+# ╔═╡ 3db384bd-28cf-448b-81e6-441225eba1b6
+if length(tea_coffee) == 1
+	md"You like $(tea_coffee) only."
+elseif length(tea_coffee) == 2
+	md"You like both tea and coffee!"
+else
+	md"You don't seem to like either tea or coffee."
 end
 
 # ╔═╡ 396664d5-5bd7-4b06-ab6c-9ec405b21bab
@@ -1246,6 +1395,14 @@ version = "0.9.1+5"
 # ╟─a2de6b40-11b0-4980-a7b6-e1631e565424
 # ╟─d5f174cb-c102-422b-92db-9356367f80a2
 # ╟─92d391e3-4d84-465d-ae06-4ec53b60c4e8
+# ╟─0cfdd4f6-f524-4364-b578-8b44a0acee51
+# ╠═bbd3e4b3-d1c4-4bee-b56b-1a61777a6e20
+# ╠═b1f605e6-46b8-4118-9a47-bbefbdc7e4ab
+# ╠═65360c70-1a85-4b21-b4c4-e3466980e423
+# ╟─a8d3b190-637c-420b-89bf-d0e489bd5bd0
+# ╠═73e69dca-f784-4ed2-afb1-6d41270d5c36
+# ╠═cb2b9bef-d9b8-457f-88a3-360f8fd79cec
+# ╠═107eeb96-fbaa-44fc-8994-70564182b20f
 # ╟─fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 # ╟─c14b3f3c-3a8b-4e9d-83b0-cbfb022a7159
 # ╟─919db11f-ab83-40d9-b57f-b3ffe72b38ce
@@ -1258,10 +1415,27 @@ version = "0.9.1+5"
 # ╠═bfee83e0-a398-40ac-8b32-c5297e31c70b
 # ╟─68f185f2-e8a3-475b-8b4a-847b59996744
 # ╠═c48d5f36-66e1-46d0-aeae-0c2bf4279960
-# ╟─cbfb4a3b-5a3c-416d-80af-49c311e67963
+# ╠═05f77f87-f238-4b3c-9803-6527229a863d
+# ╟─0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
+# ╠═89a87461-fee5-4954-9a9e-4dafc9945918
+# ╠═ef24b06b-513d-4b5b-b92f-24a123d47ed3
+# ╟─4879f359-9724-4b17-ab34-30a7b125756d
+# ╠═bf40d1b0-9443-459c-a0df-512ce7574423
+# ╠═1555ee93-63f0-4dfa-a7a4-68b5b0820687
+# ╟─5cfcd806-b33a-46fe-b6ef-7b350f5c7d05
+# ╟─34dc0947-7aba-47ee-a735-bbd65cddab2b
+# ╠═31e7ada4-eeff-4dd1-b581-9dc9d7a1f070
+# ╠═009c7553-88b2-4a85-bba1-ed9c62207cad
+# ╟─3db384bd-28cf-448b-81e6-441225eba1b6
+# ╟─a9d20250-c5a5-44e8-ac6b-c5bd68f955fa
+# ╠═56b4a58d-fa38-4903-8a04-38ed2a1b88c4
+# ╠═ac66ef40-e5eb-44a3-9f2c-f70d4865ec43
+# ╠═606a3504-f73e-43e6-9230-c1559ffd0c13
+# ╠═b913899b-5045-4664-aa96-a19ed96f8d4c
+# ╠═cbfb4a3b-5a3c-416d-80af-49c311e67963
 # ╠═396664d5-5bd7-4b06-ab6c-9ec405b21bab
 # ╠═a0552566-38e6-463c-936a-8f039f12ab26
-# ╠═0d25358f-8a68-4f3b-aba8-4533fb3748fc
+# ╟─0d25358f-8a68-4f3b-aba8-4533fb3748fc
 # ╟─3da74bf7-8bdb-45fa-a1df-f47afb3106c6
 # ╠═352b3d76-0b73-4ef8-b50c-ae5d6174d881
 # ╠═a57916ee-6638-46e7-9199-1a6fcaef50ab
