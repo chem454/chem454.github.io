@@ -15,25 +15,25 @@ Much of this course will be project-based.  In general, I intend to use Tuesdays
 
 Activities in **bold** require you to bring a computer and USB converter.
 
-| Week No. | Begins On | Tuesday Topic             | Thursday Topic             | Due |
-|:--------:|:---------:|:--------------------------|:---------------------------|:----|
-| 1        | 1/09      | Introduction              | **Safety + Arduino Intro** |     |
-| 2        | 1/16      | **Soldering + Blink**     | Literature Discussion      |     |
-| 3        | 1/23      | Microcontrollers          | **Functions**     |     |
-| 4        | 1/30      | Passive Analog Circuits   | **RC Filters**             |     |
-| 5        | 2/6       | Active Analog Circuits    | **Op-amps**                |     |
-| 6        | 2/13      | Presentations How-to      | TBD                        |     |
-| 7        | 2/20      | *Advising Day - No Class* | TBD                        |     |
-| 8        | 2/27      | Presentations             | Presentations              |     |
-| 9        | 3/6       | *Spring Break - No Class* | *No Class*                 |     |
-| 10       | 3/13      | TBD                       | **Project**                |     |
-| 11       | 3/20      | TBD                       | **Project**                |     |
-| 12       | 3/27      | TBD                       | **Project**                |     |
-| 13       | 4/3       | TBD                       | **Project**                |     |
-| 14       | 4/10      | TBD                       | *Easter - No Class*        |     |
-| 15       | 4/17      | TBD                       | **Project**                |     |
-| 16       | 4/24      | TBD                       | Final Presentation         |     |
-| 18       | 5/1       | *Final*                   | *Exams*                    |     |
+| Week No. | Begins On | Tuesday Topic                    | Thursday Topic                 | Due |
+|:--------:|:---------:|:---------------------------------|:-------------------------------|:----|
+| 1        | 1/09      | Introduction                     | **Safety + Arduino Intro**     |     |
+| 2        | 1/16      | **Soldering + Blink**            | Literature Discussion          |     |
+| 3        | 1/23      | Microcontrollers                 | **Functions**                  |     |
+| 4        | 1/30      | Passive Analog Circuits          | **RC Filters**                 |     |
+| 5        | 2/6       | Active Analog Circuits           | **Op-amps**                    |     |
+| 6        | 2/13      | Presentations How-to             | TBD                            |     |
+| 7        | 2/20      | *Advising Day - No Class*        | TBD                            |     |
+| 8        | 2/27      | Presentations                    | Presentations                  |     |
+| 9        | 3/6       | *Spring Break - No Class*        | *No Class*                     |     |
+| 10       | 3/13      | ~~TBD~~ **Project**              | **Project**                    |     |
+| 11       | 3/20      | ~~TBD~~ **Firmware vs Software** | **Project**                    |     |
+| 12       | 3/27      | ~~TBD~~ **Project**              | **Project**                    |     |
+| 13       | 4/3       | **GUI Creation**                 | **Project**                    |     |
+| 14       | 4/10      | **Transistors**                  | *Easter - No Class*            |     |
+| 15       | 4/17      | **Project**                      | **Project**                    |     |
+| 16       | 4/24      | **Project**                      | Presention Tips / Expectations |     |
+| 18       | 5/1       | *Final Exams:*                   | *Presentations on Instruments* |     |
 
 ## Potential Topics for TBD Days
 

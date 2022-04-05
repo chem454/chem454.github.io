@@ -14,17 +14,75 @@ last_modified_date: 2022-01-03
 # Preparing Datasheets
 {: .no_toc  }
 
+
+<details open markdown="block">
+  <summary>
+  Table of Contents
+  </summary>
+
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+# Introduction
+
+Datasheets (also called spec sheets and cut sheets) are the way manufacturers typically communicate the technical specifications and performance characteristics of their products to consumers.  They are a dense, succinct way to convey this information.  Each group is expected to turn in a datasheet detailing the functioning of their spectrometer.  Your datasheet should be styled similarly to the datasheets you've looked up this semester.  You may use any software you wish to create it, but your final document must be a PDF.
+
+# What to Include 
+
+Your data sheet should include the following information.
+
+## UV-vis Spectrometer (Undergraduates)
+
++ A clear picture or rendering of the spectrometer that is your *original* work.
++ 3-$\sigma$ limit of detection (units of intensity @ 1-second integration time)
++ 3-$\sigma$ limit of detection (units of intensity @ maximum integration time)
+  > Remember the LOD is specified as three times the standard deviation (3-$\sigma$) of a blank measurement.
++ Wavelength calibration equation and values for each parameter
++ Example spectra of a test sample, including:
+  + Your spectrum vs. literature spectrum of sample 
+  + Solution info (composition, concentration, etc)
++ Optical description:
+  + Legible optical diagram to approximate scale
+  + Grating information (blazes per mm and blaze angle)
+  + Radius of curvature for mirrors
+  + Slit width
+  + Light source information
+	+ Type of light source (LED, halogen, Hg-Xe, etc.)
+	+ Diagram of light source
++ Microprocessor Type
++ GUI
+  + Show screenshot of GUI
+  + Turn in Code
++ Bill of materials: include every item that goes into the spectrometer with description, part number, quanity, individual cost, total cost
+
+## UV-vis Spectrofluorometer (Graduate Students)
+Graduate students should include the same information as undergraduates (listed above), *plus*:
++ Fluorescence light source information (type, wavelength, etc)
++ Fluorescence spectrum of test compound vs. literature
++ List of serial commands used to control the fluorometer + Code
+
+## PAS Project
+
++ A clear picture or rendering of the spectrometer that is your *original* work.
++ 2-$\sigma$ limit of detection (units of intensity @ 1-second averaging time)
++ 2-$\sigma$ limit of detection (units of intensity @ 2-minute averaging time)
++ Plot of frequency response of cell. (Signal vs. Frequency), with resonant frequency indicated.
++ Calibration Curve or sensitivity calculation
++ Optical description:
+ + Legible optical diagram to approximate scale
+  + Radius of curvature for mirrors
+  + Light source information
+	+ Type of light source (LED, halogen, Hg-Xe, etc.)
+	+ Diagram of light source
++ Microprocessor Type
++ GUI
+  + Show screenshot of GUI
+  + Turn in Code
++ Bill of materials: include every item that goes into the spectrometer with description, part number, quanity, individual cost, total cost
 Each group will prepare a datasheet on their instrument.  More information forthcoming.
 
-<!-- <details open markdown="block"> -->
-<!--   <summary> -->
-<!--   Table of Contents -->
-<!--   </summary> -->
-
-<!--   {: .text-delta } -->
-<!-- 1. TOC -->
-<!-- {:toc} -->
-<!-- </details> -->
 
 <!-- --- -->
 
@@ -71,13 +129,3 @@ Each group will prepare a datasheet on their instrument.  More information forth
 
 <!-- <\!-- - Claim assignment [template](https://github.com/alphonse/alphonse.github.io/raw/master/CHEM191/assignments/claim-report-template.docx) and [guidelines](https://github.com/alphonse/alphonse.github.io/raw/master/chem370/pdf/lab-report-rubric.pdf). -\-> -->
 
-## Writing Help at Western
-
-   - [Writing and Learning Commons](https://www.wcu.edu/learn/academic-success/tutoring-services/index.aspx)
-   - [WCU Writing Support](https://www.wcu.edu/learn/academic-success/tutoring-services/services-resources/writing-support/index.aspx)
-   - Peer review: Have a friend or roommate provide feedback on your report before you turn it in.
-
-## Other writing-related stuff
-
-   - *Elements of Style*, William Strunk, Jr. and E.B. White (aka "Strunk and White") free html & ebook at [Project Gutenberg](http://www.gutenberg.org/ebooks/37134?msg=welcome_stranger) or free PDF [here](http://www.jlakes.org/ch/web/The-elements-of-style.pdf).
-   - [Mendeley Reference Manager]({{site.url}}/technical-reports/mendeley)
