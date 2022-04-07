@@ -93,7 +93,7 @@ md"""
 """
 
 # ╔═╡ 62f9c3a9-f91a-4ef6-ae23-da82956e5f53
-2+2
+cos(π)
 
 # ╔═╡ a2de6b40-11b0-4980-a7b6-e1631e565424
 md"""
@@ -151,16 +151,16 @@ Rules specific to Pluto but not found in other environments:
 """
 
 # ╔═╡ bbd3e4b3-d1c4-4bee-b56b-1a61777a6e20
-2+2
+2+9
 
 # ╔═╡ b1f605e6-46b8-4118-9a47-bbefbdc7e4ab
-f(x) = 2x + 5
+f(x) = 2x^2 + 3x - 5
 
 # ╔═╡ 7adb4df2-159d-470c-bb7c-b5635394d2c0
-
+f(5)
 
 # ╔═╡ 65360c70-1a85-4b21-b4c4-e3466980e423
-# ploting
+plot(f.(-100:100))
 
 # ╔═╡ a8d3b190-637c-420b-89bf-d0e489bd5bd0
 md"""
@@ -181,7 +181,13 @@ In Pluto, Julia code becomes *reactive*, such that the value of c *does* change 
 """
 
 # ╔═╡ 73e69dca-f784-4ed2-afb1-6d41270d5c36
+a = 9
 
+# ╔═╡ 5dd63244-6361-4c51-81c6-2b025888700c
+b = 6
+
+# ╔═╡ ae943a95-dfb3-47be-bb62-40cf27bf609c
+c = a+b
 
 # ╔═╡ fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 md"""
@@ -277,9 +283,6 @@ md"""
 # ╔═╡ c48d5f36-66e1-46d0-aeae-0c2bf4279960
 Slider(1:10, default = 5)
 
-# ╔═╡ 05f77f87-f238-4b3c-9803-6527229a863d
-
-
 # ╔═╡ 0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
 md"""
 # Creating a GUI in Julia - Number Input
@@ -309,9 +312,6 @@ A button can be used to trigger another cell.
 This can be helpful in making an instrument perform a function, such as acquiring a spectrum.
 """
 
-# ╔═╡ 1555ee93-63f0-4dfa-a7a4-68b5b0820687
-val = rand(1:1:6)
-
 # ╔═╡ 5cfcd806-b33a-46fe-b6ef-7b350f5c7d05
 md"""
 # Creating a GUI in Julia - Check Boxes
@@ -337,7 +337,7 @@ plotly();
 x = 1:100;
 
 # ╔═╡ 606a3504-f73e-43e6-9230-c1559ffd0c13
-y = rand(100);
+y = rand(100) .+ 90;
 
 # ╔═╡ b913899b-5045-4664-aa96-a19ed96f8d4c
 plot(x, y)
@@ -416,8 +416,23 @@ begin
 	end
 end
 
+# ╔═╡ 05f77f87-f238-4b3c-9803-6527229a863d
+@bind slider_val Slider(1:10, default = 5)
+
+# ╔═╡ f292757e-22e8-4fd6-b703-0c877f650a89
+slider_val
+
+# ╔═╡ 010c4461-2ff1-45e9-ab85-08c7045820ec
+5 + slider_val
+
 # ╔═╡ bf40d1b0-9443-459c-a0df-512ce7574423
 @bind roll_die Button("Roll the Die 🎲")
+
+# ╔═╡ 1555ee93-63f0-4dfa-a7a4-68b5b0820687
+begin
+roll_die
+val = rand(1:1:6)
+end
 
 # ╔═╡ 34dc0947-7aba-47ee-a735-bbd65cddab2b
 md"""
@@ -449,12 +464,12 @@ else
 end
 
 # ╔═╡ 396664d5-5bd7-4b06-ab6c-9ec405b21bab
-@bind A NumberField(1:1000, default = 5)
+@bind A Debounced(NumberField(1:1000, default = 5), 1000)
 
 # ╔═╡ a0552566-38e6-463c-936a-8f039f12ab26
 begin
 	sleep(5)
-	A + 9
+	A + 1
 end
 
 # ╔═╡ ec0450f1-a601-48cb-808a-cc1e930e97c6
@@ -1409,6 +1424,8 @@ version = "0.9.1+5"
 # ╠═65360c70-1a85-4b21-b4c4-e3466980e423
 # ╟─a8d3b190-637c-420b-89bf-d0e489bd5bd0
 # ╠═73e69dca-f784-4ed2-afb1-6d41270d5c36
+# ╠═5dd63244-6361-4c51-81c6-2b025888700c
+# ╠═ae943a95-dfb3-47be-bb62-40cf27bf609c
 # ╟─fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 # ╟─c14b3f3c-3a8b-4e9d-83b0-cbfb022a7159
 # ╟─919db11f-ab83-40d9-b57f-b3ffe72b38ce
@@ -1422,6 +1439,8 @@ version = "0.9.1+5"
 # ╟─68f185f2-e8a3-475b-8b4a-847b59996744
 # ╠═c48d5f36-66e1-46d0-aeae-0c2bf4279960
 # ╠═05f77f87-f238-4b3c-9803-6527229a863d
+# ╠═f292757e-22e8-4fd6-b703-0c877f650a89
+# ╠═010c4461-2ff1-45e9-ab85-08c7045820ec
 # ╟─0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
 # ╠═89a87461-fee5-4954-9a9e-4dafc9945918
 # ╠═ef24b06b-513d-4b5b-b92f-24a123d47ed3
