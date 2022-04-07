@@ -30,8 +30,8 @@ Activities in **bold** require you to bring a computer and USB converter.
 | 11       | 3/20      | ~~TBD~~ **Firmware vs Software** | **Project**                    |     |
 | 12       | 3/27      | ~~TBD~~ **Project**              | **Project**                    |     |
 | 13       | 4/3       | **GUI Creation**                 | **Project**                    |     |
-| 14       | 4/10      | **Transistors**                  | *Easter - No Class*            |     |
-| 15       | 4/17      | **Project**                      | **Project**                    |     |
+| 14       | 4/10      | **Project**                      | *Easter - No Class*            |     |
+| 15       | 4/17      | **Transistors**                  | **Project**                    |     |
 | 16       | 4/24      | **Project**                      | Presention Tips / Expectations |     |
 | 18       | 5/1       | *Final Exams:*                   | *Presentations on Instruments* |     |
 
