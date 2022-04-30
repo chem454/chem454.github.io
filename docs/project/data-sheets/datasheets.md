@@ -36,14 +36,14 @@ Your data sheet should include the following information.
 ## UV-vis Spectrometer (Undergraduates)
 
 + A clear picture or rendering of the spectrometer that is your *original* work.
-+ 3-$\sigma$ limit of detection (units of intensity @ 1-second integration time)
-+ 3-$\sigma$ limit of detection (units of intensity @ maximum integration time)
++ ~~3-$\sigma$ limit of detection (units of intensity @ 1-second integration time)~~
++ ~~3-$\sigma$ limit of detection (units of intensity @ maximum integration time)~~
   > Remember the LOD is specified as three times the standard deviation (3-$\sigma$) of a blank measurement.
 + Wavelength calibration equation and values for each parameter
 + Example spectra of a test sample, including:
-  + Your spectrum vs. literature spectrum of sample 
+  + Your spectrum vs. literature spectrum of sample (or spectrum of sample taken with a commerical instrument, like the SpectroVis) 
   + Solution info (composition, concentration, etc)
-+ Optical description:
++ Optical description (check the Smoky Mountain Scientific Website for a lot of this info):
   + Legible optical diagram to approximate scale
   + Grating information (blazes per mm and blaze angle)
   + Radius of curvature for mirrors
@@ -66,10 +66,10 @@ Graduate students should include the same information as undergraduates (listed 
 ## PAS Project
 
 + A clear picture or rendering of the spectrometer that is your *original* work.
-+ 2-$\sigma$ limit of detection (units of intensity @ 1-second averaging time)
-+ 2-$\sigma$ limit of detection (units of intensity @ 2-minute averaging time)
-+ Plot of frequency response of cell. (Signal vs. Frequency), with resonant frequency indicated.
-+ Calibration Curve or sensitivity calculation
++ ~~2-$\sigma$ limit of detection (units of intensity @ 1-second averaging time)~~
++ ~~2-$\sigma$ limit of detection (units of intensity @ 2-minute averaging time)~~
++ ~~Plot of frequency response of cell. (Signal vs. Frequency), with resonant frequency indicated.~~  Fourier transform plot of signal
++ ~~Calibration Curve or sensitivity calculation~~
 + Optical description:
  + Legible optical diagram to approximate scale
   + Radius of curvature for mirrors
