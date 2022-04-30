@@ -55,13 +55,19 @@ Your data sheet should include the following information.
 + GUI
   + Show screenshot of GUI
   + Turn in Code
+  + Your GUI should do the following:
+	+ Allow acquisition of I, I0, and a dark spectrum.
+	+ Calculate and plot the absorbance spectrum based on I, I0, and dark spectra.
+	+ Allow the user to set the integration time.
+	+ Save the data to a CSV.
 + Bill of materials: include every item that goes into the spectrometer with description, part number, quanity, individual cost, total cost
 
 ## UV-vis Spectrofluorometer (Graduate Students)
 Graduate students should include the same information as undergraduates (listed above), *plus*:
 + Fluorescence light source information (type, wavelength, etc)
 + Fluorescence spectrum of test compound vs. literature
-+ List of serial commands used to control the fluorometer + Code
++ List of serial commands used to control the fluorometer + Firmware Code
++ In addition to the GUI items above, your GUI should allow the user to turn an excitation source on and off and acquire and save a fluorescence spectrum.
 
 ## PAS Project
 
@@ -80,6 +86,12 @@ Graduate students should include the same information as undergraduates (listed 
 + GUI
   + Show screenshot of GUI
   + Turn in Code
+  + Your GUI should do the following:
+	+ Allow acquisition of FFT and the signal at the resonant frequency.
+	+ Turn an LED on and off.
+	+ Allow the user to set the modulation frequency time.
+	+ Save data to a CSV.
++ List of serial commands used to control the fluorometer + Firmware Code
 + Bill of materials: include every item that goes into the spectrometer with description, part number, quanity, individual cost, total cost
 Each group will prepare a datasheet on their instrument.  More information forthcoming.
 

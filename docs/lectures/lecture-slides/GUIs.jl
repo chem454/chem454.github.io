@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.4
+# v0.18.1
 
 using Markdown
 using InteractiveUtils
@@ -38,6 +38,9 @@ md"""
 3. Paste this link into the "Open Notebook" box once Pluto opens.
 4. Let everything load...we'll come back to it later!
 
+### Following Along
+
+- You may wish to open a New Notebook in a separate tab to follow along with today's lecture.
 """
 
 # ╔═╡ afff5088-9858-43d5-976f-f9e43445d164
@@ -63,7 +66,7 @@ md"""
 ### Processing
 
 - Free, open-source, used large by hobbyists, but is related to Java, not graphical, not specific to science
-- Used for spectrometer calibration software
+- Used by Smoky Mountain Scientific for the spectrometer calibration software
 
 ### Python
 
@@ -79,13 +82,18 @@ md"""
 > 
 > (via [Wikipedia](https://en.wikipedia.org/wiki/Julia_(programming_language)))
 
+*Julia is basically a very advanced calculator*
 
 - Open source, free language designed for scientific computing
 - Initial release 2012
 - Currently on version 1.7
 - Adoption has been slow, but Julia is growing in popularity.
+- Key features are usability and speed.
 
 """
+
+# ╔═╡ 62f9c3a9-f91a-4ef6-ae23-da82956e5f53
+cos(π)
 
 # ╔═╡ a2de6b40-11b0-4980-a7b6-e1631e565424
 md"""
@@ -114,7 +122,7 @@ Some notable users include:
 md"""
 # Pluto
 
-- Add-on notebook environment for Julia, written as a Julia Package
+- Add-on notebook environment (interface) for Julia, written as a Julia Package
 - Initial release summer 2020 (see JuliaCon video presentation for more info)
 - Provides reactive programming environment - this can be used to build a basic GUI
 
@@ -133,7 +141,7 @@ html"""
 md"""
 # Pluto Rules
 
-Julia is basically a very advanced calculator, and Pluto is an interface for it.  Rules specific to Pluto but not found in other environments:
+Rules specific to Pluto but not found in other environments:
 
 1. All code goes in "cells".
 1. Only one line of code may be used in a cell; this may be circumvented by using `begin ... end` blocks, but this is discouraged except where necessary!
@@ -143,13 +151,16 @@ Julia is basically a very advanced calculator, and Pluto is an interface for it.
 """
 
 # ╔═╡ bbd3e4b3-d1c4-4bee-b56b-1a61777a6e20
-2+2
+2+9
 
 # ╔═╡ b1f605e6-46b8-4118-9a47-bbefbdc7e4ab
-f(x) = 2x + 5
+f(x) = 2x^2 + 3x - 5
+
+# ╔═╡ 7adb4df2-159d-470c-bb7c-b5635394d2c0
+f(5)
 
 # ╔═╡ 65360c70-1a85-4b21-b4c4-e3466980e423
-# plot()
+plot(f.(-100:100))
 
 # ╔═╡ a8d3b190-637c-420b-89bf-d0e489bd5bd0
 md"""
@@ -170,13 +181,13 @@ In Pluto, Julia code becomes *reactive*, such that the value of c *does* change 
 """
 
 # ╔═╡ 73e69dca-f784-4ed2-afb1-6d41270d5c36
-a = 8
+a = 9
 
-# ╔═╡ cb2b9bef-d9b8-457f-88a3-360f8fd79cec
+# ╔═╡ 5dd63244-6361-4c51-81c6-2b025888700c
 b = 6
 
-# ╔═╡ 107eeb96-fbaa-44fc-8994-70564182b20f
-c = a + b
+# ╔═╡ ae943a95-dfb3-47be-bb62-40cf27bf609c
+c = a+b
 
 # ╔═╡ fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 md"""
@@ -249,7 +260,7 @@ md"""
 # ╔═╡ bfee83e0-a398-40ac-8b32-c5297e31c70b
 begin
 	serdat = ""
-	LibSerialPort.open("/dev/ttyACM0", 115200) do sp
+	LibSerialPort.open("/dev/tty.usbmodem109651301", 115200) do sp
 		set_read_timeout(sp, 60)
    		sleep(0.1)
    		write(sp, "I001000&")
@@ -271,9 +282,6 @@ md"""
 
 # ╔═╡ c48d5f36-66e1-46d0-aeae-0c2bf4279960
 Slider(1:10, default = 5)
-
-# ╔═╡ 05f77f87-f238-4b3c-9803-6527229a863d
-
 
 # ╔═╡ 0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
 md"""
@@ -304,11 +312,6 @@ A button can be used to trigger another cell.
 This can be helpful in making an instrument perform a function, such as acquiring a spectrum.
 """
 
-# ╔═╡ 1555ee93-63f0-4dfa-a7a4-68b5b0820687
-begin
-	rand()
-end
-
 # ╔═╡ 5cfcd806-b33a-46fe-b6ef-7b350f5c7d05
 md"""
 # Creating a GUI in Julia - Check Boxes
@@ -334,7 +337,7 @@ plotly();
 x = 1:100;
 
 # ╔═╡ 606a3504-f73e-43e6-9230-c1559ffd0c13
-y = rand(100);
+y = rand(100) .+ 90;
 
 # ╔═╡ b913899b-5045-4664-aa96-a19ed96f8d4c
 plot(x, y)
@@ -354,7 +357,7 @@ md"""
 
 Work in your groups to start communicating with your spectrometer
 1. You may use the [template](https://raw.githubusercontent.com/chem454/chem454.github.io/master/docs/programming/julia/gui-template.jl) provided as a starting point (link on Canvas or website)
-2. Try first to acquire a spectrum using the built in functionality, then try to start adding your own functionality to work towards acquiring an absorbance spectrum.
+2. Try first to acquire a spectrum using the built in functionality, then try to start adding your own functionality to work towards acquiring an absorbance spectrum.  You might start by simply modifying the buttons to acquire I and I0 instead of just I.
  
 """
 
@@ -413,8 +416,23 @@ begin
 	end
 end
 
+# ╔═╡ 05f77f87-f238-4b3c-9803-6527229a863d
+@bind slider_val Slider(1:10, default = 5)
+
+# ╔═╡ f292757e-22e8-4fd6-b703-0c877f650a89
+slider_val
+
+# ╔═╡ 010c4461-2ff1-45e9-ab85-08c7045820ec
+5 + slider_val
+
 # ╔═╡ bf40d1b0-9443-459c-a0df-512ce7574423
-@bind get_rand_no Button("Get Random Number 🎲")
+@bind roll_die Button("Roll the Die 🎲")
+
+# ╔═╡ 1555ee93-63f0-4dfa-a7a4-68b5b0820687
+begin
+roll_die
+val = rand(1:1:6)
+end
 
 # ╔═╡ 34dc0947-7aba-47ee-a735-bbd65cddab2b
 md"""
@@ -446,10 +464,13 @@ else
 end
 
 # ╔═╡ 396664d5-5bd7-4b06-ab6c-9ec405b21bab
-@bind A NumberField(1:1000, default = 5)
+@bind A Debounced(NumberField(1:1000, default = 5), 1000)
 
 # ╔═╡ a0552566-38e6-463c-936a-8f039f12ab26
-A + 9
+begin
+	sleep(5)
+	A + 1
+end
 
 # ╔═╡ ec0450f1-a601-48cb-808a-cc1e930e97c6
 PlutoUI.TableOfContents()
@@ -471,7 +492,7 @@ PlutoUI = "~0.7.38"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.7.1"
+julia_version = "1.7.0"
 manifest_format = "2.0"
 
 [[deps.AbstractPlutoDingetjes]]
@@ -1392,17 +1413,19 @@ version = "0.9.1+5"
 # ╟─afff5088-9858-43d5-976f-f9e43445d164
 # ╟─7e32fa3e-8ebb-4229-b0a7-16e3edc9e188
 # ╟─19af3ce0-9635-4c3f-84a7-ec1d6ab2ea76
+# ╠═62f9c3a9-f91a-4ef6-ae23-da82956e5f53
 # ╟─a2de6b40-11b0-4980-a7b6-e1631e565424
 # ╟─d5f174cb-c102-422b-92db-9356367f80a2
 # ╟─92d391e3-4d84-465d-ae06-4ec53b60c4e8
 # ╟─0cfdd4f6-f524-4364-b578-8b44a0acee51
 # ╠═bbd3e4b3-d1c4-4bee-b56b-1a61777a6e20
 # ╠═b1f605e6-46b8-4118-9a47-bbefbdc7e4ab
+# ╠═7adb4df2-159d-470c-bb7c-b5635394d2c0
 # ╠═65360c70-1a85-4b21-b4c4-e3466980e423
 # ╟─a8d3b190-637c-420b-89bf-d0e489bd5bd0
 # ╠═73e69dca-f784-4ed2-afb1-6d41270d5c36
-# ╠═cb2b9bef-d9b8-457f-88a3-360f8fd79cec
-# ╠═107eeb96-fbaa-44fc-8994-70564182b20f
+# ╠═5dd63244-6361-4c51-81c6-2b025888700c
+# ╠═ae943a95-dfb3-47be-bb62-40cf27bf609c
 # ╟─fa64cde1-f03d-43a9-bc88-7065cd3c3ec3
 # ╟─c14b3f3c-3a8b-4e9d-83b0-cbfb022a7159
 # ╟─919db11f-ab83-40d9-b57f-b3ffe72b38ce
@@ -1416,6 +1439,8 @@ version = "0.9.1+5"
 # ╟─68f185f2-e8a3-475b-8b4a-847b59996744
 # ╠═c48d5f36-66e1-46d0-aeae-0c2bf4279960
 # ╠═05f77f87-f238-4b3c-9803-6527229a863d
+# ╠═f292757e-22e8-4fd6-b703-0c877f650a89
+# ╠═010c4461-2ff1-45e9-ab85-08c7045820ec
 # ╟─0e2cb3b5-7b78-46f4-9f0f-2728b19b6dc1
 # ╠═89a87461-fee5-4954-9a9e-4dafc9945918
 # ╠═ef24b06b-513d-4b5b-b92f-24a123d47ed3
@@ -1424,7 +1449,7 @@ version = "0.9.1+5"
 # ╠═1555ee93-63f0-4dfa-a7a4-68b5b0820687
 # ╟─5cfcd806-b33a-46fe-b6ef-7b350f5c7d05
 # ╟─34dc0947-7aba-47ee-a735-bbd65cddab2b
-# ╠═31e7ada4-eeff-4dd1-b581-9dc9d7a1f070
+# ╟─31e7ada4-eeff-4dd1-b581-9dc9d7a1f070
 # ╠═009c7553-88b2-4a85-bba1-ed9c62207cad
 # ╟─3db384bd-28cf-448b-81e6-441225eba1b6
 # ╟─a9d20250-c5a5-44e8-ac6b-c5bd68f955fa
@@ -1432,7 +1457,7 @@ version = "0.9.1+5"
 # ╠═ac66ef40-e5eb-44a3-9f2c-f70d4865ec43
 # ╠═606a3504-f73e-43e6-9230-c1559ffd0c13
 # ╠═b913899b-5045-4664-aa96-a19ed96f8d4c
-# ╠═cbfb4a3b-5a3c-416d-80af-49c311e67963
+# ╟─cbfb4a3b-5a3c-416d-80af-49c311e67963
 # ╠═396664d5-5bd7-4b06-ab6c-9ec405b21bab
 # ╠═a0552566-38e6-463c-936a-8f039f12ab26
 # ╟─0d25358f-8a68-4f3b-aba8-4533fb3748fc
